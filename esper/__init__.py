@@ -15,11 +15,14 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
+from esper.api.commands_api import CommandsApi
 from esper.api.device_api import DeviceApi
 # import ApiClient
 from esper.api_client import ApiClient
 from esper.configuration import Configuration
 # import models into sdk package
 from esper.models.device import Device
+from esper.models.device_command_request import DeviceCommandRequest
+from esper.models.device_command_response import DeviceCommandResponse
 from esper.models.device_list_response import DeviceListResponse
 from esper.models.emm_device import EmmDevice

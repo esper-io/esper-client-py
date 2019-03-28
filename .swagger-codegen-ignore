@@ -25,3 +25,5 @@
 test-esper.py
 
 .git/*
+
+.gitignore

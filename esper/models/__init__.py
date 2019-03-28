@@ -15,5 +15,7 @@ from __future__ import absolute_import
 
 # import models into model package
 from esper.models.device import Device
+from esper.models.device_command_request import DeviceCommandRequest
+from esper.models.device_command_response import DeviceCommandResponse
 from esper.models.device_list_response import DeviceListResponse
 from esper.models.emm_device import EmmDevice

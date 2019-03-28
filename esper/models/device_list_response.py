@@ -31,8 +31,8 @@ class DeviceListResponse(object):
     """
     swagger_types = {
         'count': 'int',
-        'next': 'list[str]',
-        'previous': 'list[str]',
+        'next': 'str',
+        'previous': 'str',
         'results': 'list[Device]'
     }
 
@@ -86,7 +86,7 @@ class DeviceListResponse(object):
 
 
         :return: The next of this DeviceListResponse.  # noqa: E501
-        :rtype: list[str]
+        :rtype: str
         """
         return self._next
 
@@ -96,7 +96,7 @@ class DeviceListResponse(object):
 
 
         :param next: The next of this DeviceListResponse.  # noqa: E501
-        :type: list[str]
+        :type: str
         """
 
         self._next = next
@@ -107,7 +107,7 @@ class DeviceListResponse(object):
 
 
         :return: The previous of this DeviceListResponse.  # noqa: E501
-        :rtype: list[str]
+        :rtype: str
         """
         return self._previous
 
@@ -117,7 +117,7 @@ class DeviceListResponse(object):
 
 
         :param previous: The previous of this DeviceListResponse.  # noqa: E501
-        :type: list[str]
+        :type: str
         """
 
         self._previous = previous
