@@ -12,7 +12,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "esper"
+NAME = "esperclient"
 VERSION = "0.0.1"
 # To install the library, run the following
 #
@@ -34,6 +34,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    This is a read only Esper SDK.  You can find out more about Esper at [https://shoonya.io](https://shoonya.io).  # noqa: E501
+    This is a read only Esper SDK.  You can find out more about Esper at [https://shoonya.io](https://shoonya.io).
     """
 )
