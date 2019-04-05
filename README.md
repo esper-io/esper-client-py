@@ -4,7 +4,7 @@ Esper Manage python SDK
 Python client library for Esper Manage APIs. You can find out more about Esper at [https://shoonya.io](https://shoonya.io).
 
 - API version: 1.0.0
-- Package version: 0.0.1
+- Package version: 0.0.2
 
 
 ## Requirements.
