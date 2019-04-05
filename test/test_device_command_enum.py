@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import esperclient
-from esperclient.models.device_command_request import DeviceCommandRequest
+from esperclient.models.device_command_enum import DeviceCommandEnum
 from esperclient.rest import ApiException
 
 
-class TestDeviceCommandRequest(unittest.TestCase):
-    """DeviceCommandRequest unit test stubs"""
+class TestDeviceCommandEnum(unittest.TestCase):
+    """DeviceCommandEnum unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,9 +29,9 @@ class TestDeviceCommandRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDeviceCommandRequest(self):
-        """Test DeviceCommandRequest"""
-        model = esperclient.models.device_command_request.DeviceCommandRequest()
+    def testDeviceCommandEnum(self):
+        """Test DeviceCommandEnum"""
+        model = esperclient.models.device_command_enum.DeviceCommandEnum()
         pass
 
 

@@ -1,5 +1,6 @@
 # coding: utf-8
 
+# flake8: noqa
 """
     Esper SDK
 
@@ -13,27 +14,10 @@
 
 from __future__ import absolute_import
 
-import unittest
-
-import esperclient
+# import models into model package
 from esperclient.models.device import Device
-from esperclient.rest import ApiException
-
-
-class TestDevice(unittest.TestCase):
-    """Device unit test stubs"""
-
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
-    def testDevice(self):
-        """Test Device"""
-        model = esperclient.models.device.Device()
-        pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+from esperclient.models.device_command_enum import DeviceCommandEnum
+from esperclient.models.device_command_request import DeviceCommandRequest
+from esperclient.models.device_command_response import DeviceCommandResponse
+from esperclient.models.emm_device import EmmDevice
+from esperclient.models.inline_response200 import InlineResponse200

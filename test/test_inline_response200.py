@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import esperclient
-from esperclient.models.device_command_request import DeviceCommandRequest
+from esperclient.models.inline_response200 import InlineResponse200
 from esperclient.rest import ApiException
 
 
-class TestDeviceCommandRequest(unittest.TestCase):
-    """DeviceCommandRequest unit test stubs"""
+class TestInlineResponse200(unittest.TestCase):
+    """InlineResponse200 unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,9 +29,9 @@ class TestDeviceCommandRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDeviceCommandRequest(self):
-        """Test DeviceCommandRequest"""
-        model = esperclient.models.device_command_request.DeviceCommandRequest()
+    def testInlineResponse200(self):
+        """Test InlineResponse200"""
+        model = esperclient.models.inline_response200.InlineResponse200()
         pass
 
 

@@ -67,5 +67,4 @@ target/
 
 test-esper.py
 .swagger-codegen/
-.swagger-codegen-ignore
 git_push.sh

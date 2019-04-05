@@ -1,14 +1,15 @@
-# esper.DeviceApi
+# esperclient.DeviceApi
 
-All URIs are relative to *https://127.0.0.1:8000/api*
+All URIs are relative to *https://demo.esper.io/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_devices**](DeviceApi.md#get_all_devices) | **GET** /enterprise/{enterprise_id}/device/ | Fetch all devices in an enterprise
 [**get_device_by_id**](DeviceApi.md#get_device_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/ | Fetch device details by ID
 
+
 # **get_all_devices**
-> DeviceListResponse get_all_devices(enterprise_id)
+> InlineResponse200 get_all_devices(enterprise_id, name=name, limit=limit)
 
 Fetch all devices in an enterprise
 
@@ -18,21 +19,24 @@ Returns a list of devices
 ```python
 from __future__ import print_function
 import time
-import esper
-from esper.rest import ApiException
+import esperclient
+from esperclient.rest import ApiException
 from pprint import pprint
+
 # Configure HTTP basic authorization: basic_security
-configuration = esper.Configuration()
+configuration = esperclient.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = esper.DeviceApi(esper.ApiClient(configuration))
+api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
+name = 'name_example' # str | Filter by device name (optional)
+limit = 20 # int | Pagination (optional) (default to 20)
 
 try:
     # Fetch all devices in an enterprise
-    api_response = api_instance.get_all_devices(enterprise_id)
+    api_response = api_instance.get_all_devices(enterprise_id, name=name, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DeviceApi->get_all_devices: %s\n" % e)
@@ -43,10 +47,12 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | [**str**](.md)| ID of the enterprise | 
+ **name** | **str**| Filter by device name | [optional] 
+ **limit** | **int**| Pagination | [optional] [default to 20]
 
 ### Return type
 
-[**DeviceListResponse**](DeviceListResponse.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -70,16 +76,17 @@ Returns details of a device
 ```python
 from __future__ import print_function
 import time
-import esper
-from esper.rest import ApiException
+import esperclient
+from esperclient.rest import ApiException
 from pprint import pprint
+
 # Configure HTTP basic authorization: basic_security
-configuration = esper.Configuration()
+configuration = esperclient.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = esper.DeviceApi(esper.ApiClient(configuration))
+api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
 device_id = 'device_id_example' # str | ID of the device
 
