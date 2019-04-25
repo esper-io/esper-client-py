@@ -3,9 +3,9 @@
 # flake8: noqa
 
 """
-    Esper SDK
+    Esper Manage API
 
-    Python client library for Esper Manage APIs. You can find out more about Esper at [https://shoonya.io](https://shoonya.io).  # noqa: E501
+    # Introduction Esper Manage APIs for Cloud are a set of REST-based APIs that help you programmatically control and monitor your enterprise's dedicated Esper endpoint. Using these APIs, one can orchestrate & manage devices that have been provisioned against your endpoint. Furthermore, this API allows you to manage android applications that get installed on such devices. To read more about the various capabilities of Esper endpoints and Esper managed devices, please visit [esper.io](https://esper.io). This guide describes all the available APIs in detail, along with code samples for you to quickly ramp up to using them.  You can find out more about Esper at [https://esper.io](https://esper.io)  We've done our best to keep this document up to date, but if you find any issues, please reach out to us at developer@esper.io.  # SDK    You are welcome to use your favorite HTTP/REST library for your programming language in order to use these APIs, or you can use our official SDK (currently available in [python](https://github.com/esper-io/esper-client-py)) to do so.   # Authentication Client needs to send authentication details to access APIs. Following authentication schemes are supported:  #### Basic Authentication Client can use username and password to authenticate. These are your developer account credentials. For example, the client sends HTTP requests with the Authorization header that contains the word `Basic` followed by a space and a base64-encoded string `username:password`. ##### Base64 encoding Bash  ``` echo 'username:password' | base64 ```  Powershell  ``` [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes(\"username:password\")) ```  **Example request** ```bash curl -X GET \\   https://DOMAIN.shoonyacloud.com/api/enterprise/<enterprise_id>/device/ \\   -H 'Authorization: Basic cl0ZWFkbWluOnNpdG1pbjEyMyQ=' \\   -H 'Content-Type: application/json' \\ ``` You can read more about basic authentication scheme  [here](https://swagger.io/docs/specification/authentication/basic-authentication/)  # Errors The API uses standard HTTP status codes to indicate success or failure. All error responses will have a JSON body in the following format  ``` {   \"errors\": [],   \"message\": \"error message\",   \"status\": 400 } ``` * `errors` -  List of error details * `message` - Error description * `status` - HTTP status code   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: developer@esper.io
@@ -16,16 +16,53 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
-from esperclient.api.commands_api import CommandsApi
+from esperclient.api.application_api import ApplicationApi
 from esperclient.api.device_api import DeviceApi
+from esperclient.api.device_app_api import DeviceAppApi
+from esperclient.api.device_commands_api import DeviceCommandsApi
+from esperclient.api.device_group_api import DeviceGroupApi
+from esperclient.api.enterprise_api import EnterpriseApi
+from esperclient.api.enterprise_application_api import EnterpriseApplicationApi
+from esperclient.api.group_commands_api import GroupCommandsApi
+from esperclient.api.policy_api import PolicyApi
+from esperclient.api.v0_api import V0Api
 
 # import ApiClient
 from esperclient.api_client import ApiClient
 from esperclient.configuration import Configuration
 # import models into sdk package
+from esperclient.models.app_install import AppInstall
+from esperclient.models.app_install_state_enum import AppInstallStateEnum
+from esperclient.models.app_permission import AppPermission
+from esperclient.models.app_version import AppVersion
+from esperclient.models.application import Application
 from esperclient.models.device import Device
+from esperclient.models.device_app import DeviceApp
+from esperclient.models.device_app_permission import DeviceAppPermission
+from esperclient.models.device_command import DeviceCommand
 from esperclient.models.device_command_enum import DeviceCommandEnum
 from esperclient.models.device_command_request import DeviceCommandRequest
-from esperclient.models.device_command_response import DeviceCommandResponse
+from esperclient.models.device_custom import DeviceCustom
+from esperclient.models.device_custom_group import DeviceCustomGroup
+from esperclient.models.device_status import DeviceStatus
+from esperclient.models.device_status_tiles import DeviceStatusTiles
+from esperclient.models.emm_enterprise_state_enum import EMMEnterpriseStateEnum
 from esperclient.models.emm_device import EmmDevice
+from esperclient.models.enterprise import Enterprise
+from esperclient.models.enterprise_detail import EnterpriseDetail
+from esperclient.models.enterprise_device_group import EnterpriseDeviceGroup
+from esperclient.models.enterprise_policy import EnterprisePolicy
+from esperclient.models.google_enterprise import GoogleEnterprise
+from esperclient.models.group_command import GroupCommand
+from esperclient.models.group_command_request import GroupCommandRequest
 from esperclient.models.inline_response200 import InlineResponse200
+from esperclient.models.inline_response2001 import InlineResponse2001
+from esperclient.models.inline_response2002 import InlineResponse2002
+from esperclient.models.inline_response2003 import InlineResponse2003
+from esperclient.models.inline_response2004 import InlineResponse2004
+from esperclient.models.inline_response2005 import InlineResponse2005
+from esperclient.models.inline_response2006 import InlineResponse2006
+from esperclient.models.inline_response2007 import InlineResponse2007
+from esperclient.models.inline_response2008 import InlineResponse2008
+from esperclient.models.inline_response201 import InlineResponse201
+from esperclient.models.unauthorized_response import UnauthorizedResponse

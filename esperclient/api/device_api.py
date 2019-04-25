@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Esper SDK
+    Esper Manage API
 
-    Python client library for Esper Manage APIs. You can find out more about Esper at [https://shoonya.io](https://shoonya.io).  # noqa: E501
+    # Introduction Esper Manage APIs for Cloud are a set of REST-based APIs that help you programmatically control and monitor your enterprise's dedicated Esper endpoint. Using these APIs, one can orchestrate & manage devices that have been provisioned against your endpoint. Furthermore, this API allows you to manage android applications that get installed on such devices. To read more about the various capabilities of Esper endpoints and Esper managed devices, please visit [esper.io](https://esper.io). This guide describes all the available APIs in detail, along with code samples for you to quickly ramp up to using them.  You can find out more about Esper at [https://esper.io](https://esper.io)  We've done our best to keep this document up to date, but if you find any issues, please reach out to us at developer@esper.io.  # SDK    You are welcome to use your favorite HTTP/REST library for your programming language in order to use these APIs, or you can use our official SDK (currently available in [python](https://github.com/esper-io/esper-client-py)) to do so.   # Authentication Client needs to send authentication details to access APIs. Following authentication schemes are supported:  #### Basic Authentication Client can use username and password to authenticate. These are your developer account credentials. For example, the client sends HTTP requests with the Authorization header that contains the word `Basic` followed by a space and a base64-encoded string `username:password`. ##### Base64 encoding Bash  ``` echo 'username:password' | base64 ```  Powershell  ``` [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes(\"username:password\")) ```  **Example request** ```bash curl -X GET \\   https://DOMAIN.shoonyacloud.com/api/enterprise/<enterprise_id>/device/ \\   -H 'Authorization: Basic cl0ZWFkbWluOnNpdG1pbjEyMyQ=' \\   -H 'Content-Type: application/json' \\ ``` You can read more about basic authentication scheme  [here](https://swagger.io/docs/specification/authentication/basic-authentication/)  # Errors The API uses standard HTTP status codes to indicate success or failure. All error responses will have a JSON body in the following format  ``` {   \"errors\": [],   \"message\": \"error message\",   \"status\": 400 } ``` * `errors` -  List of error details * `message` - Error description * `status` - HTTP status code   # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: developer@esper.io
@@ -45,8 +45,10 @@ class DeviceApi(object):
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
         :param str name: Filter by device name
-        :param int limit: Pagination
-        :return: InlineResponse200
+        :param str search: A search term. Search by device name or imei
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -69,13 +71,15 @@ class DeviceApi(object):
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
         :param str name: Filter by device name
-        :param int limit: Pagination
-        :return: InlineResponse200
+        :param str search: A search term. Search by device name or imei
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'name', 'limit']  # noqa: E501
+        all_params = ['enterprise_id', 'name', 'search', 'limit', 'offset']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -104,8 +108,12 @@ class DeviceApi(object):
         query_params = []
         if 'name' in params:
             query_params.append(('name', params['name']))  # noqa: E501
+        if 'search' in params:
+            query_params.append(('search', params['search']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('limit', params['limit']))  # noqa: E501
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))  # noqa: E501
 
         header_params = {}
 
@@ -128,7 +136,7 @@ class DeviceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse200',  # noqa: E501
+            response_type='InlineResponse2003',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -232,6 +240,117 @@ class DeviceApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Device',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_device_event(self, enterprise_id, device_id, latest_event, **kwargs):  # noqa: E501
+        """Get latest device event  # noqa: E501
+
+        Returns DeviceStatus instance  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_event(enterprise_id, device_id, latest_event, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param str device_id: A UUID string identifying device. (required)
+        :param float latest_event: Flag to get latest event (required)
+        :return: InlineResponse2006
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_device_event_with_http_info(enterprise_id, device_id, latest_event, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_device_event_with_http_info(enterprise_id, device_id, latest_event, **kwargs)  # noqa: E501
+            return data
+
+    def get_device_event_with_http_info(self, enterprise_id, device_id, latest_event, **kwargs):  # noqa: E501
+        """Get latest device event  # noqa: E501
+
+        Returns DeviceStatus instance  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_event_with_http_info(enterprise_id, device_id, latest_event, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param str device_id: A UUID string identifying device. (required)
+        :param float latest_event: Flag to get latest event (required)
+        :return: InlineResponse2006
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['enterprise_id', 'device_id', 'latest_event']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_device_event" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'enterprise_id' is set
+        if ('enterprise_id' not in params or
+                params['enterprise_id'] is None):
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_device_event`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_device_event`")  # noqa: E501
+        # verify the required parameter 'latest_event' is set
+        if ('latest_event' not in params or
+                params['latest_event'] is None):
+            raise ValueError("Missing the required parameter `latest_event` when calling `get_device_event`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'enterprise_id' in params:
+            path_params['enterprise_id'] = params['enterprise_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['device_id'] = params['device_id']  # noqa: E501
+
+        query_params = []
+        if 'latest_event' in params:
+            query_params.append(('latest_event', params['latest_event']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/enterprise/{enterprise_id}/device/{device_id}/status/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2006',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
