@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_device_command**](V0Api.md#get_device_command) | **GET** /v0/device-command/{command_id}/ | Get command information
 [**get_group_command**](V0Api.md#get_group_command) | **GET** /v0/group-command/{command_id}/ | Get command information
+[**group_app_install**](V0Api.md#group_app_install) | **POST** /v0/group-command/install/ | Group App installtion
 [**install_device_app**](V0Api.md#install_device_app) | **POST** /v0/device-command/install/ | Install an app on device
 [**lock_device**](V0Api.md#lock_device) | **POST** /v0/device-command/lock/ | Lock a device
 [**lock_group**](V0Api.md#lock_group) | **POST** /v0/group-command/lock/ | Lock devices in a group
@@ -98,6 +99,59 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **command_id** | [**str**](.md)| A UUID string identifying this device group command. | 
+
+### Return type
+
+[**GroupCommand**](GroupCommand.md)
+
+### Authorization
+
+[basic_security](../README.md#basic_security)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **group_app_install**
+> GroupCommand group_app_install(data)
+
+Group App installtion
+
+Creates GroupCommand instance
+
+### Example
+```python
+from __future__ import print_function
+import time
+import esperclient
+from esperclient.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = esperclient.V0Api(esperclient.ApiClient(configuration))
+data = esperclient.GroupCommandRequest() # GroupCommandRequest | 
+
+try:
+    # Group App installtion
+    api_response = api_instance.group_app_install(data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling V0Api->group_app_install: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**GroupCommandRequest**](GroupCommandRequest.md)|  | 
 
 ### Return type
 

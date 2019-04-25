@@ -32,23 +32,28 @@ class GroupCommandRequest(object):
     """
     swagger_types = {
         'enterprise': 'str',
-        'group': 'str'
+        'group': 'str',
+        'command_args': 'str'
     }
 
     attribute_map = {
         'enterprise': 'enterprise',
-        'group': 'group'
+        'group': 'group',
+        'command_args': 'command_args'
     }
 
-    def __init__(self, enterprise=None, group=None):  # noqa: E501
+    def __init__(self, enterprise=None, group=None, command_args=None):  # noqa: E501
         """GroupCommandRequest - a model defined in Swagger"""  # noqa: E501
 
         self._enterprise = None
         self._group = None
+        self._command_args = None
         self.discriminator = None
 
         self.enterprise = enterprise
         self.group = group
+        if command_args is not None:
+            self.command_args = command_args
 
     @property
     def enterprise(self):
@@ -95,6 +100,27 @@ class GroupCommandRequest(object):
             raise ValueError("Invalid value for `group`, must not be `None`")  # noqa: E501
 
         self._group = group
+
+    @property
+    def command_args(self):
+        """Gets the command_args of this GroupCommandRequest.  # noqa: E501
+
+
+        :return: The command_args of this GroupCommandRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._command_args
+
+    @command_args.setter
+    def command_args(self, command_args):
+        """Sets the command_args of this GroupCommandRequest.
+
+
+        :param command_args: The command_args of this GroupCommandRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._command_args = command_args
 
     def to_dict(self):
         """Returns the model properties as a dict"""
