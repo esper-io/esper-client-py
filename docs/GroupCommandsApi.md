@@ -24,8 +24,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.GroupCommandsApi()
+api_instance = esperclient.GroupCommandsApi(esperclient.ApiClient(configuration))
 command_id = 'command_id_example' # str | A UUID string identifying this device group command.
 
 try:
@@ -48,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -72,8 +77,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.GroupCommandsApi()
+api_instance = esperclient.GroupCommandsApi(esperclient.ApiClient(configuration))
 data = esperclient.GroupCommandRequest() # GroupCommandRequest | 
 
 try:
@@ -96,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -120,8 +130,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.GroupCommandsApi()
+api_instance = esperclient.GroupCommandsApi(esperclient.ApiClient(configuration))
 data = esperclient.GroupCommandRequest() # GroupCommandRequest | 
 
 try:
@@ -144,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 

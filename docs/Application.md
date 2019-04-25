@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**version** | [**AppVersion**](AppVersion.md) |  | [optional] 
+**versions** | [**list[ApplicationVersion]**](ApplicationVersion.md) |  | [optional] 
 **application_name** | **str** |  | 
 **package_name** | **str** |  | 
 **developer** | **str** |  | [optional] 

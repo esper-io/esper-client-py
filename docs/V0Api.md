@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_device_command**](V0Api.md#get_device_command) | **GET** /v0/device-command/{command_id}/ | Get command information
 [**get_group_command**](V0Api.md#get_group_command) | **GET** /v0/group-command/{command_id}/ | Get command information
+[**install_device_app**](V0Api.md#install_device_app) | **POST** /v0/device-command/install/ | Install an app on device
 [**lock_device**](V0Api.md#lock_device) | **POST** /v0/device-command/lock/ | Lock a device
 [**lock_group**](V0Api.md#lock_group) | **POST** /v0/group-command/lock/ | Lock devices in a group
 [**reboot_device**](V0Api.md#reboot_device) | **POST** /v0/device-command/reboot/ | Reboot a device
@@ -75,8 +76,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.V0Api()
+api_instance = esperclient.V0Api(esperclient.ApiClient(configuration))
 command_id = 'command_id_example' # str | A UUID string identifying this device group command.
 
 try:
@@ -99,7 +105,60 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **install_device_app**
+> DeviceCommand install_device_app(data)
+
+Install an app on device
+
+Creates DeviceCommand instance
+
+### Example
+```python
+from __future__ import print_function
+import time
+import esperclient
+from esperclient.rest import ApiException
+from pprint import pprint
+
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = esperclient.V0Api(esperclient.ApiClient(configuration))
+data = esperclient.DeviceCommandRequest() # DeviceCommandRequest | 
+
+try:
+    # Install an app on device
+    api_response = api_instance.install_device_app(data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling V0Api->install_device_app: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**DeviceCommandRequest**](DeviceCommandRequest.md)|  | 
+
+### Return type
+
+[**DeviceCommand**](DeviceCommand.md)
+
+### Authorization
+
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -123,8 +182,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.V0Api()
+api_instance = esperclient.V0Api(esperclient.ApiClient(configuration))
 data = esperclient.DeviceCommandRequest() # DeviceCommandRequest | 
 
 try:
@@ -147,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -171,8 +235,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.V0Api()
+api_instance = esperclient.V0Api(esperclient.ApiClient(configuration))
 data = esperclient.GroupCommandRequest() # GroupCommandRequest | 
 
 try:
@@ -195,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -219,8 +288,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.V0Api()
+api_instance = esperclient.V0Api(esperclient.ApiClient(configuration))
 data = esperclient.DeviceCommandRequest() # DeviceCommandRequest | 
 
 try:
@@ -243,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -267,8 +341,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.V0Api()
+api_instance = esperclient.V0Api(esperclient.ApiClient(configuration))
 data = esperclient.GroupCommandRequest() # GroupCommandRequest | 
 
 try:
@@ -291,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 

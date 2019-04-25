@@ -1,10 +1,10 @@
 Esper Manage python SDK
 ==================
 
-# Introduction Esper Manage APIs 
+# Introduction Esper Manage APIs for Cloud are a set of REST-based APIs that help you programmatically control and monitor your enterprise's dedicated Esper endpoint. Using these APIs, one can orchestrate & manage devices that have been provisioned against your endpoint. Furthermore, this API allows you to manage android applications that get installed on such devices. To read more about the various capabilities of Esper endpoints and Esper managed devices, please visit [esper.io](https://esper.io). This guide describes all the available APIs in detail, along with code samples for you to quickly ramp up to using them.  You can find out more about Esper at [https://esper.io](https://esper.io)  We've done our best to keep this document up to date, but if you find any issues, please reach out to us at developer@esper.io.  # SDK    You are welcome to use your favorite HTTP/REST library for your programming language in order to use these APIs, or you can use our official SDK (currently available in [python](https://github.com/esper-io/esper-client-py)) to do so.   # Authentication Client needs to send authentication details to access APIs. Following authentication schemes are supported:  #### Basic Authentication Client can use username and password to authenticate. These are your developer account credentials. For example, the client sends HTTP requests with the Authorization header that contains the word `Basic` followed by a space and a base64-encoded string `username:password`. ##### Base64 encoding Bash  ``` echo 'username:password' | base64 ```  Powershell  ``` [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes(\"username:password\")) ```  **Example request** ```bash curl -X GET \\   https://DOMAIN.shoonyacloud.com/api/enterprise/<enterprise_id>/device/ \\   -H 'Authorization: Basic cl0ZWFkbWluOnNpdG1pbjEyMyQ=' \\   -H 'Content-Type: application/json' \\ ``` You can read more about basic authentication scheme  [here](https://swagger.io/docs/specification/authentication/basic-authentication/)  # Errors The API uses standard HTTP status codes to indicate success or failure. All error responses will have a JSON body in the following format  ``` {   \"errors\": [],   \"message\": \"error message\",   \"status\": 400 } ``` * `errors` -  List of error details * `message` - Error description * `status` - HTTP status code 
 
 - API version: 1.0.0
-- Package version: 0.0.3
+- Package version: 0.0.4
 
 
 ## Requirements.
@@ -55,6 +55,12 @@ from __future__ import print_function
 import esperclient
 from esperclient.rest import ApiException
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
 api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 application_id = 'application_id_example' # str | A UUID string identifying this application.
@@ -88,6 +94,7 @@ Class | Method | HTTP request
 *DeviceAppApi* | [**device_app_install_list**](docs/DeviceAppApi.md#device_app_install_list) | **GET** /enterprise/{enterprise_id}/device/{device_id}/install/
 *DeviceAppApi* | [**device_app_list**](docs/DeviceAppApi.md#device_app_list) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/
 *DeviceCommandsApi* | [**get_device_command**](docs/DeviceCommandsApi.md#get_device_command) | **GET** /v0/device-command/{command_id}/
+*DeviceCommandsApi* | [**install_device_app**](docs/DeviceCommandsApi.md#install_device_app) | **POST** /v0/device-command/install/
 *DeviceCommandsApi* | [**lock_device**](docs/DeviceCommandsApi.md#lock_device) | **POST** /v0/device-command/lock/
 *DeviceCommandsApi* | [**reboot_device**](docs/DeviceCommandsApi.md#reboot_device) | **POST** /v0/device-command/reboot/
 *DeviceGroupApi* | [**create_group**](docs/DeviceGroupApi.md#create_group) | **POST** /enterprise/{enterprise_id}/devicegroup/
@@ -111,6 +118,7 @@ Class | Method | HTTP request
 *PolicyApi* | [**update_policy**](docs/PolicyApi.md#update_policy) | **PUT** /enterprise/{enterprise_id}/policy/{policy_id}/
 *V0Api* | [**get_device_command**](docs/V0Api.md#get_device_command) | **GET** /v0/device-command/{command_id}/
 *V0Api* | [**get_group_command**](docs/V0Api.md#get_group_command) | **GET** /v0/group-command/{command_id}/
+*V0Api* | [**install_device_app**](docs/V0Api.md#install_device_app) | **POST** /v0/device-command/install/
 *V0Api* | [**lock_device**](docs/V0Api.md#lock_device) | **POST** /v0/device-command/lock/
 *V0Api* | [**lock_group**](docs/V0Api.md#lock_group) | **POST** /v0/group-command/lock/
 *V0Api* | [**reboot_device**](docs/V0Api.md#reboot_device) | **POST** /v0/device-command/reboot/
@@ -123,6 +131,7 @@ Class | Method | HTTP request
  - [AppPermission](docs/AppPermission.md)
  - [AppVersion](docs/AppVersion.md)
  - [Application](docs/Application.md)
+ - [ApplicationVersion](docs/ApplicationVersion.md)
  - [Device](docs/Device.md)
  - [DeviceApp](docs/DeviceApp.md)
  - [DeviceAppPermission](docs/DeviceAppPermission.md)

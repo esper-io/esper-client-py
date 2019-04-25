@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "esperclient"
-VERSION = "0.0.3"
+VERSION = "0.0.4"
 # To install the library, run the following
 #
 # python setup.py install
@@ -46,7 +46,7 @@ setup(
     Python client library for Esper Manage APIs. You can find out more about Esper at https://shoonya.io.
 
     - API version: 1.0.0
-    - Package version: 0.0.3
+    - Package version: 0.0.4
 
     For usage instructions and API documentation please visit: https://github.com/esper-io/esper-client-py
 

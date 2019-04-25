@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from esperclient.models.app_version import AppVersion  # noqa: F401,E501
+from esperclient.models.application_version import ApplicationVersion  # noqa: F401,E501
 
 
 class Application(object):
@@ -34,7 +34,7 @@ class Application(object):
     """
     swagger_types = {
         'id': 'str',
-        'version': 'AppVersion',
+        'versions': 'list[ApplicationVersion]',
         'application_name': 'str',
         'package_name': 'str',
         'developer': 'str',
@@ -50,7 +50,7 @@ class Application(object):
 
     attribute_map = {
         'id': 'id',
-        'version': 'version',
+        'versions': 'versions',
         'application_name': 'application_name',
         'package_name': 'package_name',
         'developer': 'developer',
@@ -64,11 +64,11 @@ class Application(object):
         'enterprise': 'enterprise'
     }
 
-    def __init__(self, id=None, version=None, application_name=None, package_name=None, developer=None, category=None, content_rating=None, compatibility=None, created_on=None, updated_on=None, is_active=None, is_hidden=None, enterprise=None):  # noqa: E501
+    def __init__(self, id=None, versions=None, application_name=None, package_name=None, developer=None, category=None, content_rating=None, compatibility=None, created_on=None, updated_on=None, is_active=None, is_hidden=None, enterprise=None):  # noqa: E501
         """Application - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._version = None
+        self._versions = None
         self._application_name = None
         self._package_name = None
         self._developer = None
@@ -84,8 +84,8 @@ class Application(object):
 
         if id is not None:
             self.id = id
-        if version is not None:
-            self.version = version
+        if versions is not None:
+            self.versions = versions
         self.application_name = application_name
         self.package_name = package_name
         if developer is not None:
@@ -128,25 +128,25 @@ class Application(object):
         self._id = id
 
     @property
-    def version(self):
-        """Gets the version of this Application.  # noqa: E501
+    def versions(self):
+        """Gets the versions of this Application.  # noqa: E501
 
 
-        :return: The version of this Application.  # noqa: E501
-        :rtype: AppVersion
+        :return: The versions of this Application.  # noqa: E501
+        :rtype: list[ApplicationVersion]
         """
-        return self._version
+        return self._versions
 
-    @version.setter
-    def version(self, version):
-        """Sets the version of this Application.
+    @versions.setter
+    def versions(self, versions):
+        """Sets the versions of this Application.
 
 
-        :param version: The version of this Application.  # noqa: E501
-        :type: AppVersion
+        :param versions: The versions of this Application.  # noqa: E501
+        :type: list[ApplicationVersion]
         """
 
-        self._version = version
+        self._versions = versions
 
     @property
     def application_name(self):

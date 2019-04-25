@@ -32,23 +32,28 @@ class DeviceCommandRequest(object):
     """
     swagger_types = {
         'enterprise': 'str',
-        'device': 'str'
+        'device': 'str',
+        'command_args': 'str'
     }
 
     attribute_map = {
         'enterprise': 'enterprise',
-        'device': 'device'
+        'device': 'device',
+        'command_args': 'command_args'
     }
 
-    def __init__(self, enterprise=None, device=None):  # noqa: E501
+    def __init__(self, enterprise=None, device=None, command_args=None):  # noqa: E501
         """DeviceCommandRequest - a model defined in Swagger"""  # noqa: E501
 
         self._enterprise = None
         self._device = None
+        self._command_args = None
         self.discriminator = None
 
         self.enterprise = enterprise
         self.device = device
+        if command_args is not None:
+            self.command_args = command_args
 
     @property
     def enterprise(self):
@@ -95,6 +100,27 @@ class DeviceCommandRequest(object):
             raise ValueError("Invalid value for `device`, must not be `None`")  # noqa: E501
 
         self._device = device
+
+    @property
+    def command_args(self):
+        """Gets the command_args of this DeviceCommandRequest.  # noqa: E501
+
+
+        :return: The command_args of this DeviceCommandRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._command_args
+
+    @command_args.setter
+    def command_args(self, command_args):
+        """Sets the command_args of this DeviceCommandRequest.
+
+
+        :param command_args: The command_args of this DeviceCommandRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._command_args = command_args
 
     def to_dict(self):
         """Returns the model properties as a dict"""

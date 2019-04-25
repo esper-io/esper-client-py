@@ -36,6 +36,7 @@ from esperclient.models.app_install_state_enum import AppInstallStateEnum
 from esperclient.models.app_permission import AppPermission
 from esperclient.models.app_version import AppVersion
 from esperclient.models.application import Application
+from esperclient.models.application_version import ApplicationVersion
 from esperclient.models.device import Device
 from esperclient.models.device_app import DeviceApp
 from esperclient.models.device_app_permission import DeviceAppPermission

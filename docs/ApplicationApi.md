@@ -27,8 +27,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.ApplicationApi()
+api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 application_id = 'application_id_example' # str | A UUID string identifying this application.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 
@@ -52,7 +57,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -127,8 +132,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.ApplicationApi()
+api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 application_id = 'application_id_example' # str | A UUID string identifying this application.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 
@@ -153,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -177,8 +187,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.ApplicationApi()
+api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 version_id = 'version_id_example' # str | A UUID string identifying this app version.
 application_id = 'application_id_example' # str | A UUID string identifying this application.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
@@ -205,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -229,8 +244,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.ApplicationApi()
+api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 application_id = 'application_id_example' # str | A UUID string identifying this application.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 version_code = 'version_code_example' # str | filter by version code (optional)
@@ -263,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 
@@ -287,8 +307,13 @@ import esperclient
 from esperclient.rest import ApiException
 from pprint import pprint
 
+# Configure HTTP basic authorization: basic_security
+configuration = esperclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
 # create an instance of the API class
-api_instance = esperclient.ApplicationApi()
+api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
 application_name = 'application_name_example' # str | filter by application name (optional)
 package_name = 'package_name_example' # str | filter by package name (optional)
@@ -319,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basic_security](../README.md#basic_security)
 
 ### HTTP request headers
 

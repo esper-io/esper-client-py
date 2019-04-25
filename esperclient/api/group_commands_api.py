@@ -110,7 +110,7 @@ class GroupCommandsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['basic_security']  # noqa: E501
 
         return self.api_client.call_api(
             '/v0/group-command/{command_id}/', 'GET',
@@ -205,7 +205,7 @@ class GroupCommandsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['basic_security']  # noqa: E501
 
         return self.api_client.call_api(
             '/v0/group-command/lock/', 'POST',
@@ -300,7 +300,7 @@ class GroupCommandsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['basic_security']  # noqa: E501
 
         return self.api_client.call_api(
             '/v0/group-command/reboot/', 'POST',
