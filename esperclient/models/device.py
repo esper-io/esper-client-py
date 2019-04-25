@@ -33,6 +33,7 @@ class Device(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'url': 'str',
         'device_name': 'str',
         'policy_name': 'str',
@@ -63,6 +64,7 @@ class Device(object):
     }
 
     attribute_map = {
+        'id': 'id',
         'url': 'url',
         'device_name': 'device_name',
         'policy_name': 'policy_name',
@@ -92,9 +94,10 @@ class Device(object):
         'is_active': 'is_active'
     }
 
-    def __init__(self, url=None, device_name=None, policy_name=None, status=None, state=None, current_command=None, suid=None, fcm_id=None, enterprise=None, policy=None, user=None, groups=None, api_level=None, template_name=None, mqtt_id=None, software_info=None, hardware_info=None, displays=None, network_info=None, memory_info=None, audio_constraints=None, provisioned_on=None, created_on=None, updated_on=None, emm_device=None, is_gms=True, is_active=True):  # noqa: E501
+    def __init__(self, id=None, url=None, device_name=None, policy_name=None, status=None, state=None, current_command=None, suid=None, fcm_id=None, enterprise=None, policy=None, user=None, groups=None, api_level=None, template_name=None, mqtt_id=None, software_info=None, hardware_info=None, displays=None, network_info=None, memory_info=None, audio_constraints=None, provisioned_on=None, created_on=None, updated_on=None, emm_device=None, is_gms=True, is_active=True):  # noqa: E501
         """Device - a model defined in Swagger"""  # noqa: E501
 
+        self._id = None
         self._url = None
         self._device_name = None
         self._policy_name = None
@@ -124,6 +127,8 @@ class Device(object):
         self._is_active = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
         if url is not None:
             self.url = url
         if device_name is not None:
@@ -178,6 +183,27 @@ class Device(object):
             self.is_gms = is_gms
         if is_active is not None:
             self.is_active = is_active
+
+    @property
+    def id(self):
+        """Gets the id of this Device.  # noqa: E501
+
+
+        :return: The id of this Device.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Device.
+
+
+        :param id: The id of this Device.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def url(self):

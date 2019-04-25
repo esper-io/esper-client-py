@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **device_name** | **str** |  | [optional] 
 **policy_name** | **str** |  | [optional] 

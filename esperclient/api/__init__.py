@@ -4,6 +4,7 @@ from __future__ import absolute_import
 
 # import apis into api package
 from esperclient.api.application_api import ApplicationApi
+from esperclient.api.commands_api import CommandsApi
 from esperclient.api.device_api import DeviceApi
 from esperclient.api.device_app_api import DeviceAppApi
 from esperclient.api.device_commands_api import DeviceCommandsApi

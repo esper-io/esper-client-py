@@ -1,6 +1,6 @@
 # esperclient.CommandsApi
 
-All URIs are relative to *https://demo.esper.io/api*
+All URIs are relative to *https://DOMAIN.shoonyacloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **run_command**
-> DeviceCommandResponse run_command(enterprise_id, device_id, command)
+> DeviceCommand run_command(enterprise_id, device_id, command)
 
 Run commands on device
 
@@ -31,7 +31,7 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = esperclient.CommandsApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
 device_id = 'device_id_example' # str | ID of the device
-command = esperclient.DeviceCommandRequest() # DeviceCommandRequest | command name to fire
+command = esperclient.CommandRequest() # CommandRequest | command name to fire
 
 try:
     # Run commands on device
@@ -47,11 +47,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | [**str**](.md)| ID of the enterprise | 
  **device_id** | [**str**](.md)| ID of the device | 
- **command** | [**DeviceCommandRequest**](DeviceCommandRequest.md)| command name to fire | 
+ **command** | [**CommandRequest**](CommandRequest.md)| command name to fire | 
 
 ### Return type
 
-[**DeviceCommandResponse**](DeviceCommandResponse.md)
+[**DeviceCommand**](DeviceCommand.md)
 
 ### Authorization
 

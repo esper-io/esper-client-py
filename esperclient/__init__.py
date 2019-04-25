@@ -17,6 +17,7 @@ from __future__ import absolute_import
 
 # import apis into sdk package
 from esperclient.api.application_api import ApplicationApi
+from esperclient.api.commands_api import CommandsApi
 from esperclient.api.device_api import DeviceApi
 from esperclient.api.device_app_api import DeviceAppApi
 from esperclient.api.device_commands_api import DeviceCommandsApi
@@ -37,6 +38,7 @@ from esperclient.models.app_permission import AppPermission
 from esperclient.models.app_version import AppVersion
 from esperclient.models.application import Application
 from esperclient.models.application_version import ApplicationVersion
+from esperclient.models.command_request import CommandRequest
 from esperclient.models.device import Device
 from esperclient.models.device_app import DeviceApp
 from esperclient.models.device_app_permission import DeviceAppPermission
