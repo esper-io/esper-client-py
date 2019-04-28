@@ -1,4 +1,7 @@
 # DeviceCustomGroup
+> esperclient.models.device_custom_group
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

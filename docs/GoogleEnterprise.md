@@ -1,4 +1,7 @@
 # GoogleEnterprise
+> esperclient.models.google_enterprise
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

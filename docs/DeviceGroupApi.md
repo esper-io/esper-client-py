@@ -21,11 +21,8 @@ Returns EnterpriseDeviceGroup instance
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
 
 # create an instance of the API class
 api_instance = esperclient.DeviceGroupApi()
@@ -35,7 +32,7 @@ data = esperclient.EnterpriseDeviceGroup() # EnterpriseDeviceGroup |
 try:
     # Create a device group
     api_response = api_instance.create_group(enterprise_id, data)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceGroupApi->create_group: %s\n" % e)
 ```
@@ -71,14 +68,17 @@ Emtpy response
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.DeviceGroupApi()
+api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
 group_id = 'group_id_example' # str | A UUID string identifying this enterprise device group.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 
@@ -102,7 +102,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -120,14 +120,17 @@ Returns EnterpriseDeviceGroup list
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.DeviceGroupApi()
+api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 name = 'name_example' # str | filter by group name (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
@@ -136,7 +139,7 @@ offset = 56 # int | The initial index from which to return the results. (optiona
 try:
     # List device groups
     api_response = api_instance.get_all_groups(enterprise_id, name=name, limit=limit, offset=offset)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceGroupApi->get_all_groups: %s\n" % e)
 ```
@@ -156,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -174,21 +177,24 @@ Returns EnterpriseDeviceGroup instance
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.DeviceGroupApi()
+api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
 group_id = 'group_id_example' # str | A UUID string identifying this enterprise device group.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 
 try:
     # Get device group information
     api_response = api_instance.get_group_by_id(group_id, enterprise_id)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceGroupApi->get_group_by_id: %s\n" % e)
 ```
@@ -206,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -224,14 +230,17 @@ Returns EnterpriseDeviceGroup instance
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.DeviceGroupApi()
+api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
 group_id = 'group_id_example' # str | A UUID string identifying this enterprise device group.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 data = esperclient.EnterpriseDeviceGroup() # EnterpriseDeviceGroup | 
@@ -239,7 +248,7 @@ data = esperclient.EnterpriseDeviceGroup() # EnterpriseDeviceGroup |
 try:
     # Partial update group
     api_response = api_instance.partial_update_group(group_id, enterprise_id, data)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceGroupApi->partial_update_group: %s\n" % e)
 ```
@@ -258,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -276,14 +285,17 @@ Returns EnterpriseDeviceGroup instance
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.DeviceGroupApi()
+api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
 group_id = 'group_id_example' # str | A UUID string identifying this enterprise device group.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 data = esperclient.EnterpriseDeviceGroup() # EnterpriseDeviceGroup | 
@@ -291,7 +303,7 @@ data = esperclient.EnterpriseDeviceGroup() # EnterpriseDeviceGroup |
 try:
     # Update device group
     api_response = api_instance.update_group(group_id, enterprise_id, data)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceGroupApi->update_group: %s\n" % e)
 ```
@@ -310,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 

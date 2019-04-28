@@ -1,4 +1,7 @@
 # InlineResponse2007
+> esperclient.models.inline_response2007
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

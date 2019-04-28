@@ -1,4 +1,7 @@
 # CommandRequest
+> esperclient.models.command_request
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

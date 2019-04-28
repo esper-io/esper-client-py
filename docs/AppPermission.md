@@ -1,4 +1,7 @@
 # AppPermission
+> esperclient.models.app_permission
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

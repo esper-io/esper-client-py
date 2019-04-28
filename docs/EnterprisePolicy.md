@@ -1,4 +1,7 @@
 # EnterprisePolicy
+> esperclient.models.enterprise_policy
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

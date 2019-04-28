@@ -1,4 +1,7 @@
 # EmmDevice
+> esperclient.models.emm_device
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

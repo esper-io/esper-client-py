@@ -1,4 +1,7 @@
 # DeviceAppPermission
+> esperclient.models.device_app_permission
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

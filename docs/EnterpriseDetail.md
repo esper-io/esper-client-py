@@ -1,4 +1,7 @@
 # EnterpriseDetail
+> esperclient.models.enterprise_detail
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

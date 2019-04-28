@@ -1,4 +1,9 @@
 # UnauthorizedResponse
+> esperclient.models.unauthorized_response
+
+### Description
+
+Represents an authorization error
 
 ## Properties
 Name | Type | Description | Notes

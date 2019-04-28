@@ -1,10 +1,13 @@
 # ApplicationVersion
+> esperclient.models.application_version
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**version_code** | **str** |  | 
+**version_code** | **str** |  | [optional] 
 **build_number** | **str** |  | [optional] 
 **hash_string** | **str** |  | [optional] 
 **min_sdk_version** | **str** |  | [optional] 

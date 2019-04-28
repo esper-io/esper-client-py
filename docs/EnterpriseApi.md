@@ -18,19 +18,22 @@ Returns Enterprise list
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.EnterpriseApi()
+api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
 
 try:
     # List all enterprises
     api_response = api_instance.get_all_enterprises()
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling EnterpriseApi->get_all_enterprises: %s\n" % e)
 ```
@@ -44,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -62,20 +65,23 @@ Returns Enterprise instance
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.EnterpriseApi()
+api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
 
 try:
     # Get your enteprise information
     api_response = api_instance.get_enterprise(enterprise_id)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling EnterpriseApi->get_enterprise: %s\n" % e)
 ```
@@ -92,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -110,21 +116,24 @@ Returns updated enterprise
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.EnterpriseApi()
+api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
 data = esperclient.Enterprise() # Enterprise | 
 
 try:
     # Partial update enterprise information
     api_response = api_instance.partial_update_enterprise(enterprise_id, data)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling EnterpriseApi->partial_update_enterprise: %s\n" % e)
 ```
@@ -142,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 

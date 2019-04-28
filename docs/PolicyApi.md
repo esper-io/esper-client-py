@@ -21,21 +21,24 @@ Return EnterprisePolicy instance
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.PolicyApi()
+api_instance = esperclient.PolicyApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 data = esperclient.EnterprisePolicy() # EnterprisePolicy | 
 
 try:
     # Create a policy
     api_response = api_instance.create_policy(enterprise_id, data)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling PolicyApi->create_policy: %s\n" % e)
 ```
@@ -53,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -71,14 +74,17 @@ Empty response
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.PolicyApi()
+api_instance = esperclient.PolicyApi(esperclient.ApiClient(configuration))
 policy_id = 56 # int | A unique integer value identifying this enterprise policy.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 
@@ -102,7 +108,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -120,14 +126,17 @@ Returns EnterprisePolicy list
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.PolicyApi()
+api_instance = esperclient.PolicyApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 name = 'name_example' # str | filter by name (starts with) (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
@@ -136,7 +145,7 @@ offset = 56 # int | The initial index from which to return the results. (optiona
 try:
     # List enterprise policies
     api_response = api_instance.get_all_policies(enterprise_id, name=name, limit=limit, offset=offset)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling PolicyApi->get_all_policies: %s\n" % e)
 ```
@@ -156,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -174,21 +183,24 @@ Returns EnterprisePolicy instance
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.PolicyApi()
+api_instance = esperclient.PolicyApi(esperclient.ApiClient(configuration))
 policy_id = 56 # int | A unique integer value identifying this enterprise policy.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 
 try:
     # Get policy details
     api_response = api_instance.get_policy_by_id(policy_id, enterprise_id)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling PolicyApi->get_policy_by_id: %s\n" % e)
 ```
@@ -206,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -224,14 +236,17 @@ Returns updated policy
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.PolicyApi()
+api_instance = esperclient.PolicyApi(esperclient.ApiClient(configuration))
 policy_id = 56 # int | A unique integer value identifying this enterprise policy.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 data = esperclient.EnterprisePolicy() # EnterprisePolicy | 
@@ -239,7 +254,7 @@ data = esperclient.EnterprisePolicy() # EnterprisePolicy |
 try:
     # Partial update policy
     api_response = api_instance.partial_update_policy(policy_id, enterprise_id, data)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling PolicyApi->partial_update_policy: %s\n" % e)
 ```
@@ -258,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -276,14 +291,17 @@ Returns updated policy
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.PolicyApi()
+api_instance = esperclient.PolicyApi(esperclient.ApiClient(configuration))
 policy_id = 56 # int | A unique integer value identifying this enterprise policy.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 data = esperclient.EnterprisePolicy() # EnterprisePolicy | 
@@ -291,7 +309,7 @@ data = esperclient.EnterprisePolicy() # EnterprisePolicy |
 try:
     # Update/Replace information
     api_response = api_instance.update_policy(policy_id, enterprise_id, data)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling PolicyApi->update_policy: %s\n" % e)
 ```
@@ -310,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 

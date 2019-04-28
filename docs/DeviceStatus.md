@@ -1,4 +1,7 @@
 # DeviceStatus
+> esperclient.models.device_status
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

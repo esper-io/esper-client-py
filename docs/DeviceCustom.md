@@ -1,4 +1,7 @@
 # DeviceCustom
+> esperclient.models.device_custom
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

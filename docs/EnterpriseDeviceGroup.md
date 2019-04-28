@@ -1,4 +1,7 @@
 # EnterpriseDeviceGroup
+> esperclient.models.enterprise_device_group
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

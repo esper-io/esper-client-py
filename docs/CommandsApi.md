@@ -16,16 +16,14 @@ Fire commands on device like lock, ping etc
 
 ### Example
 ```python
-from __future__ import print_function
-import time
 import esperclient
 from esperclient.rest import ApiException
-from pprint import pprint
 
-# Configure HTTP basic authorization: basic_security
+# Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.CommandsApi(esperclient.ApiClient(configuration))
@@ -36,7 +34,7 @@ command = esperclient.CommandRequest() # CommandRequest | command name to fire
 try:
     # Run commands on device
     api_response = api_instance.run_command(enterprise_id, device_id, command)
-    pprint(api_response)
+    print(api_response)
 except ApiException as e:
     print("Exception when calling CommandsApi->run_command: %s\n" % e)
 ```
@@ -55,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_security](../README.md#basic_security)
+[apiKey](../README.md#apiKey)
 
 ### HTTP request headers
 

@@ -1,4 +1,7 @@
 # AppVersion
+> esperclient.models.app_version
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

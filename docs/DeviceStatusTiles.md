@@ -1,4 +1,7 @@
 # DeviceStatusTiles
+> esperclient.models.device_status_tiles
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

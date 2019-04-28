@@ -1,4 +1,7 @@
 # DeviceApp
+> esperclient.models.device_app
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes

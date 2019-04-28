@@ -1,4 +1,7 @@
 # AppInstall
+> esperclient.models.app_install
+
+### Description
 
 ## Properties
 Name | Type | Description | Notes
