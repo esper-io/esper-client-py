@@ -40,15 +40,6 @@ python setup.py install
 
 ## Getting Started
 
-Please follow the [installation procedure](#installation--usage):
-
-Then import the package:
-```python
-import esperclient
-```
-
-## Getting Started
-
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
