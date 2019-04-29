@@ -7,7 +7,7 @@ OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
 ---------------------------------------------------------
 
-Copyright 2019 Esper, Inc.
+Copyright 2019 Shoonya Enterprises Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
