@@ -3,7 +3,8 @@
 
 ### Description
 
- * REBOOT: Reboot device * LOCK:  Lock device screen * INSTALL:  Install an app on device 
+Command Options 
+``` * REBOOT: Reboot device * LOCK:  Lock device screen * INSTALL:  Install an app on device ``` 
 
 ## Properties
 Name | Type

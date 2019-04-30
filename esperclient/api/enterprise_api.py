@@ -133,7 +133,7 @@ class EnterpriseApi(object):
             collection_formats=collection_formats)
 
     def get_enterprise(self, enterprise_id, **kwargs):
-        """Get your enteprise information
+        """Get your enterprise information
 
         Returns Enterprise instance
         This method makes a synchronous HTTP request by default. To make an
@@ -155,7 +155,7 @@ class EnterpriseApi(object):
             return data
 
     def get_enterprise_with_http_info(self, enterprise_id, **kwargs):
-        """Get your enteprise information
+        """Get your enterprise information
 
         Returns Enterprise instance
         This method makes a synchronous HTTP request by default. To make an

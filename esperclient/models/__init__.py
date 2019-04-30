@@ -28,7 +28,9 @@ from __future__ import absolute_import
 
 # import models into model package
 from esperclient.models.app_install import AppInstall
+from esperclient.models.app_install_application import AppInstallApplication
 from esperclient.models.app_install_state_enum import AppInstallStateEnum
+from esperclient.models.app_install_version import AppInstallVersion
 from esperclient.models.app_permission import AppPermission
 from esperclient.models.app_version import AppVersion
 from esperclient.models.application import Application
@@ -60,4 +62,3 @@ from esperclient.models.inline_response2006 import InlineResponse2006
 from esperclient.models.inline_response2007 import InlineResponse2007
 from esperclient.models.inline_response2008 import InlineResponse2008
 from esperclient.models.inline_response201 import InlineResponse201
-from esperclient.models.unauthorized_response import UnauthorizedResponse

@@ -108,6 +108,8 @@ Class | Method | HTTP request
 ## Documentation For Models
 
  - [AppInstall](docs/AppInstall.md)
+ - [AppInstallApplication](docs/AppInstallApplication.md)
+ - [AppInstallVersion](docs/AppInstallVersion.md)
  - [AppPermission](docs/AppPermission.md)
  - [AppVersion](docs/AppVersion.md)
  - [Application](docs/Application.md)
@@ -137,7 +139,6 @@ Class | Method | HTTP request
  - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse201](docs/InlineResponse201.md)
- - [UnauthorizedResponse](docs/UnauthorizedResponse.md)
 
 
 ## Documentation For Enums

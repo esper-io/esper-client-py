@@ -29,6 +29,7 @@ import re  # noqa: F401
 
 import six
 
+from esperclient.models.app_install_application import AppInstallApplication  # noqa: F401,E501
 from esperclient.models.app_install_state_enum import AppInstallStateEnum  # noqa: F401,E501
 
 
@@ -47,7 +48,7 @@ class AppInstall(object):
     """
     swagger_types = {
         'id': 'str',
-        'application': 'str',
+        'application': 'AppInstallApplication',
         'install_state': 'AppInstallStateEnum',
         'reason_details': 'str',
         'created_on': 'datetime',
@@ -125,7 +126,7 @@ class AppInstall(object):
 
 
         :return: The application of this AppInstall.  # noqa: E501
-        :rtype: str
+        :rtype: AppInstallApplication
         """
         return self._application
 
@@ -135,7 +136,7 @@ class AppInstall(object):
 
 
         :param application: The application of this AppInstall.  # noqa: E501
-        :type: str
+        :type: AppInstallApplication
         """
         if application is None:
             raise ValueError("Invalid value for `application`, must not be `None`")  # noqa: E501

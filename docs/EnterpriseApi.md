@@ -5,7 +5,7 @@ All URIs are relative to *https://DOMAIN.shoonyacloud.com/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_enterprises**](EnterpriseApi.md#get_all_enterprises) | **GET** /enterprise/ | List all enterprises
-[**get_enterprise**](EnterpriseApi.md#get_enterprise) | **GET** /enterprise/{enterprise_id}/ | Get your enteprise information
+[**get_enterprise**](EnterpriseApi.md#get_enterprise) | **GET** /enterprise/{enterprise_id}/ | Get your enterprise information
 [**partial_update_enterprise**](EnterpriseApi.md#partial_update_enterprise) | **PATCH** /enterprise/{enterprise_id}/ | Partial update enterprise information
 
 
@@ -59,7 +59,7 @@ This endpoint does not need any parameter.
 # **get_enterprise**
 > Enterprise get_enterprise(enterprise_id)
 
-Get your enteprise information
+Get your enterprise information
 
 Returns Enterprise instance
 
@@ -79,7 +79,7 @@ api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
 
 try:
-    # Get your enteprise information
+    # Get your enterprise information
     api_response = api_instance.get_enterprise(enterprise_id)
     print(api_response)
 except ApiException as e:

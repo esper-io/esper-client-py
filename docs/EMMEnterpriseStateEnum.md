@@ -3,7 +3,7 @@
 
 ### Description
 
-EMM enterprise workflow state * UNSPECIFIED = 1 * BEGIN_SIGNUP = 2 * COMPLETE_SIGNUP = 3 * ENROLLED = 4 * UNENROLLED = 5 * ENROLL_FAILED = 10 
+EMM enterprise workflow state ``` * UNSPECIFIED = 1 * BEGIN_SIGNUP = 2 * COMPLETE_SIGNUP = 3 * ENROLLED = 4 * UNENROLLED = 5 * ENROLL_FAILED = 10 ``` 
 
 ## Properties
 Name | Type

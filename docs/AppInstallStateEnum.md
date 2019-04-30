@@ -3,7 +3,7 @@
 
 ### Description
 
-Device App Install State  * NOT_INSTALLED = \"Not Installed\"  * INSTALL_IN_PROGRESS = \"Installation In-Progress\"  * UNINSTALL_IN_PROGRESS = \"Uninstallation In-Progress\"  * INSTALL_SUCCESS = \"Install Success\"  * INSTALL_FAILED = \"Install Failed\"  * UNINSTALL_SUCCESS = \"Uninstall Success\"  * UNINSTALL_FAILED = \"Uninstall Failed\" 
+Device App Install State  ``` * NOT_INSTALLED = \"Not Installed\" * INSTALL_IN_PROGRESS = \"Installation In-Progress\" * UNINSTALL_IN_PROGRESS = \"Uninstallation In-Progress\" * INSTALL_SUCCESS = \"Install Success\" * INSTALL_FAILED = \"Install Failed\" * UNINSTALL_SUCCESS = \"Uninstall Success\" * UNINSTALL_FAILED = \"Uninstall Failed\" ``` 
 
 ## Properties
 Name | Type

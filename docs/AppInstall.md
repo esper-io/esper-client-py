@@ -7,7 +7,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**application** | **str** |  | 
+**application** | [**AppInstallApplication**](AppInstallApplication.md) |  | 
 **install_state** | [**AppInstallStateEnum**](AppInstallStateEnum.md) |  | 
 **reason_details** | **str** |  | [optional] 
 **created_on** | **datetime** |  | [optional] 
