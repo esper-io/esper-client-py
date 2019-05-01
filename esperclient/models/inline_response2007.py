@@ -29,7 +29,7 @@ import re  # noqa: F401
 
 import six
 
-from esperclient.models.enterprise_device_group import EnterpriseDeviceGroup  # noqa: F401,E501
+from esperclient.models.device_group import DeviceGroup  # noqa: F401,E501
 
 
 class InlineResponse2007(object):
@@ -49,7 +49,7 @@ class InlineResponse2007(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[EnterpriseDeviceGroup]'
+        'results': 'list[DeviceGroup]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class InlineResponse2007(object):
 
 
         :return: The results of this InlineResponse2007.  # noqa: E501
-        :rtype: list[EnterpriseDeviceGroup]
+        :rtype: list[DeviceGroup]
         """
         return self._results
 
@@ -156,7 +156,7 @@ class InlineResponse2007(object):
 
 
         :param results: The results of this InlineResponse2007.  # noqa: E501
-        :type: list[EnterpriseDeviceGroup]
+        :type: list[DeviceGroup]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501

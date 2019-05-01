@@ -1,5 +1,5 @@
-# EnterpriseDeviceGroup
-> esperclient.models.enterprise_device_group
+# DeviceGroup
+> esperclient.models.device_group
 
 ### Description
 
@@ -7,8 +7,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**device_ids** | **list[str]** |  | [optional] 
-**device_tiles** | [**list[DeviceStatusTiles]**](DeviceStatusTiles.md) |  | [optional] 
 **device_count** | **int** |  | [optional] 
 **name** | **str** |  | 
 **created_on** | **datetime** |  | [optional] 

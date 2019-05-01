@@ -56,8 +56,8 @@ class DeviceGroupApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterpriseDeviceGroup data: (required)
-        :return: EnterpriseDeviceGroup
+        :param DeviceGroup data: (required)
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -79,8 +79,8 @@ class DeviceGroupApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterpriseDeviceGroup data: (required)
-        :return: EnterpriseDeviceGroup
+        :param DeviceGroup data: (required)
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -130,7 +130,7 @@ class DeviceGroupApi(object):
             ['application/json'])
 
         # Authentication setting
-        auth_settings = []
+        auth_settings = ['apiKey']
 
         return self.api_client.call_api(
             '/enterprise/{enterprise_id}/devicegroup/', 'POST',
@@ -140,7 +140,7 @@ class DeviceGroupApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EnterpriseDeviceGroup',
+            response_type='DeviceGroup',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -370,7 +370,7 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :return: EnterpriseDeviceGroup
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -393,7 +393,7 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :return: EnterpriseDeviceGroup
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -453,7 +453,7 @@ class DeviceGroupApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EnterpriseDeviceGroup',
+            response_type='DeviceGroup',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -473,8 +473,8 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterpriseDeviceGroup data: (required)
-        :return: EnterpriseDeviceGroup
+        :param DeviceGroupUpdate data: (required)
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -497,8 +497,8 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterpriseDeviceGroup data: (required)
-        :return: EnterpriseDeviceGroup
+        :param DeviceGroupUpdate data: (required)
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -564,7 +564,7 @@ class DeviceGroupApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EnterpriseDeviceGroup',
+            response_type='DeviceGroup',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -584,8 +584,8 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterpriseDeviceGroup data: (required)
-        :return: EnterpriseDeviceGroup
+        :param DeviceGroupUpdate data: (required)
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -608,8 +608,8 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterpriseDeviceGroup data: (required)
-        :return: EnterpriseDeviceGroup
+        :param DeviceGroupUpdate data: (required)
+        :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -675,7 +675,7 @@ class DeviceGroupApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='EnterpriseDeviceGroup',
+            response_type='DeviceGroup',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

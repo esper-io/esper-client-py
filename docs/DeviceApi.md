@@ -26,7 +26,7 @@ from esperclient.rest import ApiException
 configuration = esperclient.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
@@ -85,7 +85,7 @@ from esperclient.rest import ApiException
 configuration = esperclient.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
@@ -150,7 +150,7 @@ from esperclient.rest import ApiException
 configuration = esperclient.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
@@ -203,13 +203,13 @@ from esperclient.rest import ApiException
 configuration = esperclient.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
 device_id = 'device_id_example' # str | A UUID string identifying device.
-latest_event = 8.14 # float | Flag to get latest event
+latest_event = 56 # int | Flag to get latest event
 
 try:
     # Get latest device event
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
  **device_id** | **str**| A UUID string identifying device. | 
- **latest_event** | **float**| Flag to get latest event | 
+ **latest_event** | **int**| Flag to get latest event | 
 
 ### Return type
 

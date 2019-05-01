@@ -51,7 +51,7 @@ configuration = esperclient.Configuration()
 configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
@@ -119,14 +119,12 @@ Class | Method | HTTP request
  - [DeviceApp](docs/DeviceApp.md)
  - [DeviceAppPermission](docs/DeviceAppPermission.md)
  - [DeviceCommand](docs/DeviceCommand.md)
- - [DeviceCustom](docs/DeviceCustom.md)
- - [DeviceCustomGroup](docs/DeviceCustomGroup.md)
+ - [DeviceGroup](docs/DeviceGroup.md)
+ - [DeviceGroupUpdate](docs/DeviceGroupUpdate.md)
  - [DeviceStatus](docs/DeviceStatus.md)
- - [DeviceStatusTiles](docs/DeviceStatusTiles.md)
  - [EmmDevice](docs/EmmDevice.md)
  - [Enterprise](docs/Enterprise.md)
  - [EnterpriseDetail](docs/EnterpriseDetail.md)
- - [EnterpriseDeviceGroup](docs/EnterpriseDeviceGroup.md)
  - [EnterprisePolicy](docs/EnterprisePolicy.md)
  - [GoogleEnterprise](docs/GoogleEnterprise.md)
  - [InlineResponse200](docs/InlineResponse200.md)

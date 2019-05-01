@@ -398,7 +398,7 @@ class DeviceApi(object):
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str device_id: A UUID string identifying device. (required)
-        :param float latest_event: Flag to get latest event (required)
+        :param int latest_event: Flag to get latest event (required)
         :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
@@ -422,7 +422,7 @@ class DeviceApi(object):
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str device_id: A UUID string identifying device. (required)
-        :param float latest_event: Flag to get latest event (required)
+        :param int latest_event: Flag to get latest event (required)
         :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.

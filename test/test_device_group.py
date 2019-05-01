@@ -29,12 +29,12 @@ from __future__ import absolute_import
 import unittest
 
 import esperclient
-from esperclient.models.device_custom import DeviceCustom
+from esperclient.models.device_group import DeviceGroup
 from esperclient.rest import ApiException
 
 
-class TestDeviceCustom(unittest.TestCase):
-    """DeviceCustom unit test stubs"""
+class TestDeviceGroup(unittest.TestCase):
+    """DeviceGroup unit test stubs"""
 
     def setUp(self):
         pass
@@ -42,9 +42,9 @@ class TestDeviceCustom(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDeviceCustom(self):
-        """Test DeviceCustom"""
-        model = esperclient.models.device_custom.DeviceCustom()
+    def testDeviceGroup(self):
+        """Test DeviceGroup"""
+        model = esperclient.models.device_group.DeviceGroup()
         pass
 
 

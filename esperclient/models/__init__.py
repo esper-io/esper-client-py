@@ -41,15 +41,13 @@ from esperclient.models.device_app import DeviceApp
 from esperclient.models.device_app_permission import DeviceAppPermission
 from esperclient.models.device_command import DeviceCommand
 from esperclient.models.device_command_enum import DeviceCommandEnum
-from esperclient.models.device_custom import DeviceCustom
-from esperclient.models.device_custom_group import DeviceCustomGroup
+from esperclient.models.device_group import DeviceGroup
+from esperclient.models.device_group_update import DeviceGroupUpdate
 from esperclient.models.device_status import DeviceStatus
-from esperclient.models.device_status_tiles import DeviceStatusTiles
 from esperclient.models.emm_enterprise_state_enum import EMMEnterpriseStateEnum
 from esperclient.models.emm_device import EmmDevice
 from esperclient.models.enterprise import Enterprise
 from esperclient.models.enterprise_detail import EnterpriseDetail
-from esperclient.models.enterprise_device_group import EnterpriseDeviceGroup
 from esperclient.models.enterprise_policy import EnterprisePolicy
 from esperclient.models.google_enterprise import GoogleEnterprise
 from esperclient.models.inline_response200 import InlineResponse200
