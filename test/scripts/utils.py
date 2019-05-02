@@ -59,3 +59,23 @@ def get_group_for_enterprise(enterprise_id):
         print("Exception when calling DeviceGroupApi->get_all_groups: %s\n" % e)
 
     return api_response.results[0].id
+
+def get_application_for_enterprise(enterprise_id):
+    api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
+
+    try:
+        api_response = api_instance.get_all_applications(enterprise_id)
+    except ApiException as e:
+        print("Exception when calling ApplicationApi->get_all_applications: %s\n" % e)
+
+    return api_response.results[0].id
+
+def get_version_for_app(application_id, enterprise_id):
+    api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
+
+    try:
+        api_response = api_instance.get_app_versions(application_id, enterprise_id)
+    except ApiException as e:
+        print("Exception when calling ApplicationApi->get_app_versions: %s\n" % e)
+
+    return api_response.results[0].id

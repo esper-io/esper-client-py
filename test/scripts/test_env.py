@@ -1,6 +1,7 @@
 import test_enterprise as enterprise
 import test_device as device
 import test_device_group as devicegroup
+import test_application as application
 
 
 # Enterprise
@@ -17,8 +18,16 @@ import test_device_group as devicegroup
 
 # Device Group
 #devicegroup.test_create_device_group()
-devicegroup.test_list_device_group()
-devicegroup.test_device_group_detail()
+#devicegroup.test_list_device_group()
+#devicegroup.test_device_group_detail()
+
+# Application
+#application.test_application_list()
+#application.test_application_detail()
+#application.test_application_upload_delete()
+#application.test_app_version_list()
+#application.test_app_version_detail()
+#application.test_app_version_delete()
 
 
 
