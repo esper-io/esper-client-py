@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -57,8 +57,8 @@ class AppInstallVersion(object):
         'hash_string': 'hash_string'
     }
 
-    def __init__(self, app_version_id=None, version_code=None, build_number=None, hash_string=None):  # noqa: E501
-        """AppInstallVersion - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, app_version_id=None, version_code=None, build_number=None, hash_string=None):
+        """AppInstallVersion - a model defined in Swagger"""
 
         self._app_version_id = None
         self._version_code = None
@@ -77,10 +77,10 @@ class AppInstallVersion(object):
 
     @property
     def app_version_id(self):
-        """Gets the app_version_id of this AppInstallVersion.  # noqa: E501
+        """Gets the app_version_id of this AppInstallVersion.
 
 
-        :return: The app_version_id of this AppInstallVersion.  # noqa: E501
+        :return: The app_version_id of this AppInstallVersion.
         :rtype: str
         """
         return self._app_version_id
@@ -90,7 +90,7 @@ class AppInstallVersion(object):
         """Sets the app_version_id of this AppInstallVersion.
 
 
-        :param app_version_id: The app_version_id of this AppInstallVersion.  # noqa: E501
+        :param app_version_id: The app_version_id of this AppInstallVersion.
         :type: str
         """
 
@@ -98,10 +98,10 @@ class AppInstallVersion(object):
 
     @property
     def version_code(self):
-        """Gets the version_code of this AppInstallVersion.  # noqa: E501
+        """Gets the version_code of this AppInstallVersion.
 
 
-        :return: The version_code of this AppInstallVersion.  # noqa: E501
+        :return: The version_code of this AppInstallVersion.
         :rtype: str
         """
         return self._version_code
@@ -111,7 +111,7 @@ class AppInstallVersion(object):
         """Sets the version_code of this AppInstallVersion.
 
 
-        :param version_code: The version_code of this AppInstallVersion.  # noqa: E501
+        :param version_code: The version_code of this AppInstallVersion.
         :type: str
         """
 
@@ -119,10 +119,10 @@ class AppInstallVersion(object):
 
     @property
     def build_number(self):
-        """Gets the build_number of this AppInstallVersion.  # noqa: E501
+        """Gets the build_number of this AppInstallVersion.
 
 
-        :return: The build_number of this AppInstallVersion.  # noqa: E501
+        :return: The build_number of this AppInstallVersion.
         :rtype: str
         """
         return self._build_number
@@ -132,7 +132,7 @@ class AppInstallVersion(object):
         """Sets the build_number of this AppInstallVersion.
 
 
-        :param build_number: The build_number of this AppInstallVersion.  # noqa: E501
+        :param build_number: The build_number of this AppInstallVersion.
         :type: str
         """
 
@@ -140,10 +140,10 @@ class AppInstallVersion(object):
 
     @property
     def hash_string(self):
-        """Gets the hash_string of this AppInstallVersion.  # noqa: E501
+        """Gets the hash_string of this AppInstallVersion.
 
 
-        :return: The hash_string of this AppInstallVersion.  # noqa: E501
+        :return: The hash_string of this AppInstallVersion.
         :rtype: str
         """
         return self._hash_string
@@ -153,7 +153,7 @@ class AppInstallVersion(object):
         """Sets the hash_string of this AppInstallVersion.
 
 
-        :param hash_string: The hash_string of this AppInstallVersion.  # noqa: E501
+        :param hash_string: The hash_string of this AppInstallVersion.
         :type: str
         """
 

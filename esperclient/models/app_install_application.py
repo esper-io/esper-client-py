@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.app_install_version import AppInstallVersion  # noqa: F401,E501
+from esperclient.models.app_install_version import AppInstallVersion
 
 
 class AppInstallApplication(object):
@@ -59,8 +59,8 @@ class AppInstallApplication(object):
         'is_enabled': 'is_enabled'
     }
 
-    def __init__(self, application_name=None, package_name=None, version=None, is_enabled=None):  # noqa: E501
-        """AppInstallApplication - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, application_name=None, package_name=None, version=None, is_enabled=None):
+        """AppInstallApplication - a model defined in Swagger"""
 
         self._application_name = None
         self._package_name = None
@@ -79,10 +79,10 @@ class AppInstallApplication(object):
 
     @property
     def application_name(self):
-        """Gets the application_name of this AppInstallApplication.  # noqa: E501
+        """Gets the application_name of this AppInstallApplication.
 
 
-        :return: The application_name of this AppInstallApplication.  # noqa: E501
+        :return: The application_name of this AppInstallApplication.
         :rtype: str
         """
         return self._application_name
@@ -92,7 +92,7 @@ class AppInstallApplication(object):
         """Sets the application_name of this AppInstallApplication.
 
 
-        :param application_name: The application_name of this AppInstallApplication.  # noqa: E501
+        :param application_name: The application_name of this AppInstallApplication.
         :type: str
         """
 
@@ -100,10 +100,10 @@ class AppInstallApplication(object):
 
     @property
     def package_name(self):
-        """Gets the package_name of this AppInstallApplication.  # noqa: E501
+        """Gets the package_name of this AppInstallApplication.
 
 
-        :return: The package_name of this AppInstallApplication.  # noqa: E501
+        :return: The package_name of this AppInstallApplication.
         :rtype: str
         """
         return self._package_name
@@ -113,7 +113,7 @@ class AppInstallApplication(object):
         """Sets the package_name of this AppInstallApplication.
 
 
-        :param package_name: The package_name of this AppInstallApplication.  # noqa: E501
+        :param package_name: The package_name of this AppInstallApplication.
         :type: str
         """
 
@@ -121,10 +121,10 @@ class AppInstallApplication(object):
 
     @property
     def version(self):
-        """Gets the version of this AppInstallApplication.  # noqa: E501
+        """Gets the version of this AppInstallApplication.
 
 
-        :return: The version of this AppInstallApplication.  # noqa: E501
+        :return: The version of this AppInstallApplication.
         :rtype: AppInstallVersion
         """
         return self._version
@@ -134,7 +134,7 @@ class AppInstallApplication(object):
         """Sets the version of this AppInstallApplication.
 
 
-        :param version: The version of this AppInstallApplication.  # noqa: E501
+        :param version: The version of this AppInstallApplication.
         :type: AppInstallVersion
         """
 
@@ -142,10 +142,10 @@ class AppInstallApplication(object):
 
     @property
     def is_enabled(self):
-        """Gets the is_enabled of this AppInstallApplication.  # noqa: E501
+        """Gets the is_enabled of this AppInstallApplication.
 
 
-        :return: The is_enabled of this AppInstallApplication.  # noqa: E501
+        :return: The is_enabled of this AppInstallApplication.
         :rtype: bool
         """
         return self._is_enabled
@@ -155,7 +155,7 @@ class AppInstallApplication(object):
         """Sets the is_enabled of this AppInstallApplication.
 
 
-        :param is_enabled: The is_enabled of this AppInstallApplication.  # noqa: E501
+        :param is_enabled: The is_enabled of this AppInstallApplication.
         :type: bool
         """
 

@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.device_group import DeviceGroup  # noqa: F401,E501
+from esperclient.models.device_group import DeviceGroup
 
 
 class InlineResponse2007(object):
@@ -59,8 +59,8 @@ class InlineResponse2007(object):
         'results': 'results'
     }
 
-    def __init__(self, count=None, next=None, previous=None, results=None):  # noqa: E501
-        """InlineResponse2007 - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, count=None, next=None, previous=None, results=None):
+        """InlineResponse2007 - a model defined in Swagger"""
 
         self._count = None
         self._next = None
@@ -77,10 +77,10 @@ class InlineResponse2007(object):
 
     @property
     def count(self):
-        """Gets the count of this InlineResponse2007.  # noqa: E501
+        """Gets the count of this InlineResponse2007.
 
 
-        :return: The count of this InlineResponse2007.  # noqa: E501
+        :return: The count of this InlineResponse2007.
         :rtype: int
         """
         return self._count
@@ -90,20 +90,20 @@ class InlineResponse2007(object):
         """Sets the count of this InlineResponse2007.
 
 
-        :param count: The count of this InlineResponse2007.  # noqa: E501
+        :param count: The count of this InlineResponse2007.
         :type: int
         """
         if count is None:
-            raise ValueError("Invalid value for `count`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `count`, must not be `None`")
 
         self._count = count
 
     @property
     def next(self):
-        """Gets the next of this InlineResponse2007.  # noqa: E501
+        """Gets the next of this InlineResponse2007.
 
 
-        :return: The next of this InlineResponse2007.  # noqa: E501
+        :return: The next of this InlineResponse2007.
         :rtype: str
         """
         return self._next
@@ -113,7 +113,7 @@ class InlineResponse2007(object):
         """Sets the next of this InlineResponse2007.
 
 
-        :param next: The next of this InlineResponse2007.  # noqa: E501
+        :param next: The next of this InlineResponse2007.
         :type: str
         """
 
@@ -121,10 +121,10 @@ class InlineResponse2007(object):
 
     @property
     def previous(self):
-        """Gets the previous of this InlineResponse2007.  # noqa: E501
+        """Gets the previous of this InlineResponse2007.
 
 
-        :return: The previous of this InlineResponse2007.  # noqa: E501
+        :return: The previous of this InlineResponse2007.
         :rtype: str
         """
         return self._previous
@@ -134,7 +134,7 @@ class InlineResponse2007(object):
         """Sets the previous of this InlineResponse2007.
 
 
-        :param previous: The previous of this InlineResponse2007.  # noqa: E501
+        :param previous: The previous of this InlineResponse2007.
         :type: str
         """
 
@@ -142,10 +142,10 @@ class InlineResponse2007(object):
 
     @property
     def results(self):
-        """Gets the results of this InlineResponse2007.  # noqa: E501
+        """Gets the results of this InlineResponse2007.
 
 
-        :return: The results of this InlineResponse2007.  # noqa: E501
+        :return: The results of this InlineResponse2007.
         :rtype: list[DeviceGroup]
         """
         return self._results
@@ -155,11 +155,11 @@ class InlineResponse2007(object):
         """Sets the results of this InlineResponse2007.
 
 
-        :param results: The results of this InlineResponse2007.  # noqa: E501
+        :param results: The results of this InlineResponse2007.
         :type: list[DeviceGroup]
         """
         if results is None:
-            raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `results`, must not be `None`")
 
         self._results = results
 

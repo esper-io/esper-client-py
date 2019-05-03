@@ -25,12 +25,12 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.app_install_application import AppInstallApplication  # noqa: F401,E501
-from esperclient.models.app_install_state_enum import AppInstallStateEnum  # noqa: F401,E501
+from esperclient.models.app_install_application import AppInstallApplication
+from esperclient.models.app_install_state_enum import AppInstallStateEnum
 
 
 class AppInstall(object):
@@ -70,8 +70,8 @@ class AppInstall(object):
         'device': 'device'
     }
 
-    def __init__(self, id=None, application=None, install_state=None, reason_details=None, created_on=None, updated_on=None, is_active=None, enterprise=None, device=None):  # noqa: E501
-        """AppInstall - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, application=None, install_state=None, reason_details=None, created_on=None, updated_on=None, is_active=None, enterprise=None, device=None):
+        """AppInstall - a model defined in Swagger"""
 
         self._id = None
         self._application = None
@@ -101,10 +101,10 @@ class AppInstall(object):
 
     @property
     def id(self):
-        """Gets the id of this AppInstall.  # noqa: E501
+        """Gets the id of this AppInstall.
 
 
-        :return: The id of this AppInstall.  # noqa: E501
+        :return: The id of this AppInstall.
         :rtype: str
         """
         return self._id
@@ -114,7 +114,7 @@ class AppInstall(object):
         """Sets the id of this AppInstall.
 
 
-        :param id: The id of this AppInstall.  # noqa: E501
+        :param id: The id of this AppInstall.
         :type: str
         """
 
@@ -122,10 +122,10 @@ class AppInstall(object):
 
     @property
     def application(self):
-        """Gets the application of this AppInstall.  # noqa: E501
+        """Gets the application of this AppInstall.
 
 
-        :return: The application of this AppInstall.  # noqa: E501
+        :return: The application of this AppInstall.
         :rtype: AppInstallApplication
         """
         return self._application
@@ -135,20 +135,20 @@ class AppInstall(object):
         """Sets the application of this AppInstall.
 
 
-        :param application: The application of this AppInstall.  # noqa: E501
+        :param application: The application of this AppInstall.
         :type: AppInstallApplication
         """
         if application is None:
-            raise ValueError("Invalid value for `application`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `application`, must not be `None`")
 
         self._application = application
 
     @property
     def install_state(self):
-        """Gets the install_state of this AppInstall.  # noqa: E501
+        """Gets the install_state of this AppInstall.
 
 
-        :return: The install_state of this AppInstall.  # noqa: E501
+        :return: The install_state of this AppInstall.
         :rtype: AppInstallStateEnum
         """
         return self._install_state
@@ -158,20 +158,20 @@ class AppInstall(object):
         """Sets the install_state of this AppInstall.
 
 
-        :param install_state: The install_state of this AppInstall.  # noqa: E501
+        :param install_state: The install_state of this AppInstall.
         :type: AppInstallStateEnum
         """
         if install_state is None:
-            raise ValueError("Invalid value for `install_state`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `install_state`, must not be `None`")
 
         self._install_state = install_state
 
     @property
     def reason_details(self):
-        """Gets the reason_details of this AppInstall.  # noqa: E501
+        """Gets the reason_details of this AppInstall.
 
 
-        :return: The reason_details of this AppInstall.  # noqa: E501
+        :return: The reason_details of this AppInstall.
         :rtype: str
         """
         return self._reason_details
@@ -181,20 +181,20 @@ class AppInstall(object):
         """Sets the reason_details of this AppInstall.
 
 
-        :param reason_details: The reason_details of this AppInstall.  # noqa: E501
+        :param reason_details: The reason_details of this AppInstall.
         :type: str
         """
         if reason_details is not None and len(reason_details) < 1:
-            raise ValueError("Invalid value for `reason_details`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `reason_details`, length must be greater than or equal to `1`")
 
         self._reason_details = reason_details
 
     @property
     def created_on(self):
-        """Gets the created_on of this AppInstall.  # noqa: E501
+        """Gets the created_on of this AppInstall.
 
 
-        :return: The created_on of this AppInstall.  # noqa: E501
+        :return: The created_on of this AppInstall.
         :rtype: datetime
         """
         return self._created_on
@@ -204,7 +204,7 @@ class AppInstall(object):
         """Sets the created_on of this AppInstall.
 
 
-        :param created_on: The created_on of this AppInstall.  # noqa: E501
+        :param created_on: The created_on of this AppInstall.
         :type: datetime
         """
 
@@ -212,10 +212,10 @@ class AppInstall(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this AppInstall.  # noqa: E501
+        """Gets the updated_on of this AppInstall.
 
 
-        :return: The updated_on of this AppInstall.  # noqa: E501
+        :return: The updated_on of this AppInstall.
         :rtype: datetime
         """
         return self._updated_on
@@ -225,7 +225,7 @@ class AppInstall(object):
         """Sets the updated_on of this AppInstall.
 
 
-        :param updated_on: The updated_on of this AppInstall.  # noqa: E501
+        :param updated_on: The updated_on of this AppInstall.
         :type: datetime
         """
 
@@ -233,10 +233,10 @@ class AppInstall(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this AppInstall.  # noqa: E501
+        """Gets the is_active of this AppInstall.
 
 
-        :return: The is_active of this AppInstall.  # noqa: E501
+        :return: The is_active of this AppInstall.
         :rtype: bool
         """
         return self._is_active
@@ -246,7 +246,7 @@ class AppInstall(object):
         """Sets the is_active of this AppInstall.
 
 
-        :param is_active: The is_active of this AppInstall.  # noqa: E501
+        :param is_active: The is_active of this AppInstall.
         :type: bool
         """
 
@@ -254,10 +254,10 @@ class AppInstall(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this AppInstall.  # noqa: E501
+        """Gets the enterprise of this AppInstall.
 
 
-        :return: The enterprise of this AppInstall.  # noqa: E501
+        :return: The enterprise of this AppInstall.
         :rtype: str
         """
         return self._enterprise
@@ -267,20 +267,20 @@ class AppInstall(object):
         """Sets the enterprise of this AppInstall.
 
 
-        :param enterprise: The enterprise of this AppInstall.  # noqa: E501
+        :param enterprise: The enterprise of this AppInstall.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 
     @property
     def device(self):
-        """Gets the device of this AppInstall.  # noqa: E501
+        """Gets the device of this AppInstall.
 
 
-        :return: The device of this AppInstall.  # noqa: E501
+        :return: The device of this AppInstall.
         :rtype: str
         """
         return self._device
@@ -290,11 +290,11 @@ class AppInstall(object):
         """Sets the device of this AppInstall.
 
 
-        :param device: The device of this AppInstall.  # noqa: E501
+        :param device: The device of this AppInstall.
         :type: str
         """
         if device is None:
-            raise ValueError("Invalid value for `device`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `device`, must not be `None`")
 
         self._device = device
 

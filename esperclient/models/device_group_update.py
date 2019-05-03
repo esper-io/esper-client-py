@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -61,8 +61,8 @@ class DeviceGroupUpdate(object):
         'enterprise': 'enterprise'
     }
 
-    def __init__(self, id=None, device_ids=None, device_count=None, name=None, created_on=None, enterprise=None):  # noqa: E501
-        """DeviceGroupUpdate - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, device_ids=None, device_count=None, name=None, created_on=None, enterprise=None):
+        """DeviceGroupUpdate - a model defined in Swagger"""
 
         self._id = None
         self._device_ids = None
@@ -85,10 +85,10 @@ class DeviceGroupUpdate(object):
 
     @property
     def id(self):
-        """Gets the id of this DeviceGroupUpdate.  # noqa: E501
+        """Gets the id of this DeviceGroupUpdate.
 
 
-        :return: The id of this DeviceGroupUpdate.  # noqa: E501
+        :return: The id of this DeviceGroupUpdate.
         :rtype: str
         """
         return self._id
@@ -98,7 +98,7 @@ class DeviceGroupUpdate(object):
         """Sets the id of this DeviceGroupUpdate.
 
 
-        :param id: The id of this DeviceGroupUpdate.  # noqa: E501
+        :param id: The id of this DeviceGroupUpdate.
         :type: str
         """
 
@@ -106,10 +106,10 @@ class DeviceGroupUpdate(object):
 
     @property
     def device_ids(self):
-        """Gets the device_ids of this DeviceGroupUpdate.  # noqa: E501
+        """Gets the device_ids of this DeviceGroupUpdate.
 
 
-        :return: The device_ids of this DeviceGroupUpdate.  # noqa: E501
+        :return: The device_ids of this DeviceGroupUpdate.
         :rtype: list[str]
         """
         return self._device_ids
@@ -119,7 +119,7 @@ class DeviceGroupUpdate(object):
         """Sets the device_ids of this DeviceGroupUpdate.
 
 
-        :param device_ids: The device_ids of this DeviceGroupUpdate.  # noqa: E501
+        :param device_ids: The device_ids of this DeviceGroupUpdate.
         :type: list[str]
         """
 
@@ -127,10 +127,10 @@ class DeviceGroupUpdate(object):
 
     @property
     def device_count(self):
-        """Gets the device_count of this DeviceGroupUpdate.  # noqa: E501
+        """Gets the device_count of this DeviceGroupUpdate.
 
 
-        :return: The device_count of this DeviceGroupUpdate.  # noqa: E501
+        :return: The device_count of this DeviceGroupUpdate.
         :rtype: int
         """
         return self._device_count
@@ -140,7 +140,7 @@ class DeviceGroupUpdate(object):
         """Sets the device_count of this DeviceGroupUpdate.
 
 
-        :param device_count: The device_count of this DeviceGroupUpdate.  # noqa: E501
+        :param device_count: The device_count of this DeviceGroupUpdate.
         :type: int
         """
 
@@ -148,10 +148,10 @@ class DeviceGroupUpdate(object):
 
     @property
     def name(self):
-        """Gets the name of this DeviceGroupUpdate.  # noqa: E501
+        """Gets the name of this DeviceGroupUpdate.
 
 
-        :return: The name of this DeviceGroupUpdate.  # noqa: E501
+        :return: The name of this DeviceGroupUpdate.
         :rtype: str
         """
         return self._name
@@ -161,24 +161,24 @@ class DeviceGroupUpdate(object):
         """Sets the name of this DeviceGroupUpdate.
 
 
-        :param name: The name of this DeviceGroupUpdate.  # noqa: E501
+        :param name: The name of this DeviceGroupUpdate.
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")
         if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
         if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")
 
         self._name = name
 
     @property
     def created_on(self):
-        """Gets the created_on of this DeviceGroupUpdate.  # noqa: E501
+        """Gets the created_on of this DeviceGroupUpdate.
 
 
-        :return: The created_on of this DeviceGroupUpdate.  # noqa: E501
+        :return: The created_on of this DeviceGroupUpdate.
         :rtype: datetime
         """
         return self._created_on
@@ -188,7 +188,7 @@ class DeviceGroupUpdate(object):
         """Sets the created_on of this DeviceGroupUpdate.
 
 
-        :param created_on: The created_on of this DeviceGroupUpdate.  # noqa: E501
+        :param created_on: The created_on of this DeviceGroupUpdate.
         :type: datetime
         """
 
@@ -196,10 +196,10 @@ class DeviceGroupUpdate(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this DeviceGroupUpdate.  # noqa: E501
+        """Gets the enterprise of this DeviceGroupUpdate.
 
 
-        :return: The enterprise of this DeviceGroupUpdate.  # noqa: E501
+        :return: The enterprise of this DeviceGroupUpdate.
         :rtype: str
         """
         return self._enterprise
@@ -209,11 +209,11 @@ class DeviceGroupUpdate(object):
         """Sets the enterprise of this DeviceGroupUpdate.
 
 
-        :param enterprise: The enterprise of this DeviceGroupUpdate.  # noqa: E501
+        :param enterprise: The enterprise of this DeviceGroupUpdate.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 

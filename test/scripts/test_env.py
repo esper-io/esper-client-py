@@ -2,6 +2,7 @@ import test_enterprise as enterprise
 import test_device as device
 import test_device_group as devicegroup
 import test_application as application
+import test_device_commands as device_commands
 
 
 # Enterprise
@@ -28,6 +29,13 @@ import test_application as application
 #application.test_app_version_list()
 #application.test_app_version_detail()
 #application.test_app_version_delete()
+
+# Device Commands
+#device_commands.test_device_command_reboot()
+#device_commands.test_device_command_status_get()
+#device_commands.test_device_app_deploy()
+#device_commands.test_device_command_settings_change()
+
 
 
 

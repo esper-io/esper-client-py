@@ -25,11 +25,12 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.device_command_enum import DeviceCommandEnum  # noqa: F401,E501
+from esperclient.models.command_args import CommandArgs
+from esperclient.models.device_command_enum import DeviceCommandEnum
 
 
 class CommandRequest(object):
@@ -46,7 +47,7 @@ class CommandRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'command_args': 'str',
+        'command_args': 'CommandArgs',
         'command': 'DeviceCommandEnum'
     }
 
@@ -55,8 +56,8 @@ class CommandRequest(object):
         'command': 'command'
     }
 
-    def __init__(self, command_args=None, command=None):  # noqa: E501
-        """CommandRequest - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, command_args=None, command=None):
+        """CommandRequest - a model defined in Swagger"""
 
         self._command_args = None
         self._command = None
@@ -68,11 +69,11 @@ class CommandRequest(object):
 
     @property
     def command_args(self):
-        """Gets the command_args of this CommandRequest.  # noqa: E501
+        """Gets the command_args of this CommandRequest.
 
 
-        :return: The command_args of this CommandRequest.  # noqa: E501
-        :rtype: str
+        :return: The command_args of this CommandRequest.
+        :rtype: CommandArgs
         """
         return self._command_args
 
@@ -81,18 +82,18 @@ class CommandRequest(object):
         """Sets the command_args of this CommandRequest.
 
 
-        :param command_args: The command_args of this CommandRequest.  # noqa: E501
-        :type: str
+        :param command_args: The command_args of this CommandRequest.
+        :type: CommandArgs
         """
 
         self._command_args = command_args
 
     @property
     def command(self):
-        """Gets the command of this CommandRequest.  # noqa: E501
+        """Gets the command of this CommandRequest.
 
 
-        :return: The command of this CommandRequest.  # noqa: E501
+        :return: The command of this CommandRequest.
         :rtype: DeviceCommandEnum
         """
         return self._command
@@ -102,11 +103,11 @@ class CommandRequest(object):
         """Sets the command of this CommandRequest.
 
 
-        :param command: The command of this CommandRequest.  # noqa: E501
+        :param command: The command of this CommandRequest.
         :type: DeviceCommandEnum
         """
         if command is None:
-            raise ValueError("Invalid value for `command`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `command`, must not be `None`")
 
         self._command = command
 

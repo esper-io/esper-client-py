@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.device import Device  # noqa: F401,E501
+from esperclient.models.device import Device
 
 
 class InlineResponse2003(object):
@@ -59,8 +59,8 @@ class InlineResponse2003(object):
         'results': 'results'
     }
 
-    def __init__(self, count=None, next=None, previous=None, results=None):  # noqa: E501
-        """InlineResponse2003 - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, count=None, next=None, previous=None, results=None):
+        """InlineResponse2003 - a model defined in Swagger"""
 
         self._count = None
         self._next = None
@@ -79,10 +79,10 @@ class InlineResponse2003(object):
 
     @property
     def count(self):
-        """Gets the count of this InlineResponse2003.  # noqa: E501
+        """Gets the count of this InlineResponse2003.
 
 
-        :return: The count of this InlineResponse2003.  # noqa: E501
+        :return: The count of this InlineResponse2003.
         :rtype: int
         """
         return self._count
@@ -92,7 +92,7 @@ class InlineResponse2003(object):
         """Sets the count of this InlineResponse2003.
 
 
-        :param count: The count of this InlineResponse2003.  # noqa: E501
+        :param count: The count of this InlineResponse2003.
         :type: int
         """
 
@@ -100,10 +100,10 @@ class InlineResponse2003(object):
 
     @property
     def next(self):
-        """Gets the next of this InlineResponse2003.  # noqa: E501
+        """Gets the next of this InlineResponse2003.
 
 
-        :return: The next of this InlineResponse2003.  # noqa: E501
+        :return: The next of this InlineResponse2003.
         :rtype: str
         """
         return self._next
@@ -113,7 +113,7 @@ class InlineResponse2003(object):
         """Sets the next of this InlineResponse2003.
 
 
-        :param next: The next of this InlineResponse2003.  # noqa: E501
+        :param next: The next of this InlineResponse2003.
         :type: str
         """
 
@@ -121,10 +121,10 @@ class InlineResponse2003(object):
 
     @property
     def previous(self):
-        """Gets the previous of this InlineResponse2003.  # noqa: E501
+        """Gets the previous of this InlineResponse2003.
 
 
-        :return: The previous of this InlineResponse2003.  # noqa: E501
+        :return: The previous of this InlineResponse2003.
         :rtype: str
         """
         return self._previous
@@ -134,7 +134,7 @@ class InlineResponse2003(object):
         """Sets the previous of this InlineResponse2003.
 
 
-        :param previous: The previous of this InlineResponse2003.  # noqa: E501
+        :param previous: The previous of this InlineResponse2003.
         :type: str
         """
 
@@ -142,10 +142,10 @@ class InlineResponse2003(object):
 
     @property
     def results(self):
-        """Gets the results of this InlineResponse2003.  # noqa: E501
+        """Gets the results of this InlineResponse2003.
 
 
-        :return: The results of this InlineResponse2003.  # noqa: E501
+        :return: The results of this InlineResponse2003.
         :rtype: list[Device]
         """
         return self._results
@@ -155,7 +155,7 @@ class InlineResponse2003(object):
         """Sets the results of this InlineResponse2003.
 
 
-        :param results: The results of this InlineResponse2003.  # noqa: E501
+        :param results: The results of this InlineResponse2003.
         :type: list[Device]
         """
 

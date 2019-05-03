@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -75,8 +75,8 @@ class EnterprisePolicy(object):
         'enterprise': 'enterprise'
     }
 
-    def __init__(self, url=None, device_count=None, is_default=None, is_template=False, uuid=None, name=None, description=None, google_policy_id=None, policy=None, created_on=None, updated_on=None, is_active=None, enterprise=None):  # noqa: E501
-        """EnterprisePolicy - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, url=None, device_count=None, is_default=None, is_template=False, uuid=None, name=None, description=None, google_policy_id=None, policy=None, created_on=None, updated_on=None, is_active=None, enterprise=None):
+        """EnterprisePolicy - a model defined in Swagger"""
 
         self._url = None
         self._device_count = None
@@ -119,10 +119,10 @@ class EnterprisePolicy(object):
 
     @property
     def url(self):
-        """Gets the url of this EnterprisePolicy.  # noqa: E501
+        """Gets the url of this EnterprisePolicy.
 
 
-        :return: The url of this EnterprisePolicy.  # noqa: E501
+        :return: The url of this EnterprisePolicy.
         :rtype: str
         """
         return self._url
@@ -132,7 +132,7 @@ class EnterprisePolicy(object):
         """Sets the url of this EnterprisePolicy.
 
 
-        :param url: The url of this EnterprisePolicy.  # noqa: E501
+        :param url: The url of this EnterprisePolicy.
         :type: str
         """
 
@@ -140,10 +140,10 @@ class EnterprisePolicy(object):
 
     @property
     def device_count(self):
-        """Gets the device_count of this EnterprisePolicy.  # noqa: E501
+        """Gets the device_count of this EnterprisePolicy.
 
 
-        :return: The device_count of this EnterprisePolicy.  # noqa: E501
+        :return: The device_count of this EnterprisePolicy.
         :rtype: int
         """
         return self._device_count
@@ -153,7 +153,7 @@ class EnterprisePolicy(object):
         """Sets the device_count of this EnterprisePolicy.
 
 
-        :param device_count: The device_count of this EnterprisePolicy.  # noqa: E501
+        :param device_count: The device_count of this EnterprisePolicy.
         :type: int
         """
 
@@ -161,10 +161,10 @@ class EnterprisePolicy(object):
 
     @property
     def is_default(self):
-        """Gets the is_default of this EnterprisePolicy.  # noqa: E501
+        """Gets the is_default of this EnterprisePolicy.
 
 
-        :return: The is_default of this EnterprisePolicy.  # noqa: E501
+        :return: The is_default of this EnterprisePolicy.
         :rtype: bool
         """
         return self._is_default
@@ -174,7 +174,7 @@ class EnterprisePolicy(object):
         """Sets the is_default of this EnterprisePolicy.
 
 
-        :param is_default: The is_default of this EnterprisePolicy.  # noqa: E501
+        :param is_default: The is_default of this EnterprisePolicy.
         :type: bool
         """
 
@@ -182,10 +182,10 @@ class EnterprisePolicy(object):
 
     @property
     def is_template(self):
-        """Gets the is_template of this EnterprisePolicy.  # noqa: E501
+        """Gets the is_template of this EnterprisePolicy.
 
 
-        :return: The is_template of this EnterprisePolicy.  # noqa: E501
+        :return: The is_template of this EnterprisePolicy.
         :rtype: bool
         """
         return self._is_template
@@ -195,7 +195,7 @@ class EnterprisePolicy(object):
         """Sets the is_template of this EnterprisePolicy.
 
 
-        :param is_template: The is_template of this EnterprisePolicy.  # noqa: E501
+        :param is_template: The is_template of this EnterprisePolicy.
         :type: bool
         """
 
@@ -203,10 +203,10 @@ class EnterprisePolicy(object):
 
     @property
     def uuid(self):
-        """Gets the uuid of this EnterprisePolicy.  # noqa: E501
+        """Gets the uuid of this EnterprisePolicy.
 
 
-        :return: The uuid of this EnterprisePolicy.  # noqa: E501
+        :return: The uuid of this EnterprisePolicy.
         :rtype: str
         """
         return self._uuid
@@ -216,7 +216,7 @@ class EnterprisePolicy(object):
         """Sets the uuid of this EnterprisePolicy.
 
 
-        :param uuid: The uuid of this EnterprisePolicy.  # noqa: E501
+        :param uuid: The uuid of this EnterprisePolicy.
         :type: str
         """
 
@@ -224,10 +224,10 @@ class EnterprisePolicy(object):
 
     @property
     def name(self):
-        """Gets the name of this EnterprisePolicy.  # noqa: E501
+        """Gets the name of this EnterprisePolicy.
 
 
-        :return: The name of this EnterprisePolicy.  # noqa: E501
+        :return: The name of this EnterprisePolicy.
         :rtype: str
         """
         return self._name
@@ -237,24 +237,24 @@ class EnterprisePolicy(object):
         """Sets the name of this EnterprisePolicy.
 
 
-        :param name: The name of this EnterprisePolicy.  # noqa: E501
+        :param name: The name of this EnterprisePolicy.
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")
         if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
         if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")
 
         self._name = name
 
     @property
     def description(self):
-        """Gets the description of this EnterprisePolicy.  # noqa: E501
+        """Gets the description of this EnterprisePolicy.
 
 
-        :return: The description of this EnterprisePolicy.  # noqa: E501
+        :return: The description of this EnterprisePolicy.
         :rtype: str
         """
         return self._description
@@ -264,7 +264,7 @@ class EnterprisePolicy(object):
         """Sets the description of this EnterprisePolicy.
 
 
-        :param description: The description of this EnterprisePolicy.  # noqa: E501
+        :param description: The description of this EnterprisePolicy.
         :type: str
         """
 
@@ -272,10 +272,10 @@ class EnterprisePolicy(object):
 
     @property
     def google_policy_id(self):
-        """Gets the google_policy_id of this EnterprisePolicy.  # noqa: E501
+        """Gets the google_policy_id of this EnterprisePolicy.
 
 
-        :return: The google_policy_id of this EnterprisePolicy.  # noqa: E501
+        :return: The google_policy_id of this EnterprisePolicy.
         :rtype: str
         """
         return self._google_policy_id
@@ -285,23 +285,23 @@ class EnterprisePolicy(object):
         """Sets the google_policy_id of this EnterprisePolicy.
 
 
-        :param google_policy_id: The google_policy_id of this EnterprisePolicy.  # noqa: E501
+        :param google_policy_id: The google_policy_id of this EnterprisePolicy.
         :type: str
         """
         if google_policy_id is not None and len(google_policy_id) > 255:
-            raise ValueError("Invalid value for `google_policy_id`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `google_policy_id`, length must be less than or equal to `255`")
         if google_policy_id is not None and len(google_policy_id) < 1:
-            raise ValueError("Invalid value for `google_policy_id`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `google_policy_id`, length must be greater than or equal to `1`")
 
         self._google_policy_id = google_policy_id
 
     @property
     def policy(self):
-        """Gets the policy of this EnterprisePolicy.  # noqa: E501
+        """Gets the policy of this EnterprisePolicy.
 
-        Policy JSON string  # noqa: E501
+        Policy JSON string
 
-        :return: The policy of this EnterprisePolicy.  # noqa: E501
+        :return: The policy of this EnterprisePolicy.
         :rtype: str
         """
         return self._policy
@@ -310,22 +310,22 @@ class EnterprisePolicy(object):
     def policy(self, policy):
         """Sets the policy of this EnterprisePolicy.
 
-        Policy JSON string  # noqa: E501
+        Policy JSON string
 
-        :param policy: The policy of this EnterprisePolicy.  # noqa: E501
+        :param policy: The policy of this EnterprisePolicy.
         :type: str
         """
         if policy is None:
-            raise ValueError("Invalid value for `policy`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `policy`, must not be `None`")
 
         self._policy = policy
 
     @property
     def created_on(self):
-        """Gets the created_on of this EnterprisePolicy.  # noqa: E501
+        """Gets the created_on of this EnterprisePolicy.
 
 
-        :return: The created_on of this EnterprisePolicy.  # noqa: E501
+        :return: The created_on of this EnterprisePolicy.
         :rtype: datetime
         """
         return self._created_on
@@ -335,7 +335,7 @@ class EnterprisePolicy(object):
         """Sets the created_on of this EnterprisePolicy.
 
 
-        :param created_on: The created_on of this EnterprisePolicy.  # noqa: E501
+        :param created_on: The created_on of this EnterprisePolicy.
         :type: datetime
         """
 
@@ -343,10 +343,10 @@ class EnterprisePolicy(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this EnterprisePolicy.  # noqa: E501
+        """Gets the updated_on of this EnterprisePolicy.
 
 
-        :return: The updated_on of this EnterprisePolicy.  # noqa: E501
+        :return: The updated_on of this EnterprisePolicy.
         :rtype: datetime
         """
         return self._updated_on
@@ -356,7 +356,7 @@ class EnterprisePolicy(object):
         """Sets the updated_on of this EnterprisePolicy.
 
 
-        :param updated_on: The updated_on of this EnterprisePolicy.  # noqa: E501
+        :param updated_on: The updated_on of this EnterprisePolicy.
         :type: datetime
         """
 
@@ -364,10 +364,10 @@ class EnterprisePolicy(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this EnterprisePolicy.  # noqa: E501
+        """Gets the is_active of this EnterprisePolicy.
 
 
-        :return: The is_active of this EnterprisePolicy.  # noqa: E501
+        :return: The is_active of this EnterprisePolicy.
         :rtype: bool
         """
         return self._is_active
@@ -377,7 +377,7 @@ class EnterprisePolicy(object):
         """Sets the is_active of this EnterprisePolicy.
 
 
-        :param is_active: The is_active of this EnterprisePolicy.  # noqa: E501
+        :param is_active: The is_active of this EnterprisePolicy.
         :type: bool
         """
 
@@ -385,10 +385,10 @@ class EnterprisePolicy(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this EnterprisePolicy.  # noqa: E501
+        """Gets the enterprise of this EnterprisePolicy.
 
 
-        :return: The enterprise of this EnterprisePolicy.  # noqa: E501
+        :return: The enterprise of this EnterprisePolicy.
         :rtype: str
         """
         return self._enterprise
@@ -398,11 +398,11 @@ class EnterprisePolicy(object):
         """Sets the enterprise of this EnterprisePolicy.
 
 
-        :param enterprise: The enterprise of this EnterprisePolicy.  # noqa: E501
+        :param enterprise: The enterprise of this EnterprisePolicy.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 

@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -59,8 +59,8 @@ class DeviceStatus(object):
         'enterprise': 'enterprise'
     }
 
-    def __init__(self, id=None, data=None, created_on=None, device=None, enterprise=None):  # noqa: E501
-        """DeviceStatus - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, data=None, created_on=None, device=None, enterprise=None):
+        """DeviceStatus - a model defined in Swagger"""
 
         self._id = None
         self._data = None
@@ -79,10 +79,10 @@ class DeviceStatus(object):
 
     @property
     def id(self):
-        """Gets the id of this DeviceStatus.  # noqa: E501
+        """Gets the id of this DeviceStatus.
 
 
-        :return: The id of this DeviceStatus.  # noqa: E501
+        :return: The id of this DeviceStatus.
         :rtype: int
         """
         return self._id
@@ -92,7 +92,7 @@ class DeviceStatus(object):
         """Sets the id of this DeviceStatus.
 
 
-        :param id: The id of this DeviceStatus.  # noqa: E501
+        :param id: The id of this DeviceStatus.
         :type: int
         """
 
@@ -100,10 +100,10 @@ class DeviceStatus(object):
 
     @property
     def data(self):
-        """Gets the data of this DeviceStatus.  # noqa: E501
+        """Gets the data of this DeviceStatus.
 
 
-        :return: The data of this DeviceStatus.  # noqa: E501
+        :return: The data of this DeviceStatus.
         :rtype: str
         """
         return self._data
@@ -113,20 +113,20 @@ class DeviceStatus(object):
         """Sets the data of this DeviceStatus.
 
 
-        :param data: The data of this DeviceStatus.  # noqa: E501
+        :param data: The data of this DeviceStatus.
         :type: str
         """
         if data is None:
-            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `data`, must not be `None`")
 
         self._data = data
 
     @property
     def created_on(self):
-        """Gets the created_on of this DeviceStatus.  # noqa: E501
+        """Gets the created_on of this DeviceStatus.
 
 
-        :return: The created_on of this DeviceStatus.  # noqa: E501
+        :return: The created_on of this DeviceStatus.
         :rtype: datetime
         """
         return self._created_on
@@ -136,7 +136,7 @@ class DeviceStatus(object):
         """Sets the created_on of this DeviceStatus.
 
 
-        :param created_on: The created_on of this DeviceStatus.  # noqa: E501
+        :param created_on: The created_on of this DeviceStatus.
         :type: datetime
         """
 
@@ -144,10 +144,10 @@ class DeviceStatus(object):
 
     @property
     def device(self):
-        """Gets the device of this DeviceStatus.  # noqa: E501
+        """Gets the device of this DeviceStatus.
 
 
-        :return: The device of this DeviceStatus.  # noqa: E501
+        :return: The device of this DeviceStatus.
         :rtype: str
         """
         return self._device
@@ -157,20 +157,20 @@ class DeviceStatus(object):
         """Sets the device of this DeviceStatus.
 
 
-        :param device: The device of this DeviceStatus.  # noqa: E501
+        :param device: The device of this DeviceStatus.
         :type: str
         """
         if device is None:
-            raise ValueError("Invalid value for `device`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `device`, must not be `None`")
 
         self._device = device
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this DeviceStatus.  # noqa: E501
+        """Gets the enterprise of this DeviceStatus.
 
 
-        :return: The enterprise of this DeviceStatus.  # noqa: E501
+        :return: The enterprise of this DeviceStatus.
         :rtype: str
         """
         return self._enterprise
@@ -180,11 +180,11 @@ class DeviceStatus(object):
         """Sets the enterprise of this DeviceStatus.
 
 
-        :param enterprise: The enterprise of this DeviceStatus.  # noqa: E501
+        :param enterprise: The enterprise of this DeviceStatus.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 

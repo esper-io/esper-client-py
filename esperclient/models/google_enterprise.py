@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.emm_enterprise_state_enum import EMMEnterpriseStateEnum  # noqa: F401,E501
+from esperclient.models.emm_enterprise_state_enum import EMMEnterpriseStateEnum
 
 
 class GoogleEnterprise(object):
@@ -75,8 +75,8 @@ class GoogleEnterprise(object):
         'enterprise': 'enterprise'
     }
 
-    def __init__(self, id=None, google_enterprise_id=None, name=None, state=None, callback_url=None, signup_url=None, completion_token=None, enterprise_token=None, is_active=None, created_on=None, updated_on=None, enterprise=None):  # noqa: E501
-        """GoogleEnterprise - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, google_enterprise_id=None, name=None, state=None, callback_url=None, signup_url=None, completion_token=None, enterprise_token=None, is_active=None, created_on=None, updated_on=None, enterprise=None):
+        """GoogleEnterprise - a model defined in Swagger"""
 
         self._id = None
         self._google_enterprise_id = None
@@ -118,10 +118,10 @@ class GoogleEnterprise(object):
 
     @property
     def id(self):
-        """Gets the id of this GoogleEnterprise.  # noqa: E501
+        """Gets the id of this GoogleEnterprise.
 
 
-        :return: The id of this GoogleEnterprise.  # noqa: E501
+        :return: The id of this GoogleEnterprise.
         :rtype: int
         """
         return self._id
@@ -131,7 +131,7 @@ class GoogleEnterprise(object):
         """Sets the id of this GoogleEnterprise.
 
 
-        :param id: The id of this GoogleEnterprise.  # noqa: E501
+        :param id: The id of this GoogleEnterprise.
         :type: int
         """
 
@@ -139,10 +139,10 @@ class GoogleEnterprise(object):
 
     @property
     def google_enterprise_id(self):
-        """Gets the google_enterprise_id of this GoogleEnterprise.  # noqa: E501
+        """Gets the google_enterprise_id of this GoogleEnterprise.
 
 
-        :return: The google_enterprise_id of this GoogleEnterprise.  # noqa: E501
+        :return: The google_enterprise_id of this GoogleEnterprise.
         :rtype: str
         """
         return self._google_enterprise_id
@@ -152,22 +152,22 @@ class GoogleEnterprise(object):
         """Sets the google_enterprise_id of this GoogleEnterprise.
 
 
-        :param google_enterprise_id: The google_enterprise_id of this GoogleEnterprise.  # noqa: E501
+        :param google_enterprise_id: The google_enterprise_id of this GoogleEnterprise.
         :type: str
         """
         if google_enterprise_id is not None and len(google_enterprise_id) > 50:
-            raise ValueError("Invalid value for `google_enterprise_id`, length must be less than or equal to `50`")  # noqa: E501
+            raise ValueError("Invalid value for `google_enterprise_id`, length must be less than or equal to `50`")
         if google_enterprise_id is not None and len(google_enterprise_id) < 1:
-            raise ValueError("Invalid value for `google_enterprise_id`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `google_enterprise_id`, length must be greater than or equal to `1`")
 
         self._google_enterprise_id = google_enterprise_id
 
     @property
     def name(self):
-        """Gets the name of this GoogleEnterprise.  # noqa: E501
+        """Gets the name of this GoogleEnterprise.
 
 
-        :return: The name of this GoogleEnterprise.  # noqa: E501
+        :return: The name of this GoogleEnterprise.
         :rtype: str
         """
         return self._name
@@ -177,24 +177,24 @@ class GoogleEnterprise(object):
         """Sets the name of this GoogleEnterprise.
 
 
-        :param name: The name of this GoogleEnterprise.  # noqa: E501
+        :param name: The name of this GoogleEnterprise.
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")
         if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
         if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")
 
         self._name = name
 
     @property
     def state(self):
-        """Gets the state of this GoogleEnterprise.  # noqa: E501
+        """Gets the state of this GoogleEnterprise.
 
 
-        :return: The state of this GoogleEnterprise.  # noqa: E501
+        :return: The state of this GoogleEnterprise.
         :rtype: EMMEnterpriseStateEnum
         """
         return self._state
@@ -204,7 +204,7 @@ class GoogleEnterprise(object):
         """Sets the state of this GoogleEnterprise.
 
 
-        :param state: The state of this GoogleEnterprise.  # noqa: E501
+        :param state: The state of this GoogleEnterprise.
         :type: EMMEnterpriseStateEnum
         """
 
@@ -212,10 +212,10 @@ class GoogleEnterprise(object):
 
     @property
     def callback_url(self):
-        """Gets the callback_url of this GoogleEnterprise.  # noqa: E501
+        """Gets the callback_url of this GoogleEnterprise.
 
 
-        :return: The callback_url of this GoogleEnterprise.  # noqa: E501
+        :return: The callback_url of this GoogleEnterprise.
         :rtype: str
         """
         return self._callback_url
@@ -225,20 +225,20 @@ class GoogleEnterprise(object):
         """Sets the callback_url of this GoogleEnterprise.
 
 
-        :param callback_url: The callback_url of this GoogleEnterprise.  # noqa: E501
+        :param callback_url: The callback_url of this GoogleEnterprise.
         :type: str
         """
         if callback_url is not None and len(callback_url) < 1:
-            raise ValueError("Invalid value for `callback_url`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `callback_url`, length must be greater than or equal to `1`")
 
         self._callback_url = callback_url
 
     @property
     def signup_url(self):
-        """Gets the signup_url of this GoogleEnterprise.  # noqa: E501
+        """Gets the signup_url of this GoogleEnterprise.
 
 
-        :return: The signup_url of this GoogleEnterprise.  # noqa: E501
+        :return: The signup_url of this GoogleEnterprise.
         :rtype: str
         """
         return self._signup_url
@@ -248,20 +248,20 @@ class GoogleEnterprise(object):
         """Sets the signup_url of this GoogleEnterprise.
 
 
-        :param signup_url: The signup_url of this GoogleEnterprise.  # noqa: E501
+        :param signup_url: The signup_url of this GoogleEnterprise.
         :type: str
         """
         if signup_url is not None and len(signup_url) < 1:
-            raise ValueError("Invalid value for `signup_url`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `signup_url`, length must be greater than or equal to `1`")
 
         self._signup_url = signup_url
 
     @property
     def completion_token(self):
-        """Gets the completion_token of this GoogleEnterprise.  # noqa: E501
+        """Gets the completion_token of this GoogleEnterprise.
 
 
-        :return: The completion_token of this GoogleEnterprise.  # noqa: E501
+        :return: The completion_token of this GoogleEnterprise.
         :rtype: str
         """
         return self._completion_token
@@ -271,22 +271,22 @@ class GoogleEnterprise(object):
         """Sets the completion_token of this GoogleEnterprise.
 
 
-        :param completion_token: The completion_token of this GoogleEnterprise.  # noqa: E501
+        :param completion_token: The completion_token of this GoogleEnterprise.
         :type: str
         """
         if completion_token is not None and len(completion_token) > 255:
-            raise ValueError("Invalid value for `completion_token`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `completion_token`, length must be less than or equal to `255`")
         if completion_token is not None and len(completion_token) < 1:
-            raise ValueError("Invalid value for `completion_token`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `completion_token`, length must be greater than or equal to `1`")
 
         self._completion_token = completion_token
 
     @property
     def enterprise_token(self):
-        """Gets the enterprise_token of this GoogleEnterprise.  # noqa: E501
+        """Gets the enterprise_token of this GoogleEnterprise.
 
 
-        :return: The enterprise_token of this GoogleEnterprise.  # noqa: E501
+        :return: The enterprise_token of this GoogleEnterprise.
         :rtype: str
         """
         return self._enterprise_token
@@ -296,22 +296,22 @@ class GoogleEnterprise(object):
         """Sets the enterprise_token of this GoogleEnterprise.
 
 
-        :param enterprise_token: The enterprise_token of this GoogleEnterprise.  # noqa: E501
+        :param enterprise_token: The enterprise_token of this GoogleEnterprise.
         :type: str
         """
         if enterprise_token is not None and len(enterprise_token) > 255:
-            raise ValueError("Invalid value for `enterprise_token`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise_token`, length must be less than or equal to `255`")
         if enterprise_token is not None and len(enterprise_token) < 1:
-            raise ValueError("Invalid value for `enterprise_token`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise_token`, length must be greater than or equal to `1`")
 
         self._enterprise_token = enterprise_token
 
     @property
     def is_active(self):
-        """Gets the is_active of this GoogleEnterprise.  # noqa: E501
+        """Gets the is_active of this GoogleEnterprise.
 
 
-        :return: The is_active of this GoogleEnterprise.  # noqa: E501
+        :return: The is_active of this GoogleEnterprise.
         :rtype: bool
         """
         return self._is_active
@@ -321,7 +321,7 @@ class GoogleEnterprise(object):
         """Sets the is_active of this GoogleEnterprise.
 
 
-        :param is_active: The is_active of this GoogleEnterprise.  # noqa: E501
+        :param is_active: The is_active of this GoogleEnterprise.
         :type: bool
         """
 
@@ -329,10 +329,10 @@ class GoogleEnterprise(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this GoogleEnterprise.  # noqa: E501
+        """Gets the created_on of this GoogleEnterprise.
 
 
-        :return: The created_on of this GoogleEnterprise.  # noqa: E501
+        :return: The created_on of this GoogleEnterprise.
         :rtype: datetime
         """
         return self._created_on
@@ -342,7 +342,7 @@ class GoogleEnterprise(object):
         """Sets the created_on of this GoogleEnterprise.
 
 
-        :param created_on: The created_on of this GoogleEnterprise.  # noqa: E501
+        :param created_on: The created_on of this GoogleEnterprise.
         :type: datetime
         """
 
@@ -350,10 +350,10 @@ class GoogleEnterprise(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this GoogleEnterprise.  # noqa: E501
+        """Gets the updated_on of this GoogleEnterprise.
 
 
-        :return: The updated_on of this GoogleEnterprise.  # noqa: E501
+        :return: The updated_on of this GoogleEnterprise.
         :rtype: datetime
         """
         return self._updated_on
@@ -363,7 +363,7 @@ class GoogleEnterprise(object):
         """Sets the updated_on of this GoogleEnterprise.
 
 
-        :param updated_on: The updated_on of this GoogleEnterprise.  # noqa: E501
+        :param updated_on: The updated_on of this GoogleEnterprise.
         :type: datetime
         """
 
@@ -371,10 +371,10 @@ class GoogleEnterprise(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this GoogleEnterprise.  # noqa: E501
+        """Gets the enterprise of this GoogleEnterprise.
 
 
-        :return: The enterprise of this GoogleEnterprise.  # noqa: E501
+        :return: The enterprise of this GoogleEnterprise.
         :rtype: str
         """
         return self._enterprise
@@ -384,7 +384,7 @@ class GoogleEnterprise(object):
         """Sets the enterprise of this GoogleEnterprise.
 
 
-        :param enterprise: The enterprise of this GoogleEnterprise.  # noqa: E501
+        :param enterprise: The enterprise of this GoogleEnterprise.
         :type: str
         """
 

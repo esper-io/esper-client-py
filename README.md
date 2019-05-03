@@ -81,6 +81,7 @@ Class | Method | HTTP request
 *ApplicationApi* | [**get_app_versions**](docs/ApplicationApi.md#get_app_versions) | **GET** /enterprise/{enterprise_id}/application/{application_id}/version/
 *ApplicationApi* | [**get_application**](docs/ApplicationApi.md#get_application) | **GET** /enterprise/{enterprise_id}/application/{application_id}/
 *ApplicationApi* | [**upload**](docs/ApplicationApi.md#upload) | **POST** /enterprise/{enterprise_id}/application/upload/
+*CommandsApi* | [**get_command**](docs/CommandsApi.md#get_command) | **GET** /enterprise/{enterprise_id}/device/{device_id}/command/{command_id}/
 *CommandsApi* | [**run_command**](docs/CommandsApi.md#run_command) | **POST** /enterprise/{enterprise_id}/device/{device_id}/command/
 *DeviceApi* | [**get_all_devices**](docs/DeviceApi.md#get_all_devices) | **GET** /enterprise/{enterprise_id}/device/
 *DeviceApi* | [**get_app_installs**](docs/DeviceApi.md#get_app_installs) | **GET** /enterprise/{enterprise_id}/device/{device_id}/install/
@@ -114,6 +115,7 @@ Class | Method | HTTP request
  - [AppVersion](docs/AppVersion.md)
  - [Application](docs/Application.md)
  - [ApplicationVersion](docs/ApplicationVersion.md)
+ - [CommandArgs](docs/CommandArgs.md)
  - [CommandRequest](docs/CommandRequest.md)
  - [Device](docs/Device.md)
  - [DeviceApp](docs/DeviceApp.md)
@@ -144,6 +146,9 @@ Class | Method | HTTP request
  - [AppInstallStateEnum](docs/AppInstallStateEnum.md)
  - [DeviceCommandEnum](docs/DeviceCommandEnum.md)
  - [EMMEnterpriseStateEnum](docs/EMMEnterpriseStateEnum.md)
+ - [SettingsGPSStateEnum](docs/SettingsGPSStateEnum.md)
+ - [SettingsRotateStateEnum](docs/SettingsRotateStateEnum.md)
+ - [SettingsVolumeStreamEnum](docs/SettingsVolumeStreamEnum.md)
 
 
 ## Documentation For Authorization

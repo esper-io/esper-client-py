@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.application_version import ApplicationVersion  # noqa: F401,E501
+from esperclient.models.application_version import ApplicationVersion
 
 
 class Application(object):
@@ -77,8 +77,8 @@ class Application(object):
         'enterprise': 'enterprise'
     }
 
-    def __init__(self, id=None, versions=None, application_name=None, package_name=None, developer=None, category=None, content_rating=None, compatibility=None, created_on=None, updated_on=None, is_active=None, is_hidden=None, enterprise=None):  # noqa: E501
-        """Application - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, versions=None, application_name=None, package_name=None, developer=None, category=None, content_rating=None, compatibility=None, created_on=None, updated_on=None, is_active=None, is_hidden=None, enterprise=None):
+        """Application - a model defined in Swagger"""
 
         self._id = None
         self._versions = None
@@ -121,10 +121,10 @@ class Application(object):
 
     @property
     def id(self):
-        """Gets the id of this Application.  # noqa: E501
+        """Gets the id of this Application.
 
 
-        :return: The id of this Application.  # noqa: E501
+        :return: The id of this Application.
         :rtype: str
         """
         return self._id
@@ -134,7 +134,7 @@ class Application(object):
         """Sets the id of this Application.
 
 
-        :param id: The id of this Application.  # noqa: E501
+        :param id: The id of this Application.
         :type: str
         """
 
@@ -142,10 +142,10 @@ class Application(object):
 
     @property
     def versions(self):
-        """Gets the versions of this Application.  # noqa: E501
+        """Gets the versions of this Application.
 
 
-        :return: The versions of this Application.  # noqa: E501
+        :return: The versions of this Application.
         :rtype: list[ApplicationVersion]
         """
         return self._versions
@@ -155,7 +155,7 @@ class Application(object):
         """Sets the versions of this Application.
 
 
-        :param versions: The versions of this Application.  # noqa: E501
+        :param versions: The versions of this Application.
         :type: list[ApplicationVersion]
         """
 
@@ -163,10 +163,10 @@ class Application(object):
 
     @property
     def application_name(self):
-        """Gets the application_name of this Application.  # noqa: E501
+        """Gets the application_name of this Application.
 
 
-        :return: The application_name of this Application.  # noqa: E501
+        :return: The application_name of this Application.
         :rtype: str
         """
         return self._application_name
@@ -176,24 +176,24 @@ class Application(object):
         """Sets the application_name of this Application.
 
 
-        :param application_name: The application_name of this Application.  # noqa: E501
+        :param application_name: The application_name of this Application.
         :type: str
         """
         if application_name is None:
-            raise ValueError("Invalid value for `application_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `application_name`, must not be `None`")
         if application_name is not None and len(application_name) > 255:
-            raise ValueError("Invalid value for `application_name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `application_name`, length must be less than or equal to `255`")
         if application_name is not None and len(application_name) < 1:
-            raise ValueError("Invalid value for `application_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `application_name`, length must be greater than or equal to `1`")
 
         self._application_name = application_name
 
     @property
     def package_name(self):
-        """Gets the package_name of this Application.  # noqa: E501
+        """Gets the package_name of this Application.
 
 
-        :return: The package_name of this Application.  # noqa: E501
+        :return: The package_name of this Application.
         :rtype: str
         """
         return self._package_name
@@ -203,24 +203,24 @@ class Application(object):
         """Sets the package_name of this Application.
 
 
-        :param package_name: The package_name of this Application.  # noqa: E501
+        :param package_name: The package_name of this Application.
         :type: str
         """
         if package_name is None:
-            raise ValueError("Invalid value for `package_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `package_name`, must not be `None`")
         if package_name is not None and len(package_name) > 255:
-            raise ValueError("Invalid value for `package_name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `package_name`, length must be less than or equal to `255`")
         if package_name is not None and len(package_name) < 1:
-            raise ValueError("Invalid value for `package_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `package_name`, length must be greater than or equal to `1`")
 
         self._package_name = package_name
 
     @property
     def developer(self):
-        """Gets the developer of this Application.  # noqa: E501
+        """Gets the developer of this Application.
 
 
-        :return: The developer of this Application.  # noqa: E501
+        :return: The developer of this Application.
         :rtype: str
         """
         return self._developer
@@ -230,22 +230,22 @@ class Application(object):
         """Sets the developer of this Application.
 
 
-        :param developer: The developer of this Application.  # noqa: E501
+        :param developer: The developer of this Application.
         :type: str
         """
         if developer is not None and len(developer) > 255:
-            raise ValueError("Invalid value for `developer`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `developer`, length must be less than or equal to `255`")
         if developer is not None and len(developer) < 1:
-            raise ValueError("Invalid value for `developer`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `developer`, length must be greater than or equal to `1`")
 
         self._developer = developer
 
     @property
     def category(self):
-        """Gets the category of this Application.  # noqa: E501
+        """Gets the category of this Application.
 
 
-        :return: The category of this Application.  # noqa: E501
+        :return: The category of this Application.
         :rtype: str
         """
         return self._category
@@ -255,22 +255,22 @@ class Application(object):
         """Sets the category of this Application.
 
 
-        :param category: The category of this Application.  # noqa: E501
+        :param category: The category of this Application.
         :type: str
         """
         if category is not None and len(category) > 255:
-            raise ValueError("Invalid value for `category`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `category`, length must be less than or equal to `255`")
         if category is not None and len(category) < 1:
-            raise ValueError("Invalid value for `category`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `category`, length must be greater than or equal to `1`")
 
         self._category = category
 
     @property
     def content_rating(self):
-        """Gets the content_rating of this Application.  # noqa: E501
+        """Gets the content_rating of this Application.
 
 
-        :return: The content_rating of this Application.  # noqa: E501
+        :return: The content_rating of this Application.
         :rtype: str
         """
         return self._content_rating
@@ -280,7 +280,7 @@ class Application(object):
         """Sets the content_rating of this Application.
 
 
-        :param content_rating: The content_rating of this Application.  # noqa: E501
+        :param content_rating: The content_rating of this Application.
         :type: str
         """
 
@@ -288,10 +288,10 @@ class Application(object):
 
     @property
     def compatibility(self):
-        """Gets the compatibility of this Application.  # noqa: E501
+        """Gets the compatibility of this Application.
 
 
-        :return: The compatibility of this Application.  # noqa: E501
+        :return: The compatibility of this Application.
         :rtype: str
         """
         return self._compatibility
@@ -301,20 +301,20 @@ class Application(object):
         """Sets the compatibility of this Application.
 
 
-        :param compatibility: The compatibility of this Application.  # noqa: E501
+        :param compatibility: The compatibility of this Application.
         :type: str
         """
         if compatibility is not None and len(compatibility) < 1:
-            raise ValueError("Invalid value for `compatibility`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `compatibility`, length must be greater than or equal to `1`")
 
         self._compatibility = compatibility
 
     @property
     def created_on(self):
-        """Gets the created_on of this Application.  # noqa: E501
+        """Gets the created_on of this Application.
 
 
-        :return: The created_on of this Application.  # noqa: E501
+        :return: The created_on of this Application.
         :rtype: datetime
         """
         return self._created_on
@@ -324,7 +324,7 @@ class Application(object):
         """Sets the created_on of this Application.
 
 
-        :param created_on: The created_on of this Application.  # noqa: E501
+        :param created_on: The created_on of this Application.
         :type: datetime
         """
 
@@ -332,10 +332,10 @@ class Application(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this Application.  # noqa: E501
+        """Gets the updated_on of this Application.
 
 
-        :return: The updated_on of this Application.  # noqa: E501
+        :return: The updated_on of this Application.
         :rtype: datetime
         """
         return self._updated_on
@@ -345,7 +345,7 @@ class Application(object):
         """Sets the updated_on of this Application.
 
 
-        :param updated_on: The updated_on of this Application.  # noqa: E501
+        :param updated_on: The updated_on of this Application.
         :type: datetime
         """
 
@@ -353,10 +353,10 @@ class Application(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this Application.  # noqa: E501
+        """Gets the is_active of this Application.
 
 
-        :return: The is_active of this Application.  # noqa: E501
+        :return: The is_active of this Application.
         :rtype: bool
         """
         return self._is_active
@@ -366,7 +366,7 @@ class Application(object):
         """Sets the is_active of this Application.
 
 
-        :param is_active: The is_active of this Application.  # noqa: E501
+        :param is_active: The is_active of this Application.
         :type: bool
         """
 
@@ -374,10 +374,10 @@ class Application(object):
 
     @property
     def is_hidden(self):
-        """Gets the is_hidden of this Application.  # noqa: E501
+        """Gets the is_hidden of this Application.
 
 
-        :return: The is_hidden of this Application.  # noqa: E501
+        :return: The is_hidden of this Application.
         :rtype: bool
         """
         return self._is_hidden
@@ -387,7 +387,7 @@ class Application(object):
         """Sets the is_hidden of this Application.
 
 
-        :param is_hidden: The is_hidden of this Application.  # noqa: E501
+        :param is_hidden: The is_hidden of this Application.
         :type: bool
         """
 
@@ -395,10 +395,10 @@ class Application(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this Application.  # noqa: E501
+        """Gets the enterprise of this Application.
 
 
-        :return: The enterprise of this Application.  # noqa: E501
+        :return: The enterprise of this Application.
         :rtype: str
         """
         return self._enterprise
@@ -408,11 +408,11 @@ class Application(object):
         """Sets the enterprise of this Application.
 
 
-        :param enterprise: The enterprise of this Application.  # noqa: E501
+        :param enterprise: The enterprise of this Application.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 

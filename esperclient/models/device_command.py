@@ -25,11 +25,12 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.device_command_enum import DeviceCommandEnum  # noqa: F401,E501
+from esperclient.models.command_args import CommandArgs
+from esperclient.models.device_command_enum import DeviceCommandEnum
 
 
 class DeviceCommand(object):
@@ -48,7 +49,7 @@ class DeviceCommand(object):
     swagger_types = {
         'id': 'str',
         'current_base_uri': 'str',
-        'command_args': 'str',
+        'command_args': 'CommandArgs',
         'action': 'str',
         'schedule': 'str',
         'group_schedule_id': 'str',
@@ -81,8 +82,8 @@ class DeviceCommand(object):
         'issued_by': 'issued_by'
     }
 
-    def __init__(self, id=None, current_base_uri=None, command_args=None, action=None, schedule=None, group_schedule_id=None, command=None, state=None, details=None, created_on=None, updated_on=None, enterprise=None, device=None, group_command=None, issued_by=None):  # noqa: E501
-        """DeviceCommand - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, current_base_uri=None, command_args=None, action=None, schedule=None, group_schedule_id=None, command=None, state=None, details=None, created_on=None, updated_on=None, enterprise=None, device=None, group_command=None, issued_by=None):
+        """DeviceCommand - a model defined in Swagger"""
 
         self._id = None
         self._current_base_uri = None
@@ -131,10 +132,10 @@ class DeviceCommand(object):
 
     @property
     def id(self):
-        """Gets the id of this DeviceCommand.  # noqa: E501
+        """Gets the id of this DeviceCommand.
 
 
-        :return: The id of this DeviceCommand.  # noqa: E501
+        :return: The id of this DeviceCommand.
         :rtype: str
         """
         return self._id
@@ -144,7 +145,7 @@ class DeviceCommand(object):
         """Sets the id of this DeviceCommand.
 
 
-        :param id: The id of this DeviceCommand.  # noqa: E501
+        :param id: The id of this DeviceCommand.
         :type: str
         """
 
@@ -152,10 +153,10 @@ class DeviceCommand(object):
 
     @property
     def current_base_uri(self):
-        """Gets the current_base_uri of this DeviceCommand.  # noqa: E501
+        """Gets the current_base_uri of this DeviceCommand.
 
 
-        :return: The current_base_uri of this DeviceCommand.  # noqa: E501
+        :return: The current_base_uri of this DeviceCommand.
         :rtype: str
         """
         return self._current_base_uri
@@ -165,21 +166,21 @@ class DeviceCommand(object):
         """Sets the current_base_uri of this DeviceCommand.
 
 
-        :param current_base_uri: The current_base_uri of this DeviceCommand.  # noqa: E501
+        :param current_base_uri: The current_base_uri of this DeviceCommand.
         :type: str
         """
         if current_base_uri is not None and len(current_base_uri) < 1:
-            raise ValueError("Invalid value for `current_base_uri`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `current_base_uri`, length must be greater than or equal to `1`")
 
         self._current_base_uri = current_base_uri
 
     @property
     def command_args(self):
-        """Gets the command_args of this DeviceCommand.  # noqa: E501
+        """Gets the command_args of this DeviceCommand.
 
 
-        :return: The command_args of this DeviceCommand.  # noqa: E501
-        :rtype: str
+        :return: The command_args of this DeviceCommand.
+        :rtype: CommandArgs
         """
         return self._command_args
 
@@ -188,18 +189,18 @@ class DeviceCommand(object):
         """Sets the command_args of this DeviceCommand.
 
 
-        :param command_args: The command_args of this DeviceCommand.  # noqa: E501
-        :type: str
+        :param command_args: The command_args of this DeviceCommand.
+        :type: CommandArgs
         """
 
         self._command_args = command_args
 
     @property
     def action(self):
-        """Gets the action of this DeviceCommand.  # noqa: E501
+        """Gets the action of this DeviceCommand.
 
 
-        :return: The action of this DeviceCommand.  # noqa: E501
+        :return: The action of this DeviceCommand.
         :rtype: str
         """
         return self._action
@@ -209,13 +210,13 @@ class DeviceCommand(object):
         """Sets the action of this DeviceCommand.
 
 
-        :param action: The action of this DeviceCommand.  # noqa: E501
+        :param action: The action of this DeviceCommand.
         :type: str
         """
-        allowed_values = ["acknowledge", "in_progress", "success", "failed"]  # noqa: E501
+        allowed_values = ["acknowledge", "in_progress", "success", "failed"]
         if action not in allowed_values:
             raise ValueError(
-                "Invalid value for `action` ({0}), must be one of {1}"  # noqa: E501
+                "Invalid value for `action` ({0}), must be one of {1}"
                 .format(action, allowed_values)
             )
 
@@ -223,10 +224,10 @@ class DeviceCommand(object):
 
     @property
     def schedule(self):
-        """Gets the schedule of this DeviceCommand.  # noqa: E501
+        """Gets the schedule of this DeviceCommand.
 
 
-        :return: The schedule of this DeviceCommand.  # noqa: E501
+        :return: The schedule of this DeviceCommand.
         :rtype: str
         """
         return self._schedule
@@ -236,7 +237,7 @@ class DeviceCommand(object):
         """Sets the schedule of this DeviceCommand.
 
 
-        :param schedule: The schedule of this DeviceCommand.  # noqa: E501
+        :param schedule: The schedule of this DeviceCommand.
         :type: str
         """
 
@@ -244,10 +245,10 @@ class DeviceCommand(object):
 
     @property
     def group_schedule_id(self):
-        """Gets the group_schedule_id of this DeviceCommand.  # noqa: E501
+        """Gets the group_schedule_id of this DeviceCommand.
 
 
-        :return: The group_schedule_id of this DeviceCommand.  # noqa: E501
+        :return: The group_schedule_id of this DeviceCommand.
         :rtype: str
         """
         return self._group_schedule_id
@@ -257,7 +258,7 @@ class DeviceCommand(object):
         """Sets the group_schedule_id of this DeviceCommand.
 
 
-        :param group_schedule_id: The group_schedule_id of this DeviceCommand.  # noqa: E501
+        :param group_schedule_id: The group_schedule_id of this DeviceCommand.
         :type: str
         """
 
@@ -265,10 +266,10 @@ class DeviceCommand(object):
 
     @property
     def command(self):
-        """Gets the command of this DeviceCommand.  # noqa: E501
+        """Gets the command of this DeviceCommand.
 
 
-        :return: The command of this DeviceCommand.  # noqa: E501
+        :return: The command of this DeviceCommand.
         :rtype: DeviceCommandEnum
         """
         return self._command
@@ -278,20 +279,20 @@ class DeviceCommand(object):
         """Sets the command of this DeviceCommand.
 
 
-        :param command: The command of this DeviceCommand.  # noqa: E501
+        :param command: The command of this DeviceCommand.
         :type: DeviceCommandEnum
         """
         if command is None:
-            raise ValueError("Invalid value for `command`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `command`, must not be `None`")
 
         self._command = command
 
     @property
     def state(self):
-        """Gets the state of this DeviceCommand.  # noqa: E501
+        """Gets the state of this DeviceCommand.
 
 
-        :return: The state of this DeviceCommand.  # noqa: E501
+        :return: The state of this DeviceCommand.
         :rtype: str
         """
         return self._state
@@ -301,13 +302,13 @@ class DeviceCommand(object):
         """Sets the state of this DeviceCommand.
 
 
-        :param state: The state of this DeviceCommand.  # noqa: E501
+        :param state: The state of this DeviceCommand.
         :type: str
         """
-        allowed_values = ["Command Initiated", "Command Acknowledged", "Command In Progress", "Command TimeOut", "Command Success", "Command Failure", "Command Scheduled"]  # noqa: E501
+        allowed_values = ["Command Initiated", "Command Acknowledged", "Command In Progress", "Command TimeOut", "Command Success", "Command Failure", "Command Scheduled"]
         if state not in allowed_values:
             raise ValueError(
-                "Invalid value for `state` ({0}), must be one of {1}"  # noqa: E501
+                "Invalid value for `state` ({0}), must be one of {1}"
                 .format(state, allowed_values)
             )
 
@@ -315,10 +316,10 @@ class DeviceCommand(object):
 
     @property
     def details(self):
-        """Gets the details of this DeviceCommand.  # noqa: E501
+        """Gets the details of this DeviceCommand.
 
 
-        :return: The details of this DeviceCommand.  # noqa: E501
+        :return: The details of this DeviceCommand.
         :rtype: str
         """
         return self._details
@@ -328,7 +329,7 @@ class DeviceCommand(object):
         """Sets the details of this DeviceCommand.
 
 
-        :param details: The details of this DeviceCommand.  # noqa: E501
+        :param details: The details of this DeviceCommand.
         :type: str
         """
 
@@ -336,10 +337,10 @@ class DeviceCommand(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this DeviceCommand.  # noqa: E501
+        """Gets the created_on of this DeviceCommand.
 
 
-        :return: The created_on of this DeviceCommand.  # noqa: E501
+        :return: The created_on of this DeviceCommand.
         :rtype: datetime
         """
         return self._created_on
@@ -349,7 +350,7 @@ class DeviceCommand(object):
         """Sets the created_on of this DeviceCommand.
 
 
-        :param created_on: The created_on of this DeviceCommand.  # noqa: E501
+        :param created_on: The created_on of this DeviceCommand.
         :type: datetime
         """
 
@@ -357,10 +358,10 @@ class DeviceCommand(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this DeviceCommand.  # noqa: E501
+        """Gets the updated_on of this DeviceCommand.
 
 
-        :return: The updated_on of this DeviceCommand.  # noqa: E501
+        :return: The updated_on of this DeviceCommand.
         :rtype: datetime
         """
         return self._updated_on
@@ -370,7 +371,7 @@ class DeviceCommand(object):
         """Sets the updated_on of this DeviceCommand.
 
 
-        :param updated_on: The updated_on of this DeviceCommand.  # noqa: E501
+        :param updated_on: The updated_on of this DeviceCommand.
         :type: datetime
         """
 
@@ -378,10 +379,10 @@ class DeviceCommand(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this DeviceCommand.  # noqa: E501
+        """Gets the enterprise of this DeviceCommand.
 
 
-        :return: The enterprise of this DeviceCommand.  # noqa: E501
+        :return: The enterprise of this DeviceCommand.
         :rtype: str
         """
         return self._enterprise
@@ -391,20 +392,20 @@ class DeviceCommand(object):
         """Sets the enterprise of this DeviceCommand.
 
 
-        :param enterprise: The enterprise of this DeviceCommand.  # noqa: E501
+        :param enterprise: The enterprise of this DeviceCommand.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 
     @property
     def device(self):
-        """Gets the device of this DeviceCommand.  # noqa: E501
+        """Gets the device of this DeviceCommand.
 
 
-        :return: The device of this DeviceCommand.  # noqa: E501
+        :return: The device of this DeviceCommand.
         :rtype: str
         """
         return self._device
@@ -414,20 +415,20 @@ class DeviceCommand(object):
         """Sets the device of this DeviceCommand.
 
 
-        :param device: The device of this DeviceCommand.  # noqa: E501
+        :param device: The device of this DeviceCommand.
         :type: str
         """
         if device is None:
-            raise ValueError("Invalid value for `device`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `device`, must not be `None`")
 
         self._device = device
 
     @property
     def group_command(self):
-        """Gets the group_command of this DeviceCommand.  # noqa: E501
+        """Gets the group_command of this DeviceCommand.
 
 
-        :return: The group_command of this DeviceCommand.  # noqa: E501
+        :return: The group_command of this DeviceCommand.
         :rtype: str
         """
         return self._group_command
@@ -437,7 +438,7 @@ class DeviceCommand(object):
         """Sets the group_command of this DeviceCommand.
 
 
-        :param group_command: The group_command of this DeviceCommand.  # noqa: E501
+        :param group_command: The group_command of this DeviceCommand.
         :type: str
         """
 
@@ -445,10 +446,10 @@ class DeviceCommand(object):
 
     @property
     def issued_by(self):
-        """Gets the issued_by of this DeviceCommand.  # noqa: E501
+        """Gets the issued_by of this DeviceCommand.
 
 
-        :return: The issued_by of this DeviceCommand.  # noqa: E501
+        :return: The issued_by of this DeviceCommand.
         :rtype: str
         """
         return self._issued_by
@@ -458,7 +459,7 @@ class DeviceCommand(object):
         """Sets the issued_by of this DeviceCommand.
 
 
-        :param issued_by: The issued_by of this DeviceCommand.  # noqa: E501
+        :param issued_by: The issued_by of this DeviceCommand.
         :type: str
         """
 

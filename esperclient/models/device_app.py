@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.device_app_permission import DeviceAppPermission  # noqa: F401,E501
+from esperclient.models.device_app_permission import DeviceAppPermission
 
 
 class DeviceApp(object):
@@ -75,8 +75,8 @@ class DeviceApp(object):
         'device': 'device'
     }
 
-    def __init__(self, id=None, permissions=None, app_name=None, package_name=None, whitelisted=None, product_id=None, version_code=None, version_name=None, created_on=None, updated_on=None, is_active=None, device=None):  # noqa: E501
-        """DeviceApp - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, permissions=None, app_name=None, package_name=None, whitelisted=None, product_id=None, version_code=None, version_name=None, created_on=None, updated_on=None, is_active=None, device=None):
+        """DeviceApp - a model defined in Swagger"""
 
         self._id = None
         self._permissions = None
@@ -116,10 +116,10 @@ class DeviceApp(object):
 
     @property
     def id(self):
-        """Gets the id of this DeviceApp.  # noqa: E501
+        """Gets the id of this DeviceApp.
 
 
-        :return: The id of this DeviceApp.  # noqa: E501
+        :return: The id of this DeviceApp.
         :rtype: str
         """
         return self._id
@@ -129,7 +129,7 @@ class DeviceApp(object):
         """Sets the id of this DeviceApp.
 
 
-        :param id: The id of this DeviceApp.  # noqa: E501
+        :param id: The id of this DeviceApp.
         :type: str
         """
 
@@ -137,10 +137,10 @@ class DeviceApp(object):
 
     @property
     def permissions(self):
-        """Gets the permissions of this DeviceApp.  # noqa: E501
+        """Gets the permissions of this DeviceApp.
 
 
-        :return: The permissions of this DeviceApp.  # noqa: E501
+        :return: The permissions of this DeviceApp.
         :rtype: list[DeviceAppPermission]
         """
         return self._permissions
@@ -150,7 +150,7 @@ class DeviceApp(object):
         """Sets the permissions of this DeviceApp.
 
 
-        :param permissions: The permissions of this DeviceApp.  # noqa: E501
+        :param permissions: The permissions of this DeviceApp.
         :type: list[DeviceAppPermission]
         """
 
@@ -158,10 +158,10 @@ class DeviceApp(object):
 
     @property
     def app_name(self):
-        """Gets the app_name of this DeviceApp.  # noqa: E501
+        """Gets the app_name of this DeviceApp.
 
 
-        :return: The app_name of this DeviceApp.  # noqa: E501
+        :return: The app_name of this DeviceApp.
         :rtype: str
         """
         return self._app_name
@@ -171,22 +171,22 @@ class DeviceApp(object):
         """Sets the app_name of this DeviceApp.
 
 
-        :param app_name: The app_name of this DeviceApp.  # noqa: E501
+        :param app_name: The app_name of this DeviceApp.
         :type: str
         """
         if app_name is None:
-            raise ValueError("Invalid value for `app_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `app_name`, must not be `None`")
         if app_name is not None and len(app_name) < 1:
-            raise ValueError("Invalid value for `app_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `app_name`, length must be greater than or equal to `1`")
 
         self._app_name = app_name
 
     @property
     def package_name(self):
-        """Gets the package_name of this DeviceApp.  # noqa: E501
+        """Gets the package_name of this DeviceApp.
 
 
-        :return: The package_name of this DeviceApp.  # noqa: E501
+        :return: The package_name of this DeviceApp.
         :rtype: str
         """
         return self._package_name
@@ -196,24 +196,24 @@ class DeviceApp(object):
         """Sets the package_name of this DeviceApp.
 
 
-        :param package_name: The package_name of this DeviceApp.  # noqa: E501
+        :param package_name: The package_name of this DeviceApp.
         :type: str
         """
         if package_name is None:
-            raise ValueError("Invalid value for `package_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `package_name`, must not be `None`")
         if package_name is not None and len(package_name) > 255:
-            raise ValueError("Invalid value for `package_name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `package_name`, length must be less than or equal to `255`")
         if package_name is not None and len(package_name) < 1:
-            raise ValueError("Invalid value for `package_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `package_name`, length must be greater than or equal to `1`")
 
         self._package_name = package_name
 
     @property
     def whitelisted(self):
-        """Gets the whitelisted of this DeviceApp.  # noqa: E501
+        """Gets the whitelisted of this DeviceApp.
 
 
-        :return: The whitelisted of this DeviceApp.  # noqa: E501
+        :return: The whitelisted of this DeviceApp.
         :rtype: bool
         """
         return self._whitelisted
@@ -223,7 +223,7 @@ class DeviceApp(object):
         """Sets the whitelisted of this DeviceApp.
 
 
-        :param whitelisted: The whitelisted of this DeviceApp.  # noqa: E501
+        :param whitelisted: The whitelisted of this DeviceApp.
         :type: bool
         """
 
@@ -231,10 +231,10 @@ class DeviceApp(object):
 
     @property
     def product_id(self):
-        """Gets the product_id of this DeviceApp.  # noqa: E501
+        """Gets the product_id of this DeviceApp.
 
 
-        :return: The product_id of this DeviceApp.  # noqa: E501
+        :return: The product_id of this DeviceApp.
         :rtype: str
         """
         return self._product_id
@@ -244,22 +244,22 @@ class DeviceApp(object):
         """Sets the product_id of this DeviceApp.
 
 
-        :param product_id: The product_id of this DeviceApp.  # noqa: E501
+        :param product_id: The product_id of this DeviceApp.
         :type: str
         """
         if product_id is not None and len(product_id) > 255:
-            raise ValueError("Invalid value for `product_id`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `product_id`, length must be less than or equal to `255`")
         if product_id is not None and len(product_id) < 1:
-            raise ValueError("Invalid value for `product_id`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `product_id`, length must be greater than or equal to `1`")
 
         self._product_id = product_id
 
     @property
     def version_code(self):
-        """Gets the version_code of this DeviceApp.  # noqa: E501
+        """Gets the version_code of this DeviceApp.
 
 
-        :return: The version_code of this DeviceApp.  # noqa: E501
+        :return: The version_code of this DeviceApp.
         :rtype: str
         """
         return self._version_code
@@ -269,22 +269,22 @@ class DeviceApp(object):
         """Sets the version_code of this DeviceApp.
 
 
-        :param version_code: The version_code of this DeviceApp.  # noqa: E501
+        :param version_code: The version_code of this DeviceApp.
         :type: str
         """
         if version_code is not None and len(version_code) > 128:
-            raise ValueError("Invalid value for `version_code`, length must be less than or equal to `128`")  # noqa: E501
+            raise ValueError("Invalid value for `version_code`, length must be less than or equal to `128`")
         if version_code is not None and len(version_code) < 1:
-            raise ValueError("Invalid value for `version_code`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `version_code`, length must be greater than or equal to `1`")
 
         self._version_code = version_code
 
     @property
     def version_name(self):
-        """Gets the version_name of this DeviceApp.  # noqa: E501
+        """Gets the version_name of this DeviceApp.
 
 
-        :return: The version_name of this DeviceApp.  # noqa: E501
+        :return: The version_name of this DeviceApp.
         :rtype: str
         """
         return self._version_name
@@ -294,22 +294,22 @@ class DeviceApp(object):
         """Sets the version_name of this DeviceApp.
 
 
-        :param version_name: The version_name of this DeviceApp.  # noqa: E501
+        :param version_name: The version_name of this DeviceApp.
         :type: str
         """
         if version_name is not None and len(version_name) > 128:
-            raise ValueError("Invalid value for `version_name`, length must be less than or equal to `128`")  # noqa: E501
+            raise ValueError("Invalid value for `version_name`, length must be less than or equal to `128`")
         if version_name is not None and len(version_name) < 1:
-            raise ValueError("Invalid value for `version_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `version_name`, length must be greater than or equal to `1`")
 
         self._version_name = version_name
 
     @property
     def created_on(self):
-        """Gets the created_on of this DeviceApp.  # noqa: E501
+        """Gets the created_on of this DeviceApp.
 
 
-        :return: The created_on of this DeviceApp.  # noqa: E501
+        :return: The created_on of this DeviceApp.
         :rtype: datetime
         """
         return self._created_on
@@ -319,7 +319,7 @@ class DeviceApp(object):
         """Sets the created_on of this DeviceApp.
 
 
-        :param created_on: The created_on of this DeviceApp.  # noqa: E501
+        :param created_on: The created_on of this DeviceApp.
         :type: datetime
         """
 
@@ -327,10 +327,10 @@ class DeviceApp(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this DeviceApp.  # noqa: E501
+        """Gets the updated_on of this DeviceApp.
 
 
-        :return: The updated_on of this DeviceApp.  # noqa: E501
+        :return: The updated_on of this DeviceApp.
         :rtype: datetime
         """
         return self._updated_on
@@ -340,7 +340,7 @@ class DeviceApp(object):
         """Sets the updated_on of this DeviceApp.
 
 
-        :param updated_on: The updated_on of this DeviceApp.  # noqa: E501
+        :param updated_on: The updated_on of this DeviceApp.
         :type: datetime
         """
 
@@ -348,10 +348,10 @@ class DeviceApp(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this DeviceApp.  # noqa: E501
+        """Gets the is_active of this DeviceApp.
 
 
-        :return: The is_active of this DeviceApp.  # noqa: E501
+        :return: The is_active of this DeviceApp.
         :rtype: bool
         """
         return self._is_active
@@ -361,7 +361,7 @@ class DeviceApp(object):
         """Sets the is_active of this DeviceApp.
 
 
-        :param is_active: The is_active of this DeviceApp.  # noqa: E501
+        :param is_active: The is_active of this DeviceApp.
         :type: bool
         """
 
@@ -369,10 +369,10 @@ class DeviceApp(object):
 
     @property
     def device(self):
-        """Gets the device of this DeviceApp.  # noqa: E501
+        """Gets the device of this DeviceApp.
 
 
-        :return: The device of this DeviceApp.  # noqa: E501
+        :return: The device of this DeviceApp.
         :rtype: str
         """
         return self._device
@@ -382,11 +382,11 @@ class DeviceApp(object):
         """Sets the device of this DeviceApp.
 
 
-        :param device: The device of this DeviceApp.  # noqa: E501
+        :param device: The device of this DeviceApp.
         :type: str
         """
         if device is None:
-            raise ValueError("Invalid value for `device`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `device`, must not be `None`")
 
         self._device = device
 

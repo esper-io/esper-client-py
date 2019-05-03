@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -67,8 +67,8 @@ class EmmDevice(object):
         'is_active': 'is_active'
     }
 
-    def __init__(self, id=None, google_device_id=None, management_type=None, device=None, google_user=None, policy=None, created_on=None, updated_on=None, is_active=True):  # noqa: E501
-        """EmmDevice - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, google_device_id=None, management_type=None, device=None, google_user=None, policy=None, created_on=None, updated_on=None, is_active=True):
+        """EmmDevice - a model defined in Swagger"""
 
         self._id = None
         self._google_device_id = None
@@ -102,10 +102,10 @@ class EmmDevice(object):
 
     @property
     def id(self):
-        """Gets the id of this EmmDevice.  # noqa: E501
+        """Gets the id of this EmmDevice.
 
 
-        :return: The id of this EmmDevice.  # noqa: E501
+        :return: The id of this EmmDevice.
         :rtype: int
         """
         return self._id
@@ -115,7 +115,7 @@ class EmmDevice(object):
         """Sets the id of this EmmDevice.
 
 
-        :param id: The id of this EmmDevice.  # noqa: E501
+        :param id: The id of this EmmDevice.
         :type: int
         """
 
@@ -123,10 +123,10 @@ class EmmDevice(object):
 
     @property
     def google_device_id(self):
-        """Gets the google_device_id of this EmmDevice.  # noqa: E501
+        """Gets the google_device_id of this EmmDevice.
 
 
-        :return: The google_device_id of this EmmDevice.  # noqa: E501
+        :return: The google_device_id of this EmmDevice.
         :rtype: str
         """
         return self._google_device_id
@@ -136,7 +136,7 @@ class EmmDevice(object):
         """Sets the google_device_id of this EmmDevice.
 
 
-        :param google_device_id: The google_device_id of this EmmDevice.  # noqa: E501
+        :param google_device_id: The google_device_id of this EmmDevice.
         :type: str
         """
 
@@ -144,10 +144,10 @@ class EmmDevice(object):
 
     @property
     def management_type(self):
-        """Gets the management_type of this EmmDevice.  # noqa: E501
+        """Gets the management_type of this EmmDevice.
 
 
-        :return: The management_type of this EmmDevice.  # noqa: E501
+        :return: The management_type of this EmmDevice.
         :rtype: str
         """
         return self._management_type
@@ -157,7 +157,7 @@ class EmmDevice(object):
         """Sets the management_type of this EmmDevice.
 
 
-        :param management_type: The management_type of this EmmDevice.  # noqa: E501
+        :param management_type: The management_type of this EmmDevice.
         :type: str
         """
 
@@ -165,10 +165,10 @@ class EmmDevice(object):
 
     @property
     def device(self):
-        """Gets the device of this EmmDevice.  # noqa: E501
+        """Gets the device of this EmmDevice.
 
 
-        :return: The device of this EmmDevice.  # noqa: E501
+        :return: The device of this EmmDevice.
         :rtype: str
         """
         return self._device
@@ -178,7 +178,7 @@ class EmmDevice(object):
         """Sets the device of this EmmDevice.
 
 
-        :param device: The device of this EmmDevice.  # noqa: E501
+        :param device: The device of this EmmDevice.
         :type: str
         """
 
@@ -186,10 +186,10 @@ class EmmDevice(object):
 
     @property
     def google_user(self):
-        """Gets the google_user of this EmmDevice.  # noqa: E501
+        """Gets the google_user of this EmmDevice.
 
 
-        :return: The google_user of this EmmDevice.  # noqa: E501
+        :return: The google_user of this EmmDevice.
         :rtype: int
         """
         return self._google_user
@@ -199,7 +199,7 @@ class EmmDevice(object):
         """Sets the google_user of this EmmDevice.
 
 
-        :param google_user: The google_user of this EmmDevice.  # noqa: E501
+        :param google_user: The google_user of this EmmDevice.
         :type: int
         """
 
@@ -207,10 +207,10 @@ class EmmDevice(object):
 
     @property
     def policy(self):
-        """Gets the policy of this EmmDevice.  # noqa: E501
+        """Gets the policy of this EmmDevice.
 
 
-        :return: The policy of this EmmDevice.  # noqa: E501
+        :return: The policy of this EmmDevice.
         :rtype: int
         """
         return self._policy
@@ -220,7 +220,7 @@ class EmmDevice(object):
         """Sets the policy of this EmmDevice.
 
 
-        :param policy: The policy of this EmmDevice.  # noqa: E501
+        :param policy: The policy of this EmmDevice.
         :type: int
         """
 
@@ -228,10 +228,10 @@ class EmmDevice(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this EmmDevice.  # noqa: E501
+        """Gets the created_on of this EmmDevice.
 
 
-        :return: The created_on of this EmmDevice.  # noqa: E501
+        :return: The created_on of this EmmDevice.
         :rtype: datetime
         """
         return self._created_on
@@ -241,7 +241,7 @@ class EmmDevice(object):
         """Sets the created_on of this EmmDevice.
 
 
-        :param created_on: The created_on of this EmmDevice.  # noqa: E501
+        :param created_on: The created_on of this EmmDevice.
         :type: datetime
         """
 
@@ -249,10 +249,10 @@ class EmmDevice(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this EmmDevice.  # noqa: E501
+        """Gets the updated_on of this EmmDevice.
 
 
-        :return: The updated_on of this EmmDevice.  # noqa: E501
+        :return: The updated_on of this EmmDevice.
         :rtype: datetime
         """
         return self._updated_on
@@ -262,7 +262,7 @@ class EmmDevice(object):
         """Sets the updated_on of this EmmDevice.
 
 
-        :param updated_on: The updated_on of this EmmDevice.  # noqa: E501
+        :param updated_on: The updated_on of this EmmDevice.
         :type: datetime
         """
 
@@ -270,10 +270,10 @@ class EmmDevice(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this EmmDevice.  # noqa: E501
+        """Gets the is_active of this EmmDevice.
 
 
-        :return: The is_active of this EmmDevice.  # noqa: E501
+        :return: The is_active of this EmmDevice.
         :rtype: bool
         """
         return self._is_active
@@ -283,7 +283,7 @@ class EmmDevice(object):
         """Sets the is_active of this EmmDevice.
 
 
-        :param is_active: The is_active of this EmmDevice.  # noqa: E501
+        :param is_active: The is_active of this EmmDevice.
         :type: bool
         """
 

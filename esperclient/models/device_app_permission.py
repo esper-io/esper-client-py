@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -63,8 +63,8 @@ class DeviceAppPermission(object):
         'app': 'app'
     }
 
-    def __init__(self, id=None, permission=None, grant_state=None, created_on=None, updated_on=None, is_active=None, app=None):  # noqa: E501
-        """DeviceAppPermission - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, permission=None, grant_state=None, created_on=None, updated_on=None, is_active=None, app=None):
+        """DeviceAppPermission - a model defined in Swagger"""
 
         self._id = None
         self._permission = None
@@ -91,10 +91,10 @@ class DeviceAppPermission(object):
 
     @property
     def id(self):
-        """Gets the id of this DeviceAppPermission.  # noqa: E501
+        """Gets the id of this DeviceAppPermission.
 
 
-        :return: The id of this DeviceAppPermission.  # noqa: E501
+        :return: The id of this DeviceAppPermission.
         :rtype: str
         """
         return self._id
@@ -104,7 +104,7 @@ class DeviceAppPermission(object):
         """Sets the id of this DeviceAppPermission.
 
 
-        :param id: The id of this DeviceAppPermission.  # noqa: E501
+        :param id: The id of this DeviceAppPermission.
         :type: str
         """
 
@@ -112,10 +112,10 @@ class DeviceAppPermission(object):
 
     @property
     def permission(self):
-        """Gets the permission of this DeviceAppPermission.  # noqa: E501
+        """Gets the permission of this DeviceAppPermission.
 
 
-        :return: The permission of this DeviceAppPermission.  # noqa: E501
+        :return: The permission of this DeviceAppPermission.
         :rtype: str
         """
         return self._permission
@@ -125,24 +125,24 @@ class DeviceAppPermission(object):
         """Sets the permission of this DeviceAppPermission.
 
 
-        :param permission: The permission of this DeviceAppPermission.  # noqa: E501
+        :param permission: The permission of this DeviceAppPermission.
         :type: str
         """
         if permission is None:
-            raise ValueError("Invalid value for `permission`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `permission`, must not be `None`")
         if permission is not None and len(permission) > 255:
-            raise ValueError("Invalid value for `permission`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `permission`, length must be less than or equal to `255`")
         if permission is not None and len(permission) < 1:
-            raise ValueError("Invalid value for `permission`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `permission`, length must be greater than or equal to `1`")
 
         self._permission = permission
 
     @property
     def grant_state(self):
-        """Gets the grant_state of this DeviceAppPermission.  # noqa: E501
+        """Gets the grant_state of this DeviceAppPermission.
 
 
-        :return: The grant_state of this DeviceAppPermission.  # noqa: E501
+        :return: The grant_state of this DeviceAppPermission.
         :rtype: int
         """
         return self._grant_state
@@ -152,7 +152,7 @@ class DeviceAppPermission(object):
         """Sets the grant_state of this DeviceAppPermission.
 
 
-        :param grant_state: The grant_state of this DeviceAppPermission.  # noqa: E501
+        :param grant_state: The grant_state of this DeviceAppPermission.
         :type: int
         """
 
@@ -160,10 +160,10 @@ class DeviceAppPermission(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this DeviceAppPermission.  # noqa: E501
+        """Gets the created_on of this DeviceAppPermission.
 
 
-        :return: The created_on of this DeviceAppPermission.  # noqa: E501
+        :return: The created_on of this DeviceAppPermission.
         :rtype: datetime
         """
         return self._created_on
@@ -173,7 +173,7 @@ class DeviceAppPermission(object):
         """Sets the created_on of this DeviceAppPermission.
 
 
-        :param created_on: The created_on of this DeviceAppPermission.  # noqa: E501
+        :param created_on: The created_on of this DeviceAppPermission.
         :type: datetime
         """
 
@@ -181,10 +181,10 @@ class DeviceAppPermission(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this DeviceAppPermission.  # noqa: E501
+        """Gets the updated_on of this DeviceAppPermission.
 
 
-        :return: The updated_on of this DeviceAppPermission.  # noqa: E501
+        :return: The updated_on of this DeviceAppPermission.
         :rtype: datetime
         """
         return self._updated_on
@@ -194,7 +194,7 @@ class DeviceAppPermission(object):
         """Sets the updated_on of this DeviceAppPermission.
 
 
-        :param updated_on: The updated_on of this DeviceAppPermission.  # noqa: E501
+        :param updated_on: The updated_on of this DeviceAppPermission.
         :type: datetime
         """
 
@@ -202,10 +202,10 @@ class DeviceAppPermission(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this DeviceAppPermission.  # noqa: E501
+        """Gets the is_active of this DeviceAppPermission.
 
 
-        :return: The is_active of this DeviceAppPermission.  # noqa: E501
+        :return: The is_active of this DeviceAppPermission.
         :rtype: bool
         """
         return self._is_active
@@ -215,7 +215,7 @@ class DeviceAppPermission(object):
         """Sets the is_active of this DeviceAppPermission.
 
 
-        :param is_active: The is_active of this DeviceAppPermission.  # noqa: E501
+        :param is_active: The is_active of this DeviceAppPermission.
         :type: bool
         """
 
@@ -223,10 +223,10 @@ class DeviceAppPermission(object):
 
     @property
     def app(self):
-        """Gets the app of this DeviceAppPermission.  # noqa: E501
+        """Gets the app of this DeviceAppPermission.
 
 
-        :return: The app of this DeviceAppPermission.  # noqa: E501
+        :return: The app of this DeviceAppPermission.
         :rtype: str
         """
         return self._app
@@ -236,7 +236,7 @@ class DeviceAppPermission(object):
         """Sets the app of this DeviceAppPermission.
 
 
-        :param app: The app of this DeviceAppPermission.  # noqa: E501
+        :param app: The app of this DeviceAppPermission.
         :type: str
         """
 

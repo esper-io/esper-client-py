@@ -96,8 +96,8 @@ def test_app_version_detail():
 
 def test_app_version_delete():
     api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
-    version_id = '2b233cc3-ec02-4319-8601-43edcd5a3ed7'  # str | A UUID string identifying this app version.
-    application_id = 'c968e4a2-7e30-49fd-a548-85f11f05e972'  # str | A UUID string identifying this application.
+    version_id = '2b233cc3-ec02-4319-8601-43edcd5a3ed7'  # replace with valid uui
+    application_id = 'c968e4a2-7e30-49fd-a548-85f11f05e972'  # replace with valid uuid
 
     try:
         # Delete app version

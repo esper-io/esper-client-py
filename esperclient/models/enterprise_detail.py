@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -71,8 +71,8 @@ class EnterpriseDetail(object):
         'is_active': 'is_active'
     }
 
-    def __init__(self, id=None, registered_name=None, registered_address=None, location=None, zipcode=None, contact_person=None, contact_number=None, contact_email=None, created_on=None, updated_on=None, is_active=None):  # noqa: E501
-        """EnterpriseDetail - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, registered_name=None, registered_address=None, location=None, zipcode=None, contact_person=None, contact_number=None, contact_email=None, created_on=None, updated_on=None, is_active=None):
+        """EnterpriseDetail - a model defined in Swagger"""
 
         self._id = None
         self._registered_name = None
@@ -107,10 +107,10 @@ class EnterpriseDetail(object):
 
     @property
     def id(self):
-        """Gets the id of this EnterpriseDetail.  # noqa: E501
+        """Gets the id of this EnterpriseDetail.
 
 
-        :return: The id of this EnterpriseDetail.  # noqa: E501
+        :return: The id of this EnterpriseDetail.
         :rtype: str
         """
         return self._id
@@ -120,7 +120,7 @@ class EnterpriseDetail(object):
         """Sets the id of this EnterpriseDetail.
 
 
-        :param id: The id of this EnterpriseDetail.  # noqa: E501
+        :param id: The id of this EnterpriseDetail.
         :type: str
         """
 
@@ -128,10 +128,10 @@ class EnterpriseDetail(object):
 
     @property
     def registered_name(self):
-        """Gets the registered_name of this EnterpriseDetail.  # noqa: E501
+        """Gets the registered_name of this EnterpriseDetail.
 
 
-        :return: The registered_name of this EnterpriseDetail.  # noqa: E501
+        :return: The registered_name of this EnterpriseDetail.
         :rtype: str
         """
         return self._registered_name
@@ -141,24 +141,24 @@ class EnterpriseDetail(object):
         """Sets the registered_name of this EnterpriseDetail.
 
 
-        :param registered_name: The registered_name of this EnterpriseDetail.  # noqa: E501
+        :param registered_name: The registered_name of this EnterpriseDetail.
         :type: str
         """
         if registered_name is None:
-            raise ValueError("Invalid value for `registered_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `registered_name`, must not be `None`")
         if registered_name is not None and len(registered_name) > 255:
-            raise ValueError("Invalid value for `registered_name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `registered_name`, length must be less than or equal to `255`")
         if registered_name is not None and len(registered_name) < 1:
-            raise ValueError("Invalid value for `registered_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `registered_name`, length must be greater than or equal to `1`")
 
         self._registered_name = registered_name
 
     @property
     def registered_address(self):
-        """Gets the registered_address of this EnterpriseDetail.  # noqa: E501
+        """Gets the registered_address of this EnterpriseDetail.
 
 
-        :return: The registered_address of this EnterpriseDetail.  # noqa: E501
+        :return: The registered_address of this EnterpriseDetail.
         :rtype: str
         """
         return self._registered_address
@@ -168,22 +168,22 @@ class EnterpriseDetail(object):
         """Sets the registered_address of this EnterpriseDetail.
 
 
-        :param registered_address: The registered_address of this EnterpriseDetail.  # noqa: E501
+        :param registered_address: The registered_address of this EnterpriseDetail.
         :type: str
         """
         if registered_address is None:
-            raise ValueError("Invalid value for `registered_address`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `registered_address`, must not be `None`")
         if registered_address is not None and len(registered_address) < 1:
-            raise ValueError("Invalid value for `registered_address`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `registered_address`, length must be greater than or equal to `1`")
 
         self._registered_address = registered_address
 
     @property
     def location(self):
-        """Gets the location of this EnterpriseDetail.  # noqa: E501
+        """Gets the location of this EnterpriseDetail.
 
 
-        :return: The location of this EnterpriseDetail.  # noqa: E501
+        :return: The location of this EnterpriseDetail.
         :rtype: str
         """
         return self._location
@@ -193,24 +193,24 @@ class EnterpriseDetail(object):
         """Sets the location of this EnterpriseDetail.
 
 
-        :param location: The location of this EnterpriseDetail.  # noqa: E501
+        :param location: The location of this EnterpriseDetail.
         :type: str
         """
         if location is None:
-            raise ValueError("Invalid value for `location`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `location`, must not be `None`")
         if location is not None and len(location) > 255:
-            raise ValueError("Invalid value for `location`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `location`, length must be less than or equal to `255`")
         if location is not None and len(location) < 1:
-            raise ValueError("Invalid value for `location`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `location`, length must be greater than or equal to `1`")
 
         self._location = location
 
     @property
     def zipcode(self):
-        """Gets the zipcode of this EnterpriseDetail.  # noqa: E501
+        """Gets the zipcode of this EnterpriseDetail.
 
 
-        :return: The zipcode of this EnterpriseDetail.  # noqa: E501
+        :return: The zipcode of this EnterpriseDetail.
         :rtype: str
         """
         return self._zipcode
@@ -220,24 +220,24 @@ class EnterpriseDetail(object):
         """Sets the zipcode of this EnterpriseDetail.
 
 
-        :param zipcode: The zipcode of this EnterpriseDetail.  # noqa: E501
+        :param zipcode: The zipcode of this EnterpriseDetail.
         :type: str
         """
         if zipcode is None:
-            raise ValueError("Invalid value for `zipcode`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `zipcode`, must not be `None`")
         if zipcode is not None and len(zipcode) > 8:
-            raise ValueError("Invalid value for `zipcode`, length must be less than or equal to `8`")  # noqa: E501
+            raise ValueError("Invalid value for `zipcode`, length must be less than or equal to `8`")
         if zipcode is not None and len(zipcode) < 1:
-            raise ValueError("Invalid value for `zipcode`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `zipcode`, length must be greater than or equal to `1`")
 
         self._zipcode = zipcode
 
     @property
     def contact_person(self):
-        """Gets the contact_person of this EnterpriseDetail.  # noqa: E501
+        """Gets the contact_person of this EnterpriseDetail.
 
 
-        :return: The contact_person of this EnterpriseDetail.  # noqa: E501
+        :return: The contact_person of this EnterpriseDetail.
         :rtype: str
         """
         return self._contact_person
@@ -247,22 +247,22 @@ class EnterpriseDetail(object):
         """Sets the contact_person of this EnterpriseDetail.
 
 
-        :param contact_person: The contact_person of this EnterpriseDetail.  # noqa: E501
+        :param contact_person: The contact_person of this EnterpriseDetail.
         :type: str
         """
         if contact_person is not None and len(contact_person) > 255:
-            raise ValueError("Invalid value for `contact_person`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `contact_person`, length must be less than or equal to `255`")
         if contact_person is not None and len(contact_person) < 1:
-            raise ValueError("Invalid value for `contact_person`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `contact_person`, length must be greater than or equal to `1`")
 
         self._contact_person = contact_person
 
     @property
     def contact_number(self):
-        """Gets the contact_number of this EnterpriseDetail.  # noqa: E501
+        """Gets the contact_number of this EnterpriseDetail.
 
 
-        :return: The contact_number of this EnterpriseDetail.  # noqa: E501
+        :return: The contact_number of this EnterpriseDetail.
         :rtype: str
         """
         return self._contact_number
@@ -272,22 +272,22 @@ class EnterpriseDetail(object):
         """Sets the contact_number of this EnterpriseDetail.
 
 
-        :param contact_number: The contact_number of this EnterpriseDetail.  # noqa: E501
+        :param contact_number: The contact_number of this EnterpriseDetail.
         :type: str
         """
         if contact_number is not None and len(contact_number) > 20:
-            raise ValueError("Invalid value for `contact_number`, length must be less than or equal to `20`")  # noqa: E501
+            raise ValueError("Invalid value for `contact_number`, length must be less than or equal to `20`")
         if contact_number is not None and len(contact_number) < 1:
-            raise ValueError("Invalid value for `contact_number`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `contact_number`, length must be greater than or equal to `1`")
 
         self._contact_number = contact_number
 
     @property
     def contact_email(self):
-        """Gets the contact_email of this EnterpriseDetail.  # noqa: E501
+        """Gets the contact_email of this EnterpriseDetail.
 
 
-        :return: The contact_email of this EnterpriseDetail.  # noqa: E501
+        :return: The contact_email of this EnterpriseDetail.
         :rtype: str
         """
         return self._contact_email
@@ -297,24 +297,24 @@ class EnterpriseDetail(object):
         """Sets the contact_email of this EnterpriseDetail.
 
 
-        :param contact_email: The contact_email of this EnterpriseDetail.  # noqa: E501
+        :param contact_email: The contact_email of this EnterpriseDetail.
         :type: str
         """
         if contact_email is None:
-            raise ValueError("Invalid value for `contact_email`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `contact_email`, must not be `None`")
         if contact_email is not None and len(contact_email) > 254:
-            raise ValueError("Invalid value for `contact_email`, length must be less than or equal to `254`")  # noqa: E501
+            raise ValueError("Invalid value for `contact_email`, length must be less than or equal to `254`")
         if contact_email is not None and len(contact_email) < 1:
-            raise ValueError("Invalid value for `contact_email`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `contact_email`, length must be greater than or equal to `1`")
 
         self._contact_email = contact_email
 
     @property
     def created_on(self):
-        """Gets the created_on of this EnterpriseDetail.  # noqa: E501
+        """Gets the created_on of this EnterpriseDetail.
 
 
-        :return: The created_on of this EnterpriseDetail.  # noqa: E501
+        :return: The created_on of this EnterpriseDetail.
         :rtype: datetime
         """
         return self._created_on
@@ -324,7 +324,7 @@ class EnterpriseDetail(object):
         """Sets the created_on of this EnterpriseDetail.
 
 
-        :param created_on: The created_on of this EnterpriseDetail.  # noqa: E501
+        :param created_on: The created_on of this EnterpriseDetail.
         :type: datetime
         """
 
@@ -332,10 +332,10 @@ class EnterpriseDetail(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this EnterpriseDetail.  # noqa: E501
+        """Gets the updated_on of this EnterpriseDetail.
 
 
-        :return: The updated_on of this EnterpriseDetail.  # noqa: E501
+        :return: The updated_on of this EnterpriseDetail.
         :rtype: datetime
         """
         return self._updated_on
@@ -345,7 +345,7 @@ class EnterpriseDetail(object):
         """Sets the updated_on of this EnterpriseDetail.
 
 
-        :param updated_on: The updated_on of this EnterpriseDetail.  # noqa: E501
+        :param updated_on: The updated_on of this EnterpriseDetail.
         :type: datetime
         """
 
@@ -353,10 +353,10 @@ class EnterpriseDetail(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this EnterpriseDetail.  # noqa: E501
+        """Gets the is_active of this EnterpriseDetail.
 
 
-        :return: The is_active of this EnterpriseDetail.  # noqa: E501
+        :return: The is_active of this EnterpriseDetail.
         :rtype: bool
         """
         return self._is_active
@@ -366,7 +366,7 @@ class EnterpriseDetail(object):
         """Sets the is_active of this EnterpriseDetail.
 
 
-        :param is_active: The is_active of this EnterpriseDetail.  # noqa: E501
+        :param is_active: The is_active of this EnterpriseDetail.
         :type: bool
         """
 

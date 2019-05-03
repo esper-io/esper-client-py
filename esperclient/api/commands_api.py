@@ -45,10 +45,121 @@ class CommandsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def get_command(self, command_id, device_id, enterprise_id, **kwargs):
+        """Get command status
+
+        Return DeviceCommand instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_command(command_id, device_id, enterprise_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str command_id: A UUID string identifying this device command. (required)
+        :param str device_id: A UUID string identifying this application. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: DeviceCommand
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_command_with_http_info(command_id, device_id, enterprise_id, **kwargs)
+        else:
+            (data) = self.get_command_with_http_info(command_id, device_id, enterprise_id, **kwargs)
+            return data
+
+    def get_command_with_http_info(self, command_id, device_id, enterprise_id, **kwargs):
+        """Get command status
+
+        Return DeviceCommand instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_command_with_http_info(command_id, device_id, enterprise_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str command_id: A UUID string identifying this device command. (required)
+        :param str device_id: A UUID string identifying this application. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: DeviceCommand
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['command_id', 'device_id', 'enterprise_id']
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_command" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'command_id' is set
+        if ('command_id' not in params or
+                params['command_id'] is None):
+            raise ValueError("Missing the required parameter `command_id` when calling `get_command`")
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_command`")
+        # verify the required parameter 'enterprise_id' is set
+        if ('enterprise_id' not in params or
+                params['enterprise_id'] is None):
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_command`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'command_id' in params:
+            path_params['command_id'] = params['command_id']
+        if 'device_id' in params:
+            path_params['device_id'] = params['device_id']
+        if 'enterprise_id' in params:
+            path_params['enterprise_id'] = params['enterprise_id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(
+            '/enterprise/{enterprise_id}/device/{device_id}/command/{command_id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DeviceCommand',
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def run_command(self, enterprise_id, device_id, command, **kwargs):
         """Run commands on device
 
-        Fire commands on device like lock, ping etc
+        Fire commands on device like reboot, ping etc
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.run_command(enterprise_id, device_id, command, async_req=True)
@@ -57,7 +168,7 @@ class CommandsApi(object):
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
         :param str device_id: ID of the device (required)
-        :param CommandRequest command: command name to fire (required)
+        :param CommandRequest command: command request body (required)
         :return: DeviceCommand
                  If the method is called asynchronously,
                  returns the request thread.
@@ -72,7 +183,7 @@ class CommandsApi(object):
     def run_command_with_http_info(self, enterprise_id, device_id, command, **kwargs):
         """Run commands on device
 
-        Fire commands on device like lock, ping etc
+        Fire commands on device like reboot, ping etc
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.run_command_with_http_info(enterprise_id, device_id, command, async_req=True)
@@ -81,7 +192,7 @@ class CommandsApi(object):
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
         :param str device_id: ID of the device (required)
-        :param CommandRequest command: command name to fire (required)
+        :param CommandRequest command: command request body (required)
         :return: DeviceCommand
                  If the method is called asynchronously,
                  returns the request thread.

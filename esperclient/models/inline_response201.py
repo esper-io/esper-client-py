@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.application import Application  # noqa: F401,E501
+from esperclient.models.application import Application
 
 
 class InlineResponse201(object):
@@ -53,8 +53,8 @@ class InlineResponse201(object):
         'application': 'application'
     }
 
-    def __init__(self, application=None):  # noqa: E501
-        """InlineResponse201 - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, application=None):
+        """InlineResponse201 - a model defined in Swagger"""
 
         self._application = None
         self.discriminator = None
@@ -64,10 +64,10 @@ class InlineResponse201(object):
 
     @property
     def application(self):
-        """Gets the application of this InlineResponse201.  # noqa: E501
+        """Gets the application of this InlineResponse201.
 
 
-        :return: The application of this InlineResponse201.  # noqa: E501
+        :return: The application of this InlineResponse201.
         :rtype: Application
         """
         return self._application
@@ -77,7 +77,7 @@ class InlineResponse201(object):
         """Sets the application of this InlineResponse201.
 
 
-        :param application: The application of this InlineResponse201.  # noqa: E501
+        :param application: The application of this InlineResponse201.
         :type: Application
         """
 

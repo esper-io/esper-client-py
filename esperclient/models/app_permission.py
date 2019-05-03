@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -65,8 +65,8 @@ class AppPermission(object):
         'app_version': 'app_version'
     }
 
-    def __init__(self, id=None, permission=None, grant_state=None, created_on=None, updated_on=None, is_active=None, enterprise=None, app_version=None):  # noqa: E501
-        """AppPermission - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, permission=None, grant_state=None, created_on=None, updated_on=None, is_active=None, enterprise=None, app_version=None):
+        """AppPermission - a model defined in Swagger"""
 
         self._id = None
         self._permission = None
@@ -95,10 +95,10 @@ class AppPermission(object):
 
     @property
     def id(self):
-        """Gets the id of this AppPermission.  # noqa: E501
+        """Gets the id of this AppPermission.
 
 
-        :return: The id of this AppPermission.  # noqa: E501
+        :return: The id of this AppPermission.
         :rtype: str
         """
         return self._id
@@ -108,7 +108,7 @@ class AppPermission(object):
         """Sets the id of this AppPermission.
 
 
-        :param id: The id of this AppPermission.  # noqa: E501
+        :param id: The id of this AppPermission.
         :type: str
         """
 
@@ -116,10 +116,10 @@ class AppPermission(object):
 
     @property
     def permission(self):
-        """Gets the permission of this AppPermission.  # noqa: E501
+        """Gets the permission of this AppPermission.
 
 
-        :return: The permission of this AppPermission.  # noqa: E501
+        :return: The permission of this AppPermission.
         :rtype: str
         """
         return self._permission
@@ -129,24 +129,24 @@ class AppPermission(object):
         """Sets the permission of this AppPermission.
 
 
-        :param permission: The permission of this AppPermission.  # noqa: E501
+        :param permission: The permission of this AppPermission.
         :type: str
         """
         if permission is None:
-            raise ValueError("Invalid value for `permission`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `permission`, must not be `None`")
         if permission is not None and len(permission) > 255:
-            raise ValueError("Invalid value for `permission`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `permission`, length must be less than or equal to `255`")
         if permission is not None and len(permission) < 1:
-            raise ValueError("Invalid value for `permission`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `permission`, length must be greater than or equal to `1`")
 
         self._permission = permission
 
     @property
     def grant_state(self):
-        """Gets the grant_state of this AppPermission.  # noqa: E501
+        """Gets the grant_state of this AppPermission.
 
 
-        :return: The grant_state of this AppPermission.  # noqa: E501
+        :return: The grant_state of this AppPermission.
         :rtype: str
         """
         return self._grant_state
@@ -156,13 +156,13 @@ class AppPermission(object):
         """Sets the grant_state of this AppPermission.
 
 
-        :param grant_state: The grant_state of this AppPermission.  # noqa: E501
+        :param grant_state: The grant_state of this AppPermission.
         :type: str
         """
-        allowed_values = ["Default", "Denied", "Granted"]  # noqa: E501
+        allowed_values = ["Default", "Denied", "Granted"]
         if grant_state not in allowed_values:
             raise ValueError(
-                "Invalid value for `grant_state` ({0}), must be one of {1}"  # noqa: E501
+                "Invalid value for `grant_state` ({0}), must be one of {1}"
                 .format(grant_state, allowed_values)
             )
 
@@ -170,10 +170,10 @@ class AppPermission(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this AppPermission.  # noqa: E501
+        """Gets the created_on of this AppPermission.
 
 
-        :return: The created_on of this AppPermission.  # noqa: E501
+        :return: The created_on of this AppPermission.
         :rtype: datetime
         """
         return self._created_on
@@ -183,7 +183,7 @@ class AppPermission(object):
         """Sets the created_on of this AppPermission.
 
 
-        :param created_on: The created_on of this AppPermission.  # noqa: E501
+        :param created_on: The created_on of this AppPermission.
         :type: datetime
         """
 
@@ -191,10 +191,10 @@ class AppPermission(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this AppPermission.  # noqa: E501
+        """Gets the updated_on of this AppPermission.
 
 
-        :return: The updated_on of this AppPermission.  # noqa: E501
+        :return: The updated_on of this AppPermission.
         :rtype: datetime
         """
         return self._updated_on
@@ -204,7 +204,7 @@ class AppPermission(object):
         """Sets the updated_on of this AppPermission.
 
 
-        :param updated_on: The updated_on of this AppPermission.  # noqa: E501
+        :param updated_on: The updated_on of this AppPermission.
         :type: datetime
         """
 
@@ -212,10 +212,10 @@ class AppPermission(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this AppPermission.  # noqa: E501
+        """Gets the is_active of this AppPermission.
 
 
-        :return: The is_active of this AppPermission.  # noqa: E501
+        :return: The is_active of this AppPermission.
         :rtype: bool
         """
         return self._is_active
@@ -225,7 +225,7 @@ class AppPermission(object):
         """Sets the is_active of this AppPermission.
 
 
-        :param is_active: The is_active of this AppPermission.  # noqa: E501
+        :param is_active: The is_active of this AppPermission.
         :type: bool
         """
 
@@ -233,10 +233,10 @@ class AppPermission(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this AppPermission.  # noqa: E501
+        """Gets the enterprise of this AppPermission.
 
 
-        :return: The enterprise of this AppPermission.  # noqa: E501
+        :return: The enterprise of this AppPermission.
         :rtype: str
         """
         return self._enterprise
@@ -246,20 +246,20 @@ class AppPermission(object):
         """Sets the enterprise of this AppPermission.
 
 
-        :param enterprise: The enterprise of this AppPermission.  # noqa: E501
+        :param enterprise: The enterprise of this AppPermission.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 
     @property
     def app_version(self):
-        """Gets the app_version of this AppPermission.  # noqa: E501
+        """Gets the app_version of this AppPermission.
 
 
-        :return: The app_version of this AppPermission.  # noqa: E501
+        :return: The app_version of this AppPermission.
         :rtype: str
         """
         return self._app_version
@@ -269,7 +269,7 @@ class AppPermission(object):
         """Sets the app_version of this AppPermission.
 
 
-        :param app_version: The app_version of this AppPermission.  # noqa: E501
+        :param app_version: The app_version of this AppPermission.
         :type: str
         """
 

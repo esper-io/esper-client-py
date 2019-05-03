@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -59,8 +59,8 @@ class EMMEnterpriseStateEnum(object):
     attribute_map = {
     }
 
-    def __init__(self):  # noqa: E501
-        """EMMEnterpriseStateEnum - a model defined in Swagger"""  # noqa: E501
+    def __init__(self):
+        """EMMEnterpriseStateEnum - a model defined in Swagger"""
         self.discriminator = None
 
     def to_dict(self):

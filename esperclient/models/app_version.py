@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.app_permission import AppPermission  # noqa: F401,E501
+from esperclient.models.app_permission import AppPermission
 
 
 class AppVersion(object):
@@ -89,8 +89,8 @@ class AppVersion(object):
         'application': 'application'
     }
 
-    def __init__(self, id=None, installed_count=None, permissions=None, app_file=None, app_icon=None, version_code=None, build_number=None, size_in_mb=None, hash_string=None, release_name=None, release_comments=None, release_track=None, created_on=None, updated_on=None, min_sdk_version=None, target_sdk_version=None, is_enabled=None, enterprise=None, application=None):  # noqa: E501
-        """AppVersion - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, installed_count=None, permissions=None, app_file=None, app_icon=None, version_code=None, build_number=None, size_in_mb=None, hash_string=None, release_name=None, release_comments=None, release_track=None, created_on=None, updated_on=None, min_sdk_version=None, target_sdk_version=None, is_enabled=None, enterprise=None, application=None):
+        """AppVersion - a model defined in Swagger"""
 
         self._id = None
         self._installed_count = None
@@ -151,10 +151,10 @@ class AppVersion(object):
 
     @property
     def id(self):
-        """Gets the id of this AppVersion.  # noqa: E501
+        """Gets the id of this AppVersion.
 
 
-        :return: The id of this AppVersion.  # noqa: E501
+        :return: The id of this AppVersion.
         :rtype: str
         """
         return self._id
@@ -164,7 +164,7 @@ class AppVersion(object):
         """Sets the id of this AppVersion.
 
 
-        :param id: The id of this AppVersion.  # noqa: E501
+        :param id: The id of this AppVersion.
         :type: str
         """
 
@@ -172,10 +172,10 @@ class AppVersion(object):
 
     @property
     def installed_count(self):
-        """Gets the installed_count of this AppVersion.  # noqa: E501
+        """Gets the installed_count of this AppVersion.
 
 
-        :return: The installed_count of this AppVersion.  # noqa: E501
+        :return: The installed_count of this AppVersion.
         :rtype: int
         """
         return self._installed_count
@@ -185,7 +185,7 @@ class AppVersion(object):
         """Sets the installed_count of this AppVersion.
 
 
-        :param installed_count: The installed_count of this AppVersion.  # noqa: E501
+        :param installed_count: The installed_count of this AppVersion.
         :type: int
         """
 
@@ -193,10 +193,10 @@ class AppVersion(object):
 
     @property
     def permissions(self):
-        """Gets the permissions of this AppVersion.  # noqa: E501
+        """Gets the permissions of this AppVersion.
 
 
-        :return: The permissions of this AppVersion.  # noqa: E501
+        :return: The permissions of this AppVersion.
         :rtype: list[AppPermission]
         """
         return self._permissions
@@ -206,20 +206,20 @@ class AppVersion(object):
         """Sets the permissions of this AppVersion.
 
 
-        :param permissions: The permissions of this AppVersion.  # noqa: E501
+        :param permissions: The permissions of this AppVersion.
         :type: list[AppPermission]
         """
         if permissions is None:
-            raise ValueError("Invalid value for `permissions`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `permissions`, must not be `None`")
 
         self._permissions = permissions
 
     @property
     def app_file(self):
-        """Gets the app_file of this AppVersion.  # noqa: E501
+        """Gets the app_file of this AppVersion.
 
 
-        :return: The app_file of this AppVersion.  # noqa: E501
+        :return: The app_file of this AppVersion.
         :rtype: str
         """
         return self._app_file
@@ -229,7 +229,7 @@ class AppVersion(object):
         """Sets the app_file of this AppVersion.
 
 
-        :param app_file: The app_file of this AppVersion.  # noqa: E501
+        :param app_file: The app_file of this AppVersion.
         :type: str
         """
 
@@ -237,10 +237,10 @@ class AppVersion(object):
 
     @property
     def app_icon(self):
-        """Gets the app_icon of this AppVersion.  # noqa: E501
+        """Gets the app_icon of this AppVersion.
 
 
-        :return: The app_icon of this AppVersion.  # noqa: E501
+        :return: The app_icon of this AppVersion.
         :rtype: str
         """
         return self._app_icon
@@ -250,7 +250,7 @@ class AppVersion(object):
         """Sets the app_icon of this AppVersion.
 
 
-        :param app_icon: The app_icon of this AppVersion.  # noqa: E501
+        :param app_icon: The app_icon of this AppVersion.
         :type: str
         """
 
@@ -258,10 +258,10 @@ class AppVersion(object):
 
     @property
     def version_code(self):
-        """Gets the version_code of this AppVersion.  # noqa: E501
+        """Gets the version_code of this AppVersion.
 
 
-        :return: The version_code of this AppVersion.  # noqa: E501
+        :return: The version_code of this AppVersion.
         :rtype: str
         """
         return self._version_code
@@ -271,24 +271,24 @@ class AppVersion(object):
         """Sets the version_code of this AppVersion.
 
 
-        :param version_code: The version_code of this AppVersion.  # noqa: E501
+        :param version_code: The version_code of this AppVersion.
         :type: str
         """
         if version_code is None:
-            raise ValueError("Invalid value for `version_code`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `version_code`, must not be `None`")
         if version_code is not None and len(version_code) > 50:
-            raise ValueError("Invalid value for `version_code`, length must be less than or equal to `50`")  # noqa: E501
+            raise ValueError("Invalid value for `version_code`, length must be less than or equal to `50`")
         if version_code is not None and len(version_code) < 1:
-            raise ValueError("Invalid value for `version_code`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `version_code`, length must be greater than or equal to `1`")
 
         self._version_code = version_code
 
     @property
     def build_number(self):
-        """Gets the build_number of this AppVersion.  # noqa: E501
+        """Gets the build_number of this AppVersion.
 
 
-        :return: The build_number of this AppVersion.  # noqa: E501
+        :return: The build_number of this AppVersion.
         :rtype: str
         """
         return self._build_number
@@ -298,22 +298,22 @@ class AppVersion(object):
         """Sets the build_number of this AppVersion.
 
 
-        :param build_number: The build_number of this AppVersion.  # noqa: E501
+        :param build_number: The build_number of this AppVersion.
         :type: str
         """
         if build_number is not None and len(build_number) > 100:
-            raise ValueError("Invalid value for `build_number`, length must be less than or equal to `100`")  # noqa: E501
+            raise ValueError("Invalid value for `build_number`, length must be less than or equal to `100`")
         if build_number is not None and len(build_number) < 1:
-            raise ValueError("Invalid value for `build_number`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `build_number`, length must be greater than or equal to `1`")
 
         self._build_number = build_number
 
     @property
     def size_in_mb(self):
-        """Gets the size_in_mb of this AppVersion.  # noqa: E501
+        """Gets the size_in_mb of this AppVersion.
 
 
-        :return: The size_in_mb of this AppVersion.  # noqa: E501
+        :return: The size_in_mb of this AppVersion.
         :rtype: float
         """
         return self._size_in_mb
@@ -323,7 +323,7 @@ class AppVersion(object):
         """Sets the size_in_mb of this AppVersion.
 
 
-        :param size_in_mb: The size_in_mb of this AppVersion.  # noqa: E501
+        :param size_in_mb: The size_in_mb of this AppVersion.
         :type: float
         """
 
@@ -331,10 +331,10 @@ class AppVersion(object):
 
     @property
     def hash_string(self):
-        """Gets the hash_string of this AppVersion.  # noqa: E501
+        """Gets the hash_string of this AppVersion.
 
 
-        :return: The hash_string of this AppVersion.  # noqa: E501
+        :return: The hash_string of this AppVersion.
         :rtype: str
         """
         return self._hash_string
@@ -344,7 +344,7 @@ class AppVersion(object):
         """Sets the hash_string of this AppVersion.
 
 
-        :param hash_string: The hash_string of this AppVersion.  # noqa: E501
+        :param hash_string: The hash_string of this AppVersion.
         :type: str
         """
 
@@ -352,10 +352,10 @@ class AppVersion(object):
 
     @property
     def release_name(self):
-        """Gets the release_name of this AppVersion.  # noqa: E501
+        """Gets the release_name of this AppVersion.
 
 
-        :return: The release_name of this AppVersion.  # noqa: E501
+        :return: The release_name of this AppVersion.
         :rtype: str
         """
         return self._release_name
@@ -365,22 +365,22 @@ class AppVersion(object):
         """Sets the release_name of this AppVersion.
 
 
-        :param release_name: The release_name of this AppVersion.  # noqa: E501
+        :param release_name: The release_name of this AppVersion.
         :type: str
         """
         if release_name is not None and len(release_name) > 255:
-            raise ValueError("Invalid value for `release_name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `release_name`, length must be less than or equal to `255`")
         if release_name is not None and len(release_name) < 1:
-            raise ValueError("Invalid value for `release_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `release_name`, length must be greater than or equal to `1`")
 
         self._release_name = release_name
 
     @property
     def release_comments(self):
-        """Gets the release_comments of this AppVersion.  # noqa: E501
+        """Gets the release_comments of this AppVersion.
 
 
-        :return: The release_comments of this AppVersion.  # noqa: E501
+        :return: The release_comments of this AppVersion.
         :rtype: str
         """
         return self._release_comments
@@ -390,20 +390,20 @@ class AppVersion(object):
         """Sets the release_comments of this AppVersion.
 
 
-        :param release_comments: The release_comments of this AppVersion.  # noqa: E501
+        :param release_comments: The release_comments of this AppVersion.
         :type: str
         """
         if release_comments is not None and len(release_comments) < 1:
-            raise ValueError("Invalid value for `release_comments`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `release_comments`, length must be greater than or equal to `1`")
 
         self._release_comments = release_comments
 
     @property
     def release_track(self):
-        """Gets the release_track of this AppVersion.  # noqa: E501
+        """Gets the release_track of this AppVersion.
 
 
-        :return: The release_track of this AppVersion.  # noqa: E501
+        :return: The release_track of this AppVersion.
         :rtype: str
         """
         return self._release_track
@@ -413,13 +413,13 @@ class AppVersion(object):
         """Sets the release_track of this AppVersion.
 
 
-        :param release_track: The release_track of this AppVersion.  # noqa: E501
+        :param release_track: The release_track of this AppVersion.
         :type: str
         """
-        allowed_values = ["Alpha", "Beta", "Production"]  # noqa: E501
+        allowed_values = ["Alpha", "Beta", "Production"]
         if release_track not in allowed_values:
             raise ValueError(
-                "Invalid value for `release_track` ({0}), must be one of {1}"  # noqa: E501
+                "Invalid value for `release_track` ({0}), must be one of {1}"
                 .format(release_track, allowed_values)
             )
 
@@ -427,10 +427,10 @@ class AppVersion(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this AppVersion.  # noqa: E501
+        """Gets the created_on of this AppVersion.
 
 
-        :return: The created_on of this AppVersion.  # noqa: E501
+        :return: The created_on of this AppVersion.
         :rtype: datetime
         """
         return self._created_on
@@ -440,7 +440,7 @@ class AppVersion(object):
         """Sets the created_on of this AppVersion.
 
 
-        :param created_on: The created_on of this AppVersion.  # noqa: E501
+        :param created_on: The created_on of this AppVersion.
         :type: datetime
         """
 
@@ -448,10 +448,10 @@ class AppVersion(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this AppVersion.  # noqa: E501
+        """Gets the updated_on of this AppVersion.
 
 
-        :return: The updated_on of this AppVersion.  # noqa: E501
+        :return: The updated_on of this AppVersion.
         :rtype: datetime
         """
         return self._updated_on
@@ -461,7 +461,7 @@ class AppVersion(object):
         """Sets the updated_on of this AppVersion.
 
 
-        :param updated_on: The updated_on of this AppVersion.  # noqa: E501
+        :param updated_on: The updated_on of this AppVersion.
         :type: datetime
         """
 
@@ -469,10 +469,10 @@ class AppVersion(object):
 
     @property
     def min_sdk_version(self):
-        """Gets the min_sdk_version of this AppVersion.  # noqa: E501
+        """Gets the min_sdk_version of this AppVersion.
 
 
-        :return: The min_sdk_version of this AppVersion.  # noqa: E501
+        :return: The min_sdk_version of this AppVersion.
         :rtype: str
         """
         return self._min_sdk_version
@@ -482,22 +482,22 @@ class AppVersion(object):
         """Sets the min_sdk_version of this AppVersion.
 
 
-        :param min_sdk_version: The min_sdk_version of this AppVersion.  # noqa: E501
+        :param min_sdk_version: The min_sdk_version of this AppVersion.
         :type: str
         """
         if min_sdk_version is not None and len(min_sdk_version) > 10:
-            raise ValueError("Invalid value for `min_sdk_version`, length must be less than or equal to `10`")  # noqa: E501
+            raise ValueError("Invalid value for `min_sdk_version`, length must be less than or equal to `10`")
         if min_sdk_version is not None and len(min_sdk_version) < 1:
-            raise ValueError("Invalid value for `min_sdk_version`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `min_sdk_version`, length must be greater than or equal to `1`")
 
         self._min_sdk_version = min_sdk_version
 
     @property
     def target_sdk_version(self):
-        """Gets the target_sdk_version of this AppVersion.  # noqa: E501
+        """Gets the target_sdk_version of this AppVersion.
 
 
-        :return: The target_sdk_version of this AppVersion.  # noqa: E501
+        :return: The target_sdk_version of this AppVersion.
         :rtype: str
         """
         return self._target_sdk_version
@@ -507,22 +507,22 @@ class AppVersion(object):
         """Sets the target_sdk_version of this AppVersion.
 
 
-        :param target_sdk_version: The target_sdk_version of this AppVersion.  # noqa: E501
+        :param target_sdk_version: The target_sdk_version of this AppVersion.
         :type: str
         """
         if target_sdk_version is not None and len(target_sdk_version) > 10:
-            raise ValueError("Invalid value for `target_sdk_version`, length must be less than or equal to `10`")  # noqa: E501
+            raise ValueError("Invalid value for `target_sdk_version`, length must be less than or equal to `10`")
         if target_sdk_version is not None and len(target_sdk_version) < 1:
-            raise ValueError("Invalid value for `target_sdk_version`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `target_sdk_version`, length must be greater than or equal to `1`")
 
         self._target_sdk_version = target_sdk_version
 
     @property
     def is_enabled(self):
-        """Gets the is_enabled of this AppVersion.  # noqa: E501
+        """Gets the is_enabled of this AppVersion.
 
 
-        :return: The is_enabled of this AppVersion.  # noqa: E501
+        :return: The is_enabled of this AppVersion.
         :rtype: bool
         """
         return self._is_enabled
@@ -532,7 +532,7 @@ class AppVersion(object):
         """Sets the is_enabled of this AppVersion.
 
 
-        :param is_enabled: The is_enabled of this AppVersion.  # noqa: E501
+        :param is_enabled: The is_enabled of this AppVersion.
         :type: bool
         """
 
@@ -540,10 +540,10 @@ class AppVersion(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this AppVersion.  # noqa: E501
+        """Gets the enterprise of this AppVersion.
 
 
-        :return: The enterprise of this AppVersion.  # noqa: E501
+        :return: The enterprise of this AppVersion.
         :rtype: str
         """
         return self._enterprise
@@ -553,20 +553,20 @@ class AppVersion(object):
         """Sets the enterprise of this AppVersion.
 
 
-        :param enterprise: The enterprise of this AppVersion.  # noqa: E501
+        :param enterprise: The enterprise of this AppVersion.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 
     @property
     def application(self):
-        """Gets the application of this AppVersion.  # noqa: E501
+        """Gets the application of this AppVersion.
 
 
-        :return: The application of this AppVersion.  # noqa: E501
+        :return: The application of this AppVersion.
         :rtype: str
         """
         return self._application
@@ -576,7 +576,7 @@ class AppVersion(object):
         """Sets the application of this AppVersion.
 
 
-        :param application: The application of this AppVersion.  # noqa: E501
+        :param application: The application of this AppVersion.
         :type: str
         """
 

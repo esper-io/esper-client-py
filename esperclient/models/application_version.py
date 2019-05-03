@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -63,8 +63,8 @@ class ApplicationVersion(object):
         'download_url': 'download_url'
     }
 
-    def __init__(self, id=None, version_code=None, build_number=None, hash_string=None, min_sdk_version=None, target_sdk_version=None, download_url=None):  # noqa: E501
-        """ApplicationVersion - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, version_code=None, build_number=None, hash_string=None, min_sdk_version=None, target_sdk_version=None, download_url=None):
+        """ApplicationVersion - a model defined in Swagger"""
 
         self._id = None
         self._version_code = None
@@ -92,10 +92,10 @@ class ApplicationVersion(object):
 
     @property
     def id(self):
-        """Gets the id of this ApplicationVersion.  # noqa: E501
+        """Gets the id of this ApplicationVersion.
 
 
-        :return: The id of this ApplicationVersion.  # noqa: E501
+        :return: The id of this ApplicationVersion.
         :rtype: str
         """
         return self._id
@@ -105,7 +105,7 @@ class ApplicationVersion(object):
         """Sets the id of this ApplicationVersion.
 
 
-        :param id: The id of this ApplicationVersion.  # noqa: E501
+        :param id: The id of this ApplicationVersion.
         :type: str
         """
 
@@ -113,10 +113,10 @@ class ApplicationVersion(object):
 
     @property
     def version_code(self):
-        """Gets the version_code of this ApplicationVersion.  # noqa: E501
+        """Gets the version_code of this ApplicationVersion.
 
 
-        :return: The version_code of this ApplicationVersion.  # noqa: E501
+        :return: The version_code of this ApplicationVersion.
         :rtype: str
         """
         return self._version_code
@@ -126,22 +126,22 @@ class ApplicationVersion(object):
         """Sets the version_code of this ApplicationVersion.
 
 
-        :param version_code: The version_code of this ApplicationVersion.  # noqa: E501
+        :param version_code: The version_code of this ApplicationVersion.
         :type: str
         """
         if version_code is not None and len(version_code) > 50:
-            raise ValueError("Invalid value for `version_code`, length must be less than or equal to `50`")  # noqa: E501
+            raise ValueError("Invalid value for `version_code`, length must be less than or equal to `50`")
         if version_code is not None and len(version_code) < 1:
-            raise ValueError("Invalid value for `version_code`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `version_code`, length must be greater than or equal to `1`")
 
         self._version_code = version_code
 
     @property
     def build_number(self):
-        """Gets the build_number of this ApplicationVersion.  # noqa: E501
+        """Gets the build_number of this ApplicationVersion.
 
 
-        :return: The build_number of this ApplicationVersion.  # noqa: E501
+        :return: The build_number of this ApplicationVersion.
         :rtype: str
         """
         return self._build_number
@@ -151,22 +151,22 @@ class ApplicationVersion(object):
         """Sets the build_number of this ApplicationVersion.
 
 
-        :param build_number: The build_number of this ApplicationVersion.  # noqa: E501
+        :param build_number: The build_number of this ApplicationVersion.
         :type: str
         """
         if build_number is not None and len(build_number) > 100:
-            raise ValueError("Invalid value for `build_number`, length must be less than or equal to `100`")  # noqa: E501
+            raise ValueError("Invalid value for `build_number`, length must be less than or equal to `100`")
         if build_number is not None and len(build_number) < 1:
-            raise ValueError("Invalid value for `build_number`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `build_number`, length must be greater than or equal to `1`")
 
         self._build_number = build_number
 
     @property
     def hash_string(self):
-        """Gets the hash_string of this ApplicationVersion.  # noqa: E501
+        """Gets the hash_string of this ApplicationVersion.
 
 
-        :return: The hash_string of this ApplicationVersion.  # noqa: E501
+        :return: The hash_string of this ApplicationVersion.
         :rtype: str
         """
         return self._hash_string
@@ -176,7 +176,7 @@ class ApplicationVersion(object):
         """Sets the hash_string of this ApplicationVersion.
 
 
-        :param hash_string: The hash_string of this ApplicationVersion.  # noqa: E501
+        :param hash_string: The hash_string of this ApplicationVersion.
         :type: str
         """
 
@@ -184,10 +184,10 @@ class ApplicationVersion(object):
 
     @property
     def min_sdk_version(self):
-        """Gets the min_sdk_version of this ApplicationVersion.  # noqa: E501
+        """Gets the min_sdk_version of this ApplicationVersion.
 
 
-        :return: The min_sdk_version of this ApplicationVersion.  # noqa: E501
+        :return: The min_sdk_version of this ApplicationVersion.
         :rtype: str
         """
         return self._min_sdk_version
@@ -197,22 +197,22 @@ class ApplicationVersion(object):
         """Sets the min_sdk_version of this ApplicationVersion.
 
 
-        :param min_sdk_version: The min_sdk_version of this ApplicationVersion.  # noqa: E501
+        :param min_sdk_version: The min_sdk_version of this ApplicationVersion.
         :type: str
         """
         if min_sdk_version is not None and len(min_sdk_version) > 10:
-            raise ValueError("Invalid value for `min_sdk_version`, length must be less than or equal to `10`")  # noqa: E501
+            raise ValueError("Invalid value for `min_sdk_version`, length must be less than or equal to `10`")
         if min_sdk_version is not None and len(min_sdk_version) < 1:
-            raise ValueError("Invalid value for `min_sdk_version`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `min_sdk_version`, length must be greater than or equal to `1`")
 
         self._min_sdk_version = min_sdk_version
 
     @property
     def target_sdk_version(self):
-        """Gets the target_sdk_version of this ApplicationVersion.  # noqa: E501
+        """Gets the target_sdk_version of this ApplicationVersion.
 
 
-        :return: The target_sdk_version of this ApplicationVersion.  # noqa: E501
+        :return: The target_sdk_version of this ApplicationVersion.
         :rtype: str
         """
         return self._target_sdk_version
@@ -222,22 +222,22 @@ class ApplicationVersion(object):
         """Sets the target_sdk_version of this ApplicationVersion.
 
 
-        :param target_sdk_version: The target_sdk_version of this ApplicationVersion.  # noqa: E501
+        :param target_sdk_version: The target_sdk_version of this ApplicationVersion.
         :type: str
         """
         if target_sdk_version is not None and len(target_sdk_version) > 10:
-            raise ValueError("Invalid value for `target_sdk_version`, length must be less than or equal to `10`")  # noqa: E501
+            raise ValueError("Invalid value for `target_sdk_version`, length must be less than or equal to `10`")
         if target_sdk_version is not None and len(target_sdk_version) < 1:
-            raise ValueError("Invalid value for `target_sdk_version`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `target_sdk_version`, length must be greater than or equal to `1`")
 
         self._target_sdk_version = target_sdk_version
 
     @property
     def download_url(self):
-        """Gets the download_url of this ApplicationVersion.  # noqa: E501
+        """Gets the download_url of this ApplicationVersion.
 
 
-        :return: The download_url of this ApplicationVersion.  # noqa: E501
+        :return: The download_url of this ApplicationVersion.
         :rtype: str
         """
         return self._download_url
@@ -247,7 +247,7 @@ class ApplicationVersion(object):
         """Sets the download_url of this ApplicationVersion.
 
 
-        :param download_url: The download_url of this ApplicationVersion.  # noqa: E501
+        :param download_url: The download_url of this ApplicationVersion.
         :type: str
         """
 

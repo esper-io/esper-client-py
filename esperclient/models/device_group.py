@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -59,8 +59,8 @@ class DeviceGroup(object):
         'enterprise': 'enterprise'
     }
 
-    def __init__(self, id=None, device_count=None, name=None, created_on=None, enterprise=None):  # noqa: E501
-        """DeviceGroup - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, device_count=None, name=None, created_on=None, enterprise=None):
+        """DeviceGroup - a model defined in Swagger"""
 
         self._id = None
         self._device_count = None
@@ -80,10 +80,10 @@ class DeviceGroup(object):
 
     @property
     def id(self):
-        """Gets the id of this DeviceGroup.  # noqa: E501
+        """Gets the id of this DeviceGroup.
 
 
-        :return: The id of this DeviceGroup.  # noqa: E501
+        :return: The id of this DeviceGroup.
         :rtype: str
         """
         return self._id
@@ -93,7 +93,7 @@ class DeviceGroup(object):
         """Sets the id of this DeviceGroup.
 
 
-        :param id: The id of this DeviceGroup.  # noqa: E501
+        :param id: The id of this DeviceGroup.
         :type: str
         """
 
@@ -101,10 +101,10 @@ class DeviceGroup(object):
 
     @property
     def device_count(self):
-        """Gets the device_count of this DeviceGroup.  # noqa: E501
+        """Gets the device_count of this DeviceGroup.
 
 
-        :return: The device_count of this DeviceGroup.  # noqa: E501
+        :return: The device_count of this DeviceGroup.
         :rtype: int
         """
         return self._device_count
@@ -114,7 +114,7 @@ class DeviceGroup(object):
         """Sets the device_count of this DeviceGroup.
 
 
-        :param device_count: The device_count of this DeviceGroup.  # noqa: E501
+        :param device_count: The device_count of this DeviceGroup.
         :type: int
         """
 
@@ -122,10 +122,10 @@ class DeviceGroup(object):
 
     @property
     def name(self):
-        """Gets the name of this DeviceGroup.  # noqa: E501
+        """Gets the name of this DeviceGroup.
 
 
-        :return: The name of this DeviceGroup.  # noqa: E501
+        :return: The name of this DeviceGroup.
         :rtype: str
         """
         return self._name
@@ -135,24 +135,24 @@ class DeviceGroup(object):
         """Sets the name of this DeviceGroup.
 
 
-        :param name: The name of this DeviceGroup.  # noqa: E501
+        :param name: The name of this DeviceGroup.
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")
         if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
         if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")
 
         self._name = name
 
     @property
     def created_on(self):
-        """Gets the created_on of this DeviceGroup.  # noqa: E501
+        """Gets the created_on of this DeviceGroup.
 
 
-        :return: The created_on of this DeviceGroup.  # noqa: E501
+        :return: The created_on of this DeviceGroup.
         :rtype: datetime
         """
         return self._created_on
@@ -162,7 +162,7 @@ class DeviceGroup(object):
         """Sets the created_on of this DeviceGroup.
 
 
-        :param created_on: The created_on of this DeviceGroup.  # noqa: E501
+        :param created_on: The created_on of this DeviceGroup.
         :type: datetime
         """
 
@@ -170,10 +170,10 @@ class DeviceGroup(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this DeviceGroup.  # noqa: E501
+        """Gets the enterprise of this DeviceGroup.
 
 
-        :return: The enterprise of this DeviceGroup.  # noqa: E501
+        :return: The enterprise of this DeviceGroup.
         :rtype: str
         """
         return self._enterprise
@@ -183,11 +183,11 @@ class DeviceGroup(object):
         """Sets the enterprise of this DeviceGroup.
 
 
-        :param enterprise: The enterprise of this DeviceGroup.  # noqa: E501
+        :param enterprise: The enterprise of this DeviceGroup.
         :type: str
         """
         if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 

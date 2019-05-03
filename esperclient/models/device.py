@@ -25,11 +25,11 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.emm_device import EmmDevice  # noqa: F401,E501
+from esperclient.models.emm_device import EmmDevice
 
 
 class Device(object):
@@ -107,8 +107,8 @@ class Device(object):
         'is_active': 'is_active'
     }
 
-    def __init__(self, id=None, url=None, device_name=None, policy_name=None, status=None, state=None, current_command=None, suid=None, fcm_id=None, enterprise=None, policy=None, user=None, groups=None, api_level=None, template_name=None, mqtt_id=None, software_info=None, hardware_info=None, displays=None, network_info=None, memory_info=None, audio_constraints=None, provisioned_on=None, created_on=None, updated_on=None, emm_device=None, is_gms=True, is_active=True):  # noqa: E501
-        """Device - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, url=None, device_name=None, policy_name=None, status=None, state=None, current_command=None, suid=None, fcm_id=None, enterprise=None, policy=None, user=None, groups=None, api_level=None, template_name=None, mqtt_id=None, software_info=None, hardware_info=None, displays=None, network_info=None, memory_info=None, audio_constraints=None, provisioned_on=None, created_on=None, updated_on=None, emm_device=None, is_gms=True, is_active=True):
+        """Device - a model defined in Swagger"""
 
         self._id = None
         self._url = None
@@ -199,10 +199,10 @@ class Device(object):
 
     @property
     def id(self):
-        """Gets the id of this Device.  # noqa: E501
+        """Gets the id of this Device.
 
 
-        :return: The id of this Device.  # noqa: E501
+        :return: The id of this Device.
         :rtype: str
         """
         return self._id
@@ -212,7 +212,7 @@ class Device(object):
         """Sets the id of this Device.
 
 
-        :param id: The id of this Device.  # noqa: E501
+        :param id: The id of this Device.
         :type: str
         """
 
@@ -220,10 +220,10 @@ class Device(object):
 
     @property
     def url(self):
-        """Gets the url of this Device.  # noqa: E501
+        """Gets the url of this Device.
 
 
-        :return: The url of this Device.  # noqa: E501
+        :return: The url of this Device.
         :rtype: str
         """
         return self._url
@@ -233,7 +233,7 @@ class Device(object):
         """Sets the url of this Device.
 
 
-        :param url: The url of this Device.  # noqa: E501
+        :param url: The url of this Device.
         :type: str
         """
 
@@ -241,10 +241,10 @@ class Device(object):
 
     @property
     def device_name(self):
-        """Gets the device_name of this Device.  # noqa: E501
+        """Gets the device_name of this Device.
 
 
-        :return: The device_name of this Device.  # noqa: E501
+        :return: The device_name of this Device.
         :rtype: str
         """
         return self._device_name
@@ -254,7 +254,7 @@ class Device(object):
         """Sets the device_name of this Device.
 
 
-        :param device_name: The device_name of this Device.  # noqa: E501
+        :param device_name: The device_name of this Device.
         :type: str
         """
 
@@ -262,10 +262,10 @@ class Device(object):
 
     @property
     def policy_name(self):
-        """Gets the policy_name of this Device.  # noqa: E501
+        """Gets the policy_name of this Device.
 
 
-        :return: The policy_name of this Device.  # noqa: E501
+        :return: The policy_name of this Device.
         :rtype: str
         """
         return self._policy_name
@@ -275,7 +275,7 @@ class Device(object):
         """Sets the policy_name of this Device.
 
 
-        :param policy_name: The policy_name of this Device.  # noqa: E501
+        :param policy_name: The policy_name of this Device.
         :type: str
         """
 
@@ -283,11 +283,11 @@ class Device(object):
 
     @property
     def status(self):
-        """Gets the status of this Device.  # noqa: E501
+        """Gets the status of this Device.
 
-        Current status of device  # noqa: E501
+        Current status of device
 
-        :return: The status of this Device.  # noqa: E501
+        :return: The status of this Device.
         :rtype: int
         """
         return self._status
@@ -296,9 +296,9 @@ class Device(object):
     def status(self, status):
         """Sets the status of this Device.
 
-        Current status of device  # noqa: E501
+        Current status of device
 
-        :param status: The status of this Device.  # noqa: E501
+        :param status: The status of this Device.
         :type: int
         """
 
@@ -306,11 +306,11 @@ class Device(object):
 
     @property
     def state(self):
-        """Gets the state of this Device.  # noqa: E501
+        """Gets the state of this Device.
 
-        Current state of device  # noqa: E501
+        Current state of device
 
-        :return: The state of this Device.  # noqa: E501
+        :return: The state of this Device.
         :rtype: int
         """
         return self._state
@@ -319,9 +319,9 @@ class Device(object):
     def state(self, state):
         """Sets the state of this Device.
 
-        Current state of device  # noqa: E501
+        Current state of device
 
-        :param state: The state of this Device.  # noqa: E501
+        :param state: The state of this Device.
         :type: int
         """
 
@@ -329,11 +329,11 @@ class Device(object):
 
     @property
     def current_command(self):
-        """Gets the current_command of this Device.  # noqa: E501
+        """Gets the current_command of this Device.
 
-        Current command associated with device  # noqa: E501
+        Current command associated with device
 
-        :return: The current_command of this Device.  # noqa: E501
+        :return: The current_command of this Device.
         :rtype: str
         """
         return self._current_command
@@ -342,9 +342,9 @@ class Device(object):
     def current_command(self, current_command):
         """Sets the current_command of this Device.
 
-        Current command associated with device  # noqa: E501
+        Current command associated with device
 
-        :param current_command: The current_command of this Device.  # noqa: E501
+        :param current_command: The current_command of this Device.
         :type: str
         """
 
@@ -352,11 +352,11 @@ class Device(object):
 
     @property
     def suid(self):
-        """Gets the suid of this Device.  # noqa: E501
+        """Gets the suid of this Device.
 
-        Device generated unique id  # noqa: E501
+        Device generated unique id
 
-        :return: The suid of this Device.  # noqa: E501
+        :return: The suid of this Device.
         :rtype: str
         """
         return self._suid
@@ -365,9 +365,9 @@ class Device(object):
     def suid(self, suid):
         """Sets the suid of this Device.
 
-        Device generated unique id  # noqa: E501
+        Device generated unique id
 
-        :param suid: The suid of this Device.  # noqa: E501
+        :param suid: The suid of this Device.
         :type: str
         """
 
@@ -375,10 +375,10 @@ class Device(object):
 
     @property
     def fcm_id(self):
-        """Gets the fcm_id of this Device.  # noqa: E501
+        """Gets the fcm_id of this Device.
 
 
-        :return: The fcm_id of this Device.  # noqa: E501
+        :return: The fcm_id of this Device.
         :rtype: str
         """
         return self._fcm_id
@@ -388,7 +388,7 @@ class Device(object):
         """Sets the fcm_id of this Device.
 
 
-        :param fcm_id: The fcm_id of this Device.  # noqa: E501
+        :param fcm_id: The fcm_id of this Device.
         :type: str
         """
 
@@ -396,10 +396,10 @@ class Device(object):
 
     @property
     def enterprise(self):
-        """Gets the enterprise of this Device.  # noqa: E501
+        """Gets the enterprise of this Device.
 
 
-        :return: The enterprise of this Device.  # noqa: E501
+        :return: The enterprise of this Device.
         :rtype: str
         """
         return self._enterprise
@@ -409,7 +409,7 @@ class Device(object):
         """Sets the enterprise of this Device.
 
 
-        :param enterprise: The enterprise of this Device.  # noqa: E501
+        :param enterprise: The enterprise of this Device.
         :type: str
         """
 
@@ -417,10 +417,10 @@ class Device(object):
 
     @property
     def policy(self):
-        """Gets the policy of this Device.  # noqa: E501
+        """Gets the policy of this Device.
 
 
-        :return: The policy of this Device.  # noqa: E501
+        :return: The policy of this Device.
         :rtype: str
         """
         return self._policy
@@ -430,7 +430,7 @@ class Device(object):
         """Sets the policy of this Device.
 
 
-        :param policy: The policy of this Device.  # noqa: E501
+        :param policy: The policy of this Device.
         :type: str
         """
 
@@ -438,10 +438,10 @@ class Device(object):
 
     @property
     def user(self):
-        """Gets the user of this Device.  # noqa: E501
+        """Gets the user of this Device.
 
 
-        :return: The user of this Device.  # noqa: E501
+        :return: The user of this Device.
         :rtype: str
         """
         return self._user
@@ -451,7 +451,7 @@ class Device(object):
         """Sets the user of this Device.
 
 
-        :param user: The user of this Device.  # noqa: E501
+        :param user: The user of this Device.
         :type: str
         """
 
@@ -459,10 +459,10 @@ class Device(object):
 
     @property
     def groups(self):
-        """Gets the groups of this Device.  # noqa: E501
+        """Gets the groups of this Device.
 
 
-        :return: The groups of this Device.  # noqa: E501
+        :return: The groups of this Device.
         :rtype: list[str]
         """
         return self._groups
@@ -472,7 +472,7 @@ class Device(object):
         """Sets the groups of this Device.
 
 
-        :param groups: The groups of this Device.  # noqa: E501
+        :param groups: The groups of this Device.
         :type: list[str]
         """
 
@@ -480,10 +480,10 @@ class Device(object):
 
     @property
     def api_level(self):
-        """Gets the api_level of this Device.  # noqa: E501
+        """Gets the api_level of this Device.
 
 
-        :return: The api_level of this Device.  # noqa: E501
+        :return: The api_level of this Device.
         :rtype: int
         """
         return self._api_level
@@ -493,7 +493,7 @@ class Device(object):
         """Sets the api_level of this Device.
 
 
-        :param api_level: The api_level of this Device.  # noqa: E501
+        :param api_level: The api_level of this Device.
         :type: int
         """
 
@@ -501,10 +501,10 @@ class Device(object):
 
     @property
     def template_name(self):
-        """Gets the template_name of this Device.  # noqa: E501
+        """Gets the template_name of this Device.
 
 
-        :return: The template_name of this Device.  # noqa: E501
+        :return: The template_name of this Device.
         :rtype: str
         """
         return self._template_name
@@ -514,7 +514,7 @@ class Device(object):
         """Sets the template_name of this Device.
 
 
-        :param template_name: The template_name of this Device.  # noqa: E501
+        :param template_name: The template_name of this Device.
         :type: str
         """
 
@@ -522,10 +522,10 @@ class Device(object):
 
     @property
     def mqtt_id(self):
-        """Gets the mqtt_id of this Device.  # noqa: E501
+        """Gets the mqtt_id of this Device.
 
 
-        :return: The mqtt_id of this Device.  # noqa: E501
+        :return: The mqtt_id of this Device.
         :rtype: str
         """
         return self._mqtt_id
@@ -535,7 +535,7 @@ class Device(object):
         """Sets the mqtt_id of this Device.
 
 
-        :param mqtt_id: The mqtt_id of this Device.  # noqa: E501
+        :param mqtt_id: The mqtt_id of this Device.
         :type: str
         """
 
@@ -543,10 +543,10 @@ class Device(object):
 
     @property
     def software_info(self):
-        """Gets the software_info of this Device.  # noqa: E501
+        """Gets the software_info of this Device.
 
 
-        :return: The software_info of this Device.  # noqa: E501
+        :return: The software_info of this Device.
         :rtype: object
         """
         return self._software_info
@@ -556,7 +556,7 @@ class Device(object):
         """Sets the software_info of this Device.
 
 
-        :param software_info: The software_info of this Device.  # noqa: E501
+        :param software_info: The software_info of this Device.
         :type: object
         """
 
@@ -564,10 +564,10 @@ class Device(object):
 
     @property
     def hardware_info(self):
-        """Gets the hardware_info of this Device.  # noqa: E501
+        """Gets the hardware_info of this Device.
 
 
-        :return: The hardware_info of this Device.  # noqa: E501
+        :return: The hardware_info of this Device.
         :rtype: object
         """
         return self._hardware_info
@@ -577,7 +577,7 @@ class Device(object):
         """Sets the hardware_info of this Device.
 
 
-        :param hardware_info: The hardware_info of this Device.  # noqa: E501
+        :param hardware_info: The hardware_info of this Device.
         :type: object
         """
 
@@ -585,10 +585,10 @@ class Device(object):
 
     @property
     def displays(self):
-        """Gets the displays of this Device.  # noqa: E501
+        """Gets the displays of this Device.
 
 
-        :return: The displays of this Device.  # noqa: E501
+        :return: The displays of this Device.
         :rtype: object
         """
         return self._displays
@@ -598,7 +598,7 @@ class Device(object):
         """Sets the displays of this Device.
 
 
-        :param displays: The displays of this Device.  # noqa: E501
+        :param displays: The displays of this Device.
         :type: object
         """
 
@@ -606,10 +606,10 @@ class Device(object):
 
     @property
     def network_info(self):
-        """Gets the network_info of this Device.  # noqa: E501
+        """Gets the network_info of this Device.
 
 
-        :return: The network_info of this Device.  # noqa: E501
+        :return: The network_info of this Device.
         :rtype: object
         """
         return self._network_info
@@ -619,7 +619,7 @@ class Device(object):
         """Sets the network_info of this Device.
 
 
-        :param network_info: The network_info of this Device.  # noqa: E501
+        :param network_info: The network_info of this Device.
         :type: object
         """
 
@@ -627,10 +627,10 @@ class Device(object):
 
     @property
     def memory_info(self):
-        """Gets the memory_info of this Device.  # noqa: E501
+        """Gets the memory_info of this Device.
 
 
-        :return: The memory_info of this Device.  # noqa: E501
+        :return: The memory_info of this Device.
         :rtype: object
         """
         return self._memory_info
@@ -640,7 +640,7 @@ class Device(object):
         """Sets the memory_info of this Device.
 
 
-        :param memory_info: The memory_info of this Device.  # noqa: E501
+        :param memory_info: The memory_info of this Device.
         :type: object
         """
 
@@ -648,10 +648,10 @@ class Device(object):
 
     @property
     def audio_constraints(self):
-        """Gets the audio_constraints of this Device.  # noqa: E501
+        """Gets the audio_constraints of this Device.
 
 
-        :return: The audio_constraints of this Device.  # noqa: E501
+        :return: The audio_constraints of this Device.
         :rtype: object
         """
         return self._audio_constraints
@@ -661,7 +661,7 @@ class Device(object):
         """Sets the audio_constraints of this Device.
 
 
-        :param audio_constraints: The audio_constraints of this Device.  # noqa: E501
+        :param audio_constraints: The audio_constraints of this Device.
         :type: object
         """
 
@@ -669,10 +669,10 @@ class Device(object):
 
     @property
     def provisioned_on(self):
-        """Gets the provisioned_on of this Device.  # noqa: E501
+        """Gets the provisioned_on of this Device.
 
 
-        :return: The provisioned_on of this Device.  # noqa: E501
+        :return: The provisioned_on of this Device.
         :rtype: datetime
         """
         return self._provisioned_on
@@ -682,7 +682,7 @@ class Device(object):
         """Sets the provisioned_on of this Device.
 
 
-        :param provisioned_on: The provisioned_on of this Device.  # noqa: E501
+        :param provisioned_on: The provisioned_on of this Device.
         :type: datetime
         """
 
@@ -690,10 +690,10 @@ class Device(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this Device.  # noqa: E501
+        """Gets the created_on of this Device.
 
 
-        :return: The created_on of this Device.  # noqa: E501
+        :return: The created_on of this Device.
         :rtype: datetime
         """
         return self._created_on
@@ -703,7 +703,7 @@ class Device(object):
         """Sets the created_on of this Device.
 
 
-        :param created_on: The created_on of this Device.  # noqa: E501
+        :param created_on: The created_on of this Device.
         :type: datetime
         """
 
@@ -711,10 +711,10 @@ class Device(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this Device.  # noqa: E501
+        """Gets the updated_on of this Device.
 
 
-        :return: The updated_on of this Device.  # noqa: E501
+        :return: The updated_on of this Device.
         :rtype: datetime
         """
         return self._updated_on
@@ -724,7 +724,7 @@ class Device(object):
         """Sets the updated_on of this Device.
 
 
-        :param updated_on: The updated_on of this Device.  # noqa: E501
+        :param updated_on: The updated_on of this Device.
         :type: datetime
         """
 
@@ -732,10 +732,10 @@ class Device(object):
 
     @property
     def emm_device(self):
-        """Gets the emm_device of this Device.  # noqa: E501
+        """Gets the emm_device of this Device.
 
 
-        :return: The emm_device of this Device.  # noqa: E501
+        :return: The emm_device of this Device.
         :rtype: EmmDevice
         """
         return self._emm_device
@@ -745,7 +745,7 @@ class Device(object):
         """Sets the emm_device of this Device.
 
 
-        :param emm_device: The emm_device of this Device.  # noqa: E501
+        :param emm_device: The emm_device of this Device.
         :type: EmmDevice
         """
 
@@ -753,10 +753,10 @@ class Device(object):
 
     @property
     def is_gms(self):
-        """Gets the is_gms of this Device.  # noqa: E501
+        """Gets the is_gms of this Device.
 
 
-        :return: The is_gms of this Device.  # noqa: E501
+        :return: The is_gms of this Device.
         :rtype: bool
         """
         return self._is_gms
@@ -766,7 +766,7 @@ class Device(object):
         """Sets the is_gms of this Device.
 
 
-        :param is_gms: The is_gms of this Device.  # noqa: E501
+        :param is_gms: The is_gms of this Device.
         :type: bool
         """
 
@@ -774,10 +774,10 @@ class Device(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this Device.  # noqa: E501
+        """Gets the is_active of this Device.
 
 
-        :return: The is_active of this Device.  # noqa: E501
+        :return: The is_active of this Device.
         :rtype: bool
         """
         return self._is_active
@@ -787,7 +787,7 @@ class Device(object):
         """Sets the is_active of this Device.
 
 
-        :param is_active: The is_active of this Device.  # noqa: E501
+        :param is_active: The is_active of this Device.
         :type: bool
         """
 

@@ -25,7 +25,7 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
@@ -42,6 +42,16 @@ class DeviceCommandEnum(object):
     REBOOT = "REBOOT"
     LOCK = "LOCK"
     INSTALL = "INSTALL"
+    UPDATE_HEARTBEAT = "UPDATE_HEARTBEAT"
+    WIPE = "WIPE"
+    SET_WIFI_STATE = "SET_WIFI_STATE"
+    SET_BLUETOOTH_STATE = "SET_BLUETOOTH_STATE"
+    SET_ROTATION_STATE = "SET_ROTATION_STATE"
+    SET_GPS_STATE = "SET_GPS_STATE"
+    SET_BRIGHTNESS_SCALE = "SET_BRIGHTNESS_SCALE"
+    SET_STREAM_VOLUME = "SET_STREAM_VOLUME"
+    SET_SCREEN_OFF_TIMEOUT = "SET_SCREEN_OFF_TIMEOUT"
+    UNINSTALL = "UNINSTALL"
 
     """
     Attributes:
@@ -56,8 +66,8 @@ class DeviceCommandEnum(object):
     attribute_map = {
     }
 
-    def __init__(self):  # noqa: E501
-        """DeviceCommandEnum - a model defined in Swagger"""  # noqa: E501
+    def __init__(self):
+        """DeviceCommandEnum - a model defined in Swagger"""
         self.discriminator = None
 
     def to_dict(self):

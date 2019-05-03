@@ -25,12 +25,12 @@ limitations under the License.
 
 
 import pprint
-import re  # noqa: F401
+import re
 
 import six
 
-from esperclient.models.enterprise_detail import EnterpriseDetail  # noqa: F401,E501
-from esperclient.models.google_enterprise import GoogleEnterprise  # noqa: F401,E501
+from esperclient.models.enterprise_detail import EnterpriseDetail
+from esperclient.models.google_enterprise import GoogleEnterprise
 
 
 class Enterprise(object):
@@ -76,8 +76,8 @@ class Enterprise(object):
         'is_active': 'is_active'
     }
 
-    def __init__(self, id=None, url=None, name=None, display_name=None, short_code=None, mdm_service=None, details=None, default_policy=None, emm=None, created_on=None, updated_on=None, is_active=None):  # noqa: E501
-        """Enterprise - a model defined in Swagger"""  # noqa: E501
+    def __init__(self, id=None, url=None, name=None, display_name=None, short_code=None, mdm_service=None, details=None, default_policy=None, emm=None, created_on=None, updated_on=None, is_active=None):
+        """Enterprise - a model defined in Swagger"""
 
         self._id = None
         self._url = None
@@ -117,11 +117,11 @@ class Enterprise(object):
 
     @property
     def id(self):
-        """Gets the id of this Enterprise.  # noqa: E501
+        """Gets the id of this Enterprise.
 
-        Enterprise id  # noqa: E501
+        Enterprise id
 
-        :return: The id of this Enterprise.  # noqa: E501
+        :return: The id of this Enterprise.
         :rtype: str
         """
         return self._id
@@ -130,9 +130,9 @@ class Enterprise(object):
     def id(self, id):
         """Sets the id of this Enterprise.
 
-        Enterprise id  # noqa: E501
+        Enterprise id
 
-        :param id: The id of this Enterprise.  # noqa: E501
+        :param id: The id of this Enterprise.
         :type: str
         """
 
@@ -140,10 +140,10 @@ class Enterprise(object):
 
     @property
     def url(self):
-        """Gets the url of this Enterprise.  # noqa: E501
+        """Gets the url of this Enterprise.
 
 
-        :return: The url of this Enterprise.  # noqa: E501
+        :return: The url of this Enterprise.
         :rtype: str
         """
         return self._url
@@ -153,7 +153,7 @@ class Enterprise(object):
         """Sets the url of this Enterprise.
 
 
-        :param url: The url of this Enterprise.  # noqa: E501
+        :param url: The url of this Enterprise.
         :type: str
         """
 
@@ -161,10 +161,10 @@ class Enterprise(object):
 
     @property
     def name(self):
-        """Gets the name of this Enterprise.  # noqa: E501
+        """Gets the name of this Enterprise.
 
 
-        :return: The name of this Enterprise.  # noqa: E501
+        :return: The name of this Enterprise.
         :rtype: str
         """
         return self._name
@@ -174,24 +174,24 @@ class Enterprise(object):
         """Sets the name of this Enterprise.
 
 
-        :param name: The name of this Enterprise.  # noqa: E501
+        :param name: The name of this Enterprise.
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")
         if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
         if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")
 
         self._name = name
 
     @property
     def display_name(self):
-        """Gets the display_name of this Enterprise.  # noqa: E501
+        """Gets the display_name of this Enterprise.
 
 
-        :return: The display_name of this Enterprise.  # noqa: E501
+        :return: The display_name of this Enterprise.
         :rtype: str
         """
         return self._display_name
@@ -201,22 +201,22 @@ class Enterprise(object):
         """Sets the display_name of this Enterprise.
 
 
-        :param display_name: The display_name of this Enterprise.  # noqa: E501
+        :param display_name: The display_name of this Enterprise.
         :type: str
         """
         if display_name is not None and len(display_name) > 50:
-            raise ValueError("Invalid value for `display_name`, length must be less than or equal to `50`")  # noqa: E501
+            raise ValueError("Invalid value for `display_name`, length must be less than or equal to `50`")
         if display_name is not None and len(display_name) < 1:
-            raise ValueError("Invalid value for `display_name`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `display_name`, length must be greater than or equal to `1`")
 
         self._display_name = display_name
 
     @property
     def short_code(self):
-        """Gets the short_code of this Enterprise.  # noqa: E501
+        """Gets the short_code of this Enterprise.
 
 
-        :return: The short_code of this Enterprise.  # noqa: E501
+        :return: The short_code of this Enterprise.
         :rtype: str
         """
         return self._short_code
@@ -226,24 +226,24 @@ class Enterprise(object):
         """Sets the short_code of this Enterprise.
 
 
-        :param short_code: The short_code of this Enterprise.  # noqa: E501
+        :param short_code: The short_code of this Enterprise.
         :type: str
         """
         if short_code is None:
-            raise ValueError("Invalid value for `short_code`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `short_code`, must not be `None`")
         if short_code is not None and len(short_code) > 10:
-            raise ValueError("Invalid value for `short_code`, length must be less than or equal to `10`")  # noqa: E501
+            raise ValueError("Invalid value for `short_code`, length must be less than or equal to `10`")
         if short_code is not None and len(short_code) < 1:
-            raise ValueError("Invalid value for `short_code`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for `short_code`, length must be greater than or equal to `1`")
 
         self._short_code = short_code
 
     @property
     def mdm_service(self):
-        """Gets the mdm_service of this Enterprise.  # noqa: E501
+        """Gets the mdm_service of this Enterprise.
 
 
-        :return: The mdm_service of this Enterprise.  # noqa: E501
+        :return: The mdm_service of this Enterprise.
         :rtype: int
         """
         return self._mdm_service
@@ -253,7 +253,7 @@ class Enterprise(object):
         """Sets the mdm_service of this Enterprise.
 
 
-        :param mdm_service: The mdm_service of this Enterprise.  # noqa: E501
+        :param mdm_service: The mdm_service of this Enterprise.
         :type: int
         """
 
@@ -261,10 +261,10 @@ class Enterprise(object):
 
     @property
     def details(self):
-        """Gets the details of this Enterprise.  # noqa: E501
+        """Gets the details of this Enterprise.
 
 
-        :return: The details of this Enterprise.  # noqa: E501
+        :return: The details of this Enterprise.
         :rtype: EnterpriseDetail
         """
         return self._details
@@ -274,21 +274,21 @@ class Enterprise(object):
         """Sets the details of this Enterprise.
 
 
-        :param details: The details of this Enterprise.  # noqa: E501
+        :param details: The details of this Enterprise.
         :type: EnterpriseDetail
         """
         if details is None:
-            raise ValueError("Invalid value for `details`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `details`, must not be `None`")
 
         self._details = details
 
     @property
     def default_policy(self):
-        """Gets the default_policy of this Enterprise.  # noqa: E501
+        """Gets the default_policy of this Enterprise.
 
-        Policy associated with enteprise  # noqa: E501
+        Policy associated with enteprise
 
-        :return: The default_policy of this Enterprise.  # noqa: E501
+        :return: The default_policy of this Enterprise.
         :rtype: int
         """
         return self._default_policy
@@ -297,9 +297,9 @@ class Enterprise(object):
     def default_policy(self, default_policy):
         """Sets the default_policy of this Enterprise.
 
-        Policy associated with enteprise  # noqa: E501
+        Policy associated with enteprise
 
-        :param default_policy: The default_policy of this Enterprise.  # noqa: E501
+        :param default_policy: The default_policy of this Enterprise.
         :type: int
         """
 
@@ -307,10 +307,10 @@ class Enterprise(object):
 
     @property
     def emm(self):
-        """Gets the emm of this Enterprise.  # noqa: E501
+        """Gets the emm of this Enterprise.
 
 
-        :return: The emm of this Enterprise.  # noqa: E501
+        :return: The emm of this Enterprise.
         :rtype: GoogleEnterprise
         """
         return self._emm
@@ -320,7 +320,7 @@ class Enterprise(object):
         """Sets the emm of this Enterprise.
 
 
-        :param emm: The emm of this Enterprise.  # noqa: E501
+        :param emm: The emm of this Enterprise.
         :type: GoogleEnterprise
         """
 
@@ -328,10 +328,10 @@ class Enterprise(object):
 
     @property
     def created_on(self):
-        """Gets the created_on of this Enterprise.  # noqa: E501
+        """Gets the created_on of this Enterprise.
 
 
-        :return: The created_on of this Enterprise.  # noqa: E501
+        :return: The created_on of this Enterprise.
         :rtype: datetime
         """
         return self._created_on
@@ -341,7 +341,7 @@ class Enterprise(object):
         """Sets the created_on of this Enterprise.
 
 
-        :param created_on: The created_on of this Enterprise.  # noqa: E501
+        :param created_on: The created_on of this Enterprise.
         :type: datetime
         """
 
@@ -349,10 +349,10 @@ class Enterprise(object):
 
     @property
     def updated_on(self):
-        """Gets the updated_on of this Enterprise.  # noqa: E501
+        """Gets the updated_on of this Enterprise.
 
 
-        :return: The updated_on of this Enterprise.  # noqa: E501
+        :return: The updated_on of this Enterprise.
         :rtype: datetime
         """
         return self._updated_on
@@ -362,7 +362,7 @@ class Enterprise(object):
         """Sets the updated_on of this Enterprise.
 
 
-        :param updated_on: The updated_on of this Enterprise.  # noqa: E501
+        :param updated_on: The updated_on of this Enterprise.
         :type: datetime
         """
 
@@ -370,10 +370,10 @@ class Enterprise(object):
 
     @property
     def is_active(self):
-        """Gets the is_active of this Enterprise.  # noqa: E501
+        """Gets the is_active of this Enterprise.
 
 
-        :return: The is_active of this Enterprise.  # noqa: E501
+        :return: The is_active of this Enterprise.
         :rtype: bool
         """
         return self._is_active
@@ -383,7 +383,7 @@ class Enterprise(object):
         """Sets the is_active of this Enterprise.
 
 
-        :param is_active: The is_active of this Enterprise.  # noqa: E501
+        :param is_active: The is_active of this Enterprise.
         :type: bool
         """
 

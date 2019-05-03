@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
 **current_base_uri** | **str** |  | [optional] 
-**command_args** | **str** |  | [optional] 
+**command_args** | [**CommandArgs**](CommandArgs.md) |  | [optional] 
 **action** | **str** |  | [optional] 
 **schedule** | **str** |  | [optional] 
 **group_schedule_id** | **str** |  | [optional] 

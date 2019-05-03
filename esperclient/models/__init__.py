@@ -35,6 +35,7 @@ from esperclient.models.app_permission import AppPermission
 from esperclient.models.app_version import AppVersion
 from esperclient.models.application import Application
 from esperclient.models.application_version import ApplicationVersion
+from esperclient.models.command_args import CommandArgs
 from esperclient.models.command_request import CommandRequest
 from esperclient.models.device import Device
 from esperclient.models.device_app import DeviceApp
@@ -60,3 +61,6 @@ from esperclient.models.inline_response2006 import InlineResponse2006
 from esperclient.models.inline_response2007 import InlineResponse2007
 from esperclient.models.inline_response2008 import InlineResponse2008
 from esperclient.models.inline_response201 import InlineResponse201
+from esperclient.models.settings_gps_state_enum import SettingsGPSStateEnum
+from esperclient.models.settings_rotate_state_enum import SettingsRotateStateEnum
+from esperclient.models.settings_volume_stream_enum import SettingsVolumeStreamEnum
