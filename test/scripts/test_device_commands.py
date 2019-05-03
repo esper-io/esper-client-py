@@ -65,3 +65,4 @@ def test_device_command_status_get():
     except ApiException as e:
         print("Exception when calling CommandsApi->get_command: %s\n" % e)
 
+    assert api_response.id is not None, "Id cannot be None"
