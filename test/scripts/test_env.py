@@ -21,6 +21,7 @@ import test_device_commands as device_commands
 #devicegroup.test_create_device_group()
 #devicegroup.test_list_device_group()
 #devicegroup.test_device_group_detail()
+#devicegroup.test_add_device_in_group()
 
 # Application
 #application.test_application_list()

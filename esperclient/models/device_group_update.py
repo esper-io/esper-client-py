@@ -78,10 +78,12 @@ class DeviceGroupUpdate(object):
             self.device_ids = device_ids
         if device_count is not None:
             self.device_count = device_count
-        self.name = name
+        if name is not None:
+            self.name = name
         if created_on is not None:
             self.created_on = created_on
-        self.enterprise = enterprise
+        if enterprise is not None:
+            self.enterprise = enterprise
 
     @property
     def id(self):
@@ -164,8 +166,6 @@ class DeviceGroupUpdate(object):
         :param name: The name of this DeviceGroupUpdate.
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")
         if name is not None and len(name) > 255:
             raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
         if name is not None and len(name) < 1:
@@ -212,8 +212,6 @@ class DeviceGroupUpdate(object):
         :param enterprise: The enterprise of this DeviceGroupUpdate.
         :type: str
         """
-        if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 

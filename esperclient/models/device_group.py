@@ -76,7 +76,8 @@ class DeviceGroup(object):
         self.name = name
         if created_on is not None:
             self.created_on = created_on
-        self.enterprise = enterprise
+        if enterprise is not None:
+            self.enterprise = enterprise
 
     @property
     def id(self):
@@ -186,8 +187,6 @@ class DeviceGroup(object):
         :param enterprise: The enterprise of this DeviceGroup.
         :type: str
         """
-        if enterprise is None:
-            raise ValueError("Invalid value for `enterprise`, must not be `None`")
 
         self._enterprise = enterprise
 

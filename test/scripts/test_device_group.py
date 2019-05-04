@@ -45,32 +45,54 @@ def test_device_group_detail():
 
     assert api_response.id is not None, "Id cannot be null"
 
-# Create group (Not working | works with enterprise url)
+# Create group
 def test_create_device_group():
+    # create group
     api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
-    data = esperclient.EnterpriseDeviceGroup(enterprise=enterprise_id, name='TestBotGroup')  # EnterpriseDeviceGroup
+    data = esperclient.DeviceGroup(name='TestBotGroup')  # DeviceGroup |
 
     try:
-        # Create a device group
         api_response = api_instance.create_group(enterprise_id, data)
         print(api_response)
     except ApiException as e:
         print("Exception when calling DeviceGroupApi->create_group: %s\n" % e)
 
+    assert api_response.id is not None, "Id cannot be None"
+    assert api_response.name == "TestBotGroup", "Invalid group name"
 
-# Delete group (test after create)
-def test_delete_group():
-    # create an instance of the API class
-    api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
-    group_id = 'group_id_example'  # str | A UUID string identifying this enterprise device group.
-
+    # delete
+    group_id = api_response.id
     try:
-        # Delete a device group
         api_instance.delete_group(group_id, enterprise_id)
     except ApiException as e:
         print("Exception when calling DeviceGroupApi->delete_group: %s\n" % e)
 
 
-# Patch Add device (Test after create) TBD
+# Patch Add device from group
+def test_add_device_in_group():
+    # create group
+    api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
+    data = esperclient.DeviceGroup(name='TestBotGroup')  # DeviceGroup |
 
-# Patch Delete device (Test after create) TBD
+    try:
+        api_response = api_instance.create_group(enterprise_id, data)
+        print(api_response)
+    except ApiException as e:
+        print("Exception when calling DeviceGroupApi->create_group: %s\n" % e)
+
+    assert api_response.id is not None, "Id cannot be None"
+    assert api_response.device_count == 0, "Invalid device count"
+
+    group_id = api_response.id
+    devices = ['63325b67-1564-472a-9bd8-10728984231a', 'cd2d9e3b-953c-482f-abbc-168910851bad']  #Add valid uuid
+    data = esperclient.DeviceGroupUpdate(device_ids=devices)  # DeviceGroupUpdate
+
+    try:
+        # Partial update group
+        api_response = api_instance.partial_update_group(group_id, enterprise_id, data)
+        print(api_response)
+    except ApiException as e:
+        print("Exception when calling DeviceGroupApi->partial_update_group: %s\n" % e)
+
+    assert api_response.device_count == 2, "Invalid device count"
+

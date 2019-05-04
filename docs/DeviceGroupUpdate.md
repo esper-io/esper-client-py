@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **device_ids** | **list[str]** |  | [optional] 
 **device_count** | **int** |  | [optional] 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 **created_on** | **datetime** |  | [optional] 
-**enterprise** | **str** |  | 
+**enterprise** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
