@@ -9,6 +9,7 @@ import test_group_commands as group_commands
 # Enterprise
 #enterprise.test_enterprise_list()
 #enterprise.test_enterprise_detail()
+#enterprise.test_enterprise_partial_update()
 
 
 # Device
@@ -41,7 +42,7 @@ import test_group_commands as group_commands
 # Group Commands
 #group_commands.test_group_app_install()
 #group_commands.test_group_command_status_get()
-group_commands.test_group_command_reboot()
+#group_commands.test_group_command_reboot()
 
 
 

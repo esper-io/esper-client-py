@@ -34,7 +34,7 @@ def test_enterprise_detail():
     try:
         # Get your enterprise information
         api_response = api_instance.get_enterprise(enterprise_id)
-        # print(api_response)
+        #print(api_response)
     except ApiException as e:
         print("Exception when calling EnterpriseApi->get_enterprise: %s\n" % e)
 
@@ -47,8 +47,20 @@ def test_enterprise_detail():
     assert api_response.details.zipcode is not None
     assert api_response.details.contact_email is not None
 
+def test_enterprise_partial_update():
+    api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
 
+    # Enterprise patch
+    enterprise_id = get_enterprise_for_env()
+    data = esperclient.EnterpriseUpdate(name='Shoonya Default Enterprise')
 
+    try:
+        api_response = api_instance.partial_update_enterprise(enterprise_id, data)
+        print(api_response)
+    except ApiException as e:
+        print("Exception when calling EnterpriseApi->partial_update_enterprise: %s\n" % e)
+
+    assert api_response.name == "Shoonya Default Enterprise", "Enterprise name patch failed"
 
 
 

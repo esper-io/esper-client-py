@@ -128,7 +128,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
-data = esperclient.Enterprise() # Enterprise | 
+data = esperclient.EnterpriseUpdate() # EnterpriseUpdate | 
 
 try:
     # Partial update enterprise information
@@ -143,7 +143,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | [**str**](.md)| A UUID string identifying this enterprise. | 
- **data** | [**Enterprise**](Enterprise.md)|  | 
+ **data** | [**EnterpriseUpdate**](EnterpriseUpdate.md)|  | 
 
 ### Return type
 

@@ -238,7 +238,7 @@ class EnterpriseApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param Enterprise data: (required)
+        :param EnterpriseUpdate data: (required)
         :return: Enterprise
                  If the method is called asynchronously,
                  returns the request thread.
@@ -261,7 +261,7 @@ class EnterpriseApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param Enterprise data: (required)
+        :param EnterpriseUpdate data: (required)
         :return: Enterprise
                  If the method is called asynchronously,
                  returns the request thread.

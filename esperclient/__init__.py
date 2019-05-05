@@ -63,6 +63,7 @@ from esperclient.models.emm_device import EmmDevice
 from esperclient.models.enterprise import Enterprise
 from esperclient.models.enterprise_detail import EnterpriseDetail
 from esperclient.models.enterprise_policy import EnterprisePolicy
+from esperclient.models.enterprise_update import EnterpriseUpdate
 from esperclient.models.google_enterprise import GoogleEnterprise
 from esperclient.models.group_command import GroupCommand
 from esperclient.models.group_command_args import GroupCommandArgs

@@ -130,6 +130,7 @@ Class | Method | HTTP request
  - [Enterprise](docs/Enterprise.md)
  - [EnterpriseDetail](docs/EnterpriseDetail.md)
  - [EnterprisePolicy](docs/EnterprisePolicy.md)
+ - [EnterpriseUpdate](docs/EnterpriseUpdate.md)
  - [GoogleEnterprise](docs/GoogleEnterprise.md)
  - [GroupCommand](docs/GroupCommand.md)
  - [GroupCommandArgs](docs/GroupCommandArgs.md)
