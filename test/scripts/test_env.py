@@ -3,6 +3,7 @@ import test_device as device
 import test_device_group as devicegroup
 import test_application as application
 import test_device_commands as device_commands
+import test_group_commands as group_commands
 
 
 # Enterprise
@@ -37,7 +38,10 @@ import test_device_commands as device_commands
 #device_commands.test_device_app_deploy()
 #device_commands.test_device_command_settings_change()
 
-
+# Group Commands
+#group_commands.test_group_app_install()
+#group_commands.test_group_command_status_get()
+group_commands.test_group_command_reboot()
 
 
 

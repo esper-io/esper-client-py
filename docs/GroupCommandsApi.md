@@ -1,19 +1,19 @@
-# esperclient.CommandsApi
+# esperclient.GroupCommandsApi
 
 All URIs are relative to *https://DOMAIN.shoonyacloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_command**](CommandsApi.md#get_command) | **GET** /enterprise/{enterprise_id}/device/{device_id}/command/{command_id}/ | Get command status
-[**run_command**](CommandsApi.md#run_command) | **POST** /enterprise/{enterprise_id}/device/{device_id}/command/ | Run commands on device
+[**get_group_command**](GroupCommandsApi.md#get_group_command) | **GET** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/{command_id}/ | Get group command status
+[**run_group_command**](GroupCommandsApi.md#run_group_command) | **POST** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/ | Run commands on group devices
 
 
-# **get_command**
-> DeviceCommand get_command(command_id, device_id, enterprise_id)
+# **get_group_command**
+> GroupCommand get_group_command(command_id, group_id, enterprise_id)
 
-Get command status
+Get group command status
 
-Return DeviceCommand instance
+Returns GroupCommand instance
 
 ### Example
 ```python
@@ -27,17 +27,17 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.CommandsApi(esperclient.ApiClient(configuration))
+api_instance = esperclient.GroupCommandsApi(esperclient.ApiClient(configuration))
 command_id = 'command_id_example' # str | A UUID string identifying this device command.
-device_id = 'device_id_example' # str | A UUID string identifying this device.
+group_id = 'group_id_example' # str | A UUID string identifying this group.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 
 try:
-    # Get command status
-    api_response = api_instance.get_command(command_id, device_id, enterprise_id)
+    # Get group command status
+    api_response = api_instance.get_group_command(command_id, group_id, enterprise_id)
     print(api_response)
 except ApiException as e:
-    print("Exception when calling CommandsApi->get_command: %s\n" % e)
+    print("Exception when calling GroupCommandsApi->get_group_command: %s\n" % e)
 ```
 
 ### Parameters
@@ -45,12 +45,12 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **command_id** | [**str**](.md)| A UUID string identifying this device command. | 
- **device_id** | [**str**](.md)| A UUID string identifying this device. | 
+ **group_id** | [**str**](.md)| A UUID string identifying this group. | 
  **enterprise_id** | [**str**](.md)| A UUID string identifying enterprise. | 
 
 ### Return type
 
-[**DeviceCommand**](DeviceCommand.md)
+[**GroupCommand**](GroupCommand.md)
 
 ### Authorization
 
@@ -63,12 +63,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **run_command**
-> DeviceCommand run_command(enterprise_id, device_id, command)
+# **run_group_command**
+> GroupCommand run_group_command(enterprise_id, group_id, data)
 
-Run commands on device
+Run commands on group devices
 
-Fire commands on device like reboot, ping etc
+Fire commands on all the group devices
 
 ### Example
 ```python
@@ -82,17 +82,17 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.CommandsApi(esperclient.ApiClient(configuration))
+api_instance = esperclient.GroupCommandsApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
-device_id = 'device_id_example' # str | ID of the device
-command = esperclient.CommandRequest() # CommandRequest | Command request body
+group_id = 'group_id_example' # str | ID of the group
+data = esperclient.GroupCommandRequest() # GroupCommandRequest | Group command request
 
 try:
-    # Run commands on device
-    api_response = api_instance.run_command(enterprise_id, device_id, command)
+    # Run commands on group devices
+    api_response = api_instance.run_group_command(enterprise_id, group_id, data)
     print(api_response)
 except ApiException as e:
-    print("Exception when calling CommandsApi->run_command: %s\n" % e)
+    print("Exception when calling GroupCommandsApi->run_group_command: %s\n" % e)
 ```
 
 ### Parameters
@@ -100,12 +100,12 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | [**str**](.md)| ID of the enterprise | 
- **device_id** | [**str**](.md)| ID of the device | 
- **command** | [**CommandRequest**](CommandRequest.md)| Command request body | 
+ **group_id** | [**str**](.md)| ID of the group | 
+ **data** | [**GroupCommandRequest**](GroupCommandRequest.md)| Group command request | 
 
 ### Return type
 
-[**DeviceCommand**](DeviceCommand.md)
+[**GroupCommand**](GroupCommand.md)
 
 ### Authorization
 

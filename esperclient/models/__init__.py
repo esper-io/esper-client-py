@@ -51,6 +51,10 @@ from esperclient.models.enterprise import Enterprise
 from esperclient.models.enterprise_detail import EnterpriseDetail
 from esperclient.models.enterprise_policy import EnterprisePolicy
 from esperclient.models.google_enterprise import GoogleEnterprise
+from esperclient.models.group_command import GroupCommand
+from esperclient.models.group_command_args import GroupCommandArgs
+from esperclient.models.group_command_enum import GroupCommandEnum
+from esperclient.models.group_command_request import GroupCommandRequest
 from esperclient.models.inline_response200 import InlineResponse200
 from esperclient.models.inline_response2001 import InlineResponse2001
 from esperclient.models.inline_response2002 import InlineResponse2002

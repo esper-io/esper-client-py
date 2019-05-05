@@ -98,6 +98,8 @@ Class | Method | HTTP request
 *EnterpriseApi* | [**get_all_enterprises**](docs/EnterpriseApi.md#get_all_enterprises) | **GET** /enterprise/
 *EnterpriseApi* | [**get_enterprise**](docs/EnterpriseApi.md#get_enterprise) | **GET** /enterprise/{enterprise_id}/
 *EnterpriseApi* | [**partial_update_enterprise**](docs/EnterpriseApi.md#partial_update_enterprise) | **PATCH** /enterprise/{enterprise_id}/
+*GroupCommandsApi* | [**get_group_command**](docs/GroupCommandsApi.md#get_group_command) | **GET** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/{command_id}/
+*GroupCommandsApi* | [**run_group_command**](docs/GroupCommandsApi.md#run_group_command) | **POST** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/
 *PolicyApi* | [**create_policy**](docs/PolicyApi.md#create_policy) | **POST** /enterprise/{enterprise_id}/policy/
 *PolicyApi* | [**delete_policy**](docs/PolicyApi.md#delete_policy) | **DELETE** /enterprise/{enterprise_id}/policy/{policy_id}/
 *PolicyApi* | [**get_all_policies**](docs/PolicyApi.md#get_all_policies) | **GET** /enterprise/{enterprise_id}/policy/
@@ -129,6 +131,9 @@ Class | Method | HTTP request
  - [EnterpriseDetail](docs/EnterpriseDetail.md)
  - [EnterprisePolicy](docs/EnterprisePolicy.md)
  - [GoogleEnterprise](docs/GoogleEnterprise.md)
+ - [GroupCommand](docs/GroupCommand.md)
+ - [GroupCommandArgs](docs/GroupCommandArgs.md)
+ - [GroupCommandRequest](docs/GroupCommandRequest.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
@@ -146,6 +151,7 @@ Class | Method | HTTP request
  - [AppInstallStateEnum](docs/AppInstallStateEnum.md)
  - [DeviceCommandEnum](docs/DeviceCommandEnum.md)
  - [EMMEnterpriseStateEnum](docs/EMMEnterpriseStateEnum.md)
+ - [GroupCommandEnum](docs/GroupCommandEnum.md)
  - [SettingsGPSStateEnum](docs/SettingsGPSStateEnum.md)
  - [SettingsRotateStateEnum](docs/SettingsRotateStateEnum.md)
  - [SettingsVolumeStreamEnum](docs/SettingsVolumeStreamEnum.md)
