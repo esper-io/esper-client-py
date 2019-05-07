@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_policies**
-> InlineResponse2008 get_all_policies(enterprise_id, name=name, limit=limit, offset=offset)
+> InlineResponse2007 get_all_policies(enterprise_id, name=name, limit=limit, offset=offset)
 
 List enterprise policies
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 

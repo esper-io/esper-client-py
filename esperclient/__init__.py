@@ -30,7 +30,6 @@ from __future__ import absolute_import
 from esperclient.api.application_api import ApplicationApi
 from esperclient.api.commands_api import CommandsApi
 from esperclient.api.device_api import DeviceApi
-from esperclient.api.device_app_api import DeviceAppApi
 from esperclient.api.device_group_api import DeviceGroupApi
 from esperclient.api.enterprise_api import EnterpriseApi
 from esperclient.api.group_commands_api import GroupCommandsApi
@@ -51,8 +50,6 @@ from esperclient.models.application_version import ApplicationVersion
 from esperclient.models.command_args import CommandArgs
 from esperclient.models.command_request import CommandRequest
 from esperclient.models.device import Device
-from esperclient.models.device_app import DeviceApp
-from esperclient.models.device_app_permission import DeviceAppPermission
 from esperclient.models.device_command import DeviceCommand
 from esperclient.models.device_command_enum import DeviceCommandEnum
 from esperclient.models.device_group import DeviceGroup
@@ -77,7 +74,6 @@ from esperclient.models.inline_response2004 import InlineResponse2004
 from esperclient.models.inline_response2005 import InlineResponse2005
 from esperclient.models.inline_response2006 import InlineResponse2006
 from esperclient.models.inline_response2007 import InlineResponse2007
-from esperclient.models.inline_response2008 import InlineResponse2008
 from esperclient.models.inline_response201 import InlineResponse201
 from esperclient.models.settings_gps_state_enum import SettingsGPSStateEnum
 from esperclient.models.settings_rotate_state_enum import SettingsRotateStateEnum

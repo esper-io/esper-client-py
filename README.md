@@ -87,8 +87,6 @@ Class | Method | HTTP request
 *DeviceApi* | [**get_app_installs**](docs/DeviceApi.md#get_app_installs) | **GET** /enterprise/{enterprise_id}/device/{device_id}/install/
 *DeviceApi* | [**get_device_by_id**](docs/DeviceApi.md#get_device_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/
 *DeviceApi* | [**get_device_event**](docs/DeviceApi.md#get_device_event) | **GET** /enterprise/{enterprise_id}/device/{device_id}/status/
-*DeviceAppApi* | [**get_device_app_by_id**](docs/DeviceAppApi.md#get_device_app_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/{app_id}/
-*DeviceAppApi* | [**get_device_apps**](docs/DeviceAppApi.md#get_device_apps) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/
 *DeviceGroupApi* | [**create_group**](docs/DeviceGroupApi.md#create_group) | **POST** /enterprise/{enterprise_id}/devicegroup/
 *DeviceGroupApi* | [**delete_group**](docs/DeviceGroupApi.md#delete_group) | **DELETE** /enterprise/{enterprise_id}/devicegroup/{group_id}/
 *DeviceGroupApi* | [**get_all_groups**](docs/DeviceGroupApi.md#get_all_groups) | **GET** /enterprise/{enterprise_id}/devicegroup/
@@ -120,8 +118,6 @@ Class | Method | HTTP request
  - [CommandArgs](docs/CommandArgs.md)
  - [CommandRequest](docs/CommandRequest.md)
  - [Device](docs/Device.md)
- - [DeviceApp](docs/DeviceApp.md)
- - [DeviceAppPermission](docs/DeviceAppPermission.md)
  - [DeviceCommand](docs/DeviceCommand.md)
  - [DeviceGroup](docs/DeviceGroup.md)
  - [DeviceGroupUpdate](docs/DeviceGroupUpdate.md)
@@ -143,7 +139,6 @@ Class | Method | HTTP request
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
- - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse201](docs/InlineResponse201.md)
 
 

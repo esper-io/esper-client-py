@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.device_app import DeviceApp
+from esperclient.models.app_install import AppInstall
 
 
 class InlineResponse2004(object):
@@ -49,7 +49,7 @@ class InlineResponse2004(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[DeviceApp]'
+        'results': 'list[AppInstall]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class InlineResponse2004(object):
 
 
         :return: The results of this InlineResponse2004.
-        :rtype: list[DeviceApp]
+        :rtype: list[AppInstall]
         """
         return self._results
 
@@ -156,7 +156,7 @@ class InlineResponse2004(object):
 
 
         :param results: The results of this InlineResponse2004.
-        :type: list[DeviceApp]
+        :type: list[AppInstall]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")

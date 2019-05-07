@@ -56,7 +56,7 @@ def test_enterprise_partial_update():
 
     try:
         api_response = api_instance.partial_update_enterprise(enterprise_id, data)
-        print(api_response)
+        #print(api_response)
     except ApiException as e:
         print("Exception when calling EnterpriseApi->partial_update_enterprise: %s\n" % e)
 
