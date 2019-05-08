@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_all_devices**
-> InlineResponse2003 get_all_devices(enterprise_id, name=name, search=search, limit=limit, offset=offset)
+> InlineResponse2003 get_all_devices(enterprise_id, name=name, group=group, search=search, limit=limit, offset=offset)
 
 Fetch all devices in an enterprise
 
@@ -32,13 +32,14 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
 name = 'name_example' # str | Filter by device name (optional)
+group = 'group_example' # str | Filter by group id (optional)
 search = 'search_example' # str | A search term. Search by device name or imei (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
 offset = 56 # int | The initial index from which to return the results. (optional)
 
 try:
     # Fetch all devices in an enterprise
-    api_response = api_instance.get_all_devices(enterprise_id, name=name, search=search, limit=limit, offset=offset)
+    api_response = api_instance.get_all_devices(enterprise_id, name=name, group=group, search=search, limit=limit, offset=offset)
     print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceApi->get_all_devices: %s\n" % e)
@@ -50,6 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | [**str**](.md)| ID of the enterprise | 
  **name** | **str**| Filter by device name | [optional] 
+ **group** | [**str**](.md)| Filter by group id | [optional] 
  **search** | **str**| A search term. Search by device name or imei | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
  **offset** | **int**| The initial index from which to return the results. | [optional] 

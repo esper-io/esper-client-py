@@ -57,6 +57,7 @@ class DeviceApi(object):
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
         :param str name: Filter by device name
+        :param str group: Filter by group id
         :param str search: A search term. Search by device name or imei
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
@@ -83,6 +84,7 @@ class DeviceApi(object):
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
         :param str name: Filter by device name
+        :param str group: Filter by group id
         :param str search: A search term. Search by device name or imei
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
@@ -91,7 +93,7 @@ class DeviceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'name', 'search', 'limit', 'offset']
+        all_params = ['enterprise_id', 'name', 'group', 'search', 'limit', 'offset']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -120,6 +122,8 @@ class DeviceApi(object):
         query_params = []
         if 'name' in params:
             query_params.append(('name', params['name']))
+        if 'group' in params:
+            query_params.append(('group', params['group']))
         if 'search' in params:
             query_params.append(('search', params['search']))
         if 'limit' in params:
