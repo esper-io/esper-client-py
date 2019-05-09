@@ -27,8 +27,8 @@ from esperclient.rest import ApiException
 
 # Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
@@ -81,8 +81,8 @@ from esperclient.rest import ApiException
 
 # Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
@@ -133,8 +133,8 @@ from esperclient.rest import ApiException
 
 # Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
@@ -192,8 +192,8 @@ from esperclient.rest import ApiException
 
 # Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
@@ -247,8 +247,8 @@ from esperclient.rest import ApiException
 
 # Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
@@ -308,8 +308,8 @@ from esperclient.rest import ApiException
 
 # Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
@@ -361,8 +361,8 @@ from esperclient.rest import ApiException
 
 # Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
