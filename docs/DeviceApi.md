@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_all_devices**
-> InlineResponse2003 get_all_devices(enterprise_id, name=name, group=group, search=search, limit=limit, offset=offset)
+> InlineResponse2003 get_all_devices(enterprise_id, name=name, group=group, imei=imei, state=state, brand=brand, is_gms=is_gms, search=search, limit=limit, offset=offset)
 
 Fetch all devices in an enterprise
 
@@ -33,13 +33,17 @@ api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
 name = 'name_example' # str | Filter by device name (optional)
 group = 'group_example' # str | Filter by group id (optional)
-search = 'search_example' # str | A search term. Search by device name or imei (optional)
+imei = 'imei_example' # str | filter by imei (optional)
+state = 8.14 # float | filter by device state (optional)
+brand = 'brand_example' # str | filter by branch (optional)
+is_gms = 'is_gms_example' # str | filter for gms devices (optional)
+search = 'search_example' # str | A search term. Search by device name, imei or mac address (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 56 # int | The initial index from which to return the results. (optional)
+offset = 10 # int | The initial index from which to return the results. (optional) (default to 10)
 
 try:
     # Fetch all devices in an enterprise
-    api_response = api_instance.get_all_devices(enterprise_id, name=name, group=group, search=search, limit=limit, offset=offset)
+    api_response = api_instance.get_all_devices(enterprise_id, name=name, group=group, imei=imei, state=state, brand=brand, is_gms=is_gms, search=search, limit=limit, offset=offset)
     print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceApi->get_all_devices: %s\n" % e)
@@ -52,9 +56,13 @@ Name | Type | Description  | Notes
  **enterprise_id** | [**str**](.md)| ID of the enterprise | 
  **name** | **str**| Filter by device name | [optional] 
  **group** | [**str**](.md)| Filter by group id | [optional] 
- **search** | **str**| A search term. Search by device name or imei | [optional] 
+ **imei** | **str**| filter by imei | [optional] 
+ **state** | **float**| filter by device state | [optional] 
+ **brand** | **str**| filter by branch | [optional] 
+ **is_gms** | **str**| filter for gms devices | [optional] 
+ **search** | **str**| A search term. Search by device name, imei or mac address | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
- **offset** | **int**| The initial index from which to return the results. | [optional] 
+ **offset** | **int**| The initial index from which to return the results. | [optional] [default to 10]
 
 ### Return type
 
