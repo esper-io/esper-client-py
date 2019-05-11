@@ -59,7 +59,7 @@ class DeviceApi(object):
         :param str name: Filter by device name
         :param str group: Filter by group id
         :param str imei: filter by imei
-        :param float state: filter by device state
+        :param int state: filter by device state
         :param str brand: filter by branch
         :param str is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address
@@ -90,7 +90,7 @@ class DeviceApi(object):
         :param str name: Filter by device name
         :param str group: Filter by group id
         :param str imei: filter by imei
-        :param float state: filter by device state
+        :param int state: filter by device state
         :param str brand: filter by branch
         :param str is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address

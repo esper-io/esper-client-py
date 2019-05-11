@@ -34,7 +34,7 @@ enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
 name = 'name_example' # str | Filter by device name (optional)
 group = 'group_example' # str | Filter by group id (optional)
 imei = 'imei_example' # str | filter by imei (optional)
-state = 8.14 # float | filter by device state (optional)
+state = 56 # int | filter by device state (optional)
 brand = 'brand_example' # str | filter by branch (optional)
 is_gms = 'is_gms_example' # str | filter for gms devices (optional)
 search = 'search_example' # str | A search term. Search by device name, imei or mac address (optional)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
  **name** | **str**| Filter by device name | [optional] 
  **group** | [**str**](.md)| Filter by group id | [optional] 
  **imei** | **str**| filter by imei | [optional] 
- **state** | **float**| filter by device state | [optional] 
+ **state** | **int**| filter by device state | [optional] 
  **brand** | **str**| filter by branch | [optional] 
  **is_gms** | **str**| filter for gms devices | [optional] 
  **search** | **str**| A search term. Search by device name, imei or mac address | [optional] 
