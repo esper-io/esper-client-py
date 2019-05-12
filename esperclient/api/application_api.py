@@ -272,6 +272,7 @@ class ApplicationApi(object):
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str application_name: filter by application name
         :param str package_name: filter by package name
+        :param bool is_hidden: filter default esper apps
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2001
@@ -298,6 +299,7 @@ class ApplicationApi(object):
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str application_name: filter by application name
         :param str package_name: filter by package name
+        :param bool is_hidden: filter default esper apps
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2001
@@ -305,7 +307,7 @@ class ApplicationApi(object):
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'application_name', 'package_name', 'limit', 'offset']
+        all_params = ['enterprise_id', 'application_name', 'package_name', 'is_hidden', 'limit', 'offset']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -336,6 +338,8 @@ class ApplicationApi(object):
             query_params.append(('application_name', params['application_name']))
         if 'package_name' in params:
             query_params.append(('package_name', params['package_name']))
+        if 'is_hidden' in params:
+            query_params.append(('is_hidden', params['is_hidden']))
         if 'limit' in params:
             query_params.append(('limit', params['limit']))
         if 'offset' in params:

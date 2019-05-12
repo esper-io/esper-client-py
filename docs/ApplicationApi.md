@@ -120,7 +120,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_applications**
-> InlineResponse2001 get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, limit=limit, offset=offset)
+> InlineResponse2001 get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
 
 List apps in enterprise
 
@@ -142,12 +142,13 @@ api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
 application_name = 'application_name_example' # str | filter by application name (optional)
 package_name = 'package_name_example' # str | filter by package name (optional)
+is_hidden = true # bool | filter default esper apps (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 56 # int | The initial index from which to return the results. (optional)
+offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
 try:
     # List apps in enterprise
-    api_response = api_instance.get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, limit=limit, offset=offset)
+    api_response = api_instance.get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
     print(api_response)
 except ApiException as e:
     print("Exception when calling ApplicationApi->get_all_applications: %s\n" % e)
@@ -160,8 +161,9 @@ Name | Type | Description  | Notes
  **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
  **application_name** | **str**| filter by application name | [optional] 
  **package_name** | **str**| filter by package name | [optional] 
+ **is_hidden** | **bool**| filter default esper apps | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
- **offset** | **int**| The initial index from which to return the results. | [optional] 
+ **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
 
 ### Return type
 
