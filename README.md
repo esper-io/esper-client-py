@@ -97,12 +97,6 @@ Class | Method | HTTP request
 *EnterpriseApi* | [**partial_update_enterprise**](docs/EnterpriseApi.md#partial_update_enterprise) | **PATCH** /enterprise/{enterprise_id}/
 *GroupCommandsApi* | [**get_group_command**](docs/GroupCommandsApi.md#get_group_command) | **GET** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/{command_id}/
 *GroupCommandsApi* | [**run_group_command**](docs/GroupCommandsApi.md#run_group_command) | **POST** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/
-*PolicyApi* | [**create_policy**](docs/PolicyApi.md#create_policy) | **POST** /enterprise/{enterprise_id}/policy/
-*PolicyApi* | [**delete_policy**](docs/PolicyApi.md#delete_policy) | **DELETE** /enterprise/{enterprise_id}/policy/{policy_id}/
-*PolicyApi* | [**get_all_policies**](docs/PolicyApi.md#get_all_policies) | **GET** /enterprise/{enterprise_id}/policy/
-*PolicyApi* | [**get_policy_by_id**](docs/PolicyApi.md#get_policy_by_id) | **GET** /enterprise/{enterprise_id}/policy/{policy_id}/
-*PolicyApi* | [**partial_update_policy**](docs/PolicyApi.md#partial_update_policy) | **PATCH** /enterprise/{enterprise_id}/policy/{policy_id}/
-*PolicyApi* | [**update_policy**](docs/PolicyApi.md#update_policy) | **PUT** /enterprise/{enterprise_id}/policy/{policy_id}/
 
 
 ## Documentation For Models
@@ -124,7 +118,6 @@ Class | Method | HTTP request
  - [EmmDevice](docs/EmmDevice.md)
  - [Enterprise](docs/Enterprise.md)
  - [EnterpriseDetail](docs/EnterpriseDetail.md)
- - [EnterprisePolicy](docs/EnterprisePolicy.md)
  - [EnterpriseUpdate](docs/EnterpriseUpdate.md)
  - [GoogleEnterprise](docs/GoogleEnterprise.md)
  - [GroupCommand](docs/GroupCommand.md)
@@ -137,7 +130,6 @@ Class | Method | HTTP request
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
- - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse201](docs/InlineResponse201.md)
 
 

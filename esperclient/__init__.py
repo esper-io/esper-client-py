@@ -33,7 +33,6 @@ from esperclient.api.device_api import DeviceApi
 from esperclient.api.device_group_api import DeviceGroupApi
 from esperclient.api.enterprise_api import EnterpriseApi
 from esperclient.api.group_commands_api import GroupCommandsApi
-from esperclient.api.policy_api import PolicyApi
 
 # import ApiClient
 from esperclient.api_client import ApiClient
@@ -59,7 +58,6 @@ from esperclient.models.emm_enterprise_state_enum import EMMEnterpriseStateEnum
 from esperclient.models.emm_device import EmmDevice
 from esperclient.models.enterprise import Enterprise
 from esperclient.models.enterprise_detail import EnterpriseDetail
-from esperclient.models.enterprise_policy import EnterprisePolicy
 from esperclient.models.enterprise_update import EnterpriseUpdate
 from esperclient.models.google_enterprise import GoogleEnterprise
 from esperclient.models.group_command import GroupCommand
@@ -73,7 +71,6 @@ from esperclient.models.inline_response2003 import InlineResponse2003
 from esperclient.models.inline_response2004 import InlineResponse2004
 from esperclient.models.inline_response2005 import InlineResponse2005
 from esperclient.models.inline_response2006 import InlineResponse2006
-from esperclient.models.inline_response2007 import InlineResponse2007
 from esperclient.models.inline_response201 import InlineResponse201
 from esperclient.models.settings_gps_state_enum import SettingsGPSStateEnum
 from esperclient.models.settings_rotate_state_enum import SettingsRotateStateEnum
