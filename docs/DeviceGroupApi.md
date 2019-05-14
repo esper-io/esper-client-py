@@ -140,7 +140,7 @@ api_instance = esperclient.DeviceGroupApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 name = 'name_example' # str | filter by group name (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 56 # int | The initial index from which to return the results. (optional)
+offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
 try:
     # List device groups
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
  **enterprise_id** | **str**| A UUID string identifying enterprise. | 
  **name** | **str**| filter by group name | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
- **offset** | **int**| The initial index from which to return the results. | [optional] 
+ **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
 
 ### Return type
 

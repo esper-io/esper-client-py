@@ -39,7 +39,7 @@ brand = 'brand_example' # str | filter by branch (optional)
 is_gms = 'is_gms_example' # str | filter for gms devices (optional)
 search = 'search_example' # str | A search term. Search by device name, imei or mac address (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 10 # int | The initial index from which to return the results. (optional) (default to 10)
+offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
 try:
     # Fetch all devices in an enterprise
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
  **is_gms** | **str**| filter for gms devices | [optional] 
  **search** | **str**| A search term. Search by device name, imei or mac address | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
- **offset** | **int**| The initial index from which to return the results. | [optional] [default to 10]
+ **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
 
 ### Return type
 
@@ -106,7 +106,7 @@ package_name = 'package_name_example' # str | filter by package name (optional)
 application_name = 'application_name_example' # str | filter by application name (optional)
 install_state = 'install_state_example' # str | filter by install state (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 56 # int | The initial index from which to return the results. (optional)
+offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
 try:
     # List installed apps
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
  **application_name** | **str**| filter by application name | [optional] 
  **install_state** | **str**| filter by install state | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
- **offset** | **int**| The initial index from which to return the results. | [optional] 
+ **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
 
 ### Return type
 

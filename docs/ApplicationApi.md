@@ -260,7 +260,7 @@ enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterp
 version_code = 'version_code_example' # str | filter by version code (optional)
 build_number = 'build_number_example' # str | filter by build number (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 56 # int | The initial index from which to return the results. (optional)
+offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
 try:
     # List App versions
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
  **version_code** | **str**| filter by version code | [optional] 
  **build_number** | **str**| filter by build number | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
- **offset** | **int**| The initial index from which to return the results. | [optional] 
+ **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
 
 ### Return type
 
