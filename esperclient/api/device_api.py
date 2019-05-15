@@ -61,7 +61,7 @@ class DeviceApi(object):
         :param str imei: filter by imei
         :param int state: filter by device state
         :param str brand: filter by branch
-        :param str is_gms: filter for gms devices
+        :param bool is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
@@ -92,7 +92,7 @@ class DeviceApi(object):
         :param str imei: filter by imei
         :param int state: filter by device state
         :param str brand: filter by branch
-        :param str is_gms: filter for gms devices
+        :param bool is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.

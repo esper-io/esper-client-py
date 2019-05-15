@@ -36,7 +36,7 @@ group = 'group_example' # str | Filter by group id (optional)
 imei = 'imei_example' # str | filter by imei (optional)
 state = 56 # int | filter by device state (optional)
 brand = 'brand_example' # str | filter by branch (optional)
-is_gms = 'is_gms_example' # str | filter for gms devices (optional)
+is_gms = true # bool | filter for gms devices (optional)
 search = 'search_example' # str | A search term. Search by device name, imei or mac address (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
 offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
  **imei** | **str**| filter by imei | [optional] 
  **state** | **int**| filter by device state | [optional] 
  **brand** | **str**| filter by branch | [optional] 
- **is_gms** | **str**| filter for gms devices | [optional] 
+ **is_gms** | **bool**| filter for gms devices | [optional] 
  **search** | **str**| A search term. Search by device name, imei or mac address | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
  **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
