@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **upload**
-> InlineResponse201 upload(enterprise_id, enterprise, app_file)
+> InlineResponse201 upload(enterprise_id, app_file)
 
 upload an application to enterprise
 
@@ -370,12 +370,11 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
-enterprise = 'enterprise_example' # str | enterprise id
 app_file = '/path/to/file.txt' # file | valid APK file
 
 try:
     # upload an application to enterprise
-    api_response = api_instance.upload(enterprise_id, enterprise, app_file)
+    api_response = api_instance.upload(enterprise_id, app_file)
     print(api_response)
 except ApiException as e:
     print("Exception when calling ApplicationApi->upload: %s\n" % e)
@@ -386,7 +385,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
- **enterprise** | [**str**](.md)| enterprise id | 
  **app_file** | **file**| valid APK file | 
 
 ### Return type

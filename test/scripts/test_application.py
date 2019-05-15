@@ -47,15 +47,14 @@ def test_application_detail():
 def test_application_upload_delete():
     # upload
     api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
-    enterprise = enterprise_id
 
     try:
-        api_response = api_instance.upload(enterprise_id, enterprise, app_file)
+        api_response = api_instance.upload(enterprise_id, app_file)
         print(api_response)
     except ApiException as e:
         print("Exception when calling ApplicationApi->upload: %s\n" % e)
 
-    assert api_response.application.is_active, "application not successful, app not active"
+    assert api_response.application.is_active, "application upload not successful, app not active"
     assert len(api_response.application.versions) > 0, "No version present for app"
 
     # delete

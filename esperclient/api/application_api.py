@@ -707,18 +707,17 @@ class ApplicationApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def upload(self, enterprise_id, enterprise, app_file, **kwargs):
+    def upload(self, enterprise_id, app_file, **kwargs):
         """upload an application to enterprise
 
         Returns application
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.upload(enterprise_id, enterprise, app_file, async_req=True)
+        >>> thread = api.upload(enterprise_id, app_file, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param str enterprise: enterprise id (required)
         :param file app_file: valid APK file (required)
         :return: InlineResponse201
                  If the method is called asynchronously,
@@ -726,30 +725,29 @@ class ApplicationApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.upload_with_http_info(enterprise_id, enterprise, app_file, **kwargs)
+            return self.upload_with_http_info(enterprise_id, app_file, **kwargs)
         else:
-            (data) = self.upload_with_http_info(enterprise_id, enterprise, app_file, **kwargs)
+            (data) = self.upload_with_http_info(enterprise_id, app_file, **kwargs)
             return data
 
-    def upload_with_http_info(self, enterprise_id, enterprise, app_file, **kwargs):
+    def upload_with_http_info(self, enterprise_id, app_file, **kwargs):
         """upload an application to enterprise
 
         Returns application
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.upload_with_http_info(enterprise_id, enterprise, app_file, async_req=True)
+        >>> thread = api.upload_with_http_info(enterprise_id, app_file, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param str enterprise: enterprise id (required)
         :param file app_file: valid APK file (required)
         :return: InlineResponse201
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'enterprise', 'app_file']
+        all_params = ['enterprise_id', 'app_file']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -768,10 +766,6 @@ class ApplicationApi(object):
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
             raise ValueError("Missing the required parameter `enterprise_id` when calling `upload`")
-        # verify the required parameter 'enterprise' is set
-        if ('enterprise' not in params or
-                params['enterprise'] is None):
-            raise ValueError("Missing the required parameter `enterprise` when calling `upload`")
         # verify the required parameter 'app_file' is set
         if ('app_file' not in params or
                 params['app_file'] is None):
@@ -789,8 +783,6 @@ class ApplicationApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'enterprise' in params:
-            form_params.append(('enterprise', params['enterprise']))
         if 'app_file' in params:
             local_var_files['app_file'] = params['app_file']
 
