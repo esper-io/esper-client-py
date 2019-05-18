@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Esper Manage API
+Esper APIs
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -53,7 +53,7 @@ class Configuration(object):
             return
 
         # Default Base url
-        self.host = "https://DOMAIN.shoonyacloud.com/api"
+        self.host = "https://foo.esper.cloud/api"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 

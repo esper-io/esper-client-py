@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Esper Manage API
+Esper APIs
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -46,15 +46,15 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Esper Manage API",
+    description="Esper APIs",
     author_email="developer@esper.io",
     url="",
-    keywords=["Python SDK", "Esper Manage API"],
+    keywords=["Python SDK", "Esper APIs"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Esper Manage python SDK
+    Esper SDK for Python
 
     Python client library for Esper Manage APIs. You can find out more about Esper at https://esper.io.
 

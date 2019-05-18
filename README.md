@@ -1,7 +1,7 @@
-Esper Manage python SDK
+Esper SDK for Python
 ==================
 
-Python client library to communicate with Esper Manage APIs that help you programmatically control and monitor your enterprise's dedicated Esper endpoint. To read more about the various capabilities of Esper endpoints and Esper managed devices, please visit [esper.io](https://esper.io).
+Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper Manage. To read more about the various capabilities of Esper Manage and Esper managed devices, please visit [esper.io](https://esper.io).
 
 
 - API version: 1.0.0
@@ -12,35 +12,42 @@ Python client library to communicate with Esper Manage APIs that help you progra
 
 Python 2.7 and 3.4+
 
-## Installation & Usage
+Additionally, you need a dedicated Esper environment set up on Esper Cloud through our Esper Dev Trial. For more details checkout [Esper Requirements](https://docs.esper.io/home/pythonsdk.html#pre-requisites)
 
-### Option 1: pip install
+## Installation
 
-From Python package index
+#### Using `pip install`
 
+From PyPI
 ```sh
 pip install esperclient
 ```
 
-### Option 2: pip install
+or
 
-You can install directly from Github
-
+From [Github](https://github.com/esper-io/esper-client-py)
 ```sh
 pip install git+https://github.com/esper-io/esper-client-py.git
 ```
 
-### Option 3: Setuptools
+#### From source
 
-Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
+Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
 ```sh
+git clone https://github.com/esper-io/esper-client-py.git
+
+cd esper-client-py
+
 python setup.py install
 ```
 
+> You need not install setuptools separately, they are packaged along with downloaded library
+
+
 ## Getting Started
 
-Please follow the [installation procedure](#installation--usage) and then run the following:
+Please follow the [installation procedure](#installation) stated above and then run the following:
 
 ```python
 import esperclient
@@ -53,22 +60,20 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
-version_id = 'version_id_example' # str | A UUID string identifying this app version.
-application_id = 'application_id_example' # str | A UUID string identifying this application.
-enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
+api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
+enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
 
 try:
-    # Delete app version
-    api_instance.delete_app_version(version_id, application_id, enterprise_id)
+    # Fetch all devices in an enterprise
+    api_response = api_instance.get_all_devices(enterprise_id)
+    print(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->delete_app_version: %s\n" % e)
-
+    print("Exception when calling DeviceApi->get_all_devices: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://DOMAIN.shoonyacloud.com/api*
+Given below is a detailed documentation for each of the API endpoint along with supported request options. All URIs are relative to *https://foo.esper.cloud/api*
 
 
 Class | Method | HTTP request
