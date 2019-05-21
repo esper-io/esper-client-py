@@ -7,7 +7,7 @@ import test_group_commands as group_commands
 
 
 # Enterprise
-#enterprise.test_enterprise_list()
+enterprise.test_enterprise_list()
 #enterprise.test_enterprise_detail()
 #enterprise.test_enterprise_partial_update()
 
