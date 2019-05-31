@@ -12,7 +12,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 
 ## Requirements.
 
-Python 2.7 and 3.4+
+Python 3.4+
 
 Additionally, you need a dedicated Esper environment set up on Esper Cloud through our Esper Dev Trial. For more details checkout [Esper Requirements](https://docs.esper.io/home/pythonsdk.html#pre-requisites)
 
@@ -75,7 +75,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-Given below is a detailed documentation for each of the API endpoint along with supported request options. All URIs are relative to *https://foo.esper.cloud/api*
+Given below is a detailed documentation for each of the API endpoint along with supported request options. All URIs are relative to *https://foo.shoonyacloud.com/api*
 
 
 Class | Method | HTTP request

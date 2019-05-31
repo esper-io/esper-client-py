@@ -53,7 +53,7 @@ class Configuration(object):
             return
 
         # Default Base url
-        self.host = "https://foo.esper.cloud/api"
+        self.host = "https://foo.shoonyacloud.com/api"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 

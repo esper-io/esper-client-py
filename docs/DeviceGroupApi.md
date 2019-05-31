@@ -1,6 +1,6 @@
 # esperclient.DeviceGroupApi
 
-All URIs are relative to *https://foo.esper.cloud/api*
+All URIs are relative to *https://foo.shoonyacloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
