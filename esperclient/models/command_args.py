@@ -58,7 +58,8 @@ class CommandArgs(object):
         'rotate_state': 'SettingsRotateStateEnum',
         'gps_state': 'SettingsGPSStateEnum',
         'screen_off_timeout': 'int',
-        'app_version': 'str'
+        'app_version': 'str',
+        'package_name': 'str'
     }
 
     attribute_map = {
@@ -72,10 +73,11 @@ class CommandArgs(object):
         'rotate_state': 'rotate_state',
         'gps_state': 'gps_state',
         'screen_off_timeout': 'screen_off_timeout',
-        'app_version': 'app_version'
+        'app_version': 'app_version',
+        'package_name': 'package_name'
     }
 
-    def __init__(self, wipe_external_storage=False, wipe_frp=True, brightness_value=None, stream=None, volume_level=None, wifi_state=None, bluetooth_state=None, rotate_state=None, gps_state=None, screen_off_timeout=None, app_version=None):
+    def __init__(self, wipe_external_storage=False, wipe_frp=True, brightness_value=None, stream=None, volume_level=None, wifi_state=None, bluetooth_state=None, rotate_state=None, gps_state=None, screen_off_timeout=None, app_version=None, package_name=None):
         """CommandArgs - a model defined in Swagger"""
 
         self._wipe_external_storage = None
@@ -89,6 +91,7 @@ class CommandArgs(object):
         self._gps_state = None
         self._screen_off_timeout = None
         self._app_version = None
+        self._package_name = None
         self.discriminator = None
 
         if wipe_external_storage is not None:
@@ -113,6 +116,8 @@ class CommandArgs(object):
             self.screen_off_timeout = screen_off_timeout
         if app_version is not None:
             self.app_version = app_version
+        if package_name is not None:
+            self.package_name = package_name
 
     @property
     def wipe_external_storage(self):
@@ -358,6 +363,27 @@ class CommandArgs(object):
         """
 
         self._app_version = app_version
+
+    @property
+    def package_name(self):
+        """Gets the package_name of this CommandArgs.
+
+
+        :return: The package_name of this CommandArgs.
+        :rtype: str
+        """
+        return self._package_name
+
+    @package_name.setter
+    def package_name(self, package_name):
+        """Sets the package_name of this CommandArgs.
+
+
+        :param package_name: The package_name of this CommandArgs.
+        :type: str
+        """
+
+        self._package_name = package_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

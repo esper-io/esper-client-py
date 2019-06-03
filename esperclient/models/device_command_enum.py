@@ -52,6 +52,7 @@ class DeviceCommandEnum(object):
     SET_STREAM_VOLUME = "SET_STREAM_VOLUME"
     SET_SCREEN_OFF_TIMEOUT = "SET_SCREEN_OFF_TIMEOUT"
     UNINSTALL = "UNINSTALL"
+    ADD_TO_WHITELIST = "ADD_TO_WHITELIST"
 
     """
     Attributes:

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **gps_state** | [**SettingsGPSStateEnum**](SettingsGPSStateEnum.md) |  | [optional] 
 **screen_off_timeout** | **int** | Value in seconds | [optional] 
 **app_version** | **str** |  | [optional] 
+**package_name** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
