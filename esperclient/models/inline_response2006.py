@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.device_group import DeviceGroup
+from esperclient.models.device_status import DeviceStatus
 
 
 class InlineResponse2006(object):
@@ -49,7 +49,7 @@ class InlineResponse2006(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[DeviceGroup]'
+        'results': 'list[DeviceStatus]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class InlineResponse2006(object):
 
 
         :return: The results of this InlineResponse2006.
-        :rtype: list[DeviceGroup]
+        :rtype: list[DeviceStatus]
         """
         return self._results
 
@@ -156,7 +156,7 @@ class InlineResponse2006(object):
 
 
         :param results: The results of this InlineResponse2006.
-        :type: list[DeviceGroup]
+        :type: list[DeviceStatus]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")

@@ -60,7 +60,7 @@ class DeviceApi(object):
         :param str group: Filter by group id
         :param str imei: filter by imei
         :param int state: filter by device state
-        :param str brand: filter by branch
+        :param str brand: filter by brand
         :param bool is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address
         :param int limit: Number of results to return per page.
@@ -91,7 +91,7 @@ class DeviceApi(object):
         :param str group: Filter by group id
         :param str imei: filter by imei
         :param int state: filter by device state
-        :param str brand: filter by branch
+        :param str brand: filter by brand
         :param bool is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address
         :param int limit: Number of results to return per page.
@@ -194,7 +194,7 @@ class DeviceApi(object):
         :param str install_state: filter by install state
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2004
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -223,7 +223,7 @@ class DeviceApi(object):
         :param str install_state: filter by install state
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2004
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -289,6 +289,240 @@ class DeviceApi(object):
 
         return self.api_client.call_api(
             '/enterprise/{enterprise_id}/device/{device_id}/install/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2005',
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_device_app_by_id(self, app_id, enterprise_id, device_id, **kwargs):
+        """Get device app details
+
+        Returns DeviceApp instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_app_by_id(app_id, enterprise_id, device_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str app_id: A UUID string identifying this device app. (required)
+        :param str enterprise_id: A UUID string identifying this device. (required)
+        :param str device_id: A UUID string identifying this enteprise. (required)
+        :return: DeviceApp
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_device_app_by_id_with_http_info(app_id, enterprise_id, device_id, **kwargs)
+        else:
+            (data) = self.get_device_app_by_id_with_http_info(app_id, enterprise_id, device_id, **kwargs)
+            return data
+
+    def get_device_app_by_id_with_http_info(self, app_id, enterprise_id, device_id, **kwargs):
+        """Get device app details
+
+        Returns DeviceApp instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_app_by_id_with_http_info(app_id, enterprise_id, device_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str app_id: A UUID string identifying this device app. (required)
+        :param str enterprise_id: A UUID string identifying this device. (required)
+        :param str device_id: A UUID string identifying this enteprise. (required)
+        :return: DeviceApp
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['app_id', 'enterprise_id', 'device_id']
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_device_app_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'app_id' is set
+        if ('app_id' not in params or
+                params['app_id'] is None):
+            raise ValueError("Missing the required parameter `app_id` when calling `get_device_app_by_id`")
+        # verify the required parameter 'enterprise_id' is set
+        if ('enterprise_id' not in params or
+                params['enterprise_id'] is None):
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_device_app_by_id`")
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_device_app_by_id`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'app_id' in params:
+            path_params['app_id'] = params['app_id']
+        if 'enterprise_id' in params:
+            path_params['enterprise_id'] = params['enterprise_id']
+        if 'device_id' in params:
+            path_params['device_id'] = params['device_id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(
+            '/enterprise/{enterprise_id}/device/{device_id}/app/{app_id}/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DeviceApp',
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_device_apps(self, enterprise_id, device_id, **kwargs):
+        """List all device apps
+
+        Returns DeviceApp list
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_apps(enterprise_id, device_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param str device_id: A UUID string identifying device. (required)
+        :param str package_name: Filter by Package name
+        :param str whitelisted: Whitelist filter
+        :param str search: A search term. Search by app_name.
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse2004
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_device_apps_with_http_info(enterprise_id, device_id, **kwargs)
+        else:
+            (data) = self.get_device_apps_with_http_info(enterprise_id, device_id, **kwargs)
+            return data
+
+    def get_device_apps_with_http_info(self, enterprise_id, device_id, **kwargs):
+        """List all device apps
+
+        Returns DeviceApp list
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_apps_with_http_info(enterprise_id, device_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param str device_id: A UUID string identifying device. (required)
+        :param str package_name: Filter by Package name
+        :param str whitelisted: Whitelist filter
+        :param str search: A search term. Search by app_name.
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse2004
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['enterprise_id', 'device_id', 'package_name', 'whitelisted', 'search', 'limit', 'offset']
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_device_apps" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'enterprise_id' is set
+        if ('enterprise_id' not in params or
+                params['enterprise_id'] is None):
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_device_apps`")
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_device_apps`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'enterprise_id' in params:
+            path_params['enterprise_id'] = params['enterprise_id']
+        if 'device_id' in params:
+            path_params['device_id'] = params['device_id']
+
+        query_params = []
+        if 'package_name' in params:
+            query_params.append(('package_name', params['package_name']))
+        if 'whitelisted' in params:
+            query_params.append(('whitelisted', params['whitelisted']))
+        if 'search' in params:
+            query_params.append(('search', params['search']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(
+            '/enterprise/{enterprise_id}/device/{device_id}/app/', 'GET',
             path_params,
             query_params,
             header_params,
@@ -419,7 +653,7 @@ class DeviceApi(object):
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str device_id: A UUID string identifying device. (required)
         :param int latest_event: Flag to get latest event (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -443,7 +677,7 @@ class DeviceApi(object):
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str device_id: A UUID string identifying device. (required)
         :param int latest_event: Flag to get latest event (required)
-        :return: InlineResponse2005
+        :return: InlineResponse2006
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -509,7 +743,7 @@ class DeviceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',
+            response_type='InlineResponse2006',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

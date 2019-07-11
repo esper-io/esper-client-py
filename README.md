@@ -7,7 +7,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 
 
 - API version: 1.0.0
-- Package version: 0.0.7
+- Package version: 0.0.8
 
 
 ## Requirements.
@@ -91,6 +91,8 @@ Class | Method | HTTP request
 *CommandsApi* | [**run_command**](docs/CommandsApi.md#run_command) | **POST** /enterprise/{enterprise_id}/device/{device_id}/command/
 *DeviceApi* | [**get_all_devices**](docs/DeviceApi.md#get_all_devices) | **GET** /enterprise/{enterprise_id}/device/
 *DeviceApi* | [**get_app_installs**](docs/DeviceApi.md#get_app_installs) | **GET** /enterprise/{enterprise_id}/device/{device_id}/install/
+*DeviceApi* | [**get_device_app_by_id**](docs/DeviceApi.md#get_device_app_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/{app_id}/
+*DeviceApi* | [**get_device_apps**](docs/DeviceApi.md#get_device_apps) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/
 *DeviceApi* | [**get_device_by_id**](docs/DeviceApi.md#get_device_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/
 *DeviceApi* | [**get_device_event**](docs/DeviceApi.md#get_device_event) | **GET** /enterprise/{enterprise_id}/device/{device_id}/status/
 *DeviceGroupApi* | [**create_group**](docs/DeviceGroupApi.md#create_group) | **POST** /enterprise/{enterprise_id}/devicegroup/
@@ -118,6 +120,8 @@ Class | Method | HTTP request
  - [CommandArgs](docs/CommandArgs.md)
  - [CommandRequest](docs/CommandRequest.md)
  - [Device](docs/Device.md)
+ - [DeviceApp](docs/DeviceApp.md)
+ - [DeviceAppPermission](docs/DeviceAppPermission.md)
  - [DeviceCommand](docs/DeviceCommand.md)
  - [DeviceGroup](docs/DeviceGroup.md)
  - [DeviceGroupUpdate](docs/DeviceGroupUpdate.md)
@@ -137,6 +141,7 @@ Class | Method | HTTP request
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
+ - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse201](docs/InlineResponse201.md)
 
 

@@ -78,3 +78,17 @@ def test_device_status():
 
     assert api_response.count == 1, "Device not sending status events"
     assert api_response.results[0].id is not None
+
+def test_device_app_list():
+    api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
+    #package_name = 'com.android.calculator2'  # str | Filter by Package name (optional)
+    #whitelisted = False  # str | Whitelist filter (optional)
+
+    try:
+        # List all device apps
+        api_response = api_instance.get_device_apps(enterprise_id, device_id)
+        print(api_response)
+    except ApiException as e:
+        print("Exception when calling DeviceApi->get_device_apps: %s\n" % e)
+
+    #assert api_response.count > 0, "No apps present on device"

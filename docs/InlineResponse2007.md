@@ -1,5 +1,5 @@
-# InlineResponse2006
-> esperclient.models.inline_response2006
+# InlineResponse2007
+> esperclient.models.inline_response2007
 
 ### Description
 
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **count** | **int** |  | 
 **next** | **str** |  | [optional] 
 **previous** | **str** |  | [optional] 
-**results** | [**list[DeviceStatus]**](DeviceStatus.md) |  | 
+**results** | [**list[DeviceGroup]**](DeviceGroup.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

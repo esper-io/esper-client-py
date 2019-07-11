@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_all_devices**](DeviceApi.md#get_all_devices) | **GET** /enterprise/{enterprise_id}/device/ | Fetch all devices in an enterprise
 [**get_app_installs**](DeviceApi.md#get_app_installs) | **GET** /enterprise/{enterprise_id}/device/{device_id}/install/ | List installed apps
+[**get_device_app_by_id**](DeviceApi.md#get_device_app_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/{app_id}/ | Get device app details
+[**get_device_apps**](DeviceApi.md#get_device_apps) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/ | List all device apps
 [**get_device_by_id**](DeviceApi.md#get_device_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/ | Fetch device details by ID
 [**get_device_event**](DeviceApi.md#get_device_event) | **GET** /enterprise/{enterprise_id}/device/{device_id}/status/ | Get latest device event
 
@@ -35,7 +37,7 @@ name = 'name_example' # str | Filter by device name (optional)
 group = 'group_example' # str | Filter by group id (optional)
 imei = 'imei_example' # str | filter by imei (optional)
 state = 56 # int | filter by device state (optional)
-brand = 'brand_example' # str | filter by branch (optional)
+brand = 'brand_example' # str | filter by brand (optional)
 is_gms = true # bool | filter for gms devices (optional)
 search = 'search_example' # str | A search term. Search by device name, imei or mac address (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
@@ -58,7 +60,7 @@ Name | Type | Description  | Notes
  **group** | [**str**](.md)| Filter by group id | [optional] 
  **imei** | **str**| filter by imei | [optional] 
  **state** | **int**| filter by device state | [optional] 
- **brand** | **str**| filter by branch | [optional] 
+ **brand** | **str**| filter by brand | [optional] 
  **is_gms** | **bool**| filter for gms devices | [optional] 
  **search** | **str**| A search term. Search by device name, imei or mac address | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
@@ -80,7 +82,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app_installs**
-> InlineResponse2004 get_app_installs(enterprise_id, device_id, device=device, package_name=package_name, application_name=application_name, install_state=install_state, limit=limit, offset=offset)
+> InlineResponse2005 get_app_installs(enterprise_id, device_id, device=device, package_name=package_name, application_name=application_name, install_state=install_state, limit=limit, offset=offset)
 
 List installed apps
 
@@ -128,6 +130,124 @@ Name | Type | Description  | Notes
  **install_state** | **str**| filter by install state | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
  **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
+
+### Return type
+
+[**InlineResponse2005**](InlineResponse2005.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_app_by_id**
+> DeviceApp get_device_app_by_id(app_id, enterprise_id, device_id)
+
+Get device app details
+
+Returns DeviceApp instance
+
+### Example
+```python
+import esperclient
+from esperclient.rest import ApiException
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
+app_id = 'app_id_example' # str | A UUID string identifying this device app.
+enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this device.
+device_id = 'device_id_example' # str | A UUID string identifying this enteprise.
+
+try:
+    # Get device app details
+    api_response = api_instance.get_device_app_by_id(app_id, enterprise_id, device_id)
+    print(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->get_device_app_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | [**str**](.md)| A UUID string identifying this device app. | 
+ **enterprise_id** | **str**| A UUID string identifying this device. | 
+ **device_id** | **str**| A UUID string identifying this enteprise. | 
+
+### Return type
+
+[**DeviceApp**](DeviceApp.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_apps**
+> InlineResponse2004 get_device_apps(enterprise_id, device_id, package_name=package_name, whitelisted=whitelisted, search=search, limit=limit, offset=offset)
+
+List all device apps
+
+Returns DeviceApp list
+
+### Example
+```python
+import esperclient
+from esperclient.rest import ApiException
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
+enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
+device_id = 'device_id_example' # str | A UUID string identifying device.
+package_name = 'package_name_example' # str | Filter by Package name (optional)
+whitelisted = 'whitelisted_example' # str | Whitelist filter (optional)
+search = 'search_example' # str | A search term. Search by app_name. (optional)
+limit = 20 # int | Number of results to return per page. (optional) (default to 20)
+offset = 56 # int | The initial index from which to return the results. (optional)
+
+try:
+    # List all device apps
+    api_response = api_instance.get_device_apps(enterprise_id, device_id, package_name=package_name, whitelisted=whitelisted, search=search, limit=limit, offset=offset)
+    print(api_response)
+except ApiException as e:
+    print("Exception when calling DeviceApi->get_device_apps: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
+ **device_id** | **str**| A UUID string identifying device. | 
+ **package_name** | **str**| Filter by Package name | [optional] 
+ **whitelisted** | **str**| Whitelist filter | [optional] 
+ **search** | **str**| A search term. Search by app_name. | [optional] 
+ **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
+ **offset** | **int**| The initial index from which to return the results. | [optional] 
 
 ### Return type
 
@@ -198,7 +318,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_event**
-> InlineResponse2005 get_device_event(enterprise_id, device_id, latest_event)
+> InlineResponse2006 get_device_event(enterprise_id, device_id, latest_event)
 
 Get latest device event
 
@@ -239,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

@@ -17,6 +17,7 @@ enterprise.test_enterprise_list()
 #device.test_device_detail()
 #device.test_device_app_installs()
 #device.test_device_status()
+#device.test_device_app_list()
 
 
 # Device Group
