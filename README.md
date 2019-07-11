@@ -3,7 +3,7 @@ Esper SDK for Python
 
 [![Build Status](https://travis-ci.com/esper-io/esper-client-py.svg?branch=master)](https://travis-ci.com/esper-io/esper-client-py) [![Gitter](https://badges.gitter.im/esper-dev/esper-sdk.svg)](https://gitter.im/esper-dev/esper-sdk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper Manage. To read more about the various capabilities of Esper Manage and Esper managed devices, please visit [esper.io](https://esper.io).
+Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper. To read more about the various capabilities of Esper and Esper managed devices, please visit [esper.io](https://esper.io).
 
 
 - API version: 1.0.0
@@ -14,7 +14,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 
 Python 3.4+
 
-Additionally, you need a dedicated Esper environment set up on Esper Cloud through our Esper Dev Trial. For more details checkout [Esper Requirements](https://docs.esper.io/home/pythonsdk.html#pre-requisites)
+Additionally, you need a dedicated Esper environment set up on Esper Cloud through our Esper Trial. For more details checkout [Esper Requirements](https://docs.esper.io/home/pythonsdk.html#pre-requisites)
 
 ## Installation
 
@@ -55,7 +55,7 @@ Please follow the [installation procedure](#installation) stated above and then 
 import esperclient
 from esperclient.rest import ApiException
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: apiKey from Esper Console
 configuration = esperclient.Configuration()
 configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
@@ -63,7 +63,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
-enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
+enterprise_id = 'enterprise_id_example' # str | ID of the enterprise obtained from the Esper Console
 
 try:
     # Fetch all devices in an enterprise
@@ -75,7 +75,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-Given below is a detailed documentation for each of the API endpoint along with supported request options. All URIs are relative to *https://foo.shoonyacloud.com/api*
+Given below is a detailed documentation for each of the API endpoint along with supported request options. All URLs are relative to *https://foo-api.shoonyacloud.com/api* where foo is your endpoint name.
 
 
 Class | Method | HTTP request
