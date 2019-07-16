@@ -87,8 +87,8 @@ def test_device_app_list():
     try:
         # List all device apps
         api_response = api_instance.get_device_apps(enterprise_id, device_id)
-        print(api_response)
+        #print(api_response)
     except ApiException as e:
         print("Exception when calling DeviceApi->get_device_apps: %s\n" % e)
 
-    #assert api_response.count > 0, "No apps present on device"
+    assert api_response.count > 0, "No apps present on device"
