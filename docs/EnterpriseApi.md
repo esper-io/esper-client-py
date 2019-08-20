@@ -4,60 +4,12 @@ All URIs are relative to *https://foo.shoonyacloud.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_enterprises**](EnterpriseApi.md#get_all_enterprises) | **GET** /enterprise/ | List all enterprises
-[**get_enterprise**](EnterpriseApi.md#get_enterprise) | **GET** /enterprise/{enterprise_id}/ | Get your enterprise information
-[**partial_update_enterprise**](EnterpriseApi.md#partial_update_enterprise) | **PATCH** /enterprise/{enterprise_id}/ | Partial update enterprise information
+[**get_enterprise**](EnterpriseApi.md#get_enterprise) | **GET** /v1/enterprise/{enterprise_id}/ | Get your enterprise information
+[**partial_update_enterprise**](EnterpriseApi.md#partial_update_enterprise) | **PATCH** /v1/enterprise/{enterprise_id}/ | Partial update enterprise information
 
-
-# **get_all_enterprises**
-> InlineResponse200 get_all_enterprises()
-
-List all enterprises
-
-Returns Enterprise list
-
-### Example
-```python
-import esperclient
-from esperclient.rest import ApiException
-
-# Configure API key authorization: apiKey
-configuration = esperclient.Configuration()
-configuration.host = 'SERVER_URL'
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
-
-try:
-    # List all enterprises
-    api_response = api_instance.get_all_enterprises()
-    print(api_response)
-except ApiException as e:
-    print("Exception when calling EnterpriseApi->get_all_enterprises: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**InlineResponse200**](InlineResponse200.md)
-
-### Authorization
-
-[apiKey](../README.md#apiKey)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_enterprise**
-> Enterprise get_enterprise(enterprise_id)
+> EnterpriseV1 get_enterprise(enterprise_id)
 
 Get your enterprise information
 
@@ -94,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Enterprise**](Enterprise.md)
+[**EnterpriseV1**](EnterpriseV1.md)
 
 ### Authorization
 
@@ -108,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **partial_update_enterprise**
-> Enterprise partial_update_enterprise(enterprise_id, data)
+> EnterpriseV1 partial_update_enterprise(enterprise_id, data)
 
 Partial update enterprise information
 
@@ -128,7 +80,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
-data = esperclient.EnterpriseUpdate() # EnterpriseUpdate | 
+data = esperclient.EnterpriseUpdateV1() # EnterpriseUpdateV1 | 
 
 try:
     # Partial update enterprise information
@@ -143,11 +95,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | [**str**](.md)| A UUID string identifying this enterprise. | 
- **data** | [**EnterpriseUpdate**](EnterpriseUpdate.md)|  | 
+ **data** | [**EnterpriseUpdateV1**](EnterpriseUpdateV1.md)|  | 
 
 ### Return type
 
-[**Enterprise**](Enterprise.md)
+[**EnterpriseV1**](EnterpriseV1.md)
 
 ### Authorization
 

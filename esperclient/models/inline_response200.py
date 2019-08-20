@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.enterprise import Enterprise
+from esperclient.models.application import Application
 
 
 class InlineResponse200(object):
@@ -49,7 +49,7 @@ class InlineResponse200(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[Enterprise]'
+        'results': 'list[Application]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class InlineResponse200(object):
 
 
         :return: The results of this InlineResponse200.
-        :rtype: list[Enterprise]
+        :rtype: list[Application]
         """
         return self._results
 
@@ -156,7 +156,7 @@ class InlineResponse200(object):
 
 
         :param results: The results of this InlineResponse200.
-        :type: list[Enterprise]
+        :type: list[Application]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")

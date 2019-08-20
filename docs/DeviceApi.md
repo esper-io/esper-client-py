@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **get_all_devices**
-> InlineResponse2003 get_all_devices(enterprise_id, name=name, group=group, imei=imei, state=state, brand=brand, is_gms=is_gms, search=search, limit=limit, offset=offset)
+> InlineResponse2002 get_all_devices(enterprise_id, name=name, group=group, imei=imei, state=state, brand=brand, is_gms=is_gms, search=search, limit=limit, offset=offset)
 
 Fetch all devices in an enterprise
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app_installs**
-> InlineResponse2005 get_app_installs(enterprise_id, device_id, device=device, package_name=package_name, application_name=application_name, install_state=install_state, limit=limit, offset=offset)
+> InlineResponse2004 get_app_installs(enterprise_id, device_id, device=device, package_name=package_name, application_name=application_name, install_state=install_state, limit=limit, offset=offset)
 
 List installed apps
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_apps**
-> InlineResponse2004 get_device_apps(enterprise_id, device_id, package_name=package_name, whitelisted=whitelisted, search=search, limit=limit, offset=offset)
+> InlineResponse2003 get_device_apps(enterprise_id, device_id, package_name=package_name, whitelisted=whitelisted, search=search, limit=limit, offset=offset)
 
 List all device apps
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_event**
-> InlineResponse2006 get_device_event(enterprise_id, device_id, latest_event)
+> InlineResponse2005 get_device_event(enterprise_id, device_id, latest_event)
 
 Get latest device event
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 

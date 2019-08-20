@@ -275,7 +275,7 @@ class ApplicationApi(object):
         :param bool is_hidden: filter default esper apps
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2001
+        :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -302,7 +302,7 @@ class ApplicationApi(object):
         :param bool is_hidden: filter default esper apps
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2001
+        :return: InlineResponse200
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -366,7 +366,7 @@ class ApplicationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2001',
+            response_type='InlineResponse200',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -501,7 +501,7 @@ class ApplicationApi(object):
         :param str build_number: filter by build number
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2002
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -528,7 +528,7 @@ class ApplicationApi(object):
         :param str build_number: filter by build number
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2002
+        :return: InlineResponse2001
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -596,7 +596,7 @@ class ApplicationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2002',
+            response_type='InlineResponse2001',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

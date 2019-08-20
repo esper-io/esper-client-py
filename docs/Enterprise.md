@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **short_code** | **str** |  | 
 **mdm_service** | **int** |  | [optional] 
 **details** | [**EnterpriseDetail**](EnterpriseDetail.md) |  | 
-**default_policy** | **int** | Policy associated with enteprise | [optional] 
+**default_policy** | **int** | Policy associated with enterprise | [optional] 
 **emm** | [**GoogleEnterprise**](GoogleEnterprise.md) |  | [optional] 
 **created_on** | **datetime** |  | [optional] 
 **updated_on** | **datetime** |  | [optional] 
