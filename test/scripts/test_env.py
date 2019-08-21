@@ -8,7 +8,6 @@ import test_token_info as token_info
 
 
 # Enterprise
-# enterprise.test_enterprise_list()
 # enterprise.test_enterprise_detail()
 #enterprise.test_enterprise_partial_update()
 
@@ -48,4 +47,4 @@ import test_token_info as token_info
 
 
 #Token
-token_info.test_token_info()
+# token_info.test_token_info()
