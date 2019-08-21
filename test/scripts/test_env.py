@@ -1,10 +1,10 @@
-import test_enterprise as enterprise
+# import test_enterprise as enterprise
 # import test_device as device
 # import test_device_group as devicegroup
 # import test_application as application
 # import test_device_commands as device_commands
 # import test_group_commands as group_commands
-import test_token_info as token_info
+# import test_token_info as token_info
 
 
 # Enterprise
