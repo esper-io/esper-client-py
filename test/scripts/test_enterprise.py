@@ -38,14 +38,13 @@ def test_enterprise_detail():
     except ApiException as e:
         print("Exception when calling EnterpriseApi->get_enterprise: %s\n" % e)
 
-    assert api_response.is_active
     assert api_response.name is not None
     assert api_response.short_code is not None
-    assert api_response.details.registered_name is not None
-    assert api_response.details.registered_address is not None
-    assert api_response.details.location is not None
-    assert api_response.details.zipcode is not None
-    assert api_response.details.contact_email is not None
+    assert api_response.registered_name is not None
+    assert api_response.registered_address is not None
+    assert api_response.location is not None
+    assert api_response.zipcode is not None
+    assert api_response.contact_email is not None
 
 def test_enterprise_partial_update():
     api_instance = esperclient.EnterpriseApi(esperclient.ApiClient(configuration))

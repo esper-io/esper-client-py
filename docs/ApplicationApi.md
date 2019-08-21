@@ -120,7 +120,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_applications**
-> InlineResponse2001 get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
+> InlineResponse200 get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
 
 List apps in enterprise
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app_versions**
-> InlineResponse2002 get_app_versions(application_id, enterprise_id, version_code=version_code, build_number=build_number, limit=limit, offset=offset)
+> InlineResponse2001 get_app_versions(application_id, enterprise_id, version_code=version_code, build_number=build_number, limit=limit, offset=offset)
 
 List App versions
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

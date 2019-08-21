@@ -65,7 +65,7 @@ class DeviceApi(object):
         :param str search: A search term. Search by device name, imei or mac address
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2003
+        :return: InlineResponse2002
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -96,7 +96,7 @@ class DeviceApi(object):
         :param str search: A search term. Search by device name, imei or mac address
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2003
+        :return: InlineResponse2002
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -168,7 +168,7 @@ class DeviceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2003',
+            response_type='InlineResponse2002',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -194,7 +194,7 @@ class DeviceApi(object):
         :param str install_state: filter by install state
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -223,7 +223,7 @@ class DeviceApi(object):
         :param str install_state: filter by install state
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2005
+        :return: InlineResponse2004
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -295,7 +295,7 @@ class DeviceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2005',
+            response_type='InlineResponse2004',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -431,7 +431,7 @@ class DeviceApi(object):
         :param str search: A search term. Search by app_name.
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2004
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -459,7 +459,7 @@ class DeviceApi(object):
         :param str search: A search term. Search by app_name.
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2004
+        :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -529,7 +529,7 @@ class DeviceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2004',
+            response_type='InlineResponse2003',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -653,7 +653,7 @@ class DeviceApi(object):
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str device_id: A UUID string identifying device. (required)
         :param int latest_event: Flag to get latest event (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -677,7 +677,7 @@ class DeviceApi(object):
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
         :param str device_id: A UUID string identifying device. (required)
         :param int latest_event: Flag to get latest event (required)
-        :return: InlineResponse2006
+        :return: InlineResponse2005
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -743,7 +743,7 @@ class DeviceApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2006',
+            response_type='InlineResponse2005',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

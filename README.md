@@ -3,18 +3,18 @@ Esper SDK for Python
 
 [![Build Status](https://travis-ci.com/esper-io/esper-client-py.svg?branch=master)](https://travis-ci.com/esper-io/esper-client-py) [![Gitter](https://badges.gitter.im/esper-dev/esper-sdk.svg)](https://gitter.im/esper-dev/esper-sdk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper. To read more about the various capabilities of Esper and Esper managed devices, please visit [esper.io](https://esper.io).
+Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper Manage. To read more about the various capabilities of Esper Manage and Esper managed devices, please visit [esper.io](https://esper.io).
 
 
 - API version: 1.0.0
-- Package version: 0.0.8
+- Package version: 0.0.9
 
 
 ## Requirements.
 
 Python 3.4+
 
-Additionally, you need a dedicated Esper environment set up on Esper Cloud through our Esper Trial. For more details checkout [Esper Requirements](https://docs.esper.io/home/pythonsdk.html#pre-requisites)
+Additionally, you need a dedicated Esper environment set up on Esper Cloud through our Esper Dev Trial. For more details checkout [Esper Requirements](https://docs.esper.io/home/pythonsdk.html#pre-requisites)
 
 ## Installation
 
@@ -55,7 +55,7 @@ Please follow the [installation procedure](#installation) stated above and then 
 import esperclient
 from esperclient.rest import ApiException
 
-# Configure API key authorization: apiKey from Esper Console
+# Configure API key authorization: apiKey
 configuration = esperclient.Configuration()
 configuration.host = 'SERVER_URL'
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
@@ -63,7 +63,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = esperclient.DeviceApi(esperclient.ApiClient(configuration))
-enterprise_id = 'enterprise_id_example' # str | ID of the enterprise obtained from the Esper Console
+enterprise_id = 'enterprise_id_example' # str | ID of the enterprise
 
 try:
     # Fetch all devices in an enterprise
@@ -75,7 +75,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-Given below is a detailed documentation for each of the API endpoint along with supported request options. All URLs are relative to *https://foo-api.shoonyacloud.com/api* where foo is your endpoint name.
+Given below is a detailed documentation for each of the API endpoint along with supported request options. All URIs are relative to *https://foo.shoonyacloud.com/api*
 
 
 Class | Method | HTTP request
@@ -101,11 +101,11 @@ Class | Method | HTTP request
 *DeviceGroupApi* | [**get_group_by_id**](docs/DeviceGroupApi.md#get_group_by_id) | **GET** /enterprise/{enterprise_id}/devicegroup/{group_id}/
 *DeviceGroupApi* | [**partial_update_group**](docs/DeviceGroupApi.md#partial_update_group) | **PATCH** /enterprise/{enterprise_id}/devicegroup/{group_id}/
 *DeviceGroupApi* | [**update_group**](docs/DeviceGroupApi.md#update_group) | **PUT** /enterprise/{enterprise_id}/devicegroup/{group_id}/
-*EnterpriseApi* | [**get_all_enterprises**](docs/EnterpriseApi.md#get_all_enterprises) | **GET** /enterprise/
-*EnterpriseApi* | [**get_enterprise**](docs/EnterpriseApi.md#get_enterprise) | **GET** /enterprise/{enterprise_id}/
-*EnterpriseApi* | [**partial_update_enterprise**](docs/EnterpriseApi.md#partial_update_enterprise) | **PATCH** /enterprise/{enterprise_id}/
+*EnterpriseApi* | [**get_enterprise**](docs/EnterpriseApi.md#get_enterprise) | **GET** /v1/enterprise/{enterprise_id}/
+*EnterpriseApi* | [**partial_update_enterprise**](docs/EnterpriseApi.md#partial_update_enterprise) | **PATCH** /v1/enterprise/{enterprise_id}/
 *GroupCommandsApi* | [**get_group_command**](docs/GroupCommandsApi.md#get_group_command) | **GET** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/{command_id}/
 *GroupCommandsApi* | [**run_group_command**](docs/GroupCommandsApi.md#run_group_command) | **POST** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/
+*TokenApi* | [**get_token_info**](docs/TokenApi.md#get_token_info) | **GET** /v1/token-info/
 
 
 ## Documentation For Models
@@ -129,7 +129,9 @@ Class | Method | HTTP request
  - [EmmDevice](docs/EmmDevice.md)
  - [Enterprise](docs/Enterprise.md)
  - [EnterpriseDetail](docs/EnterpriseDetail.md)
- - [EnterpriseUpdate](docs/EnterpriseUpdate.md)
+ - [EnterpriseUpdateV1](docs/EnterpriseUpdateV1.md)
+ - [EnterpriseV1](docs/EnterpriseV1.md)
+ - [GoogleEMM](docs/GoogleEMM.md)
  - [GoogleEnterprise](docs/GoogleEnterprise.md)
  - [GroupCommand](docs/GroupCommand.md)
  - [GroupCommandArgs](docs/GroupCommandArgs.md)
@@ -141,8 +143,8 @@ Class | Method | HTTP request
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
- - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse201](docs/InlineResponse201.md)
+ - [TokenInfoV1](docs/TokenInfoV1.md)
 
 
 ## Documentation For Enums

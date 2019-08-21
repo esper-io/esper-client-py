@@ -286,7 +286,7 @@ class Enterprise(object):
     def default_policy(self):
         """Gets the default_policy of this Enterprise.
 
-        Policy associated with enteprise
+        Policy associated with enterprise
 
         :return: The default_policy of this Enterprise.
         :rtype: int
@@ -297,7 +297,7 @@ class Enterprise(object):
     def default_policy(self, default_policy):
         """Sets the default_policy of this Enterprise.
 
-        Policy associated with enteprise
+        Policy associated with enterprise
 
         :param default_policy: The default_policy of this Enterprise.
         :type: int

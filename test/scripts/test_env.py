@@ -1,14 +1,14 @@
-import test_enterprise as enterprise
-import test_device as device
-import test_device_group as devicegroup
-import test_application as application
-import test_device_commands as device_commands
-import test_group_commands as group_commands
+# import test_enterprise as enterprise
+# import test_device as device
+# import test_device_group as devicegroup
+# import test_application as application
+# import test_device_commands as device_commands
+# import test_group_commands as group_commands
+# import test_token_info as token_info
 
 
 # Enterprise
-enterprise.test_enterprise_list()
-#enterprise.test_enterprise_detail()
+# enterprise.test_enterprise_detail()
 #enterprise.test_enterprise_partial_update()
 
 
@@ -46,4 +46,5 @@ enterprise.test_enterprise_list()
 #group_commands.test_group_command_reboot()
 
 
-
+#Token
+# token_info.test_token_info()
