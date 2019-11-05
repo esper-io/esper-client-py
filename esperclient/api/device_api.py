@@ -59,6 +59,7 @@ class DeviceApi(object):
         :param str name: Filter by device name
         :param str group: Filter by group id
         :param str imei: filter by imei
+        :param str serial: filter by serial number
         :param int state: filter by device state
         :param str brand: filter by brand
         :param bool is_gms: filter for gms devices
@@ -90,6 +91,7 @@ class DeviceApi(object):
         :param str name: Filter by device name
         :param str group: Filter by group id
         :param str imei: filter by imei
+        :param str serial: filter by serial number
         :param int state: filter by device state
         :param str brand: filter by brand
         :param bool is_gms: filter for gms devices
@@ -101,7 +103,7 @@ class DeviceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'name', 'group', 'imei', 'state', 'brand', 'is_gms', 'search', 'limit', 'offset']
+        all_params = ['enterprise_id', 'name', 'group', 'imei', 'serial', 'state', 'brand', 'is_gms', 'search', 'limit', 'offset']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -134,6 +136,8 @@ class DeviceApi(object):
             query_params.append(('group', params['group']))
         if 'imei' in params:
             query_params.append(('imei', params['imei']))
+        if 'serial' in params:
+            query_params.append(('serial', params['serial']))
         if 'state' in params:
             query_params.append(('state', params['state']))
         if 'brand' in params:

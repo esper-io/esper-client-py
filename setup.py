@@ -27,7 +27,7 @@ limitations under the License.
 from setuptools import setup, find_packages
 
 NAME = "esperclient"
-VERSION = "0.0.9"
+VERSION = "0.0.10"
 # To install the library, run the following
 #
 # python setup.py install
