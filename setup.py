@@ -59,7 +59,7 @@ setup(
     Python client library for Esper Manage APIs. You can find out more about Esper at https://esper.io.
 
     - API version: 1.0.0
-    - Package version: 0.0.9
+    - Package version: 0.0.10
 
     For usage instructions and API documentation please visit: https://github.com/esper-io/esper-client-py
 
