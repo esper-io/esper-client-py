@@ -46,9 +46,9 @@ class TokenApi(object):
         self.api_client = api_client
 
     def get_token_info(self, **kwargs):
-        """API to get resource information associated with your token like your enterprise, user etc
+        """Token Information
 
-        Gives token information
+        API to get resource information associated with your token like your enterprise, user etc
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_token_info(async_req=True)
@@ -67,9 +67,9 @@ class TokenApi(object):
             return data
 
     def get_token_info_with_http_info(self, **kwargs):
-        """API to get resource information associated with your token like your enterprise, user etc
+        """Token Information
 
-        Gives token information
+        API to get resource information associated with your token like your enterprise, user etc
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_token_info_with_http_info(async_req=True)

@@ -1,6 +1,6 @@
 # esperclient.EnterpriseApi
 
-All URIs are relative to *https://foo.shoonyacloud.com/api*
+All URIs are relative to *https://foo-api.esper.cloud/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

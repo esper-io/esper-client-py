@@ -53,7 +53,7 @@ class Configuration(object):
             return
 
         # Default Base url
-        self.host = "https://foo.shoonyacloud.com/api"
+        self.host = "https://foo-api.esper.cloud/api"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
@@ -253,5 +253,5 @@ class Configuration(object):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.0.0\n"\
-               "SDK Package Version: 0.0.9".\
+               "SDK Package Version: 0.0.11".\
                format(env=sys.platform, pyversion=sys.version)

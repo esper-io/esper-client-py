@@ -7,7 +7,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 
 
 - API version: 1.0.0
-- Package version: 0.0.10
+- Package version: 0.0.11
 
 
 ## Requirements.
@@ -75,7 +75,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-Given below is a detailed documentation for each of the API endpoint along with supported request options. All URIs are relative to *https://foo.shoonyacloud.com/api*
+Given below is a detailed documentation for each of the API endpoint along with supported request options. All URIs are relative to *https://foo-api.esper.cloud/api*
 
 
 Class | Method | HTTP request

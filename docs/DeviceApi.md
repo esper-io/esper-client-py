@@ -1,6 +1,6 @@
 # esperclient.DeviceApi
 
-All URIs are relative to *https://foo.shoonyacloud.com/api*
+All URIs are relative to *https://foo-api.esper.cloud/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **get_all_devices**
-> InlineResponse2002 get_all_devices(enterprise_id, name=name, group=group, imei=imei, serial=serial, state=state, brand=brand, is_gms=is_gms, search=search, limit=limit, offset=offset)
+> InlineResponse2002 get_all_devices(enterprise_id, name=name, group=group, imei=imei, serial=serial, state=state, brand=brand, is_gms=is_gms, search=search, tags=tags, limit=limit, offset=offset)
 
 Fetch all devices in an enterprise
 
@@ -41,12 +41,13 @@ state = 56 # int | filter by device state (optional)
 brand = 'brand_example' # str | filter by brand (optional)
 is_gms = true # bool | filter for gms devices (optional)
 search = 'search_example' # str | A search term. Search by device name, imei or mac address (optional)
+tags = 'tags_example' # str | A partial text search for device tags (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
 offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
 try:
     # Fetch all devices in an enterprise
-    api_response = api_instance.get_all_devices(enterprise_id, name=name, group=group, imei=imei, serial=serial, state=state, brand=brand, is_gms=is_gms, search=search, limit=limit, offset=offset)
+    api_response = api_instance.get_all_devices(enterprise_id, name=name, group=group, imei=imei, serial=serial, state=state, brand=brand, is_gms=is_gms, search=search, tags=tags, limit=limit, offset=offset)
     print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceApi->get_all_devices: %s\n" % e)
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
  **brand** | **str**| filter by brand | [optional] 
  **is_gms** | **bool**| filter for gms devices | [optional] 
  **search** | **str**| A search term. Search by device name, imei or mac address | [optional] 
+ **tags** | **str**| A partial text search for device tags | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
  **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
 

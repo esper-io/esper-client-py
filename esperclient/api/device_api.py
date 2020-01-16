@@ -64,6 +64,7 @@ class DeviceApi(object):
         :param str brand: filter by brand
         :param bool is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address
+        :param str tags: A partial text search for device tags
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2002
@@ -96,6 +97,7 @@ class DeviceApi(object):
         :param str brand: filter by brand
         :param bool is_gms: filter for gms devices
         :param str search: A search term. Search by device name, imei or mac address
+        :param str tags: A partial text search for device tags
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2002
@@ -103,7 +105,7 @@ class DeviceApi(object):
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'name', 'group', 'imei', 'serial', 'state', 'brand', 'is_gms', 'search', 'limit', 'offset']
+        all_params = ['enterprise_id', 'name', 'group', 'imei', 'serial', 'state', 'brand', 'is_gms', 'search', 'tags', 'limit', 'offset']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -146,6 +148,8 @@ class DeviceApi(object):
             query_params.append(('is_gms', params['is_gms']))
         if 'search' in params:
             query_params.append(('search', params['search']))
+        if 'tags' in params:
+            query_params.append(('tags', params['tags']))
         if 'limit' in params:
             query_params.append(('limit', params['limit']))
         if 'offset' in params:

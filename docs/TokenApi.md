@@ -1,18 +1,18 @@
 # esperclient.TokenApi
 
-All URIs are relative to *https://foo.shoonyacloud.com/api*
+All URIs are relative to *https://foo-api.esper.cloud/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_token_info**](TokenApi.md#get_token_info) | **GET** /v1/token-info/ | API to get resource information associated with your token like your enterprise, user etc
+[**get_token_info**](TokenApi.md#get_token_info) | **GET** /v1/token-info/ | Token Information
 
 
 # **get_token_info**
 > TokenInfoV1 get_token_info()
 
-API to get resource information associated with your token like your enterprise, user etc
+Token Information
 
-Gives token information
+API to get resource information associated with your token like your enterprise, user etc
 
 ### Example
 ```python
@@ -29,7 +29,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 api_instance = esperclient.TokenApi(esperclient.ApiClient(configuration))
 
 try:
-    # API to get resource information associated with your token like your enterprise, user etc
+    # Token Information
     api_response = api_instance.get_token_info()
     print(api_response)
 except ApiException as e:
