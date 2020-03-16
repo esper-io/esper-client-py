@@ -7,7 +7,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 
 
 - API version: 1.0.0
-- Package version: 0.0.11
+- Package version: 0.0.12
 
 
 ## Requirements.

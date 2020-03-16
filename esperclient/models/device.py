@@ -49,6 +49,7 @@ class Device(object):
         'id': 'str',
         'url': 'str',
         'device_name': 'str',
+        'alias_name': 'str',
         'policy_name': 'str',
         'status': 'int',
         'state': 'int',
@@ -59,6 +60,7 @@ class Device(object):
         'policy': 'str',
         'user': 'str',
         'groups': 'list[str]',
+        'tags': 'list[str]',
         'api_level': 'int',
         'template_name': 'str',
         'mqtt_id': 'str',
@@ -80,6 +82,7 @@ class Device(object):
         'id': 'id',
         'url': 'url',
         'device_name': 'device_name',
+        'alias_name': 'alias_name',
         'policy_name': 'policy_name',
         'status': 'status',
         'state': 'state',
@@ -90,6 +93,7 @@ class Device(object):
         'policy': 'policy',
         'user': 'user',
         'groups': 'groups',
+        'tags': 'tags',
         'api_level': 'api_level',
         'template_name': 'template_name',
         'mqtt_id': 'mqtt_id',
@@ -107,12 +111,13 @@ class Device(object):
         'is_active': 'is_active'
     }
 
-    def __init__(self, id=None, url=None, device_name=None, policy_name=None, status=None, state=None, current_command=None, suid=None, fcm_id=None, enterprise=None, policy=None, user=None, groups=None, api_level=None, template_name=None, mqtt_id=None, software_info=None, hardware_info=None, displays=None, network_info=None, memory_info=None, audio_constraints=None, provisioned_on=None, created_on=None, updated_on=None, emm_device=None, is_gms=True, is_active=True):
+    def __init__(self, id=None, url=None, device_name=None, alias_name=None, policy_name=None, status=None, state=None, current_command=None, suid=None, fcm_id=None, enterprise=None, policy=None, user=None, groups=None, tags=None, api_level=None, template_name=None, mqtt_id=None, software_info=None, hardware_info=None, displays=None, network_info=None, memory_info=None, audio_constraints=None, provisioned_on=None, created_on=None, updated_on=None, emm_device=None, is_gms=True, is_active=True):
         """Device - a model defined in Swagger"""
 
         self._id = None
         self._url = None
         self._device_name = None
+        self._alias_name = None
         self._policy_name = None
         self._status = None
         self._state = None
@@ -123,6 +128,7 @@ class Device(object):
         self._policy = None
         self._user = None
         self._groups = None
+        self._tags = None
         self._api_level = None
         self._template_name = None
         self._mqtt_id = None
@@ -146,6 +152,8 @@ class Device(object):
             self.url = url
         if device_name is not None:
             self.device_name = device_name
+        if alias_name is not None:
+            self.alias_name = alias_name
         if policy_name is not None:
             self.policy_name = policy_name
         if status is not None:
@@ -166,6 +174,8 @@ class Device(object):
             self.user = user
         if groups is not None:
             self.groups = groups
+        if tags is not None:
+            self.tags = tags
         if api_level is not None:
             self.api_level = api_level
         if template_name is not None:
@@ -259,6 +269,29 @@ class Device(object):
         """
 
         self._device_name = device_name
+
+    @property
+    def alias_name(self):
+        """Gets the alias_name of this Device.
+
+        Device friendly name
+
+        :return: The alias_name of this Device.
+        :rtype: str
+        """
+        return self._alias_name
+
+    @alias_name.setter
+    def alias_name(self, alias_name):
+        """Sets the alias_name of this Device.
+
+        Device friendly name
+
+        :param alias_name: The alias_name of this Device.
+        :type: str
+        """
+
+        self._alias_name = alias_name
 
     @property
     def policy_name(self):
@@ -477,6 +510,27 @@ class Device(object):
         """
 
         self._groups = groups
+
+    @property
+    def tags(self):
+        """Gets the tags of this Device.
+
+
+        :return: The tags of this Device.
+        :rtype: list[str]
+        """
+        return self._tags
+
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this Device.
+
+
+        :param tags: The tags of this Device.
+        :type: list[str]
+        """
+
+        self._tags = tags
 
     @property
     def api_level(self):
