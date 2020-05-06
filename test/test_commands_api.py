@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Esper Manage API
+Esper APIs
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -40,6 +40,13 @@ class TestCommandsApi(unittest.TestCase):
         self.api = esperclient.api.commands_api.CommandsApi()
 
     def tearDown(self):
+        pass
+
+    def test_get_command(self):
+        """Test case for get_command
+
+        Get command status
+        """
         pass
 
     def test_run_command(self):

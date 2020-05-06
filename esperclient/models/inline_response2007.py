@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.device_group import DeviceGroup
+from esperclient.models.v0_command_request import V0CommandRequest
 
 
 class InlineResponse2007(object):
@@ -49,7 +49,7 @@ class InlineResponse2007(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[DeviceGroup]'
+        'results': 'list[V0CommandRequest]'
     }
 
     attribute_map = {
@@ -68,12 +68,14 @@ class InlineResponse2007(object):
         self._results = None
         self.discriminator = None
 
-        self.count = count
+        if count is not None:
+            self.count = count
         if next is not None:
             self.next = next
         if previous is not None:
             self.previous = previous
-        self.results = results
+        if results is not None:
+            self.results = results
 
     @property
     def count(self):
@@ -93,8 +95,6 @@ class InlineResponse2007(object):
         :param count: The count of this InlineResponse2007.
         :type: int
         """
-        if count is None:
-            raise ValueError("Invalid value for `count`, must not be `None`")
 
         self._count = count
 
@@ -146,7 +146,7 @@ class InlineResponse2007(object):
 
 
         :return: The results of this InlineResponse2007.
-        :rtype: list[DeviceGroup]
+        :rtype: list[V0CommandRequest]
         """
         return self._results
 
@@ -156,10 +156,8 @@ class InlineResponse2007(object):
 
 
         :param results: The results of this InlineResponse2007.
-        :type: list[DeviceGroup]
+        :type: list[V0CommandRequest]
         """
-        if results is None:
-            raise ValueError("Invalid value for `results`, must not be `None`")
 
         self._results = results
 

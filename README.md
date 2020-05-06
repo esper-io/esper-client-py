@@ -7,7 +7,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 
 
 - API version: 1.0.0
-- Package version: 0.0.12
+- Package version: 0.0.13
 
 
 ## Requirements.
@@ -89,6 +89,11 @@ Class | Method | HTTP request
 *ApplicationApi* | [**upload**](docs/ApplicationApi.md#upload) | **POST** /enterprise/{enterprise_id}/application/upload/
 *CommandsApi* | [**get_command**](docs/CommandsApi.md#get_command) | **GET** /enterprise/{enterprise_id}/device/{device_id}/command/{command_id}/
 *CommandsApi* | [**run_command**](docs/CommandsApi.md#run_command) | **POST** /enterprise/{enterprise_id}/device/{device_id}/command/
+*CommandsV2Api* | [**create_command**](docs/CommandsV2Api.md#create_command) | **POST** /v0/enterprise/{enterprise_id}/command/
+*CommandsV2Api* | [**get_command_request_status**](docs/CommandsV2Api.md#get_command_request_status) | **GET** /v0/enterprise/{enterprise_id}/command/{request_id}/status/
+*CommandsV2Api* | [**get_device_command_history**](docs/CommandsV2Api.md#get_device_command_history) | **GET** /v0/enterprise/{enterprise_id}/device/{device_id}/command-history/
+*CommandsV2Api* | [**list_command_request**](docs/CommandsV2Api.md#list_command_request) | **GET** /v0/enterprise/{enterprise_id}/command/
+*CommandsV2Api* | [**partial_update_command_status**](docs/CommandsV2Api.md#partial_update_command_status) | **PATCH** /v0/enterprise/{enterprise_id}/command/{request_id}/status/{command_id}/
 *DeviceApi* | [**get_all_devices**](docs/DeviceApi.md#get_all_devices) | **GET** /enterprise/{enterprise_id}/device/
 *DeviceApi* | [**get_app_installs**](docs/DeviceApi.md#get_app_installs) | **GET** /enterprise/{enterprise_id}/device/{device_id}/install/
 *DeviceApi* | [**get_device_app_by_id**](docs/DeviceApi.md#get_device_app_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/{app_id}/
@@ -127,12 +132,9 @@ Class | Method | HTTP request
  - [DeviceGroupUpdate](docs/DeviceGroupUpdate.md)
  - [DeviceStatus](docs/DeviceStatus.md)
  - [EmmDevice](docs/EmmDevice.md)
- - [Enterprise](docs/Enterprise.md)
- - [EnterpriseDetail](docs/EnterpriseDetail.md)
  - [EnterpriseUpdateV1](docs/EnterpriseUpdateV1.md)
  - [EnterpriseV1](docs/EnterpriseV1.md)
  - [GoogleEMM](docs/GoogleEMM.md)
- - [GoogleEnterprise](docs/GoogleEnterprise.md)
  - [GroupCommand](docs/GroupCommand.md)
  - [GroupCommandArgs](docs/GroupCommandArgs.md)
  - [GroupCommandRequest](docs/GroupCommandRequest.md)
@@ -143,19 +145,30 @@ Class | Method | HTTP request
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
+ - [InlineResponse2007](docs/InlineResponse2007.md)
+ - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse201](docs/InlineResponse201.md)
  - [TokenInfoV1](docs/TokenInfoV1.md)
+ - [V0CommandArgs](docs/V0CommandArgs.md)
+ - [V0CommandRequest](docs/V0CommandRequest.md)
+ - [V0CommandRequestStatus](docs/V0CommandRequestStatus.md)
+ - [V0CommandScheduleArgs](docs/V0CommandScheduleArgs.md)
+ - [V0CommandStatus](docs/V0CommandStatus.md)
+ - [V0CommandStatusUpdate](docs/V0CommandStatusUpdate.md)
+ - [V0CommandStatusUpdateDetails](docs/V0CommandStatusUpdateDetails.md)
 
 
 ## Documentation For Enums
 
  - [AppInstallStateEnum](docs/AppInstallStateEnum.md)
  - [DeviceCommandEnum](docs/DeviceCommandEnum.md)
- - [EMMEnterpriseStateEnum](docs/EMMEnterpriseStateEnum.md)
  - [GroupCommandEnum](docs/GroupCommandEnum.md)
  - [SettingsGPSStateEnum](docs/SettingsGPSStateEnum.md)
  - [SettingsRotateStateEnum](docs/SettingsRotateStateEnum.md)
  - [SettingsVolumeStreamEnum](docs/SettingsVolumeStreamEnum.md)
+ - [V0CommandScheduleArgsTimeTypeEnum](docs/V0CommandScheduleArgsTimeTypeEnum.md)
+ - [V0CommandScheduleEnum](docs/V0CommandScheduleEnum.md)
+ - [V0DeviceCommandEnum](docs/V0DeviceCommandEnum.md)
 
 
 ## Documentation For Authorization
