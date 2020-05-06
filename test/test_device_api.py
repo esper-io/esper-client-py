@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Esper Manage API
+Esper APIs
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -53,6 +53,20 @@ class TestDeviceApi(unittest.TestCase):
         """Test case for get_app_installs
 
         List installed apps
+        """
+        pass
+
+    def test_get_device_app_by_id(self):
+        """Test case for get_device_app_by_id
+
+        Get device app details
+        """
+        pass
+
+    def test_get_device_apps(self):
+        """Test case for get_device_apps
+
+        List all device apps
         """
         pass
 

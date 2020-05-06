@@ -45,7 +45,7 @@ class TestTokenApi(unittest.TestCase):
     def test_get_token_info(self):
         """Test case for get_token_info
 
-        API to get resource information associated with your token like your enterprise, user etc
+        Token Information
         """
         pass
 

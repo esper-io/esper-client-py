@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Esper Manage API
+Esper APIs
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -42,17 +42,10 @@ class TestEnterpriseApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_all_enterprises(self):
-        """Test case for get_all_enterprises
-
-        List all enterprises
-        """
-        pass
-
     def test_get_enterprise(self):
         """Test case for get_enterprise
 
-        Get your enteprise information
+        Get your enterprise information
         """
         pass
 
