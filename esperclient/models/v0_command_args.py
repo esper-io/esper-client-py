@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Esper APIs
+ESPER API REFERENCE
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -45,25 +45,35 @@ class V0CommandArgs(object):
     """
     swagger_types = {
         'device_alias_name': 'str',
-        'custom_settings_config': 'object'
+        'custom_settings_config': 'object',
+        'app_version': 'str',
+        'package_name': 'str'
     }
 
     attribute_map = {
         'device_alias_name': 'device_alias_name',
-        'custom_settings_config': 'custom_settings_config'
+        'custom_settings_config': 'custom_settings_config',
+        'app_version': 'app_version',
+        'package_name': 'package_name'
     }
 
-    def __init__(self, device_alias_name=None, custom_settings_config=None):
+    def __init__(self, device_alias_name=None, custom_settings_config=None, app_version=None, package_name=None):
         """V0CommandArgs - a model defined in Swagger"""
 
         self._device_alias_name = None
         self._custom_settings_config = None
+        self._app_version = None
+        self._package_name = None
         self.discriminator = None
 
         if device_alias_name is not None:
             self.device_alias_name = device_alias_name
         if custom_settings_config is not None:
             self.custom_settings_config = custom_settings_config
+        if app_version is not None:
+            self.app_version = app_version
+        if package_name is not None:
+            self.package_name = package_name
 
     @property
     def device_alias_name(self):
@@ -110,6 +120,48 @@ class V0CommandArgs(object):
         """
 
         self._custom_settings_config = custom_settings_config
+
+    @property
+    def app_version(self):
+        """Gets the app_version of this V0CommandArgs.
+
+
+        :return: The app_version of this V0CommandArgs.
+        :rtype: str
+        """
+        return self._app_version
+
+    @app_version.setter
+    def app_version(self, app_version):
+        """Sets the app_version of this V0CommandArgs.
+
+
+        :param app_version: The app_version of this V0CommandArgs.
+        :type: str
+        """
+
+        self._app_version = app_version
+
+    @property
+    def package_name(self):
+        """Gets the package_name of this V0CommandArgs.
+
+
+        :return: The package_name of this V0CommandArgs.
+        :rtype: str
+        """
+        return self._package_name
+
+    @package_name.setter
+    def package_name(self, package_name):
+        """Sets the package_name of this V0CommandArgs.
+
+
+        :param package_name: The package_name of this V0CommandArgs.
+        :type: str
+        """
+
+        self._package_name = package_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

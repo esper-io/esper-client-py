@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Esper APIs
+ESPER API REFERENCE
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -42,6 +42,8 @@ class V0DeviceCommandEnum(object):
     REBOOT = "REBOOT"
     UPDATE_HEARTBEAT = "UPDATE_HEARTBEAT"
     UPDATE_DEVICE_CONFIG = "UPDATE_DEVICE_CONFIG"
+    INSTALL = "INSTALL"
+    UNINSTALL = "UNINSTALL"
 
     """
     Attributes:

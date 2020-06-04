@@ -1,6 +1,6 @@
 # coding: utf-8
 """
-Esper APIs
+ESPER API REFERENCE
 
 OpenAPI spec version: 1.0.0
 Contact: developer@esper.io
@@ -87,7 +87,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/0.0.13/python'
+        self.user_agent = 'Swagger-Codegen/0.0.14/python'
 
     def __del__(self):
         if self._pool is not None:
