@@ -46,6 +46,13 @@ from esperclient.models.device_group import DeviceGroup
 from esperclient.models.device_group_update import DeviceGroupUpdate
 from esperclient.models.device_status import DeviceStatus
 from esperclient.models.emm_device import EmmDevice
+from esperclient.models.enterprise_policy import EnterprisePolicy
+from esperclient.models.enterprise_policy_data import EnterprisePolicyData
+from esperclient.models.enterprise_policy_data_device_password_policy import EnterprisePolicyDataDevicePasswordPolicy
+from esperclient.models.enterprise_policy_data_device_update_policy import EnterprisePolicyDataDeviceUpdatePolicy
+from esperclient.models.enterprise_policy_data_frp_googles import EnterprisePolicyDataFrpGoogles
+from esperclient.models.enterprise_policy_data_google_account_permission import EnterprisePolicyDataGoogleAccountPermission
+from esperclient.models.enterprise_policy_data_phone_policy import EnterprisePolicyDataPhonePolicy
 from esperclient.models.enterprise_update_v1 import EnterpriseUpdateV1
 from esperclient.models.enterprise_v1 import EnterpriseV1
 from esperclient.models.google_emm import GoogleEMM
@@ -62,11 +69,13 @@ from esperclient.models.inline_response2005 import InlineResponse2005
 from esperclient.models.inline_response2006 import InlineResponse2006
 from esperclient.models.inline_response2007 import InlineResponse2007
 from esperclient.models.inline_response2008 import InlineResponse2008
+from esperclient.models.inline_response2009 import InlineResponse2009
 from esperclient.models.inline_response201 import InlineResponse201
 from esperclient.models.settings_gps_state_enum import SettingsGPSStateEnum
 from esperclient.models.settings_rotate_state_enum import SettingsRotateStateEnum
 from esperclient.models.settings_volume_stream_enum import SettingsVolumeStreamEnum
 from esperclient.models.token_info_v1 import TokenInfoV1
+from esperclient.models.token_renew_v0 import TokenRenewV0
 from esperclient.models.v0_command_args import V0CommandArgs
 from esperclient.models.v0_command_request import V0CommandRequest
 from esperclient.models.v0_command_request_status import V0CommandRequestStatus

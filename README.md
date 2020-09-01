@@ -108,9 +108,16 @@ Class | Method | HTTP request
 *DeviceGroupApi* | [**update_group**](docs/DeviceGroupApi.md#update_group) | **PUT** /enterprise/{enterprise_id}/devicegroup/{group_id}/
 *EnterpriseApi* | [**get_enterprise**](docs/EnterpriseApi.md#get_enterprise) | **GET** /v1/enterprise/{enterprise_id}/
 *EnterpriseApi* | [**partial_update_enterprise**](docs/EnterpriseApi.md#partial_update_enterprise) | **PATCH** /v1/enterprise/{enterprise_id}/
+*EnterprisePolicyApi* | [**create_policy**](docs/EnterprisePolicyApi.md#create_policy) | **POST** /enterprise/{enterprise_id}/policy/
+*EnterprisePolicyApi* | [**delete_enterprise_policy**](docs/EnterprisePolicyApi.md#delete_enterprise_policy) | **DELETE** /enterprise/{enterprise_id}/policy/{policy_id}/
+*EnterprisePolicyApi* | [**get_policy_by_id**](docs/EnterprisePolicyApi.md#get_policy_by_id) | **GET** /enterprise/{enterprise_id}/policy/{policy_id}/
+*EnterprisePolicyApi* | [**list_policies**](docs/EnterprisePolicyApi.md#list_policies) | **GET** /enterprise/{enterprise_id}/policy/
+*EnterprisePolicyApi* | [**partialupdate_policy**](docs/EnterprisePolicyApi.md#partialupdate_policy) | **PATCH** /enterprise/{enterprise_id}/policy/{policy_id}/
+*EnterprisePolicyApi* | [**update_policy**](docs/EnterprisePolicyApi.md#update_policy) | **PUT** /enterprise/{enterprise_id}/policy/{policy_id}/
 *GroupCommandsApi* | [**get_group_command**](docs/GroupCommandsApi.md#get_group_command) | **GET** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/{command_id}/
 *GroupCommandsApi* | [**run_group_command**](docs/GroupCommandsApi.md#run_group_command) | **POST** /enterprise/{enterprise_id}/devicegroup/{group_id}/command/
 *TokenApi* | [**get_token_info**](docs/TokenApi.md#get_token_info) | **GET** /v1/token-info/
+*TokenApi* | [**renew_token**](docs/TokenApi.md#renew_token) | **GET** /v0/enterprise/{enterprise_id}/developerapp/{developerapp_id}/renew-token/
 
 
 ## Documentation For Models
@@ -132,6 +139,13 @@ Class | Method | HTTP request
  - [DeviceGroupUpdate](docs/DeviceGroupUpdate.md)
  - [DeviceStatus](docs/DeviceStatus.md)
  - [EmmDevice](docs/EmmDevice.md)
+ - [EnterprisePolicy](docs/EnterprisePolicy.md)
+ - [EnterprisePolicyData](docs/EnterprisePolicyData.md)
+ - [EnterprisePolicyDataDevicePasswordPolicy](docs/EnterprisePolicyDataDevicePasswordPolicy.md)
+ - [EnterprisePolicyDataDeviceUpdatePolicy](docs/EnterprisePolicyDataDeviceUpdatePolicy.md)
+ - [EnterprisePolicyDataFrpGoogles](docs/EnterprisePolicyDataFrpGoogles.md)
+ - [EnterprisePolicyDataGoogleAccountPermission](docs/EnterprisePolicyDataGoogleAccountPermission.md)
+ - [EnterprisePolicyDataPhonePolicy](docs/EnterprisePolicyDataPhonePolicy.md)
  - [EnterpriseUpdateV1](docs/EnterpriseUpdateV1.md)
  - [EnterpriseV1](docs/EnterpriseV1.md)
  - [GoogleEMM](docs/GoogleEMM.md)
@@ -147,8 +161,10 @@ Class | Method | HTTP request
  - [InlineResponse2006](docs/InlineResponse2006.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
+ - [InlineResponse2009](docs/InlineResponse2009.md)
  - [InlineResponse201](docs/InlineResponse201.md)
  - [TokenInfoV1](docs/TokenInfoV1.md)
+ - [TokenRenewV0](docs/TokenRenewV0.md)
  - [V0CommandArgs](docs/V0CommandArgs.md)
  - [V0CommandRequest](docs/V0CommandRequest.md)
  - [V0CommandRequestStatus](docs/V0CommandRequestStatus.md)
