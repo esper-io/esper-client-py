@@ -34,7 +34,7 @@ import six
 from esperclient.api_client import ApiClient
 
 
-class CommandsV2Api(object):
+class EnterprisePolicyApi(object):
     """NOTE: This class is auto generated.
 
     Do not edit the class manually.
@@ -45,42 +45,42 @@ class CommandsV2Api(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_command(self, enterprise_id, request, **kwargs):
-        """Create a command request
+    def create_policy(self, enterprise_id, request, **kwargs):
+        """Create a new Enterprise Policy
 
-        API to create a command request for the device.
+        API to create a new Enterprise Policy
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_command(enterprise_id, request, async_req=True)
+        >>> thread = api.create_policy(enterprise_id, request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
-        :param V0CommandRequest request: The request body to create a command for set of devices or groups (required)
-        :return: V0CommandRequest
+        :param EnterprisePolicy request: The request body to create an Enteprise Policy (required)
+        :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_command_with_http_info(enterprise_id, request, **kwargs)
+            return self.create_policy_with_http_info(enterprise_id, request, **kwargs)
         else:
-            (data) = self.create_command_with_http_info(enterprise_id, request, **kwargs)
+            (data) = self.create_policy_with_http_info(enterprise_id, request, **kwargs)
             return data
 
-    def create_command_with_http_info(self, enterprise_id, request, **kwargs):
-        """Create a command request
+    def create_policy_with_http_info(self, enterprise_id, request, **kwargs):
+        """Create a new Enterprise Policy
 
-        API to create a command request for the device.
+        API to create a new Enterprise Policy
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_command_with_http_info(enterprise_id, request, async_req=True)
+        >>> thread = api.create_policy_with_http_info(enterprise_id, request, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
-        :param V0CommandRequest request: The request body to create a command for set of devices or groups (required)
-        :return: V0CommandRequest
+        :param EnterprisePolicy request: The request body to create an Enteprise Policy (required)
+        :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -96,18 +96,18 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_command" % key
+                    " to method create_policy" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `create_command`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `create_policy`")
         # verify the required parameter 'request' is set
         if ('request' not in params or
                 params['request'] is None):
-            raise ValueError("Missing the required parameter `request` when calling `create_command`")
+            raise ValueError("Missing the required parameter `request` when calling `create_policy`")
 
         collection_formats = {}
 
@@ -133,14 +133,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/command/', 'POST',
+            '/enterprise/{enterprise_id}/policy/', 'POST',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='V0CommandRequest',
+            response_type='EnterprisePolicy',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -148,51 +148,47 @@ class CommandsV2Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_command_request_status(self, enterprise_id, request_id, **kwargs):
-        """get status list for command request
+    def delete_enterprise_policy(self, policy_id, enterprise_id, **kwargs):
+        """Delete a Enterprise Policy
 
-        API to get and filter command request status
+        Emtpy response
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_command_request_status(enterprise_id, request_id, async_req=True)
+        >>> thread = api.delete_enterprise_policy(policy_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str request_id: ID for the command request (required)
-        :param str device: Filter status result by device id.
-        :param str state: Filter by command state
-        :return: InlineResponse2009
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_command_request_status_with_http_info(enterprise_id, request_id, **kwargs)
+            return self.delete_enterprise_policy_with_http_info(policy_id, enterprise_id, **kwargs)
         else:
-            (data) = self.get_command_request_status_with_http_info(enterprise_id, request_id, **kwargs)
+            (data) = self.delete_enterprise_policy_with_http_info(policy_id, enterprise_id, **kwargs)
             return data
 
-    def get_command_request_status_with_http_info(self, enterprise_id, request_id, **kwargs):
-        """get status list for command request
+    def delete_enterprise_policy_with_http_info(self, policy_id, enterprise_id, **kwargs):
+        """Delete a Enterprise Policy
 
-        API to get and filter command request status
+        Emtpy response
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_command_request_status_with_http_info(enterprise_id, request_id, async_req=True)
+        >>> thread = api.delete_enterprise_policy_with_http_info(policy_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str request_id: ID for the command request (required)
-        :param str device: Filter status result by device id.
-        :param str state: Filter by command state
-        :return: InlineResponse2009
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'request_id', 'device', 'state']
+        all_params = ['policy_id', 'enterprise_id']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -203,32 +199,28 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_command_request_status" % key
+                    " to method delete_enterprise_policy" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'policy_id' is set
+        if ('policy_id' not in params or
+                params['policy_id'] is None):
+            raise ValueError("Missing the required parameter `policy_id` when calling `delete_enterprise_policy`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_command_request_status`")
-        # verify the required parameter 'request_id' is set
-        if ('request_id' not in params or
-                params['request_id'] is None):
-            raise ValueError("Missing the required parameter `request_id` when calling `get_command_request_status`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `delete_enterprise_policy`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'policy_id' in params:
+            path_params['policy_id'] = params['policy_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
-        if 'request_id' in params:
-            path_params['request_id'] = params['request_id']
 
         query_params = []
-        if 'device' in params:
-            query_params.append(('device', params['device']))
-        if 'state' in params:
-            query_params.append(('state', params['state']))
 
         header_params = {}
 
@@ -244,14 +236,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/command/{request_id}/status/', 'GET',
+            '/enterprise/{enterprise_id}/policy/{policy_id}/', 'DELETE',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',
+            response_type=None,
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -259,49 +251,47 @@ class CommandsV2Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_device_command_history(self, enterprise_id, device_id, **kwargs):
-        """get command history for device
+    def get_policy_by_id(self, policy_id, enterprise_id, **kwargs):
+        """Get Enterprise Policy
 
-        API to get and filter deivce command history
+        Returns EnterprisePolicy instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_command_history(enterprise_id, device_id, async_req=True)
+        >>> thread = api.get_policy_by_id(policy_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: Id of the enterprise (required)
-        :param str device_id: Id for the command request (required)
-        :param str state: Filter by command state
-        :return: InlineResponse2009
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_device_command_history_with_http_info(enterprise_id, device_id, **kwargs)
+            return self.get_policy_by_id_with_http_info(policy_id, enterprise_id, **kwargs)
         else:
-            (data) = self.get_device_command_history_with_http_info(enterprise_id, device_id, **kwargs)
+            (data) = self.get_policy_by_id_with_http_info(policy_id, enterprise_id, **kwargs)
             return data
 
-    def get_device_command_history_with_http_info(self, enterprise_id, device_id, **kwargs):
-        """get command history for device
+    def get_policy_by_id_with_http_info(self, policy_id, enterprise_id, **kwargs):
+        """Get Enterprise Policy
 
-        API to get and filter deivce command history
+        Returns EnterprisePolicy instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_command_history_with_http_info(enterprise_id, device_id, async_req=True)
+        >>> thread = api.get_policy_by_id_with_http_info(policy_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: Id of the enterprise (required)
-        :param str device_id: Id for the command request (required)
-        :param str state: Filter by command state
-        :return: InlineResponse2009
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'device_id', 'state']
+        all_params = ['policy_id', 'enterprise_id']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -312,30 +302,28 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_device_command_history" % key
+                    " to method get_policy_by_id" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'policy_id' is set
+        if ('policy_id' not in params or
+                params['policy_id'] is None):
+            raise ValueError("Missing the required parameter `policy_id` when calling `get_policy_by_id`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_device_command_history`")
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `get_device_command_history`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_policy_by_id`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'policy_id' in params:
+            path_params['policy_id'] = params['policy_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
-        if 'device_id' in params:
-            path_params['device_id'] = params['device_id']
 
         query_params = []
-        if 'state' in params:
-            query_params.append(('state', params['state']))
 
         header_params = {}
 
@@ -351,14 +339,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/device/{device_id}/command-history/', 'GET',
+            '/enterprise/{enterprise_id}/policy/{policy_id}/', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',
+            response_type='EnterprisePolicy',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -366,55 +354,53 @@ class CommandsV2Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def list_command_request(self, enterprise_id, **kwargs):
-        """List command requests
+    def list_policies(self, enterprise_id, **kwargs):
+        """List all policies in enterprise
 
-        API to get and filter command requests
+        Returns Policies list
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_command_request(enterprise_id, async_req=True)
+        >>> thread = api.list_policies(enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
-        :param str command_type: Filter by type of command request i.e device, group etc
-        :param str devices: Filter by device IDs. Accepts comma separated values.
-        :param str device_type: Filter by device type i.e active, inactive etc
-        :param str command: Filter by command name
-        :param str issued_by: Filter by user. Accepts user id.
-        :return: InlineResponse2008
+        :param str name: filter by policy name
+        :param bool is_active: filter by Active policies
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.list_command_request_with_http_info(enterprise_id, **kwargs)
+            return self.list_policies_with_http_info(enterprise_id, **kwargs)
         else:
-            (data) = self.list_command_request_with_http_info(enterprise_id, **kwargs)
+            (data) = self.list_policies_with_http_info(enterprise_id, **kwargs)
             return data
 
-    def list_command_request_with_http_info(self, enterprise_id, **kwargs):
-        """List command requests
+    def list_policies_with_http_info(self, enterprise_id, **kwargs):
+        """List all policies in enterprise
 
-        API to get and filter command requests
+        Returns Policies list
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_command_request_with_http_info(enterprise_id, async_req=True)
+        >>> thread = api.list_policies_with_http_info(enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: ID of the enterprise (required)
-        :param str command_type: Filter by type of command request i.e device, group etc
-        :param str devices: Filter by device IDs. Accepts comma separated values.
-        :param str device_type: Filter by device type i.e active, inactive etc
-        :param str command: Filter by command name
-        :param str issued_by: Filter by user. Accepts user id.
-        :return: InlineResponse2008
+        :param str name: filter by policy name
+        :param bool is_active: filter by Active policies
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse2007
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'command_type', 'devices', 'device_type', 'command', 'issued_by']
+        all_params = ['enterprise_id', 'name', 'is_active', 'limit', 'offset']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -425,14 +411,14 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_command_request" % key
+                    " to method list_policies" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `list_command_request`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `list_policies`")
 
         collection_formats = {}
 
@@ -441,16 +427,14 @@ class CommandsV2Api(object):
             path_params['enterprise_id'] = params['enterprise_id']
 
         query_params = []
-        if 'command_type' in params:
-            query_params.append(('command_type', params['command_type']))
-        if 'devices' in params:
-            query_params.append(('devices', params['devices']))
-        if 'device_type' in params:
-            query_params.append(('device_type', params['device_type']))
-        if 'command' in params:
-            query_params.append(('command', params['command']))
-        if 'issued_by' in params:
-            query_params.append(('issued_by', params['issued_by']))
+        if 'name' in params:
+            query_params.append(('name', params['name']))
+        if 'is_active' in params:
+            query_params.append(('is_active', params['is_active']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))
 
         header_params = {}
 
@@ -466,14 +450,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/command/', 'GET',
+            '/enterprise/{enterprise_id}/policy/', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2008',
+            response_type='InlineResponse2007',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -481,53 +465,49 @@ class CommandsV2Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def partial_update_command_status(self, enterprise_id, request_id, command_id, action, **kwargs):
-        """Update command status
+    def partialupdate_policy(self, policy_id, enterprise_id, data, **kwargs):
+        """Partial update EnterprisePolicy
 
-        API to patch the state of command
+        Returns EnterprisePolicy instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.partial_update_command_status(enterprise_id, request_id, command_id, action, async_req=True)
+        >>> thread = api.partialupdate_policy(policy_id, enterprise_id, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str request_id: ID for the command request (required)
-        :param str command_id: ID for the command (required)
-        :param str action: Action to be performed on device (required)
-        :param V0CommandStatusUpdate data:
-        :return: V0CommandStatus
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param EnterprisePolicy data: (required)
+        :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.partial_update_command_status_with_http_info(enterprise_id, request_id, command_id, action, **kwargs)
+            return self.partialupdate_policy_with_http_info(policy_id, enterprise_id, data, **kwargs)
         else:
-            (data) = self.partial_update_command_status_with_http_info(enterprise_id, request_id, command_id, action, **kwargs)
+            (data) = self.partialupdate_policy_with_http_info(policy_id, enterprise_id, data, **kwargs)
             return data
 
-    def partial_update_command_status_with_http_info(self, enterprise_id, request_id, command_id, action, **kwargs):
-        """Update command status
+    def partialupdate_policy_with_http_info(self, policy_id, enterprise_id, data, **kwargs):
+        """Partial update EnterprisePolicy
 
-        API to patch the state of command
+        Returns EnterprisePolicy instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.partial_update_command_status_with_http_info(enterprise_id, request_id, command_id, action, async_req=True)
+        >>> thread = api.partialupdate_policy_with_http_info(policy_id, enterprise_id, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str request_id: ID for the command request (required)
-        :param str command_id: ID for the command (required)
-        :param str action: Action to be performed on device (required)
-        :param V0CommandStatusUpdate data:
-        :return: V0CommandStatus
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param EnterprisePolicy data: (required)
+        :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'request_id', 'command_id', 'action', 'data']
+        all_params = ['policy_id', 'enterprise_id', 'data']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -538,40 +518,32 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method partial_update_command_status" % key
+                    " to method partialupdate_policy" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'policy_id' is set
+        if ('policy_id' not in params or
+                params['policy_id'] is None):
+            raise ValueError("Missing the required parameter `policy_id` when calling `partialupdate_policy`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `partial_update_command_status`")
-        # verify the required parameter 'request_id' is set
-        if ('request_id' not in params or
-                params['request_id'] is None):
-            raise ValueError("Missing the required parameter `request_id` when calling `partial_update_command_status`")
-        # verify the required parameter 'command_id' is set
-        if ('command_id' not in params or
-                params['command_id'] is None):
-            raise ValueError("Missing the required parameter `command_id` when calling `partial_update_command_status`")
-        # verify the required parameter 'action' is set
-        if ('action' not in params or
-                params['action'] is None):
-            raise ValueError("Missing the required parameter `action` when calling `partial_update_command_status`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `partialupdate_policy`")
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `partialupdate_policy`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'policy_id' in params:
+            path_params['policy_id'] = params['policy_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
-        if 'request_id' in params:
-            path_params['request_id'] = params['request_id']
-        if 'command_id' in params:
-            path_params['command_id'] = params['command_id']
 
         query_params = []
-        if 'action' in params:
-            query_params.append(('action', params['action']))
 
         header_params = {}
 
@@ -589,14 +561,125 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/command/{request_id}/status/{command_id}/', 'PATCH',
+            '/enterprise/{enterprise_id}/policy/{policy_id}/', 'PATCH',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='V0CommandStatus',
+            response_type='EnterprisePolicy',
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_policy(self, policy_id, enterprise_id, data, **kwargs):
+        """Update Enterprise Policy
+
+        Returns Enterprise Policy instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_policy(policy_id, enterprise_id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param EnterprisePolicy data: (required)
+        :return: EnterprisePolicy
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_policy_with_http_info(policy_id, enterprise_id, data, **kwargs)
+        else:
+            (data) = self.update_policy_with_http_info(policy_id, enterprise_id, data, **kwargs)
+            return data
+
+    def update_policy_with_http_info(self, policy_id, enterprise_id, data, **kwargs):
+        """Update Enterprise Policy
+
+        Returns Enterprise Policy instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_policy_with_http_info(policy_id, enterprise_id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int policy_id: An integer identifying this EnterprisePolicy. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param EnterprisePolicy data: (required)
+        :return: EnterprisePolicy
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['policy_id', 'enterprise_id', 'data']
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_policy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'policy_id' is set
+        if ('policy_id' not in params or
+                params['policy_id'] is None):
+            raise ValueError("Missing the required parameter `policy_id` when calling `update_policy`")
+        # verify the required parameter 'enterprise_id' is set
+        if ('enterprise_id' not in params or
+                params['enterprise_id'] is None):
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `update_policy`")
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `update_policy`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'policy_id' in params:
+            path_params['policy_id'] = params['policy_id']
+        if 'enterprise_id' in params:
+            path_params['enterprise_id'] = params['enterprise_id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(
+            '/enterprise/{enterprise_id}/policy/{policy_id}/', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='EnterprisePolicy',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

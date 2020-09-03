@@ -1,15 +1,15 @@
-# InlineResponse2008
-> esperclient.models.inline_response2008
+# InlineResponse20010
+> esperclient.models.inline_response20010
 
 ### Description
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** |  | [optional] 
+**count** | **int** |  | 
 **next** | **str** |  | [optional] 
 **previous** | **str** |  | [optional] 
-**results** | [**list[V0CommandRequest]**](V0CommandRequest.md) |  | [optional] 
+**results** | [**list[Geofence]**](Geofence.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
