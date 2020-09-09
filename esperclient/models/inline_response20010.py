@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.geofence import Geofence
+from esperclient.models.v0_command_status import V0CommandStatus
 
 
 class InlineResponse20010(object):
@@ -49,7 +49,7 @@ class InlineResponse20010(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[Geofence]'
+        'results': 'list[V0CommandStatus]'
     }
 
     attribute_map = {
@@ -68,12 +68,14 @@ class InlineResponse20010(object):
         self._results = None
         self.discriminator = None
 
-        self.count = count
+        if count is not None:
+            self.count = count
         if next is not None:
             self.next = next
         if previous is not None:
             self.previous = previous
-        self.results = results
+        if results is not None:
+            self.results = results
 
     @property
     def count(self):
@@ -93,8 +95,6 @@ class InlineResponse20010(object):
         :param count: The count of this InlineResponse20010.
         :type: int
         """
-        if count is None:
-            raise ValueError("Invalid value for `count`, must not be `None`")
 
         self._count = count
 
@@ -146,7 +146,7 @@ class InlineResponse20010(object):
 
 
         :return: The results of this InlineResponse20010.
-        :rtype: list[Geofence]
+        :rtype: list[V0CommandStatus]
         """
         return self._results
 
@@ -156,10 +156,8 @@ class InlineResponse20010(object):
 
 
         :param results: The results of this InlineResponse20010.
-        :type: list[Geofence]
+        :type: list[V0CommandStatus]
         """
-        if results is None:
-            raise ValueError("Invalid value for `results`, must not be `None`")
 
         self._results = results
 

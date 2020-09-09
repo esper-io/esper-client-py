@@ -44,31 +44,45 @@ class TokenRenewV0(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'user': 'str',
         'enterprise': 'str',
         'token': 'str',
         'expires_at': 'datetime',
-        'developerapp': 'str'
+        'developerapp': 'str',
+        'scope': 'str',
+        'created_on': 'datetime',
+        'updated_on': 'datetime'
     }
 
     attribute_map = {
+        'id': 'id',
         'user': 'user',
         'enterprise': 'enterprise',
         'token': 'token',
         'expires_at': 'expires_at',
-        'developerapp': 'developerapp'
+        'developerapp': 'developerapp',
+        'scope': 'scope',
+        'created_on': 'created_on',
+        'updated_on': 'updated_on'
     }
 
-    def __init__(self, user=None, enterprise=None, token=None, expires_at=None, developerapp=None):
+    def __init__(self, id=None, user=None, enterprise=None, token=None, expires_at=None, developerapp=None, scope=None, created_on=None, updated_on=None):
         """TokenRenewV0 - a model defined in Swagger"""
 
+        self._id = None
         self._user = None
         self._enterprise = None
         self._token = None
         self._expires_at = None
         self._developerapp = None
+        self._scope = None
+        self._created_on = None
+        self._updated_on = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
         if user is not None:
             self.user = user
         if enterprise is not None:
@@ -79,6 +93,35 @@ class TokenRenewV0(object):
             self.expires_at = expires_at
         if developerapp is not None:
             self.developerapp = developerapp
+        if scope is not None:
+            self.scope = scope
+        if created_on is not None:
+            self.created_on = created_on
+        if updated_on is not None:
+            self.updated_on = updated_on
+
+    @property
+    def id(self):
+        """Gets the id of this TokenRenewV0.
+
+        Id of the token
+
+        :return: The id of this TokenRenewV0.
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this TokenRenewV0.
+
+        Id of the token
+
+        :param id: The id of this TokenRenewV0.
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def user(self):
@@ -194,6 +237,75 @@ class TokenRenewV0(object):
         """
 
         self._developerapp = developerapp
+
+    @property
+    def scope(self):
+        """Gets the scope of this TokenRenewV0.
+
+        This defines what access scopes your API token has
+
+        :return: The scope of this TokenRenewV0.
+        :rtype: str
+        """
+        return self._scope
+
+    @scope.setter
+    def scope(self, scope):
+        """Sets the scope of this TokenRenewV0.
+
+        This defines what access scopes your API token has
+
+        :param scope: The scope of this TokenRenewV0.
+        :type: str
+        """
+
+        self._scope = scope
+
+    @property
+    def created_on(self):
+        """Gets the created_on of this TokenRenewV0.
+
+        Date and time of when this resource was created
+
+        :return: The created_on of this TokenRenewV0.
+        :rtype: datetime
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """Sets the created_on of this TokenRenewV0.
+
+        Date and time of when this resource was created
+
+        :param created_on: The created_on of this TokenRenewV0.
+        :type: datetime
+        """
+
+        self._created_on = created_on
+
+    @property
+    def updated_on(self):
+        """Gets the updated_on of this TokenRenewV0.
+
+        Date and time of when this resource was updated
+
+        :return: The updated_on of this TokenRenewV0.
+        :rtype: datetime
+        """
+        return self._updated_on
+
+    @updated_on.setter
+    def updated_on(self, updated_on):
+        """Sets the updated_on of this TokenRenewV0.
+
+        Date and time of when this resource was updated
+
+        :param updated_on: The updated_on of this TokenRenewV0.
+        :type: datetime
+        """
+
+        self._updated_on = updated_on
 
     def to_dict(self):
         """Returns the model properties as a dict"""

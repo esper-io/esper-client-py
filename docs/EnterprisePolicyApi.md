@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_policies**
-> InlineResponse2007 list_policies(enterprise_id, name=name, is_active=is_active, limit=limit, offset=offset)
+> InlineResponse2008 list_policies(enterprise_id, name=name, is_active=is_active, limit=limit, offset=offset)
 
 List all policies in enterprise
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 

@@ -369,7 +369,7 @@ class EnterprisePolicyApi(object):
         :param bool is_active: filter by Active policies
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2007
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -395,7 +395,7 @@ class EnterprisePolicyApi(object):
         :param bool is_active: filter by Active policies
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse2007
+        :return: InlineResponse2008
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -457,7 +457,7 @@ class EnterprisePolicyApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2007',
+            response_type='InlineResponse2008',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

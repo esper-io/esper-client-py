@@ -1,5 +1,5 @@
-# InlineResponse2002
-> esperclient.models.inline_response2002
+# InlineResponse20011
+> esperclient.models.inline_response20011
 
 ### Description
 
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **count** | **int** |  | 
 **next** | **str** |  | [optional] 
 **previous** | **str** |  | [optional] 
-**results** | [**list[InstallDevices]**](InstallDevices.md) |  | 
+**results** | [**list[Geofence]**](Geofence.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

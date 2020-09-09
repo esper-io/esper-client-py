@@ -86,6 +86,7 @@ Class | Method | HTTP request
 *ApplicationApi* | [**get_app_version**](docs/ApplicationApi.md#get_app_version) | **GET** /enterprise/{enterprise_id}/application/{application_id}/version/{version_id}/
 *ApplicationApi* | [**get_app_versions**](docs/ApplicationApi.md#get_app_versions) | **GET** /enterprise/{enterprise_id}/application/{application_id}/version/
 *ApplicationApi* | [**get_application**](docs/ApplicationApi.md#get_application) | **GET** /enterprise/{enterprise_id}/application/{application_id}/
+*ApplicationApi* | [**get_install_devices**](docs/ApplicationApi.md#get_install_devices) | **GET** /enterprise/{enterprise_id}/application/{application_id}/version/{version_id}/installdevices
 *ApplicationApi* | [**upload**](docs/ApplicationApi.md#upload) | **POST** /enterprise/{enterprise_id}/application/upload/
 *CommandsApi* | [**get_command**](docs/CommandsApi.md#get_command) | **GET** /enterprise/{enterprise_id}/device/{device_id}/command/{command_id}/
 *CommandsApi* | [**run_command**](docs/CommandsApi.md#run_command) | **POST** /enterprise/{enterprise_id}/device/{device_id}/command/
@@ -163,6 +164,7 @@ Class | Method | HTTP request
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse20010](docs/InlineResponse20010.md)
+ - [InlineResponse20011](docs/InlineResponse20011.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
@@ -172,6 +174,7 @@ Class | Method | HTTP request
  - [InlineResponse2008](docs/InlineResponse2008.md)
  - [InlineResponse2009](docs/InlineResponse2009.md)
  - [InlineResponse201](docs/InlineResponse201.md)
+ - [InstallDevices](docs/InstallDevices.md)
  - [TokenInfoV1](docs/TokenInfoV1.md)
  - [TokenRenewV0](docs/TokenRenewV0.md)
  - [V0CommandArgs](docs/V0CommandArgs.md)
