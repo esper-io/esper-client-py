@@ -80,6 +80,7 @@ from esperclient.models.group_command_request import GroupCommandRequest
 from esperclient.models.inline_response200 import InlineResponse200
 from esperclient.models.inline_response2001 import InlineResponse2001
 from esperclient.models.inline_response20010 import InlineResponse20010
+from esperclient.models.inline_response20011 import InlineResponse20011
 from esperclient.models.inline_response2002 import InlineResponse2002
 from esperclient.models.inline_response2003 import InlineResponse2003
 from esperclient.models.inline_response2004 import InlineResponse2004
@@ -89,6 +90,7 @@ from esperclient.models.inline_response2007 import InlineResponse2007
 from esperclient.models.inline_response2008 import InlineResponse2008
 from esperclient.models.inline_response2009 import InlineResponse2009
 from esperclient.models.inline_response201 import InlineResponse201
+from esperclient.models.install_devices import InstallDevices
 from esperclient.models.settings_gps_state_enum import SettingsGPSStateEnum
 from esperclient.models.settings_rotate_state_enum import SettingsRotateStateEnum
 from esperclient.models.settings_volume_stream_enum import SettingsVolumeStreamEnum

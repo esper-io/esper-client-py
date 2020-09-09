@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.v0_command_request import V0CommandRequest
+from esperclient.models.enterprise_policy import EnterprisePolicy
 
 
 class InlineResponse2008(object):
@@ -49,7 +49,7 @@ class InlineResponse2008(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[V0CommandRequest]'
+        'results': 'list[EnterprisePolicy]'
     }
 
     attribute_map = {
@@ -68,14 +68,12 @@ class InlineResponse2008(object):
         self._results = None
         self.discriminator = None
 
-        if count is not None:
-            self.count = count
+        self.count = count
         if next is not None:
             self.next = next
         if previous is not None:
             self.previous = previous
-        if results is not None:
-            self.results = results
+        self.results = results
 
     @property
     def count(self):
@@ -95,6 +93,8 @@ class InlineResponse2008(object):
         :param count: The count of this InlineResponse2008.
         :type: int
         """
+        if count is None:
+            raise ValueError("Invalid value for `count`, must not be `None`")
 
         self._count = count
 
@@ -146,7 +146,7 @@ class InlineResponse2008(object):
 
 
         :return: The results of this InlineResponse2008.
-        :rtype: list[V0CommandRequest]
+        :rtype: list[EnterprisePolicy]
         """
         return self._results
 
@@ -156,8 +156,10 @@ class InlineResponse2008(object):
 
 
         :param results: The results of this InlineResponse2008.
-        :type: list[V0CommandRequest]
+        :type: list[EnterprisePolicy]
         """
+        if results is None:
+            raise ValueError("Invalid value for `results`, must not be `None`")
 
         self._results = results
 

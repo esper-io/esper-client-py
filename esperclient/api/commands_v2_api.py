@@ -162,7 +162,7 @@ class CommandsV2Api(object):
         :param str request_id: ID for the command request (required)
         :param str device: Filter status result by device id.
         :param str state: Filter by command state
-        :return: InlineResponse2009
+        :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -187,7 +187,7 @@ class CommandsV2Api(object):
         :param str request_id: ID for the command request (required)
         :param str device: Filter status result by device id.
         :param str state: Filter by command state
-        :return: InlineResponse2009
+        :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -251,7 +251,7 @@ class CommandsV2Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',
+            response_type='InlineResponse20010',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -272,7 +272,7 @@ class CommandsV2Api(object):
         :param str enterprise_id: Id of the enterprise (required)
         :param str device_id: Id for the command request (required)
         :param str state: Filter by command state
-        :return: InlineResponse2009
+        :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -296,7 +296,7 @@ class CommandsV2Api(object):
         :param str enterprise_id: Id of the enterprise (required)
         :param str device_id: Id for the command request (required)
         :param str state: Filter by command state
-        :return: InlineResponse2009
+        :return: InlineResponse20010
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -358,7 +358,7 @@ class CommandsV2Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',
+            response_type='InlineResponse20010',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -382,7 +382,7 @@ class CommandsV2Api(object):
         :param str device_type: Filter by device type i.e active, inactive etc
         :param str command: Filter by command name
         :param str issued_by: Filter by user. Accepts user id.
-        :return: InlineResponse2008
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -409,7 +409,7 @@ class CommandsV2Api(object):
         :param str device_type: Filter by device type i.e active, inactive etc
         :param str command: Filter by command name
         :param str issued_by: Filter by user. Accepts user id.
-        :return: InlineResponse2008
+        :return: InlineResponse2009
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -473,7 +473,7 @@ class CommandsV2Api(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2008',
+            response_type='InlineResponse2009',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

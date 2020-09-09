@@ -707,8 +707,131 @@ class ApplicationApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_install_devices(self, version_id, application_id, enterprise_id, **kwargs):
+        """List install devices
+
+        Returns list of devices with the specified app version installed
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_install_devices(version_id, application_id, enterprise_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str version_id: A UUID string identifying this app version. (required)
+        :param str application_id: A UUID string identifying this application. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param str search: A search term
+        :param int limit: Number of results to return per page
+        :param int offset: The initial index from which to return the results
+        :return: InlineResponse2002
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_install_devices_with_http_info(version_id, application_id, enterprise_id, **kwargs)
+        else:
+            (data) = self.get_install_devices_with_http_info(version_id, application_id, enterprise_id, **kwargs)
+            return data
+
+    def get_install_devices_with_http_info(self, version_id, application_id, enterprise_id, **kwargs):
+        """List install devices
+
+        Returns list of devices with the specified app version installed
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_install_devices_with_http_info(version_id, application_id, enterprise_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str version_id: A UUID string identifying this app version. (required)
+        :param str application_id: A UUID string identifying this application. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param str search: A search term
+        :param int limit: Number of results to return per page
+        :param int offset: The initial index from which to return the results
+        :return: InlineResponse2002
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['version_id', 'application_id', 'enterprise_id', 'search', 'limit', 'offset']
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_install_devices" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'version_id' is set
+        if ('version_id' not in params or
+                params['version_id'] is None):
+            raise ValueError("Missing the required parameter `version_id` when calling `get_install_devices`")
+        # verify the required parameter 'application_id' is set
+        if ('application_id' not in params or
+                params['application_id'] is None):
+            raise ValueError("Missing the required parameter `application_id` when calling `get_install_devices`")
+        # verify the required parameter 'enterprise_id' is set
+        if ('enterprise_id' not in params or
+                params['enterprise_id'] is None):
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_install_devices`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'version_id' in params:
+            path_params['version_id'] = params['version_id']
+        if 'application_id' in params:
+            path_params['application_id'] = params['application_id']
+        if 'enterprise_id' in params:
+            path_params['enterprise_id'] = params['enterprise_id']
+
+        query_params = []
+        if 'search' in params:
+            query_params.append(('search', params['search']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(
+            '/enterprise/{enterprise_id}/application/{application_id}/version/{version_id}/installdevices', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2002',
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def upload(self, enterprise_id, app_file, **kwargs):
-        """upload an application to enterprise
+        """Upload an application to enterprise
 
         Returns application
         This method makes a synchronous HTTP request by default. To make an
@@ -718,7 +841,7 @@ class ApplicationApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param file app_file: valid APK file (required)
+        :param file app_file: Valid APK file (required)
         :return: InlineResponse201
                  If the method is called asynchronously,
                  returns the request thread.
@@ -731,7 +854,7 @@ class ApplicationApi(object):
             return data
 
     def upload_with_http_info(self, enterprise_id, app_file, **kwargs):
-        """upload an application to enterprise
+        """Upload an application to enterprise
 
         Returns application
         This method makes a synchronous HTTP request by default. To make an
@@ -741,7 +864,7 @@ class ApplicationApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param file app_file: valid APK file (required)
+        :param file app_file: Valid APK file (required)
         :return: InlineResponse201
                  If the method is called asynchronously,
                  returns the request thread.

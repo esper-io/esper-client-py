@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_command_request_status**
-> InlineResponse2009 get_command_request_status(enterprise_id, request_id, device=device, state=state)
+> InlineResponse20010 get_command_request_status(enterprise_id, request_id, device=device, state=state)
 
 get status list for command request
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_command_history**
-> InlineResponse2009 get_device_command_history(enterprise_id, device_id, state=state)
+> InlineResponse20010 get_device_command_history(enterprise_id, device_id, state=state)
 
 get command history for device
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_command_request**
-> InlineResponse2008 list_command_request(enterprise_id, command_type=command_type, devices=devices, device_type=device_type, command=command, issued_by=issued_by)
+> InlineResponse2009 list_command_request(enterprise_id, command_type=command_type, devices=devices, device_type=device_type, command=command, issued_by=issued_by)
 
 List command requests
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 

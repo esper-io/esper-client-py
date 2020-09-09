@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.v0_command_status import V0CommandStatus
+from esperclient.models.v0_command_request import V0CommandRequest
 
 
 class InlineResponse2009(object):
@@ -49,7 +49,7 @@ class InlineResponse2009(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[V0CommandStatus]'
+        'results': 'list[V0CommandRequest]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class InlineResponse2009(object):
 
 
         :return: The results of this InlineResponse2009.
-        :rtype: list[V0CommandStatus]
+        :rtype: list[V0CommandRequest]
         """
         return self._results
 
@@ -156,7 +156,7 @@ class InlineResponse2009(object):
 
 
         :param results: The results of this InlineResponse2009.
-        :type: list[V0CommandStatus]
+        :type: list[V0CommandRequest]
         """
 
         self._results = results

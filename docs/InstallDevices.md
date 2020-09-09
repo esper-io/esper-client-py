@@ -1,15 +1,15 @@
-# InlineResponse2002
-> esperclient.models.inline_response2002
+# InstallDevices
+> esperclient.models.install_devices
 
 ### Description
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** |  | 
-**next** | **str** |  | [optional] 
-**previous** | **str** |  | [optional] 
-**results** | [**list[InstallDevices]**](InstallDevices.md) |  | 
+**id** | **str** |  | 
+**device_name** | **str** |  | [optional] 
+**alias_name** | **str** |  | [optional] 
+**group_name** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

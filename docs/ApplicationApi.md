@@ -10,7 +10,8 @@ Method | HTTP request | Description
 [**get_app_version**](ApplicationApi.md#get_app_version) | **GET** /enterprise/{enterprise_id}/application/{application_id}/version/{version_id}/ | Get app version information
 [**get_app_versions**](ApplicationApi.md#get_app_versions) | **GET** /enterprise/{enterprise_id}/application/{application_id}/version/ | List App versions
 [**get_application**](ApplicationApi.md#get_application) | **GET** /enterprise/{enterprise_id}/application/{application_id}/ | Get application information
-[**upload**](ApplicationApi.md#upload) | **POST** /enterprise/{enterprise_id}/application/upload/ | upload an application to enterprise
+[**get_install_devices**](ApplicationApi.md#get_install_devices) | **GET** /enterprise/{enterprise_id}/application/{application_id}/version/{version_id}/installdevices | List install devices
+[**upload**](ApplicationApi.md#upload) | **POST** /enterprise/{enterprise_id}/application/upload/ | Upload an application to enterprise
 
 
 # **delete_app_version**
@@ -349,10 +350,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_install_devices**
+> InlineResponse2002 get_install_devices(version_id, application_id, enterprise_id, search=search, limit=limit, offset=offset)
+
+List install devices
+
+Returns list of devices with the specified app version installed
+
+### Example
+```python
+import esperclient
+from esperclient.rest import ApiException
+
+# Configure API key authorization: apiKey
+configuration = esperclient.Configuration()
+configuration.host = 'SERVER_URL'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
+version_id = 'version_id_example' # str | A UUID string identifying this app version.
+application_id = 'application_id_example' # str | A UUID string identifying this application.
+enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
+search = 'search_example' # str | A search term (optional)
+limit = 56 # int | Number of results to return per page (optional)
+offset = 56 # int | The initial index from which to return the results (optional)
+
+try:
+    # List install devices
+    api_response = api_instance.get_install_devices(version_id, application_id, enterprise_id, search=search, limit=limit, offset=offset)
+    print(api_response)
+except ApiException as e:
+    print("Exception when calling ApplicationApi->get_install_devices: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **version_id** | [**str**](.md)| A UUID string identifying this app version. | 
+ **application_id** | [**str**](.md)| A UUID string identifying this application. | 
+ **enterprise_id** | **str**| A UUID string identifying enterprise. | 
+ **search** | **str**| A search term | [optional] 
+ **limit** | **int**| Number of results to return per page | [optional] 
+ **offset** | **int**| The initial index from which to return the results | [optional] 
+
+### Return type
+
+[**InlineResponse2002**](InlineResponse2002.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **upload**
 > InlineResponse201 upload(enterprise_id, app_file)
 
-upload an application to enterprise
+Upload an application to enterprise
 
 Returns application
 
@@ -370,10 +432,10 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
-app_file = '/path/to/file.txt' # file | valid APK file
+app_file = '/path/to/file.txt' # file | Valid APK file
 
 try:
-    # upload an application to enterprise
+    # Upload an application to enterprise
     api_response = api_instance.upload(enterprise_id, app_file)
     print(api_response)
 except ApiException as e:
@@ -385,7 +447,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
- **app_file** | **file**| valid APK file | 
+ **app_file** | **file**| Valid APK file | 
 
 ### Return type
 

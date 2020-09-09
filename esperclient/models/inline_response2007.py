@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.enterprise_policy import EnterprisePolicy
+from esperclient.models.device_group import DeviceGroup
 
 
 class InlineResponse2007(object):
@@ -49,7 +49,7 @@ class InlineResponse2007(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[EnterprisePolicy]'
+        'results': 'list[DeviceGroup]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class InlineResponse2007(object):
 
 
         :return: The results of this InlineResponse2007.
-        :rtype: list[EnterprisePolicy]
+        :rtype: list[DeviceGroup]
         """
         return self._results
 
@@ -156,7 +156,7 @@ class InlineResponse2007(object):
 
 
         :param results: The results of this InlineResponse2007.
-        :type: list[EnterprisePolicy]
+        :type: list[DeviceGroup]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")
