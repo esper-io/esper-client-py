@@ -10,4 +10,5 @@ from esperclient.api.enterprise_api import EnterpriseApi
 from esperclient.api.enterprise_policy_api import EnterprisePolicyApi
 from esperclient.api.geofence_api import GeofenceApi
 from esperclient.api.group_commands_api import GroupCommandsApi
+from esperclient.api.subscription_api import SubscriptionApi
 from esperclient.api.token_api import TokenApi

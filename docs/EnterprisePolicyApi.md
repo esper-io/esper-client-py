@@ -251,7 +251,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 api_instance = esperclient.EnterprisePolicyApi(esperclient.ApiClient(configuration))
 policy_id = 56 # int | An integer identifying this EnterprisePolicy.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
-data = esperclient.EnterprisePolicy() # EnterprisePolicy | 
+data = esperclient.EnterprisePolicyPartialUpdate() # EnterprisePolicyPartialUpdate | 
 
 try:
     # Partial update EnterprisePolicy
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **policy_id** | **int**| An integer identifying this EnterprisePolicy. | 
  **enterprise_id** | **str**| A UUID string identifying enterprise. | 
- **data** | [**EnterprisePolicy**](EnterprisePolicy.md)|  | 
+ **data** | [**EnterprisePolicyPartialUpdate**](EnterprisePolicyPartialUpdate.md)|  | 
 
 ### Return type
 

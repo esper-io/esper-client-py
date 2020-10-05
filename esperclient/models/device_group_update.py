@@ -45,50 +45,65 @@ class DeviceGroupUpdate(object):
     """
     swagger_types = {
         'id': 'str',
-        'device_ids': 'list[str]',
-        'device_count': 'int',
         'name': 'str',
         'created_on': 'datetime',
-        'enterprise': 'str'
+        'enterprise': 'str',
+        'parent': 'str',
+        'device_ids': 'list[str]',
+        'device_count': 'int',
+        'path': 'str',
+        'children_count': 'int'
     }
 
     attribute_map = {
         'id': 'id',
-        'device_ids': 'device_ids',
-        'device_count': 'device_count',
         'name': 'name',
         'created_on': 'created_on',
-        'enterprise': 'enterprise'
+        'enterprise': 'enterprise',
+        'parent': 'parent',
+        'device_ids': 'device_ids',
+        'device_count': 'device_count',
+        'path': 'path',
+        'children_count': 'children_count'
     }
 
-    def __init__(self, id=None, device_ids=None, device_count=None, name=None, created_on=None, enterprise=None):
+    def __init__(self, id=None, name=None, created_on=None, enterprise=None, parent=None, device_ids=None, device_count=None, path=None, children_count=None):
         """DeviceGroupUpdate - a model defined in Swagger"""
 
         self._id = None
-        self._device_ids = None
-        self._device_count = None
         self._name = None
         self._created_on = None
         self._enterprise = None
+        self._parent = None
+        self._device_ids = None
+        self._device_count = None
+        self._path = None
+        self._children_count = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if device_ids is not None:
-            self.device_ids = device_ids
-        if device_count is not None:
-            self.device_count = device_count
-        if name is not None:
-            self.name = name
+        self.name = name
         if created_on is not None:
             self.created_on = created_on
         if enterprise is not None:
             self.enterprise = enterprise
+        if parent is not None:
+            self.parent = parent
+        if device_ids is not None:
+            self.device_ids = device_ids
+        if device_count is not None:
+            self.device_count = device_count
+        if path is not None:
+            self.path = path
+        if children_count is not None:
+            self.children_count = children_count
 
     @property
     def id(self):
         """Gets the id of this DeviceGroupUpdate.
 
+        Group id
 
         :return: The id of this DeviceGroupUpdate.
         :rtype: str
@@ -99,6 +114,7 @@ class DeviceGroupUpdate(object):
     def id(self, id):
         """Sets the id of this DeviceGroupUpdate.
 
+        Group id
 
         :param id: The id of this DeviceGroupUpdate.
         :type: str
@@ -107,9 +123,104 @@ class DeviceGroupUpdate(object):
         self._id = id
 
     @property
+    def name(self):
+        """Gets the name of this DeviceGroupUpdate.
+
+        Group name
+
+        :return: The name of this DeviceGroupUpdate.
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DeviceGroupUpdate.
+
+        Group name
+
+        :param name: The name of this DeviceGroupUpdate.
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")
+
+        self._name = name
+
+    @property
+    def created_on(self):
+        """Gets the created_on of this DeviceGroupUpdate.
+
+        Date and time of when the group was created
+
+        :return: The created_on of this DeviceGroupUpdate.
+        :rtype: datetime
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """Sets the created_on of this DeviceGroupUpdate.
+
+        Date and time of when the group was created
+
+        :param created_on: The created_on of this DeviceGroupUpdate.
+        :type: datetime
+        """
+
+        self._created_on = created_on
+
+    @property
+    def enterprise(self):
+        """Gets the enterprise of this DeviceGroupUpdate.
+
+        Enterprise url
+
+        :return: The enterprise of this DeviceGroupUpdate.
+        :rtype: str
+        """
+        return self._enterprise
+
+    @enterprise.setter
+    def enterprise(self, enterprise):
+        """Sets the enterprise of this DeviceGroupUpdate.
+
+        Enterprise url
+
+        :param enterprise: The enterprise of this DeviceGroupUpdate.
+        :type: str
+        """
+
+        self._enterprise = enterprise
+
+    @property
+    def parent(self):
+        """Gets the parent of this DeviceGroupUpdate.
+
+        Parent group id
+
+        :return: The parent of this DeviceGroupUpdate.
+        :rtype: str
+        """
+        return self._parent
+
+    @parent.setter
+    def parent(self, parent):
+        """Sets the parent of this DeviceGroupUpdate.
+
+        Parent group id
+
+        :param parent: The parent of this DeviceGroupUpdate.
+        :type: str
+        """
+
+        self._parent = parent
+
+    @property
     def device_ids(self):
         """Gets the device_ids of this DeviceGroupUpdate.
 
+        Devices ids
 
         :return: The device_ids of this DeviceGroupUpdate.
         :rtype: list[str]
@@ -120,6 +231,7 @@ class DeviceGroupUpdate(object):
     def device_ids(self, device_ids):
         """Sets the device_ids of this DeviceGroupUpdate.
 
+        Devices ids
 
         :param device_ids: The device_ids of this DeviceGroupUpdate.
         :type: list[str]
@@ -149,71 +261,50 @@ class DeviceGroupUpdate(object):
         self._device_count = device_count
 
     @property
-    def name(self):
-        """Gets the name of this DeviceGroupUpdate.
+    def path(self):
+        """Gets the path of this DeviceGroupUpdate.
 
+        Path of the group
 
-        :return: The name of this DeviceGroupUpdate.
+        :return: The path of this DeviceGroupUpdate.
         :rtype: str
         """
-        return self._name
+        return self._path
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DeviceGroupUpdate.
+    @path.setter
+    def path(self, path):
+        """Sets the path of this DeviceGroupUpdate.
 
+        Path of the group
 
-        :param name: The name of this DeviceGroupUpdate.
-        :type: str
-        """
-        if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")
-        if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")
-
-        self._name = name
-
-    @property
-    def created_on(self):
-        """Gets the created_on of this DeviceGroupUpdate.
-
-
-        :return: The created_on of this DeviceGroupUpdate.
-        :rtype: datetime
-        """
-        return self._created_on
-
-    @created_on.setter
-    def created_on(self, created_on):
-        """Sets the created_on of this DeviceGroupUpdate.
-
-
-        :param created_on: The created_on of this DeviceGroupUpdate.
-        :type: datetime
-        """
-
-        self._created_on = created_on
-
-    @property
-    def enterprise(self):
-        """Gets the enterprise of this DeviceGroupUpdate.
-
-
-        :return: The enterprise of this DeviceGroupUpdate.
-        :rtype: str
-        """
-        return self._enterprise
-
-    @enterprise.setter
-    def enterprise(self, enterprise):
-        """Sets the enterprise of this DeviceGroupUpdate.
-
-
-        :param enterprise: The enterprise of this DeviceGroupUpdate.
+        :param path: The path of this DeviceGroupUpdate.
         :type: str
         """
 
-        self._enterprise = enterprise
+        self._path = path
+
+    @property
+    def children_count(self):
+        """Gets the children_count of this DeviceGroupUpdate.
+
+        Count of child groups
+
+        :return: The children_count of this DeviceGroupUpdate.
+        :rtype: int
+        """
+        return self._children_count
+
+    @children_count.setter
+    def children_count(self, children_count):
+        """Sets the children_count of this DeviceGroupUpdate.
+
+        Count of child groups
+
+        :param children_count: The children_count of this DeviceGroupUpdate.
+        :type: int
+        """
+
+        self._children_count = children_count
 
     def to_dict(self):
         """Returns the model properties as a dict"""

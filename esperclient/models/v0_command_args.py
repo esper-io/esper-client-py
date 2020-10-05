@@ -47,23 +47,38 @@ class V0CommandArgs(object):
         'device_alias_name': 'str',
         'custom_settings_config': 'object',
         'app_version': 'str',
-        'package_name': 'str'
+        'package_name': 'str',
+        'policy_url': 'str',
+        'wifi_access_points': 'object',
+        'state': 'str',
+        'message': 'str',
+        'app_state': 'str'
     }
 
     attribute_map = {
         'device_alias_name': 'device_alias_name',
         'custom_settings_config': 'custom_settings_config',
         'app_version': 'app_version',
-        'package_name': 'package_name'
+        'package_name': 'package_name',
+        'policy_url': 'policy_url',
+        'wifi_access_points': 'wifi_access_points',
+        'state': 'state',
+        'message': 'message',
+        'app_state': 'app_state'
     }
 
-    def __init__(self, device_alias_name=None, custom_settings_config=None, app_version=None, package_name=None):
+    def __init__(self, device_alias_name=None, custom_settings_config=None, app_version=None, package_name=None, policy_url=None, wifi_access_points=None, state=None, message=None, app_state=None):
         """V0CommandArgs - a model defined in Swagger"""
 
         self._device_alias_name = None
         self._custom_settings_config = None
         self._app_version = None
         self._package_name = None
+        self._policy_url = None
+        self._wifi_access_points = None
+        self._state = None
+        self._message = None
+        self._app_state = None
         self.discriminator = None
 
         if device_alias_name is not None:
@@ -74,6 +89,16 @@ class V0CommandArgs(object):
             self.app_version = app_version
         if package_name is not None:
             self.package_name = package_name
+        if policy_url is not None:
+            self.policy_url = policy_url
+        if wifi_access_points is not None:
+            self.wifi_access_points = wifi_access_points
+        if state is not None:
+            self.state = state
+        if message is not None:
+            self.message = message
+        if app_state is not None:
+            self.app_state = app_state
 
     @property
     def device_alias_name(self):
@@ -125,6 +150,7 @@ class V0CommandArgs(object):
     def app_version(self):
         """Gets the app_version of this V0CommandArgs.
 
+        The version id of app uploaded on Esper
 
         :return: The app_version of this V0CommandArgs.
         :rtype: str
@@ -135,6 +161,7 @@ class V0CommandArgs(object):
     def app_version(self, app_version):
         """Sets the app_version of this V0CommandArgs.
 
+        The version id of app uploaded on Esper
 
         :param app_version: The app_version of this V0CommandArgs.
         :type: str
@@ -146,6 +173,7 @@ class V0CommandArgs(object):
     def package_name(self):
         """Gets the package_name of this V0CommandArgs.
 
+        The app package name uploaded on Esper
 
         :return: The package_name of this V0CommandArgs.
         :rtype: str
@@ -156,12 +184,128 @@ class V0CommandArgs(object):
     def package_name(self, package_name):
         """Sets the package_name of this V0CommandArgs.
 
+        The app package name uploaded on Esper
 
         :param package_name: The package_name of this V0CommandArgs.
         :type: str
         """
 
         self._package_name = package_name
+
+    @property
+    def policy_url(self):
+        """Gets the policy_url of this V0CommandArgs.
+
+        The URL to the policy
+
+        :return: The policy_url of this V0CommandArgs.
+        :rtype: str
+        """
+        return self._policy_url
+
+    @policy_url.setter
+    def policy_url(self, policy_url):
+        """Sets the policy_url of this V0CommandArgs.
+
+        The URL to the policy
+
+        :param policy_url: The policy_url of this V0CommandArgs.
+        :type: str
+        """
+
+        self._policy_url = policy_url
+
+    @property
+    def wifi_access_points(self):
+        """Gets the wifi_access_points of this V0CommandArgs.
+
+        Wifi access points for the device (passed as JSON object)
+
+        :return: The wifi_access_points of this V0CommandArgs.
+        :rtype: object
+        """
+        return self._wifi_access_points
+
+    @wifi_access_points.setter
+    def wifi_access_points(self, wifi_access_points):
+        """Sets the wifi_access_points of this V0CommandArgs.
+
+        Wifi access points for the device (passed as JSON object)
+
+        :param wifi_access_points: The wifi_access_points of this V0CommandArgs.
+        :type: object
+        """
+
+        self._wifi_access_points = wifi_access_points
+
+    @property
+    def state(self):
+        """Gets the state of this V0CommandArgs.
+
+        LOCKED/UNLOCKED
+
+        :return: The state of this V0CommandArgs.
+        :rtype: str
+        """
+        return self._state
+
+    @state.setter
+    def state(self, state):
+        """Sets the state of this V0CommandArgs.
+
+        LOCKED/UNLOCKED
+
+        :param state: The state of this V0CommandArgs.
+        :type: str
+        """
+
+        self._state = state
+
+    @property
+    def message(self):
+        """Gets the message of this V0CommandArgs.
+
+        Message to be added with command
+
+        :return: The message of this V0CommandArgs.
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """Sets the message of this V0CommandArgs.
+
+        Message to be added with command
+
+        :param message: The message of this V0CommandArgs.
+        :type: str
+        """
+
+        self._message = message
+
+    @property
+    def app_state(self):
+        """Gets the app_state of this V0CommandArgs.
+
+        The state of app - SHOW/HIDE/DISABLE
+
+        :return: The app_state of this V0CommandArgs.
+        :rtype: str
+        """
+        return self._app_state
+
+    @app_state.setter
+    def app_state(self, app_state):
+        """Sets the app_state of this V0CommandArgs.
+
+        The state of app - SHOW/HIDE/DISABLE
+
+        :param app_state: The app_state of this V0CommandArgs.
+        :type: str
+        """
+
+        self._app_state = app_state
 
     def to_dict(self):
         """Returns the model properties as a dict"""

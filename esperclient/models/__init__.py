@@ -43,6 +43,7 @@ from esperclient.models.device_app_permission import DeviceAppPermission
 from esperclient.models.device_command import DeviceCommand
 from esperclient.models.device_command_enum import DeviceCommandEnum
 from esperclient.models.device_group import DeviceGroup
+from esperclient.models.device_group_partial_update import DeviceGroupPartialUpdate
 from esperclient.models.device_group_update import DeviceGroupUpdate
 from esperclient.models.device_status import DeviceStatus
 from esperclient.models.emm_device import EmmDevice
@@ -53,8 +54,11 @@ from esperclient.models.enterprise_policy_data_device_update_policy import Enter
 from esperclient.models.enterprise_policy_data_frp_googles import EnterprisePolicyDataFrpGoogles
 from esperclient.models.enterprise_policy_data_google_account_permission import EnterprisePolicyDataGoogleAccountPermission
 from esperclient.models.enterprise_policy_data_phone_policy import EnterprisePolicyDataPhonePolicy
+from esperclient.models.enterprise_policy_partial_update import EnterprisePolicyPartialUpdate
 from esperclient.models.enterprise_update_v1 import EnterpriseUpdateV1
 from esperclient.models.enterprise_v1 import EnterpriseV1
+from esperclient.models.event_subscription import EventSubscription
+from esperclient.models.event_subscription_args import EventSubscriptionArgs
 from esperclient.models.geofence import Geofence
 from esperclient.models.geofence_update import GeofenceUpdate
 from esperclient.models.google_emm import GoogleEMM
@@ -66,6 +70,7 @@ from esperclient.models.inline_response200 import InlineResponse200
 from esperclient.models.inline_response2001 import InlineResponse2001
 from esperclient.models.inline_response20010 import InlineResponse20010
 from esperclient.models.inline_response20011 import InlineResponse20011
+from esperclient.models.inline_response20012 import InlineResponse20012
 from esperclient.models.inline_response2002 import InlineResponse2002
 from esperclient.models.inline_response2003 import InlineResponse2003
 from esperclient.models.inline_response2004 import InlineResponse2004
@@ -88,6 +93,4 @@ from esperclient.models.v0_command_schedule_args import V0CommandScheduleArgs
 from esperclient.models.v0_command_schedule_args_time_type_enum import V0CommandScheduleArgsTimeTypeEnum
 from esperclient.models.v0_command_schedule_enum import V0CommandScheduleEnum
 from esperclient.models.v0_command_status import V0CommandStatus
-from esperclient.models.v0_command_status_update import V0CommandStatusUpdate
-from esperclient.models.v0_command_status_update_details import V0CommandStatusUpdateDetails
 from esperclient.models.v0_device_command_enum import V0DeviceCommandEnum

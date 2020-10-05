@@ -34,7 +34,7 @@ import six
 from esperclient.api_client import ApiClient
 
 
-class CommandsV2Api(object):
+class SubscriptionApi(object):
     """NOTE: This class is auto generated.
 
     Do not edit the class manually.
@@ -45,47 +45,47 @@ class CommandsV2Api(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_command(self, enterprise_id, request, **kwargs):
-        """Create a command request
+    def create_subscription(self, data, enterprise_id, **kwargs):
+        """Create a Subscription
 
-        API to create a command request for the device.
+        Returns Subscription instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_command(enterprise_id, request, async_req=True)
+        >>> thread = api.create_subscription(data, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param V0CommandRequest request: The request body to create a command for set of devices or groups (required)
-        :return: V0CommandRequest
+        :param EventSubscriptionArgs data: (required)
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :return: EventSubscription
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_command_with_http_info(enterprise_id, request, **kwargs)
+            return self.create_subscription_with_http_info(data, enterprise_id, **kwargs)
         else:
-            (data) = self.create_command_with_http_info(enterprise_id, request, **kwargs)
+            (data) = self.create_subscription_with_http_info(data, enterprise_id, **kwargs)
             return data
 
-    def create_command_with_http_info(self, enterprise_id, request, **kwargs):
-        """Create a command request
+    def create_subscription_with_http_info(self, data, enterprise_id, **kwargs):
+        """Create a Subscription
 
-        API to create a command request for the device.
+        Returns Subscription instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_command_with_http_info(enterprise_id, request, async_req=True)
+        >>> thread = api.create_subscription_with_http_info(data, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param V0CommandRequest request: The request body to create a command for set of devices or groups (required)
-        :return: V0CommandRequest
+        :param EventSubscriptionArgs data: (required)
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :return: EventSubscription
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'request']
+        all_params = ['data', 'enterprise_id']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -96,18 +96,18 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_command" % key
+                    " to method create_subscription" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `create_subscription`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `create_command`")
-        # verify the required parameter 'request' is set
-        if ('request' not in params or
-                params['request'] is None):
-            raise ValueError("Missing the required parameter `request` when calling `create_command`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `create_subscription`")
 
         collection_formats = {}
 
@@ -123,8 +123,8 @@ class CommandsV2Api(object):
         local_var_files = {}
 
         body_params = None
-        if 'request' in params:
-            body_params = params['request']
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])
@@ -133,14 +133,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/command/', 'POST',
+            '/v0/enterprise/{enterprise_id}/subscription/', 'POST',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='V0CommandRequest',
+            response_type='EventSubscription',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -148,51 +148,47 @@ class CommandsV2Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_command_request_status(self, enterprise_id, request_id, **kwargs):
-        """get status list for command request
+    def delete_subscription(self, subscription_id, enterprise_id, **kwargs):
+        """Delete a subscription
 
-        API to get and filter command request status
+        Empty response
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_command_request_status(enterprise_id, request_id, async_req=True)
+        >>> thread = api.delete_subscription(subscription_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str request_id: ID for the command request (required)
-        :param str device: Filter status result by device id.
-        :param str state: Filter by command state
-        :return: InlineResponse20010
+        :param str subscription_id: A UUID string identifying the subscription. (required)
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_command_request_status_with_http_info(enterprise_id, request_id, **kwargs)
+            return self.delete_subscription_with_http_info(subscription_id, enterprise_id, **kwargs)
         else:
-            (data) = self.get_command_request_status_with_http_info(enterprise_id, request_id, **kwargs)
+            (data) = self.delete_subscription_with_http_info(subscription_id, enterprise_id, **kwargs)
             return data
 
-    def get_command_request_status_with_http_info(self, enterprise_id, request_id, **kwargs):
-        """get status list for command request
+    def delete_subscription_with_http_info(self, subscription_id, enterprise_id, **kwargs):
+        """Delete a subscription
 
-        API to get and filter command request status
+        Empty response
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_command_request_status_with_http_info(enterprise_id, request_id, async_req=True)
+        >>> thread = api.delete_subscription_with_http_info(subscription_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str request_id: ID for the command request (required)
-        :param str device: Filter status result by device id.
-        :param str state: Filter by command state
-        :return: InlineResponse20010
+        :param str subscription_id: A UUID string identifying the subscription. (required)
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'request_id', 'device', 'state']
+        all_params = ['subscription_id', 'enterprise_id']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -203,32 +199,28 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_command_request_status" % key
+                    " to method delete_subscription" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'subscription_id' is set
+        if ('subscription_id' not in params or
+                params['subscription_id'] is None):
+            raise ValueError("Missing the required parameter `subscription_id` when calling `delete_subscription`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_command_request_status`")
-        # verify the required parameter 'request_id' is set
-        if ('request_id' not in params or
-                params['request_id'] is None):
-            raise ValueError("Missing the required parameter `request_id` when calling `get_command_request_status`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `delete_subscription`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'subscription_id' in params:
+            path_params['subscription_id'] = params['subscription_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
-        if 'request_id' in params:
-            path_params['request_id'] = params['request_id']
 
         query_params = []
-        if 'device' in params:
-            query_params.append(('device', params['device']))
-        if 'state' in params:
-            query_params.append(('state', params['state']))
 
         header_params = {}
 
@@ -244,14 +236,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/command/{request_id}/status/', 'GET',
+            '/v0/enterprise/{enterprise_id}/subscription/{subscription_id}/', 'DELETE',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20010',
+            response_type=None,
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -259,49 +251,49 @@ class CommandsV2Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_device_command_history(self, enterprise_id, device_id, **kwargs):
-        """get command history for device
+    def get_all_subscriptions(self, enterprise_id, **kwargs):
+        """List Subscriptions in Enterprise
 
-        API to get and filter deivce command history
+        API to view all the subscriptions in an enterprise
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_command_history(enterprise_id, device_id, async_req=True)
+        >>> thread = api.get_all_subscriptions(enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: Id of the enterprise (required)
-        :param str device_id: Id for the command request (required)
-        :param str state: Filter by command state
-        :return: InlineResponse20010
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_device_command_history_with_http_info(enterprise_id, device_id, **kwargs)
+            return self.get_all_subscriptions_with_http_info(enterprise_id, **kwargs)
         else:
-            (data) = self.get_device_command_history_with_http_info(enterprise_id, device_id, **kwargs)
+            (data) = self.get_all_subscriptions_with_http_info(enterprise_id, **kwargs)
             return data
 
-    def get_device_command_history_with_http_info(self, enterprise_id, device_id, **kwargs):
-        """get command history for device
+    def get_all_subscriptions_with_http_info(self, enterprise_id, **kwargs):
+        """List Subscriptions in Enterprise
 
-        API to get and filter deivce command history
+        API to view all the subscriptions in an enterprise
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_command_history_with_http_info(enterprise_id, device_id, async_req=True)
+        >>> thread = api.get_all_subscriptions_with_http_info(enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: Id of the enterprise (required)
-        :param str device_id: Id for the command request (required)
-        :param str state: Filter by command state
-        :return: InlineResponse20010
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :param int limit: Number of results to return per page.
+        :param int offset: The initial index from which to return the results.
+        :return: InlineResponse20012
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'device_id', 'state']
+        all_params = ['enterprise_id', 'limit', 'offset']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -312,30 +304,26 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_device_command_history" % key
+                    " to method get_all_subscriptions" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_device_command_history`")
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `get_device_command_history`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_all_subscriptions`")
 
         collection_formats = {}
 
         path_params = {}
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
-        if 'device_id' in params:
-            path_params['device_id'] = params['device_id']
 
         query_params = []
-        if 'state' in params:
-            query_params.append(('state', params['state']))
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))
 
         header_params = {}
 
@@ -351,14 +339,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/device/{device_id}/command-history/', 'GET',
+            '/v0/enterprise/{enterprise_id}/subscription/', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20010',
+            response_type='InlineResponse20012',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -366,55 +354,47 @@ class CommandsV2Api(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def list_command_request(self, enterprise_id, **kwargs):
-        """List command requests
+    def get_subscription(self, subscription_id, enterprise_id, **kwargs):
+        """Get subscription information
 
-        API to get and filter command requests
+        Returns subscription instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_command_request(enterprise_id, async_req=True)
+        >>> thread = api.get_subscription(subscription_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str command_type: Filter by type of command request i.e device, group etc
-        :param str devices: Filter by device IDs. Accepts comma separated values.
-        :param str device_type: Filter by device type i.e active, inactive etc
-        :param str command: Filter by command name
-        :param str issued_by: Filter by user. Accepts user id.
-        :return: InlineResponse2009
+        :param str subscription_id: A UUID string identifying the subscription. (required)
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :return: EventSubscription
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.list_command_request_with_http_info(enterprise_id, **kwargs)
+            return self.get_subscription_with_http_info(subscription_id, enterprise_id, **kwargs)
         else:
-            (data) = self.list_command_request_with_http_info(enterprise_id, **kwargs)
+            (data) = self.get_subscription_with_http_info(subscription_id, enterprise_id, **kwargs)
             return data
 
-    def list_command_request_with_http_info(self, enterprise_id, **kwargs):
-        """List command requests
+    def get_subscription_with_http_info(self, subscription_id, enterprise_id, **kwargs):
+        """Get subscription information
 
-        API to get and filter command requests
+        Returns subscription instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_command_request_with_http_info(enterprise_id, async_req=True)
+        >>> thread = api.get_subscription_with_http_info(subscription_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: ID of the enterprise (required)
-        :param str command_type: Filter by type of command request i.e device, group etc
-        :param str devices: Filter by device IDs. Accepts comma separated values.
-        :param str device_type: Filter by device type i.e active, inactive etc
-        :param str command: Filter by command name
-        :param str issued_by: Filter by user. Accepts user id.
-        :return: InlineResponse2009
+        :param str subscription_id: A UUID string identifying the subscription. (required)
+        :param str enterprise_id: A UUID string identifying the enterprise. (required)
+        :return: EventSubscription
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'command_type', 'devices', 'device_type', 'command', 'issued_by']
+        all_params = ['subscription_id', 'enterprise_id']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -425,32 +405,28 @@ class CommandsV2Api(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_command_request" % key
+                    " to method get_subscription" % key
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'subscription_id' is set
+        if ('subscription_id' not in params or
+                params['subscription_id'] is None):
+            raise ValueError("Missing the required parameter `subscription_id` when calling `get_subscription`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `list_command_request`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_subscription`")
 
         collection_formats = {}
 
         path_params = {}
+        if 'subscription_id' in params:
+            path_params['subscription_id'] = params['subscription_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
 
         query_params = []
-        if 'command_type' in params:
-            query_params.append(('command_type', params['command_type']))
-        if 'devices' in params:
-            query_params.append(('devices', params['devices']))
-        if 'device_type' in params:
-            query_params.append(('device_type', params['device_type']))
-        if 'command' in params:
-            query_params.append(('command', params['command']))
-        if 'issued_by' in params:
-            query_params.append(('issued_by', params['issued_by']))
 
         header_params = {}
 
@@ -466,14 +442,14 @@ class CommandsV2Api(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/command/', 'GET',
+            '/v0/enterprise/{enterprise_id}/subscription/{subscription_id}/', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2009',
+            response_type='EventSubscription',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

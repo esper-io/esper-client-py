@@ -56,7 +56,7 @@ class DeviceGroupApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param DeviceGroup data: (required)
+        :param DeviceGroupUpdate data: (required)
         :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
@@ -79,7 +79,7 @@ class DeviceGroupApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param DeviceGroup data: (required)
+        :param DeviceGroupUpdate data: (required)
         :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
@@ -262,7 +262,7 @@ class DeviceGroupApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param str name: filter by group name
+        :param str name: Filter by group name
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2007
@@ -287,7 +287,7 @@ class DeviceGroupApi(object):
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param str name: filter by group name
+        :param str name: Filter by group name
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2007
@@ -473,7 +473,8 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param DeviceGroupUpdate data: (required)
+        :param DeviceGroupPartialUpdate data: (required)
+        :param str action: add / remove / rename / move
         :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
@@ -497,13 +498,14 @@ class DeviceGroupApi(object):
         :param async_req bool
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param DeviceGroupUpdate data: (required)
+        :param DeviceGroupPartialUpdate data: (required)
+        :param str action: add / remove / rename / move
         :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['group_id', 'enterprise_id', 'data']
+        all_params = ['group_id', 'enterprise_id', 'data', 'action']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -540,6 +542,8 @@ class DeviceGroupApi(object):
             path_params['enterprise_id'] = params['enterprise_id']
 
         query_params = []
+        if 'action' in params:
+            query_params.append(('action', params['action']))
 
         header_params = {}
 
@@ -585,6 +589,7 @@ class DeviceGroupApi(object):
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
         :param DeviceGroupUpdate data: (required)
+        :param str action: add / remove / rename / move
         :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
@@ -609,12 +614,13 @@ class DeviceGroupApi(object):
         :param str group_id: A UUID string identifying this enterprise device group. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
         :param DeviceGroupUpdate data: (required)
+        :param str action: add / remove / rename / move
         :return: DeviceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['group_id', 'enterprise_id', 'data']
+        all_params = ['group_id', 'enterprise_id', 'data', 'action']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -651,6 +657,8 @@ class DeviceGroupApi(object):
             path_params['enterprise_id'] = params['enterprise_id']
 
         query_params = []
+        if 'action' in params:
+            query_params.append(('action', params['action']))
 
         header_params = {}
 

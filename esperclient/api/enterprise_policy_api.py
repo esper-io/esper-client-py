@@ -477,7 +477,7 @@ class EnterprisePolicyApi(object):
         :param async_req bool
         :param int policy_id: An integer identifying this EnterprisePolicy. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterprisePolicy data: (required)
+        :param EnterprisePolicyPartialUpdate data: (required)
         :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.
@@ -501,7 +501,7 @@ class EnterprisePolicyApi(object):
         :param async_req bool
         :param int policy_id: An integer identifying this EnterprisePolicy. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
-        :param EnterprisePolicy data: (required)
+        :param EnterprisePolicyPartialUpdate data: (required)
         :return: EnterprisePolicy
                  If the method is called asynchronously,
                  returns the request thread.

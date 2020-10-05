@@ -791,7 +791,7 @@ class EnterprisePolicyData(object):
         :param settings_access_level: The settings_access_level of this EnterprisePolicyData.
         :type: str
         """
-        allowed_values = ["SYSTEM", "SHOONYA"]
+        allowed_values = ["SYSTEM", "SHOONYA", "NONE"]
         if settings_access_level not in allowed_values:
             raise ValueError(
                 "Invalid value for `settings_access_level` ({0}), must be one of {1}"
