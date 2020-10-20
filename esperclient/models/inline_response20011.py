@@ -29,7 +29,7 @@ import re
 
 import six
 
-from esperclient.models.geofence import Geofence
+from esperclient.models.content import Content
 
 
 class InlineResponse20011(object):
@@ -49,7 +49,7 @@ class InlineResponse20011(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[Geofence]'
+        'results': 'list[Content]'
     }
 
     attribute_map = {
@@ -146,7 +146,7 @@ class InlineResponse20011(object):
 
 
         :return: The results of this InlineResponse20011.
-        :rtype: list[Geofence]
+        :rtype: list[Content]
         """
         return self._results
 
@@ -156,7 +156,7 @@ class InlineResponse20011(object):
 
 
         :param results: The results of this InlineResponse20011.
-        :type: list[Geofence]
+        :type: list[Content]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")

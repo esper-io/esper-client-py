@@ -7,7 +7,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 
 
 - API version: 1.0.0
-- Package version: 0.1.0
+- Package version: 0.1.1
 
 
 ## Requirements.
@@ -94,6 +94,11 @@ Class | Method | HTTP request
 *CommandsV2Api* | [**get_command_request_status**](docs/CommandsV2Api.md#get_command_request_status) | **GET** /v0/enterprise/{enterprise_id}/command/{request_id}/status/
 *CommandsV2Api* | [**get_device_command_history**](docs/CommandsV2Api.md#get_device_command_history) | **GET** /v0/enterprise/{enterprise_id}/device/{device_id}/command-history/
 *CommandsV2Api* | [**list_command_request**](docs/CommandsV2Api.md#list_command_request) | **GET** /v0/enterprise/{enterprise_id}/command/
+*ContentApi* | [**delete_content**](docs/ContentApi.md#delete_content) | **DELETE** /v0/enterprise/{enterprise_id}/content/{content_id}/
+*ContentApi* | [**get_all_content**](docs/ContentApi.md#get_all_content) | **GET** /v0/enterprise/{enterprise_id}/content/
+*ContentApi* | [**get_content**](docs/ContentApi.md#get_content) | **GET** /v0/enterprise/{enterprise_id}/content/{content_id}/
+*ContentApi* | [**patch_content**](docs/ContentApi.md#patch_content) | **PATCH** /v0/enterprise/{enterprise_id}/content/{content_id}/
+*ContentApi* | [**post_content**](docs/ContentApi.md#post_content) | **POST** /v0/enterprise/{enterprise_id}/content/upload/
 *DeviceApi* | [**get_all_devices**](docs/DeviceApi.md#get_all_devices) | **GET** /enterprise/{enterprise_id}/device/
 *DeviceApi* | [**get_app_installs**](docs/DeviceApi.md#get_app_installs) | **GET** /enterprise/{enterprise_id}/device/{device_id}/install/
 *DeviceApi* | [**get_device_app_by_id**](docs/DeviceApi.md#get_device_app_by_id) | **GET** /enterprise/{enterprise_id}/device/{device_id}/app/{app_id}/
@@ -141,6 +146,8 @@ Class | Method | HTTP request
  - [ApplicationVersion](docs/ApplicationVersion.md)
  - [CommandArgs](docs/CommandArgs.md)
  - [CommandRequest](docs/CommandRequest.md)
+ - [Content](docs/Content.md)
+ - [Data](docs/Data.md)
  - [Device](docs/Device.md)
  - [DeviceApp](docs/DeviceApp.md)
  - [DeviceAppPermission](docs/DeviceAppPermission.md)
@@ -173,6 +180,7 @@ Class | Method | HTTP request
  - [InlineResponse20010](docs/InlineResponse20010.md)
  - [InlineResponse20011](docs/InlineResponse20011.md)
  - [InlineResponse20012](docs/InlineResponse20012.md)
+ - [InlineResponse20013](docs/InlineResponse20013.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
@@ -183,6 +191,7 @@ Class | Method | HTTP request
  - [InlineResponse2009](docs/InlineResponse2009.md)
  - [InlineResponse201](docs/InlineResponse201.md)
  - [InstallDevices](docs/InstallDevices.md)
+ - [Owner](docs/Owner.md)
  - [TokenInfoV1](docs/TokenInfoV1.md)
  - [TokenRenewV0](docs/TokenRenewV0.md)
  - [V0CommandArgs](docs/V0CommandArgs.md)

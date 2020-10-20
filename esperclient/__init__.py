@@ -30,6 +30,7 @@ from __future__ import absolute_import
 from esperclient.api.application_api import ApplicationApi
 from esperclient.api.commands_api import CommandsApi
 from esperclient.api.commands_v2_api import CommandsV2Api
+from esperclient.api.content_api import ContentApi
 from esperclient.api.device_api import DeviceApi
 from esperclient.api.device_group_api import DeviceGroupApi
 from esperclient.api.enterprise_api import EnterpriseApi
@@ -53,6 +54,8 @@ from esperclient.models.application import Application
 from esperclient.models.application_version import ApplicationVersion
 from esperclient.models.command_args import CommandArgs
 from esperclient.models.command_request import CommandRequest
+from esperclient.models.content import Content
+from esperclient.models.data import Data
 from esperclient.models.device import Device
 from esperclient.models.device_app import DeviceApp
 from esperclient.models.device_app_permission import DeviceAppPermission
@@ -87,6 +90,7 @@ from esperclient.models.inline_response2001 import InlineResponse2001
 from esperclient.models.inline_response20010 import InlineResponse20010
 from esperclient.models.inline_response20011 import InlineResponse20011
 from esperclient.models.inline_response20012 import InlineResponse20012
+from esperclient.models.inline_response20013 import InlineResponse20013
 from esperclient.models.inline_response2002 import InlineResponse2002
 from esperclient.models.inline_response2003 import InlineResponse2003
 from esperclient.models.inline_response2004 import InlineResponse2004
@@ -97,6 +101,7 @@ from esperclient.models.inline_response2008 import InlineResponse2008
 from esperclient.models.inline_response2009 import InlineResponse2009
 from esperclient.models.inline_response201 import InlineResponse201
 from esperclient.models.install_devices import InstallDevices
+from esperclient.models.owner import Owner
 from esperclient.models.settings_gps_state_enum import SettingsGPSStateEnum
 from esperclient.models.settings_rotate_state_enum import SettingsRotateStateEnum
 from esperclient.models.settings_volume_stream_enum import SettingsVolumeStreamEnum

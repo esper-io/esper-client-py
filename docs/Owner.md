@@ -1,15 +1,15 @@
-# InlineResponse20011
-> esperclient.models.inline_response20011
+# Owner
+> esperclient.models.owner
 
 ### Description
+
+Owner of the content
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** |  | 
-**next** | **str** |  | [optional] 
-**previous** | **str** |  | [optional] 
-**results** | [**list[Content]**](Content.md) |  | 
+**id** | **int** |  | [optional] 
+**username** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

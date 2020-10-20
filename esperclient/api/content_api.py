@@ -34,7 +34,7 @@ import six
 from esperclient.api_client import ApiClient
 
 
-class GeofenceApi(object):
+class ContentApi(object):
     """NOTE: This class is auto generated.
 
     Do not edit the class manually.
@@ -45,47 +45,47 @@ class GeofenceApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_geofence(self, data, enterprise_id, **kwargs):
-        """Create a geofence
+    def delete_content(self, content_id, enterprise_id, **kwargs):
+        """Delete Content
 
-        Returns Geofence instance
+        Empty response
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_geofence(data, enterprise_id, async_req=True)
+        >>> thread = api.delete_content(content_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param Geofence data: (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :return: Geofence
+        :param str content_id: A UUID string identifying a content instance. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_geofence_with_http_info(data, enterprise_id, **kwargs)
+            return self.delete_content_with_http_info(content_id, enterprise_id, **kwargs)
         else:
-            (data) = self.create_geofence_with_http_info(data, enterprise_id, **kwargs)
+            (data) = self.delete_content_with_http_info(content_id, enterprise_id, **kwargs)
             return data
 
-    def create_geofence_with_http_info(self, data, enterprise_id, **kwargs):
-        """Create a geofence
+    def delete_content_with_http_info(self, content_id, enterprise_id, **kwargs):
+        """Delete Content
 
-        Returns Geofence instance
+        Empty response
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_geofence_with_http_info(data, enterprise_id, async_req=True)
+        >>> thread = api.delete_content_with_http_info(content_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param Geofence data: (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :return: Geofence
+        :param str content_id: A UUID string identifying a content instance. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['data', 'enterprise_id']
+        all_params = ['content_id', 'enterprise_id']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -96,127 +96,24 @@ class GeofenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_geofence" % key
+                    " to method delete_content" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
-            raise ValueError("Missing the required parameter `data` when calling `create_geofence`")
+        # verify the required parameter 'content_id' is set
+        if ('content_id' not in params or
+                params['content_id'] is None):
+            raise ValueError("Missing the required parameter `content_id` when calling `delete_content`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `create_geofence`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `delete_content`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'enterprise_id' in params:
-            path_params['enterprise_id'] = params['enterprise_id']
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in params:
-            body_params = params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
-
-        # Authentication setting
-        auth_settings = ['apiKey']
-
-        return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/geofence/', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Geofence',
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def delete_geofence(self, geofence_id, enterprise_id, **kwargs):
-        """Delete a geofence
-
-        Empty response
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_geofence(geofence_id, enterprise_id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.delete_geofence_with_http_info(geofence_id, enterprise_id, **kwargs)
-        else:
-            (data) = self.delete_geofence_with_http_info(geofence_id, enterprise_id, **kwargs)
-            return data
-
-    def delete_geofence_with_http_info(self, geofence_id, enterprise_id, **kwargs):
-        """Delete a geofence
-
-        Empty response
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_geofence_with_http_info(geofence_id, enterprise_id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['geofence_id', 'enterprise_id']
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_geofence" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'geofence_id' is set
-        if ('geofence_id' not in params or
-                params['geofence_id'] is None):
-            raise ValueError("Missing the required parameter `geofence_id` when calling `delete_geofence`")
-        # verify the required parameter 'enterprise_id' is set
-        if ('enterprise_id' not in params or
-                params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `delete_geofence`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'geofence_id' in params:
-            path_params['geofence_id'] = params['geofence_id']
+        if 'content_id' in params:
+            path_params['content_id'] = params['content_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
 
@@ -236,7 +133,7 @@ class GeofenceApi(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/geofence/{geofence_id}/', 'DELETE',
+            '/v0/enterprise/{enterprise_id}/content/{content_id}/', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -251,46 +148,46 @@ class GeofenceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_all_geofences(self, enterprise_id, **kwargs):
-        """List Geofences in Enterprise
+    def get_all_content(self, enterprise_id, **kwargs):
+        """List content in the enterprise
 
-        API to view all the geofences in an enterprise
+        Returns Content list
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_all_geofences(enterprise_id, async_req=True)
+        >>> thread = api.get_all_content(enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :param str search: A search term.
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param str search: Seach by tags, description
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse20012
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_all_geofences_with_http_info(enterprise_id, **kwargs)
+            return self.get_all_content_with_http_info(enterprise_id, **kwargs)
         else:
-            (data) = self.get_all_geofences_with_http_info(enterprise_id, **kwargs)
+            (data) = self.get_all_content_with_http_info(enterprise_id, **kwargs)
             return data
 
-    def get_all_geofences_with_http_info(self, enterprise_id, **kwargs):
-        """List Geofences in Enterprise
+    def get_all_content_with_http_info(self, enterprise_id, **kwargs):
+        """List content in the enterprise
 
-        API to view all the geofences in an enterprise
+        Returns Content list
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_all_geofences_with_http_info(enterprise_id, async_req=True)
+        >>> thread = api.get_all_content_with_http_info(enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :param str search: A search term.
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param str search: Seach by tags, description
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse20012
+        :return: InlineResponse20011
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -306,14 +203,14 @@ class GeofenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_all_geofences" % key
+                    " to method get_all_content" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_all_geofences`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_all_content`")
 
         collection_formats = {}
 
@@ -343,14 +240,14 @@ class GeofenceApi(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/geofence/', 'GET',
+            '/v0/enterprise/{enterprise_id}/content/', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',
+            response_type='InlineResponse20011',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -358,47 +255,47 @@ class GeofenceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_geofence(self, geofence_id, enterprise_id, **kwargs):
-        """Get geofence information
+    def get_content(self, content_id, enterprise_id, **kwargs):
+        """Get content information
 
-        Returns geofence instance
+        Returns Content instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_geofence(geofence_id, enterprise_id, async_req=True)
+        >>> thread = api.get_content(content_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :return: Geofence
+        :param str content_id: A UUID string identifying a content instance. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: Content
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_geofence_with_http_info(geofence_id, enterprise_id, **kwargs)
+            return self.get_content_with_http_info(content_id, enterprise_id, **kwargs)
         else:
-            (data) = self.get_geofence_with_http_info(geofence_id, enterprise_id, **kwargs)
+            (data) = self.get_content_with_http_info(content_id, enterprise_id, **kwargs)
             return data
 
-    def get_geofence_with_http_info(self, geofence_id, enterprise_id, **kwargs):
-        """Get geofence information
+    def get_content_with_http_info(self, content_id, enterprise_id, **kwargs):
+        """Get content information
 
-        Returns geofence instance
+        Returns Content instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_geofence_with_http_info(geofence_id, enterprise_id, async_req=True)
+        >>> thread = api.get_content_with_http_info(content_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :return: Geofence
+        :param str content_id: A UUID string identifying a content instance. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :return: Content
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['geofence_id', 'enterprise_id']
+        all_params = ['content_id', 'enterprise_id']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -409,24 +306,24 @@ class GeofenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_geofence" % key
+                    " to method get_content" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'geofence_id' is set
-        if ('geofence_id' not in params or
-                params['geofence_id'] is None):
-            raise ValueError("Missing the required parameter `geofence_id` when calling `get_geofence`")
+        # verify the required parameter 'content_id' is set
+        if ('content_id' not in params or
+                params['content_id'] is None):
+            raise ValueError("Missing the required parameter `content_id` when calling `get_content`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_geofence`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `get_content`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'geofence_id' in params:
-            path_params['geofence_id'] = params['geofence_id']
+        if 'content_id' in params:
+            path_params['content_id'] = params['content_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
 
@@ -446,14 +343,14 @@ class GeofenceApi(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/geofence/{geofence_id}/', 'GET',
+            '/v0/enterprise/{enterprise_id}/content/{content_id}/', 'GET',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Geofence',
+            response_type='Content',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -461,49 +358,47 @@ class GeofenceApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def partial_update_geofence(self, geofence_id, enterprise_id, data, **kwargs):
-        """Partially updates geofence information
+    def patch_content(self, content_id, enterprise_id, **kwargs):
+        """Patch a content instance
 
-        Returns geofence instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.partial_update_geofence(geofence_id, enterprise_id, data, async_req=True)
+        >>> thread = api.patch_content(content_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :param GeofenceUpdate data: (required)
-        :return: Geofence
+        :param str content_id: A UUID string identifying a content instance. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param Data data:
+        :return: Content
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.partial_update_geofence_with_http_info(geofence_id, enterprise_id, data, **kwargs)
+            return self.patch_content_with_http_info(content_id, enterprise_id, **kwargs)
         else:
-            (data) = self.partial_update_geofence_with_http_info(geofence_id, enterprise_id, data, **kwargs)
+            (data) = self.patch_content_with_http_info(content_id, enterprise_id, **kwargs)
             return data
 
-    def partial_update_geofence_with_http_info(self, geofence_id, enterprise_id, data, **kwargs):
-        """Partially updates geofence information
+    def patch_content_with_http_info(self, content_id, enterprise_id, **kwargs):
+        """Patch a content instance
 
-        Returns geofence instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.partial_update_geofence_with_http_info(geofence_id, enterprise_id, data, async_req=True)
+        >>> thread = api.patch_content_with_http_info(content_id, enterprise_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :param GeofenceUpdate data: (required)
-        :return: Geofence
+        :param str content_id: A UUID string identifying a content instance. (required)
+        :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param Data data:
+        :return: Content
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['geofence_id', 'enterprise_id', 'data']
+        all_params = ['content_id', 'enterprise_id', 'data']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -514,139 +409,24 @@ class GeofenceApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method partial_update_geofence" % key
+                    " to method patch_content" % key
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'geofence_id' is set
-        if ('geofence_id' not in params or
-                params['geofence_id'] is None):
-            raise ValueError("Missing the required parameter `geofence_id` when calling `partial_update_geofence`")
+        # verify the required parameter 'content_id' is set
+        if ('content_id' not in params or
+                params['content_id'] is None):
+            raise ValueError("Missing the required parameter `content_id` when calling `patch_content`")
         # verify the required parameter 'enterprise_id' is set
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `partial_update_geofence`")
-        # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
-            raise ValueError("Missing the required parameter `data` when calling `partial_update_geofence`")
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `patch_content`")
 
         collection_formats = {}
 
         path_params = {}
-        if 'geofence_id' in params:
-            path_params['geofence_id'] = params['geofence_id']
-        if 'enterprise_id' in params:
-            path_params['enterprise_id'] = params['enterprise_id']
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in params:
-            body_params = params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])
-
-        # Authentication setting
-        auth_settings = ['apiKey']
-
-        return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/geofence/{geofence_id}/', 'PATCH',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Geofence',
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def update_geofence(self, geofence_id, enterprise_id, data, **kwargs):
-        """Update geofence information
-
-        Returns geofence instance
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_geofence(geofence_id, enterprise_id, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :param Geofence data: (required)
-        :return: Geofence
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_geofence_with_http_info(geofence_id, enterprise_id, data, **kwargs)
-        else:
-            (data) = self.update_geofence_with_http_info(geofence_id, enterprise_id, data, **kwargs)
-            return data
-
-    def update_geofence_with_http_info(self, geofence_id, enterprise_id, data, **kwargs):
-        """Update geofence information
-
-        Returns geofence instance
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_geofence_with_http_info(geofence_id, enterprise_id, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str geofence_id: A UUID string identifying the geofence. (required)
-        :param str enterprise_id: A UUID string identifying the enterprise. (required)
-        :param Geofence data: (required)
-        :return: Geofence
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['geofence_id', 'enterprise_id', 'data']
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method update_geofence" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'geofence_id' is set
-        if ('geofence_id' not in params or
-                params['geofence_id'] is None):
-            raise ValueError("Missing the required parameter `geofence_id` when calling `update_geofence`")
-        # verify the required parameter 'enterprise_id' is set
-        if ('enterprise_id' not in params or
-                params['enterprise_id'] is None):
-            raise ValueError("Missing the required parameter `enterprise_id` when calling `update_geofence`")
-        # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
-            raise ValueError("Missing the required parameter `data` when calling `update_geofence`")
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'geofence_id' in params:
-            path_params['geofence_id'] = params['geofence_id']
+        if 'content_id' in params:
+            path_params['content_id'] = params['content_id']
         if 'enterprise_id' in params:
             path_params['enterprise_id'] = params['enterprise_id']
 
@@ -668,14 +448,121 @@ class GeofenceApi(object):
         auth_settings = ['apiKey']
 
         return self.api_client.call_api(
-            '/v0/enterprise/{enterprise_id}/geofence/{geofence_id}/', 'PUT',
+            '/v0/enterprise/{enterprise_id}/content/{content_id}/', 'PATCH',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Geofence',
+            response_type='Content',
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def post_content(self, enterprise_id, app_file, **kwargs):
+        """Upload new content
+
+        Returns Content instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_content(enterprise_id, app_file, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param file app_file: Valid file to upload (required)
+        :return: Content
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.post_content_with_http_info(enterprise_id, app_file, **kwargs)
+        else:
+            (data) = self.post_content_with_http_info(enterprise_id, app_file, **kwargs)
+            return data
+
+    def post_content_with_http_info(self, enterprise_id, app_file, **kwargs):
+        """Upload new content
+
+        Returns Content instance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.post_content_with_http_info(enterprise_id, app_file, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise_id: A UUID string identifying this enterprise. (required)
+        :param file app_file: Valid file to upload (required)
+        :return: Content
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['enterprise_id', 'app_file']
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method post_content" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'enterprise_id' is set
+        if ('enterprise_id' not in params or
+                params['enterprise_id'] is None):
+            raise ValueError("Missing the required parameter `enterprise_id` when calling `post_content`")
+        # verify the required parameter 'app_file' is set
+        if ('app_file' not in params or
+                params['app_file'] is None):
+            raise ValueError("Missing the required parameter `app_file` when calling `post_content`")
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'enterprise_id' in params:
+            path_params['enterprise_id'] = params['enterprise_id']
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'app_file' in params:
+            local_var_files['app_file'] = params['app_file']
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(
+            ['multipart/form-data'])
+
+        # Authentication setting
+        auth_settings = ['apiKey']
+
+        return self.api_client.call_api(
+            '/v0/enterprise/{enterprise_id}/content/upload/', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Content',
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_geofences**
-> InlineResponse20011 get_all_geofences(enterprise_id, search=search, limit=limit, offset=offset)
+> InlineResponse20012 get_all_geofences(enterprise_id, search=search, limit=limit, offset=offset)
 
 List Geofences in Enterprise
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 

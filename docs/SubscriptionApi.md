@@ -116,7 +116,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_subscriptions**
-> InlineResponse20012 get_all_subscriptions(enterprise_id, limit=limit, offset=offset)
+> InlineResponse20013 get_all_subscriptions(enterprise_id, limit=limit, offset=offset)
 
 List Subscriptions in Enterprise
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 

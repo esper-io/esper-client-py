@@ -1,12 +1,19 @@
 language: python
 python:
   - "3.6"
-
-env:
-  - PYTHONPATH=.
-
-# command to install dependencies
-install: "pip install -r requirements.txt"
-
-# command to run tests
-script: python test/scripts/test_env.py
+jobs:
+ include:
+   - stage: Perform tests
+     env:
+      - PYTHONPATH=.
+     if: tag IS present
+     install: "pip install -r requirements.txt"
+     script: python test/scripts/test_env.py
+   - stage: Push SDK to pypi
+     if: tag IS present
+     install: "pip install setuptools wheel twine"
+     script:
+      #script here
+      - python setup.py sdist bdist_wheel
+      - ls 
+      - twine upload dist/*
