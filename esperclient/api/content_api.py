@@ -463,47 +463,47 @@ class ContentApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_content(self, enterprise_id, app_file, **kwargs):
+    def post_content(self, enterprise_id, key, **kwargs):
         """Upload new content
 
         Returns Content instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_content(enterprise_id, app_file, async_req=True)
+        >>> thread = api.post_content(enterprise_id, key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param file app_file: Valid file to upload (required)
+        :param file key: Valid file to upload (required)
         :return: Content
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_content_with_http_info(enterprise_id, app_file, **kwargs)
+            return self.post_content_with_http_info(enterprise_id, key, **kwargs)
         else:
-            (data) = self.post_content_with_http_info(enterprise_id, app_file, **kwargs)
+            (data) = self.post_content_with_http_info(enterprise_id, key, **kwargs)
             return data
 
-    def post_content_with_http_info(self, enterprise_id, app_file, **kwargs):
+    def post_content_with_http_info(self, enterprise_id, key, **kwargs):
         """Upload new content
 
         Returns Content instance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_content_with_http_info(enterprise_id, app_file, async_req=True)
+        >>> thread = api.post_content_with_http_info(enterprise_id, key, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str enterprise_id: A UUID string identifying this enterprise. (required)
-        :param file app_file: Valid file to upload (required)
+        :param file key: Valid file to upload (required)
         :return: Content
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['enterprise_id', 'app_file']
+        all_params = ['enterprise_id', 'key']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -522,10 +522,10 @@ class ContentApi(object):
         if ('enterprise_id' not in params or
                 params['enterprise_id'] is None):
             raise ValueError("Missing the required parameter `enterprise_id` when calling `post_content`")
-        # verify the required parameter 'app_file' is set
-        if ('app_file' not in params or
-                params['app_file'] is None):
-            raise ValueError("Missing the required parameter `app_file` when calling `post_content`")
+        # verify the required parameter 'key' is set
+        if ('key' not in params or
+                params['key'] is None):
+            raise ValueError("Missing the required parameter `key` when calling `post_content`")
 
         collection_formats = {}
 
@@ -539,8 +539,8 @@ class ContentApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'app_file' in params:
-            local_var_files['app_file'] = params['app_file']
+        if 'key' in params:
+            local_var_files['key'] = params['key']
 
         body_params = None
         # HTTP header `Accept`

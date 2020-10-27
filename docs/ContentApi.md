@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_content**
-> Content post_content(enterprise_id, app_file)
+> Content post_content(enterprise_id, key)
 
 Upload new content
 
@@ -247,11 +247,11 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
 api_instance = esperclient.ContentApi(esperclient.ApiClient(configuration))
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
-app_file = '/path/to/file.txt' # file | Valid file to upload
+key = '/path/to/file.txt' # file | Valid file to upload
 
 try:
     # Upload new content
-    api_response = api_instance.post_content(enterprise_id, app_file)
+    api_response = api_instance.post_content(enterprise_id, key)
     print(api_response)
 except ApiException as e:
     print("Exception when calling ContentApi->post_content: %s\n" % e)
@@ -262,7 +262,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
- **app_file** | **file**| Valid file to upload | 
+ **key** | **file**| Valid file to upload | 
 
 ### Return type
 
