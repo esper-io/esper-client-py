@@ -2,6 +2,10 @@
 > esperclient.models.device
 
 ### Description
+A class which describes an Esper-provisioned device.  It contains, as properties, a multitude of device qualities.  Objects of this class are commonly returned from API calls, sometimes in lists.
+
+Returned by:
+* [get_device_by_id](DeviceApi.md#get_device_by_id)
 
 ## Properties
 Name | Type | Description | Notes

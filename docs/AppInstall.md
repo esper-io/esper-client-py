@@ -2,6 +2,7 @@
 > esperclient.models.app_install
 
 ### Description
+A class which encapsulates the metadata of a single app, installed on one device.
 
 ## Properties
 Name | Type | Description | Notes
