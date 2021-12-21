@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 # **get_device_event**
 > InlineResponse2006 get_device_event(enterprise_id, device_id, latest_event)
 
-Fetch the latest registered device event from the Esper cloud servers, for one specified device.
+Fetch the latest device event registered by the Esper cloud servers, for one specified device.
 
 Returns a list of DeviceStatus objects.
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
  **device_id** | **str**| A UUID string identifying device. | 
- **latest_event** | **int**| Flag to get latest event | 
+ **latest_event** | **int**| A necessary flag to get latest event. | May be any positive integer. Flag value has no effect on return results.
 
 ### Return type
 
