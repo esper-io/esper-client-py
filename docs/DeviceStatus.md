@@ -2,6 +2,7 @@
 > esperclient.models.device_status
 
 ### Description
+A class which encapsulates the data from one device event from a single device.
 
 ## Properties
 Name | Type | Description | Notes

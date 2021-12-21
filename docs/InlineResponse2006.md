@@ -2,6 +2,10 @@
 > esperclient.models.inline_response2006
 
 ### Description
+A class which encapsulates the data returned from an API call.  Returned data is in the form of a list of [DeviceStatus](DeviceStatus.md) objects.  Objects of this class are commonly returned from API calls.
+
+Returned by:
+* [get_device_event](DeviceApi.md#get_device_event)
 
 ## Properties
 Name | Type | Description | Notes
