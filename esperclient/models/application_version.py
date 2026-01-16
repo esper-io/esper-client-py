@@ -46,6 +46,7 @@ class ApplicationVersion(object):
     swagger_types = {
         'id': 'str',
         'version_code': 'str',
+        'version_name': 'str',
         'build_number': 'str',
         'hash_string': 'str',
         'min_sdk_version': 'str',
@@ -56,6 +57,7 @@ class ApplicationVersion(object):
     attribute_map = {
         'id': 'id',
         'version_code': 'version_code',
+        'version_name': 'version_name',
         'build_number': 'build_number',
         'hash_string': 'hash_string',
         'min_sdk_version': 'min_sdk_version',
@@ -63,11 +65,12 @@ class ApplicationVersion(object):
         'download_url': 'download_url'
     }
 
-    def __init__(self, id=None, version_code=None, build_number=None, hash_string=None, min_sdk_version=None, target_sdk_version=None, download_url=None):
+    def __init__(self, id=None, version_code=None, version_name=None, build_number=None, hash_string=None, min_sdk_version=None, target_sdk_version=None, download_url=None):
         """ApplicationVersion - a model defined in Swagger"""
 
         self._id = None
         self._version_code = None
+        self._version_name = None
         self._build_number = None
         self._hash_string = None
         self._min_sdk_version = None
@@ -79,6 +82,8 @@ class ApplicationVersion(object):
             self.id = id
         if version_code is not None:
             self.version_code = version_code
+        if version_name is not None:
+            self.version_name = version_name
         if build_number is not None:
             self.build_number = build_number
         if hash_string is not None:
@@ -135,6 +140,33 @@ class ApplicationVersion(object):
             raise ValueError("Invalid value for `version_code`, length must be greater than or equal to `1`")
 
         self._version_code = version_code
+
+    @property
+    def version_name(self):
+        """Gets the version_name of this ApplicationVersion.
+
+        Human-readable version string (e.g., "1.0.02"). Available when legacy_format=false.
+
+        :return: The version_name of this ApplicationVersion.
+        :rtype: str
+        """
+        return self._version_name
+
+    @version_name.setter
+    def version_name(self, version_name):
+        """Sets the version_name of this ApplicationVersion.
+
+        Human-readable version string (e.g., "1.0.02"). Available when legacy_format=false.
+
+        :param version_name: The version_name of this ApplicationVersion.
+        :type: str
+        """
+        if version_name is not None and len(version_name) > 128:
+            raise ValueError("Invalid value for `version_name`, length must be less than or equal to `128`")
+        if version_name is not None and len(version_name) < 1:
+            raise ValueError("Invalid value for `version_name`, length must be greater than or equal to `1`")
+
+        self._version_name = version_name
 
     @property
     def build_number(self):

@@ -46,6 +46,7 @@ class AppInstallVersion(object):
     swagger_types = {
         'app_version_id': 'str',
         'version_code': 'str',
+        'version_name': 'str',
         'build_number': 'str',
         'hash_string': 'str'
     }
@@ -53,15 +54,17 @@ class AppInstallVersion(object):
     attribute_map = {
         'app_version_id': 'app_version_id',
         'version_code': 'version_code',
+        'version_name': 'version_name',
         'build_number': 'build_number',
         'hash_string': 'hash_string'
     }
 
-    def __init__(self, app_version_id=None, version_code=None, build_number=None, hash_string=None):
+    def __init__(self, app_version_id=None, version_code=None, version_name=None, build_number=None, hash_string=None):
         """AppInstallVersion - a model defined in Swagger"""
 
         self._app_version_id = None
         self._version_code = None
+        self._version_name = None
         self._build_number = None
         self._hash_string = None
         self.discriminator = None
@@ -70,6 +73,8 @@ class AppInstallVersion(object):
             self.app_version_id = app_version_id
         if version_code is not None:
             self.version_code = version_code
+        if version_name is not None:
+            self.version_name = version_name
         if build_number is not None:
             self.build_number = build_number
         if hash_string is not None:
@@ -116,6 +121,33 @@ class AppInstallVersion(object):
         """
 
         self._version_code = version_code
+
+    @property
+    def version_name(self):
+        """Gets the version_name of this AppInstallVersion.
+
+        Human-readable version string (e.g., "1.0.02"). Available when legacy_format=false.
+
+        :return: The version_name of this AppInstallVersion.
+        :rtype: str
+        """
+        return self._version_name
+
+    @version_name.setter
+    def version_name(self, version_name):
+        """Sets the version_name of this AppInstallVersion.
+
+        Human-readable version string (e.g., "1.0.02"). Available when legacy_format=false.
+
+        :param version_name: The version_name of this AppInstallVersion.
+        :type: str
+        """
+        if version_name is not None and len(version_name) > 128:
+            raise ValueError("Invalid value for `version_name`, length must be less than or equal to `128`")
+        if version_name is not None and len(version_name) < 1:
+            raise ValueError("Invalid value for `version_name`, length must be greater than or equal to `1`")
+
+        self._version_name = version_name
 
     @property
     def build_number(self):

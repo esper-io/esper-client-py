@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app_version**
-> AppVersion get_app_version(version_id, application_id, enterprise_id)
+> AppVersion get_app_version(version_id, application_id, enterprise_id, legacy_format=legacy_format)
 
 Get app version information
 
@@ -204,10 +204,11 @@ api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
 version_id = 'version_id_example' # str | A UUID string identifying this app version.
 application_id = 'application_id_example' # str | A UUID string identifying this application.
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
+legacy_format = False # bool | If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. (optional)
 
 try:
     # Get app version information
-    api_response = api_instance.get_app_version(version_id, application_id, enterprise_id)
+    api_response = api_instance.get_app_version(version_id, application_id, enterprise_id, legacy_format=legacy_format)
     print(api_response)
 except ApiException as e:
     print("Exception when calling ApplicationApi->get_app_version: %s\n" % e)
@@ -220,6 +221,7 @@ Name | Type | Description  | Notes
  **version_id** | [**str**](.md)| A UUID string identifying this app version. | 
  **application_id** | [**str**](.md)| A UUID string identifying this application. | 
  **enterprise_id** | **str**| A UUID string identifying enterprise. | 
+ **legacy_format** | **bool**| If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. | [optional] 
 
 ### Return type
 
@@ -237,7 +239,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app_versions**
-> InlineResponse2001 get_app_versions(application_id, enterprise_id, version_code=version_code, build_number=build_number, limit=limit, offset=offset)
+> InlineResponse2001 get_app_versions(application_id, enterprise_id, version_code=version_code, build_number=build_number, legacy_format=legacy_format, limit=limit, offset=offset)
 
 List App versions
 
@@ -260,12 +262,13 @@ application_id = 'application_id_example' # str | A UUID string identifying this
 enterprise_id = 'enterprise_id_example' # str | A UUID string identifying enterprise.
 version_code = 'version_code_example' # str | filter by version code (optional)
 build_number = 'build_number_example' # str | filter by build number (optional)
+legacy_format = False # bool | If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. (optional)
 limit = 20 # int | Number of results to return per page. (optional) (default to 20)
 offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
 try:
     # List App versions
-    api_response = api_instance.get_app_versions(application_id, enterprise_id, version_code=version_code, build_number=build_number, limit=limit, offset=offset)
+    api_response = api_instance.get_app_versions(application_id, enterprise_id, version_code=version_code, build_number=build_number, legacy_format=legacy_format, limit=limit, offset=offset)
     print(api_response)
 except ApiException as e:
     print("Exception when calling ApplicationApi->get_app_versions: %s\n" % e)
@@ -279,6 +282,7 @@ Name | Type | Description  | Notes
  **enterprise_id** | **str**| A UUID string identifying enterprise. | 
  **version_code** | **str**| filter by version code | [optional] 
  **build_number** | **str**| filter by build number | [optional] 
+ **legacy_format** | **bool**| If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] [default to 20]
  **offset** | **int**| The initial index from which to return the results. | [optional] [default to 0]
 

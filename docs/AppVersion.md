@@ -12,7 +12,8 @@ Name | Type | Description | Notes
 **app_file** | **str** |  | [optional] 
 **app_icon** | **str** |  | [optional] 
 **version_code** | **str** |  | 
-**build_number** | **str** |  | [optional] 
+**version_name** | **str** | Human-readable version string (e.g., "1.0.02"). Available when legacy_format=false. | [optional]
+**build_number** | **str** | Deprecated. Use version_code instead. | [optional] 
 **size_in_mb** | **float** |  | [optional] 
 **hash_string** | **str** |  | [optional] 
 **release_name** | **str** |  | [optional] 
