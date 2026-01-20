@@ -387,6 +387,7 @@ class ApplicationApi(object):
         :param str version_id: A UUID string identifying this app version. (required)
         :param str application_id: A UUID string identifying this application. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param bool legacy_format: If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. (optional)
         :return: AppVersion
                  If the method is called asynchronously,
                  returns the request thread.
@@ -411,12 +412,13 @@ class ApplicationApi(object):
         :param str version_id: A UUID string identifying this app version. (required)
         :param str application_id: A UUID string identifying this application. (required)
         :param str enterprise_id: A UUID string identifying enterprise. (required)
+        :param bool legacy_format: If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. (optional)
         :return: AppVersion
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['version_id', 'application_id', 'enterprise_id']
+        all_params = ['version_id', 'application_id', 'enterprise_id', 'legacy_format']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -455,6 +457,12 @@ class ApplicationApi(object):
             path_params['enterprise_id'] = params['enterprise_id']
 
         query_params = []
+        if 'legacy_format' in params:
+            # Convert boolean to lowercase string for API compatibility
+            legacy_format_val = params['legacy_format']
+            if isinstance(legacy_format_val, bool):
+                legacy_format_val = str(legacy_format_val).lower()
+            query_params.append(('legacy_format', legacy_format_val))
 
         header_params = {}
 
@@ -499,6 +507,7 @@ class ApplicationApi(object):
         :param str enterprise_id: A UUID string identifying enterprise. (required)
         :param str version_code: filter by version code
         :param str build_number: filter by build number
+        :param bool legacy_format: If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. (optional)
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2001
@@ -526,6 +535,7 @@ class ApplicationApi(object):
         :param str enterprise_id: A UUID string identifying enterprise. (required)
         :param str version_code: filter by version code
         :param str build_number: filter by build number
+        :param bool legacy_format: If False, returns standardized format with version_name and version_code (build_number removed). If True or not specified, returns legacy format. (optional)
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2001
@@ -533,7 +543,7 @@ class ApplicationApi(object):
                  returns the request thread.
         """
 
-        all_params = ['application_id', 'enterprise_id', 'version_code', 'build_number', 'limit', 'offset']
+        all_params = ['application_id', 'enterprise_id', 'version_code', 'build_number', 'legacy_format', 'limit', 'offset']
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -570,6 +580,12 @@ class ApplicationApi(object):
             query_params.append(('version_code', params['version_code']))
         if 'build_number' in params:
             query_params.append(('build_number', params['build_number']))
+        if 'legacy_format' in params:
+            # Convert boolean to lowercase string for API compatibility
+            legacy_format_val = params['legacy_format']
+            if isinstance(legacy_format_val, bool):
+                legacy_format_val = str(legacy_format_val).lower()
+            query_params.append(('legacy_format', legacy_format_val))
         if 'limit' in params:
             query_params.append(('limit', params['limit']))
         if 'offset' in params:

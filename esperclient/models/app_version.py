@@ -52,6 +52,7 @@ class AppVersion(object):
         'app_file': 'str',
         'app_icon': 'str',
         'version_code': 'str',
+        'version_name': 'str',
         'build_number': 'str',
         'size_in_mb': 'float',
         'hash_string': 'str',
@@ -74,6 +75,7 @@ class AppVersion(object):
         'app_file': 'app_file',
         'app_icon': 'app_icon',
         'version_code': 'version_code',
+        'version_name': 'version_name',
         'build_number': 'build_number',
         'size_in_mb': 'size_in_mb',
         'hash_string': 'hash_string',
@@ -89,7 +91,7 @@ class AppVersion(object):
         'application': 'application'
     }
 
-    def __init__(self, id=None, installed_count=None, permissions=None, app_file=None, app_icon=None, version_code=None, build_number=None, size_in_mb=None, hash_string=None, release_name=None, release_comments=None, release_track=None, created_on=None, updated_on=None, min_sdk_version=None, target_sdk_version=None, is_enabled=None, enterprise=None, application=None):
+    def __init__(self, id=None, installed_count=None, permissions=None, app_file=None, app_icon=None, version_code=None, version_name=None, build_number=None, size_in_mb=None, hash_string=None, release_name=None, release_comments=None, release_track=None, created_on=None, updated_on=None, min_sdk_version=None, target_sdk_version=None, is_enabled=None, enterprise=None, application=None):
         """AppVersion - a model defined in Swagger"""
 
         self._id = None
@@ -98,6 +100,7 @@ class AppVersion(object):
         self._app_file = None
         self._app_icon = None
         self._version_code = None
+        self._version_name = None
         self._build_number = None
         self._size_in_mb = None
         self._hash_string = None
@@ -123,6 +126,8 @@ class AppVersion(object):
         if app_icon is not None:
             self.app_icon = app_icon
         self.version_code = version_code
+        if version_name is not None:
+            self.version_name = version_name
         if build_number is not None:
             self.build_number = build_number
         if size_in_mb is not None:
@@ -307,6 +312,33 @@ class AppVersion(object):
             raise ValueError("Invalid value for `build_number`, length must be greater than or equal to `1`")
 
         self._build_number = build_number
+
+    @property
+    def version_name(self):
+        """Gets the version_name of this AppVersion.
+
+        Human-readable version string (e.g., "1.0.02"). Available when legacy_format=false.
+
+        :return: The version_name of this AppVersion.
+        :rtype: str
+        """
+        return self._version_name
+
+    @version_name.setter
+    def version_name(self, version_name):
+        """Sets the version_name of this AppVersion.
+
+        Human-readable version string (e.g., "1.0.02"). Available when legacy_format=false.
+
+        :param version_name: The version_name of this AppVersion.
+        :type: str
+        """
+        if version_name is not None and len(version_name) > 128:
+            raise ValueError("Invalid value for `version_name`, length must be less than or equal to `128`")
+        if version_name is not None and len(version_name) < 1:
+            raise ValueError("Invalid value for `version_name`, length must be greater than or equal to `1`")
+
+        self._version_name = version_name
 
     @property
     def size_in_mb(self):
