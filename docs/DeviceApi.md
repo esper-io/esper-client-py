@@ -15,9 +15,9 @@ Method | HTTP request | Description
 # **get_all_devices**
 > InlineResponse2003 get_all_devices(enterprise_id, name=name, group=group, imei=imei, serial=serial, state=state, brand=brand, is_gms=is_gms, search=search, tags=tags, limit=limit, offset=offset)
 
-Fetch all devices in an enterprise
+Fetch the data for all devices in an Enterprise from Esper's cloud servers.
 
-Returns a list of devices
+Returns a list of Device objects, containing device state data retrieved from Esper servers.
 
 ### Example
 ```python
@@ -88,9 +88,9 @@ Name | Type | Description  | Notes
 # **get_app_installs**
 > InlineResponse2005 get_app_installs(enterprise_id, device_id, device=device, package_name=package_name, application_name=application_name, install_state=install_state, limit=limit, offset=offset)
 
-List installed apps
+Fetch a list all of the apps which are installed on a single device.
 
-Returns AppInstall list
+Returns a list of AppInstall objects.
 
 ### Example
 ```python
@@ -153,9 +153,9 @@ Name | Type | Description  | Notes
 # **get_device_app_by_id**
 > DeviceApp get_device_app_by_id(app_id, enterprise_id, device_id)
 
-Get device app details
+Fetch the details of a specified app (which may or may not be installed) associated with a specified device.
 
-Returns DeviceApp instance
+Returns a DeviceApp object containing the app details.
 
 ### Example
 ```python
@@ -208,9 +208,9 @@ Name | Type | Description  | Notes
 # **get_device_apps**
 > InlineResponse2004 get_device_apps(enterprise_id, device_id, package_name=package_name, whitelisted=whitelisted, search=search, limit=limit, offset=offset)
 
-List all device apps
+Fetch a list of all apps (installed or not) associated with a specified device.
 
-Returns DeviceApp list
+Returns a list of DeviceApp objects.
 
 ### Example
 ```python
@@ -271,9 +271,9 @@ Name | Type | Description  | Notes
 # **get_device_by_id**
 > Device get_device_by_id(enterprise_id, device_id)
 
-Fetch device details by ID
+Fetch device details based on a specified device ID.
 
-Returns details of a device
+Returns a single Device object.
 
 ### Example
 ```python
@@ -324,9 +324,9 @@ Name | Type | Description  | Notes
 # **get_device_event**
 > InlineResponse2006 get_device_event(enterprise_id, device_id, latest_event)
 
-Get latest device event
+Fetch the latest device event registered by the Esper cloud servers, for one specified device.
 
-Returns DeviceStatus instance
+Returns a list of DeviceStatus objects.
 
 ### Example
 ```python
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **enterprise_id** | **str**| A UUID string identifying this enterprise. | 
  **device_id** | **str**| A UUID string identifying device. | 
- **latest_event** | **int**| Flag to get latest event | 
+ **latest_event** | **int**| A necessary flag to get latest event. | May be any positive integer. Flag value has no effect on return results.
 
 ### Return type
 
