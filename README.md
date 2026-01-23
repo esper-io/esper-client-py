@@ -5,7 +5,7 @@
 **Esper SDK for Python** is a comprehensive Python client library that enables programmatic interaction with the Esper Manage platform APIs. Esper Manage is an enterprise-grade Android Device Management (MDM/EMM) solution designed for managing dedicated Android devices at scale.
 
 - **API version**: 1.0.0
-- **Package version**: 0.1.2
+- **Package version**: 0.1.3
 
 ## What is Esper Manage?
 
